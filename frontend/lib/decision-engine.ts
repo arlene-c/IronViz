@@ -59,6 +59,16 @@ function budgetFromField(field: OpportunityRow, months: number): number {
   return Math.max(200_000, Math.min(6_000_000, base));
 }
 
+function budgetBasis(field: OpportunityRow, months: number) {
+  const lengthFactor = Math.max(0.5, Math.min(2.5, months / 18));
+  return {
+    method: "Field-level historical AAU funding signal (2020-2024 aggregate) with project-length scaling.",
+    base_field_aau_total: Number(field.AAU_total) || 0,
+    length_factor: lengthFactor,
+    note: "Uses aggregated historical field funding, not individual project-level grant records.",
+  };
+}
+
 function timingWindowFromForecast(forecast2026: number, growthRate: number): string {
   if (forecast2026 > 200_000_000 || growthRate > 0.75) return "6-12 months";
   if (forecast2026 > 50_000_000 || growthRate > 0.2) return "9-15 months";
@@ -103,6 +113,7 @@ export async function runResearcherDecision(request: DecisionRequest) {
 
   const months = Number(request.project_length_months || 12);
   const recommendedMid = budgetFromField(field, months);
+  const basis = budgetBasis(field, months);
   const subjectTotal = (request.subject_allocations || []).reduce((acc, s) => acc + Math.max(0, Number(s.amount || 0)), 0);
   const recommendedMidAdjusted = Math.max(recommendedMid, subjectTotal);
   const recommendedLow = Math.round(recommendedMidAdjusted * 0.7);
@@ -182,6 +193,7 @@ export async function runResearcherDecision(request: DecisionRequest) {
       remaining_need: remainingNeed,
       subject_allocation_total: Math.round(subjectTotal),
       subject_allocations: request.subject_allocations || [],
+      basis,
     },
     top_funders: topFunders,
     risk_flags: riskFlags,
