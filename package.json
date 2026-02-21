@@ -1,4 +1,11 @@
 {
+  "scripts": {
+    "dev": "concurrently -k -n FRONTEND,BACKEND -c cyan,green \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "npm --prefix frontend run dev -- --port 3001",
+    "dev:backend": "python -u backend/scripts/dev_backend.py",
+    "build": "npm --prefix frontend run build",
+    "start": "npm --prefix frontend run start"
+  },
   "dependencies": {
     "d3": "^7.9.0",
     "plotly.js": "^3.4.0",
@@ -8,6 +15,7 @@
   "devDependencies": {
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "@types/react-plotly.js": "^2.6.4"
+    "@types/react-plotly.js": "^2.6.4",
+    "concurrently": "^9.2.1"
   }
 }
