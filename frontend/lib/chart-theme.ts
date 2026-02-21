@@ -1,0 +1,34 @@
+export const chartTheme = {
+  quadrant: {
+    grid: "#f2c9d2",
+    xAxis: "#9f6a79",
+    yAxis: "#6d8ea8",
+    refX: "#c08497",
+    refY: "#93c5fd",
+    pointUnder: "#fb7185",
+    pointStrong: "#38bdf8",
+    cardBorder: "#fecdd3",
+    cardBackground: "linear-gradient(135deg, #fff1f2 0%, #ffffff 45%, #f0f9ff 100%)",
+  },
+  treemap: {
+    fill: "#f472b6",
+    stroke: "#fff7f7",
+    cardBorder: "#fbcfe8",
+    cardBackground: "linear-gradient(135deg, #fdf2f8 0%, #ffffff 45%, #fff7ed 100%)",
+  },
+  projection: {
+    forecast: "#06b6d4",
+    low: "#67e8f9",
+    high: "#0ea5e9",
+    cardBorder: "#a5f3fc",
+    cardBackground: "linear-gradient(135deg, #ecfeff 0%, #ffffff 45%, #eff6ff 100%)",
+  },
+  similarity: {
+    cmu: "#34d399",
+    other: "#7dd3fc",
+    grid: "rgba(148,163,184,0.25)",
+    zero: "rgba(100,116,139,0.45)",
+    cardBorder: "#a7f3d0",
+    cardBackground: "linear-gradient(135deg, #ecfdf5 0%, #ffffff 45%, #f0f9ff 100%)",
+  },
+};

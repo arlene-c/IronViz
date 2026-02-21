@@ -47,11 +47,11 @@ type ResearcherResult = {
     award_timing_window: string;
     cmu_win_probability: number;
     fit_score: number;
-    source_type?: "field_observed" | "global_fallback" | "baseline_fallback";
+    source_type?: "field_observed" | "similar_field_fallback" | "global_fallback" | "baseline_fallback";
   }>;
   risk_flags: string[];
   likelihood_context?: {
-    funder_data_mode: "field_observed" | "global_fallback" | "baseline_fallback";
+    funder_data_mode: "field_observed" | "similar_field_fallback" | "global_fallback" | "baseline_fallback";
     fallback_note: string;
     field_funder_links_found: number;
   };

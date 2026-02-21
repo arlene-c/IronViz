@@ -11,6 +11,7 @@ import {
   YAxis,
 } from "recharts";
 import { formatCompactUsd } from "@/lib/format";
+import { chartTheme } from "@/lib/chart-theme";
 
 type ForecastRow = {
   FOR4_CODE: string;
@@ -55,7 +56,10 @@ export default function ProjectionBands({ data }: Props) {
   };
 
   return (
-    <div className="bg-white p-6 rounded shadow">
+    <div
+      className="p-6 rounded shadow border"
+      style={{ background: chartTheme.projection.cardBackground, borderColor: chartTheme.projection.cardBorder }}
+    >
       <h2 className="text-xl font-semibold mb-1">Projection Bands (AAU Forecast)</h2>
       <p className="text-sm text-gray-600 mb-4">Top 3 fields by predicted 2026 AAU funding.</p>
       <ResponsiveContainer width="100%" height={380}>
@@ -65,9 +69,9 @@ export default function ProjectionBands({ data }: Props) {
           <YAxis tickFormatter={(v) => formatCompactUsd(Number(v))} />
           <Tooltip content={<ForecastTooltip />} />
           <Legend />
-          <Line type="monotone" dataKey="aau_forecast" stroke="#2563eb" dot={false} name="Forecast" />
-          <Line type="monotone" dataKey="aau_forecast_low" stroke="#93c5fd" dot={false} name="Low band" />
-          <Line type="monotone" dataKey="aau_forecast_high" stroke="#1d4ed8" dot={false} name="High band" />
+          <Line type="monotone" dataKey="aau_forecast" stroke={chartTheme.projection.forecast} dot={false} name="Forecast" />
+          <Line type="monotone" dataKey="aau_forecast_low" stroke={chartTheme.projection.low} dot={false} name="Low band" />
+          <Line type="monotone" dataKey="aau_forecast_high" stroke={chartTheme.projection.high} dot={false} name="High band" />
         </LineChart>
       </ResponsiveContainer>
     </div>

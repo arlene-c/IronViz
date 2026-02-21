@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import dynamic from "next/dynamic";
 import { formatCompactUsd } from "@/lib/format";
+import { chartTheme } from "@/lib/chart-theme";
 
 const Plot = dynamic(() => import("react-plotly.js"), { ssr: false });
 
@@ -65,12 +66,15 @@ export default function SimilarityMap({ data }: Props) {
     [rows],
   );
   const markerColor = useMemo(
-    () => rows.map((d) => (d.institution_group === "CMU" ? "#16a34a" : "#2563eb")),
+    () => rows.map((d) => (d.institution_group === "CMU" ? chartTheme.similarity.cmu : chartTheme.similarity.other)),
     [rows],
   );
 
   return (
-    <div className="bg-white dark:bg-gray-800 p-6 rounded shadow transition-colors duration-200">
+    <div
+      className="dark:bg-gray-800 p-6 rounded shadow transition-colors duration-200 border"
+      style={{ background: chartTheme.similarity.cardBackground, borderColor: chartTheme.similarity.cardBorder }}
+    >
       <h2 className="text-xl font-semibold mb-1 text-gray-900 dark:text-white">
         Idea Similarity Map
         <HelpTip text="Points that are closer are more conceptually similar. Larger circles indicate higher field funding. Green points indicate stronger CMU-relative positioning." />
@@ -108,17 +112,17 @@ export default function SimilarityMap({ data }: Props) {
             xaxis: {
               title: { text: "Similarity Dimension 1" },
               showgrid: true,
-              gridcolor: "rgba(148,163,184,0.25)",
+              gridcolor: chartTheme.similarity.grid,
               zeroline: true,
-              zerolinecolor: "rgba(100,116,139,0.45)",
+              zerolinecolor: chartTheme.similarity.zero,
               showticklabels: true,
             },
             yaxis: {
               title: { text: "Similarity Dimension 2" },
               showgrid: true,
-              gridcolor: "rgba(148,163,184,0.25)",
+              gridcolor: chartTheme.similarity.grid,
               zeroline: true,
-              zerolinecolor: "rgba(100,116,139,0.45)",
+              zerolinecolor: chartTheme.similarity.zero,
               showticklabels: true,
             },
           }}

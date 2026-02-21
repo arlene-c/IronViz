@@ -14,6 +14,7 @@ import {
   Cell,
 } from "recharts";
 import { formatCompactUsd, formatPercent, formatSigned } from "@/lib/format";
+import { chartTheme } from "@/lib/chart-theme";
 
 type OpportunityRow = {
   FOR4_CODE: string;
@@ -98,7 +99,10 @@ export default function OpportunityQuadrant({ data }: Props) {
   );
 
   return (
-    <div className="bg-white dark:bg-gray-800 p-6 rounded shadow transition-colors duration-200">
+    <div
+      className="dark:bg-gray-800 p-6 rounded shadow transition-colors duration-200 border"
+      style={{ background: chartTheme.quadrant.cardBackground, borderColor: chartTheme.quadrant.cardBorder }}
+    >
       <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
         Opportunity Quadrant
       </h2>
@@ -111,19 +115,19 @@ export default function OpportunityQuadrant({ data }: Props) {
       <div className="h-[400px] w-full">
         <ResponsiveContainer width="100%" height="100%">
           <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
-            <CartesianGrid strokeDasharray="3 3" strokeOpacity={0.2} />
+            <CartesianGrid strokeDasharray="3 3" strokeOpacity={0.25} stroke={chartTheme.quadrant.grid} />
             <XAxis
               type="number"
               dataKey="targetingGap"
               name="Under-target gap"
-              stroke="#888888"
+              stroke={chartTheme.quadrant.xAxis}
               tickFormatter={(tick) => Number(tick).toFixed(2)}
             />
             <YAxis
               type="number"
               dataKey="growth"
               name="Growth Rate"
-              stroke="#888888"
+              stroke={chartTheme.quadrant.yAxis}
               tickFormatter={(tick) => `${(tick * 100).toFixed(0)}%`}
             />
             <ZAxis
@@ -134,14 +138,14 @@ export default function OpportunityQuadrant({ data }: Props) {
             <Tooltip content={<CustomTooltip />} cursor={{ strokeDasharray: "3 3" }} />
             
             {/* Quadrant Crosshairs */}
-            <ReferenceLine x={0} stroke="#666" strokeDasharray="3 3" label={{ position: "top", value: "Parity", fill: "#888" }} />
-            <ReferenceLine y={0} stroke="#666" strokeDasharray="3 3" />
+            <ReferenceLine x={0} stroke={chartTheme.quadrant.refX} strokeDasharray="3 3" label={{ position: "top", value: "Parity", fill: chartTheme.quadrant.xAxis }} />
+            <ReferenceLine y={0} stroke={chartTheme.quadrant.refY} strokeDasharray="3 3" />
 
             <Scatter data={chartData} name="Fields">
               {chartData.map((entry, index) => (
                 <Cell 
                   key={`cell-${index}`} 
-                  fill={entry.targetingGap > 0 ? "#ef4444" : "#3b82f6"} 
+                  fill={entry.targetingGap > 0 ? chartTheme.quadrant.pointUnder : chartTheme.quadrant.pointStrong} 
                   opacity={0.8}
                 />
               ))}

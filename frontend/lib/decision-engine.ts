@@ -45,7 +45,13 @@ type FunderRecommendation = {
   award_timing_window: string;
   cmu_win_probability: number;
   fit_score: number;
-  source_type?: "field_observed" | "global_fallback" | "baseline_fallback";
+  source_type?: "field_observed" | "similar_field_fallback" | "global_fallback" | "baseline_fallback";
+};
+
+type SimilarityNeighborRow = {
+  grant_id: string;
+  neighbor_grant_id: string;
+  similarity: number;
 };
 
 const clamp01 = (x: number) => Math.max(0, Math.min(1, x));
@@ -86,10 +92,11 @@ function deriveRiskFlags(remainingNeed: number, field: OpportunityRow, funders: 
 }
 
 export async function loadDecisionContext() {
-  const [opportunity, forecast, sankey] = await Promise.all([
+  const [opportunity, forecast, sankey, neighbors] = await Promise.all([
     readModelArtifact<OpportunityRow[]>("opportunity_scores_v1.json"),
     readModelArtifact<ForecastRow[]>("forecast_v1.json"),
     readDataArtifact<SankeyRow[]>("sankey.json"),
+    readModelArtifact<SimilarityNeighborRow[]>("similarity_neighbors_v1.json"),
   ]);
 
   const campuses = [
@@ -102,11 +109,11 @@ export async function loadDecisionContext() {
     { code: "grid.512173.3", label: "CMU Africa / Global Unit" },
   ];
 
-  return { opportunity, forecast, sankey, campuses };
+  return { opportunity, forecast, sankey, campuses, neighbors };
 }
 
 export async function runResearcherDecision(request: DecisionRequest) {
-  const { opportunity, forecast, sankey } = await loadDecisionContext();
+  const { opportunity, forecast, sankey, neighbors } = await loadDecisionContext();
 
   const code = normalizeCode(request.for4_code);
   const field = opportunity.find((r) => normalizeCode(r.FOR4_CODE) === code);
@@ -144,8 +151,61 @@ export async function runResearcherDecision(request: DecisionRequest) {
     .map(([funder, m]) => ({ funder, ...m }))
     .sort((a, b) => b.flow - a.flow)
     .slice(0, 6);
-  let funderDataMode: "field_observed" | "global_fallback" | "baseline_fallback" = "field_observed";
+  let funderDataMode: "field_observed" | "similar_field_fallback" | "global_fallback" | "baseline_fallback" = "field_observed";
   let funderFallbackNote = "";
+
+  // Similar-field fallback first (preferred over global fallback)
+  if (sortedFunders.length < 3) {
+    const thisGrantId = `field-${code}`;
+    const similar = neighbors
+      .filter((n) => n.grant_id === thisGrantId && Number(n.similarity || 0) > 0)
+      .sort((a, b) => Number(b.similarity || 0) - Number(a.similarity || 0))
+      .slice(0, 5);
+
+    const similarCodes = similar
+      .map((s) => String(s.neighbor_grant_id || "").replace("field-", "").trim())
+      .filter(Boolean);
+
+    if (similarCodes.length > 0) {
+      const simWeights = new Map<string, number>();
+      for (const s of similar) {
+        const c = String(s.neighbor_grant_id || "").replace("field-", "").trim();
+        simWeights.set(c, Number(s.similarity || 0));
+      }
+
+      const similarRows = sankey.filter((r) => similarCodes.includes(normalizeCode(r.FOR4_CODE)));
+      const simAgg = new Map<string, { flow: number; cmuTotal: number }>();
+      for (const r of similarRows) {
+        const fieldCode = normalizeCode(r.FOR4_CODE);
+        const w = Math.max(0.15, Number(simWeights.get(fieldCode) || 0.25));
+        const key = r.source || "Unknown funder";
+        const prev = simAgg.get(key) || { flow: 0, cmuTotal: 0 };
+        prev.flow += Number(r.value || 0) * w;
+        prev.cmuTotal += Number(r.cmu_field_total || 0) * w;
+        simAgg.set(key, prev);
+      }
+
+      const simTop = [...simAgg.entries()]
+        .map(([funder, m]) => ({ funder, ...m }))
+        .sort((a, b) => b.flow - a.flow)
+        .slice(0, 6);
+
+      const existing = new Set(sortedFunders.map((f) => f.funder));
+      let added = 0;
+      for (const s of simTop) {
+        if (!existing.has(s.funder)) {
+          sortedFunders.push(s);
+          added += 1;
+        }
+        if (sortedFunders.length >= 6) break;
+      }
+
+      if (added > 0) {
+        funderDataMode = "similar_field_fallback";
+        funderFallbackNote = `Used similar-field fallback from ${similarCodes.slice(0, 3).join(", ")} before global fallback.`;
+      }
+    }
+  }
 
   // Fallback when field-specific links are sparse: use broad historical CMU-active funders
   if (sortedFunders.length < 3) {
@@ -172,7 +232,11 @@ export async function runResearcherDecision(request: DecisionRequest) {
     }
     if (added > 0) {
       funderDataMode = "global_fallback";
-      funderFallbackNote = "Used global AAU/CMU historical funder activity because field-specific funder links were sparse.";
+      if (!funderFallbackNote) {
+        funderFallbackNote = "Used global AAU/CMU historical funder activity because field-specific funder links were sparse.";
+      } else {
+        funderFallbackNote += " Added global AAU/CMU historical funders to fill remaining slots.";
+      }
     }
   }
 

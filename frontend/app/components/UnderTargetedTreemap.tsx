@@ -2,6 +2,7 @@
 
 import { ResponsiveContainer, Tooltip, Treemap } from "recharts";
 import { formatCompactUsd, formatSigned } from "@/lib/format";
+import { chartTheme } from "@/lib/chart-theme";
 
 export type OpportunityRow = {
   FOR4_CODE: string;
@@ -33,11 +34,14 @@ export default function UnderTargetedTreemap({ data }: Props) {
     .slice(0, 25);
 
   return (
-    <div className="bg-white p-6 rounded shadow">
+    <div
+      className="p-6 rounded shadow border"
+      style={{ background: chartTheme.treemap.cardBackground, borderColor: chartTheme.treemap.cardBorder }}
+    >
       <h2 className="text-xl font-semibold mb-1">Under-Targeted Field Treemap</h2>
       <p className="text-sm text-gray-600 mb-4">Top 25 by under-target gap, sized by AAU funding.</p>
       <ResponsiveContainer width="100%" height={420}>
-        <Treemap data={rows} dataKey="size" stroke="#fff" fill="#3b82f6">
+        <Treemap data={rows} dataKey="size" stroke={chartTheme.treemap.stroke} fill={chartTheme.treemap.fill}>
           <Tooltip
             content={({ active, payload }: any) => {
               if (!active || !payload?.length) return null;
