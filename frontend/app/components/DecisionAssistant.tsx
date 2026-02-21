@@ -122,6 +122,14 @@ function likelihoodReason(prob: number, fit: number) {
   return "Low likelihood: CMU has limited historical strength here.";
 }
 
+function heatColorFrom01(v: number) {
+  const n = Math.max(0, Math.min(1, v));
+  if (n < 0.25) return "bg-red-100 text-red-800";
+  if (n < 0.5) return "bg-amber-100 text-amber-800";
+  if (n < 0.75) return "bg-lime-100 text-lime-800";
+  return "bg-green-100 text-green-800";
+}
+
 type Props = { role: Role };
 
 export default function DecisionAssistant({ role }: Props) {
@@ -439,34 +447,59 @@ export default function DecisionAssistant({ role }: Props) {
               <>
                 <div className="bg-white p-6 rounded shadow">
                   <h3 className="font-semibold mb-2">
-                    Funder Likelihood
+                    Funder Likelihood Matrix
                     <HelpTip
                       text={`Budget estimate basis: ${researcherResult.budget.basis?.method || "historical field signal"} Base AAU field total: ${formatCompactUsd(researcherResult.budget.basis?.base_field_aau_total || 0)}. Length factor: ${Number(researcherResult.budget.basis?.length_factor || 1).toFixed(2)}. ${researcherResult.budget.basis?.note || ""}`}
                     />
                   </h3>
-                  <ResponsiveContainer width="100%" height={240}>
-                    <BarChart data={researcherResult.top_funders}>
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="funder_name" hide />
-                      <YAxis tickFormatter={(v) => formatPercent(Number(v))} />
-                      <Tooltip content={({ active, payload }: any) => {
-                        if (!active || !payload?.length) return null;
-                        const p = payload[0]?.payload;
-                        return (
-                          <div className="bg-white border rounded p-2 text-xs shadow">
-                            <p className="font-medium">{p.funder_name}</p>
-                            <p>Win chance: {formatPercent(p.cmu_win_probability)}</p>
-                            <p>{likelihoodReason(Number(p.cmu_win_probability || 0), Number(p.fit_score || 0))}</p>
-                          </div>
-                        );
-                      }} />
-                      <Bar dataKey="cmu_win_probability">
-                        {researcherResult.top_funders.map((f, i) => (
-                          <Cell key={i} fill={Number(f.cmu_win_probability) < 0.35 ? "#ef4444" : "#22c55e"} />
-                        ))}
-                      </Bar>
-                    </BarChart>
-                  </ResponsiveContainer>
+                  <p className="text-xs text-gray-600 mb-3">
+                    Hover each cell for details. Darker/greener cells indicate stronger values.
+                    <HelpTip text="Rows are funders. Columns are win probability, fit score, and expected award amount (relative within this list)." />
+                  </p>
+                  <div className="overflow-auto">
+                    <table className="w-full text-sm border">
+                      <thead className="bg-gray-50">
+                        <tr className="text-left">
+                          <th className="p-2 border">Funder</th>
+                          <th className="p-2 border">Win Prob</th>
+                          <th className="p-2 border">Fit</th>
+                          <th className="p-2 border">Expected Award</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {researcherResult.top_funders.map((f) => {
+                          const maxAward = Math.max(
+                            1,
+                            ...researcherResult.top_funders.map((x) => Number(x.expected_award_amount || 0)),
+                          );
+                          const awardNorm = Number(f.expected_award_amount || 0) / maxAward;
+                          return (
+                            <tr key={f.funder_name}>
+                              <td className="p-2 border font-medium">{f.funder_name}</td>
+                              <td
+                                className={`p-2 border ${heatColorFrom01(Number(f.cmu_win_probability || 0))}`}
+                                title={`Win probability: ${formatPercent(f.cmu_win_probability)}. ${likelihoodReason(f.cmu_win_probability, f.fit_score)}`}
+                              >
+                                {formatPercent(f.cmu_win_probability)}
+                              </td>
+                              <td
+                                className={`p-2 border ${heatColorFrom01(Number(f.fit_score || 0))}`}
+                                title={`Fit score: ${(Number(f.fit_score || 0) * 100).toFixed(0)}%. Higher fit means this funder historically aligns better with similar projects.`}
+                              >
+                                {(Number(f.fit_score || 0) * 100).toFixed(0)}%
+                              </td>
+                              <td
+                                className={`p-2 border ${heatColorFrom01(awardNorm)}`}
+                                title={`Expected award for this project: ${formatCompactUsd(f.expected_award_amount)}.`}
+                              >
+                                {formatCompactUsd(f.expected_award_amount)}
+                              </td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
                 <div className="bg-white p-6 rounded shadow">
                   <h3 className="font-semibold mb-2">Funding likelihood rationale</h3>
