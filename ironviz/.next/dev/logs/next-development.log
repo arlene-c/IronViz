@@ -1,0 +1,32 @@
+[00:01:12.956] Server  ERROR   Error: Cannot find module 'next/dist/compiled/cookie'
+Require stack:
+- /Users/arlene-mac/Documents/Github/IronViz/ironviz/node_modules/next/dist/server/api-utils/get-cookie-parser.js
+- /Users/arlene-mac/Documents/Github/IronViz/ironviz/node_modules/next/dist/shared/lib/router/utils/prepare-destination.js
+- /Users/arlene-mac/Documents/Github/IronViz/ironviz/node_modules/next/dist/shared/lib/router/utils/middleware-route-matcher.js
+- /Users/arlene-mac/Documents/Github/IronViz/ironviz/node_modules/next/dist/server/lib/router-utils/filesystem.js
+- /Users/arlene-mac/Documents/Github/IronViz/ironviz/node_modules/next/dist/server/lib/router-server.js
+- /Users/arlene-mac/Documents/Github/IronViz/ironviz/node_modules/next/dist/server/lib/start-server.js
+[00:01:12.967] Server  ERROR   Error: Cannot find module 'next/dist/compiled/cookie'
+Require stack:
+- /Users/arlene-mac/Documents/Github/IronViz/ironviz/node_modules/next/dist/server/api-utils/get-cookie-parser.js
+- /Users/arlene-mac/Documents/Github/IronViz/ironviz/node_modules/next/dist/shared/lib/router/utils/prepare-destination.js
+- /Users/arlene-mac/Documents/Github/IronViz/ironviz/node_modules/next/dist/shared/lib/router/utils/middleware-route-matcher.js
+- /Users/arlene-mac/Documents/Github/IronViz/ironviz/node_modules/next/dist/server/lib/router-utils/filesystem.js
+- /Users/arlene-mac/Documents/Github/IronViz/ironviz/node_modules/next/dist/server/lib/router-server.js
+- /Users/arlene-mac/Documents/Github/IronViz/ironviz/node_modules/next/dist/server/lib/start-server.js
+[00:01:12.988] Server  ERROR   Error: Cannot find module 'next/dist/compiled/cookie'
+Require stack:
+- /Users/arlene-mac/Documents/Github/IronViz/ironviz/node_modules/next/dist/server/api-utils/get-cookie-parser.js
+- /Users/arlene-mac/Documents/Github/IronViz/ironviz/node_modules/next/dist/shared/lib/router/utils/prepare-destination.js
+- /Users/arlene-mac/Documents/Github/IronViz/ironviz/node_modules/next/dist/shared/lib/router/utils/middleware-route-matcher.js
+- /Users/arlene-mac/Documents/Github/IronViz/ironviz/node_modules/next/dist/server/lib/router-utils/filesystem.js
+- /Users/arlene-mac/Documents/Github/IronViz/ironviz/node_modules/next/dist/server/lib/router-server.js
+- /Users/arlene-mac/Documents/Github/IronViz/ironviz/node_modules/next/dist/server/lib/start-server.js
+[00:01:12.999] Server  ERROR   Error: Cannot find module 'next/dist/compiled/cookie'
+Require stack:
+- /Users/arlene-mac/Documents/Github/IronViz/ironviz/node_modules/next/dist/server/api-utils/get-cookie-parser.js
+- /Users/arlene-mac/Documents/Github/IronViz/ironviz/node_modules/next/dist/shared/lib/router/utils/prepare-destination.js
+- /Users/arlene-mac/Documents/Github/IronViz/ironviz/node_modules/next/dist/shared/lib/router/utils/middleware-route-matcher.js
+- /Users/arlene-mac/Documents/Github/IronViz/ironviz/node_modules/next/dist/server/lib/router-utils/filesystem.js
+- /Users/arlene-mac/Documents/Github/IronViz/ironviz/node_modules/next/dist/server/lib/router-server.js
+- /Users/arlene-mac/Documents/Github/IronViz/ironviz/node_modules/next/dist/server/lib/start-server.js

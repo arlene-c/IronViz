@@ -1,0 +1,46 @@
+{
+  "version": "v1",
+  "generated_at": "2026-02-21T20:24:26.715412+00:00",
+  "inputs": {
+    "field_summary_rows": 168,
+    "forecast_rows": 1184,
+    "sankey_rows": 101,
+    "field_summary_columns": [
+      "AAU_funding",
+      "AAU_total",
+      "CMU_funding",
+      "CMU_total",
+      "FOR4_CODE",
+      "FOR4_NAME",
+      "START_YEAR",
+      "aau_share",
+      "cmu_share",
+      "growth_norm",
+      "growth_rate",
+      "inverse_targeting",
+      "inverse_targeting_norm",
+      "opportunity_score",
+      "scale_norm",
+      "targeting_index",
+      "under_target_gap"
+    ],
+    "forecast_columns": [
+      "FOR4_CODE",
+      "FOR4_NAME",
+      "aau_forecast",
+      "aau_funding",
+      "cmu_forecast",
+      "cmu_funding",
+      "year"
+    ],
+    "sankey_columns": [
+      "FOR4_CODE",
+      "cmu_field_total",
+      "growth_weighted_value",
+      "log_growth",
+      "source",
+      "target",
+      "value"
+    ]
+  }
+}

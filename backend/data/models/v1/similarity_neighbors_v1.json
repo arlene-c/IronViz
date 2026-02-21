@@ -1,0 +1,5042 @@
+[
+  {
+    "grant_id":"field-3001",
+    "neighbor_grant_id":"field-3206",
+    "neighbor_for4_name":"Medical Biotechnology",
+    "similarity":0.2761908773
+  },
+  {
+    "grant_id":"field-3001",
+    "neighbor_grant_id":"field-4103",
+    "neighbor_for4_name":"Environmental Biotechnology",
+    "similarity":0.2761908773
+  },
+  {
+    "grant_id":"field-3001",
+    "neighbor_grant_id":"field-3106",
+    "neighbor_for4_name":"Industrial Biotechnology",
+    "similarity":0.2640131629
+  },
+  {
+    "grant_id":"field-3001",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3001",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3002",
+    "neighbor_grant_id":"field-4104",
+    "neighbor_for4_name":"Environmental Management",
+    "similarity":0.1618600353
+  },
+  {
+    "grant_id":"field-3002",
+    "neighbor_grant_id":"field-3507",
+    "neighbor_for4_name":"Strategy, Management and Organisational Behaviour",
+    "similarity":0.1077035309
+  },
+  {
+    "grant_id":"field-3002",
+    "neighbor_grant_id":"field-4605",
+    "neighbor_for4_name":"Data Management and Data Science",
+    "similarity":0.0978007856
+  },
+  {
+    "grant_id":"field-3002",
+    "neighbor_grant_id":"field-4407",
+    "neighbor_for4_name":"Policy and Administration",
+    "similarity":0.0258749671
+  },
+  {
+    "grant_id":"field-3002",
+    "neighbor_grant_id":"field-3211",
+    "neighbor_for4_name":"Oncology and Carcinogenesis",
+    "similarity":0.0254228113
+  },
+  {
+    "grant_id":"field-3003",
+    "neighbor_grant_id":"field-3008",
+    "neighbor_for4_name":"Horticultural Production",
+    "similarity":0.2756952503
+  },
+  {
+    "grant_id":"field-3003",
+    "neighbor_grant_id":"field-3004",
+    "neighbor_for4_name":"Crop and Pasture Production",
+    "similarity":0.1885085807
+  },
+  {
+    "grant_id":"field-3003",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3003",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3003",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3004",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.1885085807
+  },
+  {
+    "grant_id":"field-3004",
+    "neighbor_grant_id":"field-3008",
+    "neighbor_for4_name":"Horticultural Production",
+    "similarity":0.1885085807
+  },
+  {
+    "grant_id":"field-3004",
+    "neighbor_grant_id":"field-4407",
+    "neighbor_for4_name":"Policy and Administration",
+    "similarity":0.0298044164
+  },
+  {
+    "grant_id":"field-3004",
+    "neighbor_grant_id":"field-3212",
+    "neighbor_for4_name":"Ophthalmology and Optometry",
+    "similarity":0.029283595
+  },
+  {
+    "grant_id":"field-3004",
+    "neighbor_grant_id":"field-3210",
+    "neighbor_for4_name":"Nutrition and Dietetics",
+    "similarity":0.029283595
+  },
+  {
+    "grant_id":"field-3005",
+    "neighbor_grant_id":"field-3202",
+    "neighbor_for4_name":"Clinical Sciences",
+    "similarity":0.1964701435
+  },
+  {
+    "grant_id":"field-3005",
+    "neighbor_grant_id":"field-3007",
+    "neighbor_for4_name":"Forestry Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-3005",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-3005",
+    "neighbor_grant_id":"field-3009",
+    "neighbor_for4_name":"Veterinary Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-3005",
+    "neighbor_grant_id":"field-3701",
+    "neighbor_for4_name":"Atmospheric Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-3006",
+    "neighbor_grant_id":"field-3202",
+    "neighbor_for4_name":"Clinical Sciences",
+    "similarity":0.1964701435
+  },
+  {
+    "grant_id":"field-3006",
+    "neighbor_grant_id":"field-3007",
+    "neighbor_for4_name":"Forestry Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-3006",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-3006",
+    "neighbor_grant_id":"field-3009",
+    "neighbor_for4_name":"Veterinary Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-3006",
+    "neighbor_grant_id":"field-3701",
+    "neighbor_for4_name":"Atmospheric Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-3007",
+    "neighbor_grant_id":"field-3202",
+    "neighbor_for4_name":"Clinical Sciences",
+    "similarity":0.1964701435
+  },
+  {
+    "grant_id":"field-3007",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-3007",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-3007",
+    "neighbor_grant_id":"field-3009",
+    "neighbor_for4_name":"Veterinary Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-3007",
+    "neighbor_grant_id":"field-3701",
+    "neighbor_for4_name":"Atmospheric Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-3008",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.2756952503
+  },
+  {
+    "grant_id":"field-3008",
+    "neighbor_grant_id":"field-3004",
+    "neighbor_for4_name":"Crop and Pasture Production",
+    "similarity":0.1885085807
+  },
+  {
+    "grant_id":"field-3008",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3008",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3008",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3009",
+    "neighbor_grant_id":"field-3202",
+    "neighbor_for4_name":"Clinical Sciences",
+    "similarity":0.1964701435
+  },
+  {
+    "grant_id":"field-3009",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-3009",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-3009",
+    "neighbor_grant_id":"field-3007",
+    "neighbor_for4_name":"Forestry Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-3009",
+    "neighbor_grant_id":"field-3701",
+    "neighbor_for4_name":"Atmospheric Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-3101",
+    "neighbor_grant_id":"field-3205",
+    "neighbor_for4_name":"Medical Biochemistry and Metabolomics",
+    "similarity":0.3364394584
+  },
+  {
+    "grant_id":"field-3101",
+    "neighbor_grant_id":"field-3108",
+    "neighbor_for4_name":"Plant Biology",
+    "similarity":0.1788933976
+  },
+  {
+    "grant_id":"field-3101",
+    "neighbor_grant_id":"field-3104",
+    "neighbor_for4_name":"Evolutionary Biology",
+    "similarity":0.1788933976
+  },
+  {
+    "grant_id":"field-3101",
+    "neighbor_grant_id":"field-3102",
+    "neighbor_for4_name":"Bioinformatics and Computational Biology",
+    "similarity":0.1553900519
+  },
+  {
+    "grant_id":"field-3101",
+    "neighbor_grant_id":"field-4407",
+    "neighbor_for4_name":"Policy and Administration",
+    "similarity":0.0307485466
+  },
+  {
+    "grant_id":"field-3102",
+    "neighbor_grant_id":"field-3407",
+    "neighbor_for4_name":"Theoretical and Computational Chemistry",
+    "similarity":0.2965952754
+  },
+  {
+    "grant_id":"field-3102",
+    "neighbor_grant_id":"field-5204",
+    "neighbor_for4_name":"Cognitive and Computational Psychology",
+    "similarity":0.294241432
+  },
+  {
+    "grant_id":"field-3102",
+    "neighbor_grant_id":"field-4903",
+    "neighbor_for4_name":"Numerical and Computational Mathematics",
+    "similarity":0.2907553377
+  },
+  {
+    "grant_id":"field-3102",
+    "neighbor_grant_id":"field-3108",
+    "neighbor_for4_name":"Plant Biology",
+    "similarity":0.1844650283
+  },
+  {
+    "grant_id":"field-3102",
+    "neighbor_grant_id":"field-3104",
+    "neighbor_for4_name":"Evolutionary Biology",
+    "similarity":0.1844650283
+  },
+  {
+    "grant_id":"field-3103",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3103",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3103",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3103",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3103",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3104",
+    "neighbor_grant_id":"field-3108",
+    "neighbor_for4_name":"Plant Biology",
+    "similarity":0.2568734533
+  },
+  {
+    "grant_id":"field-3104",
+    "neighbor_grant_id":"field-3102",
+    "neighbor_for4_name":"Bioinformatics and Computational Biology",
+    "similarity":0.1844650283
+  },
+  {
+    "grant_id":"field-3104",
+    "neighbor_grant_id":"field-3101",
+    "neighbor_for4_name":"Biochemistry and Cell Biology",
+    "similarity":0.1788933976
+  },
+  {
+    "grant_id":"field-3104",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3104",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3105",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3105",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3105",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3105",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3105",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3106",
+    "neighbor_grant_id":"field-3206",
+    "neighbor_for4_name":"Medical Biotechnology",
+    "similarity":0.283867508
+  },
+  {
+    "grant_id":"field-3106",
+    "neighbor_grant_id":"field-4103",
+    "neighbor_for4_name":"Environmental Biotechnology",
+    "similarity":0.283867508
+  },
+  {
+    "grant_id":"field-3106",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.2640131629
+  },
+  {
+    "grant_id":"field-3106",
+    "neighbor_grant_id":"field-3505",
+    "neighbor_for4_name":"Human Resources and Industrial Relations",
+    "similarity":0.195606084
+  },
+  {
+    "grant_id":"field-3106",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3107",
+    "neighbor_grant_id":"field-3207",
+    "neighbor_for4_name":"Medical Microbiology",
+    "similarity":0.5860978923
+  },
+  {
+    "grant_id":"field-3107",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3107",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3107",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3107",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3108",
+    "neighbor_grant_id":"field-3104",
+    "neighbor_for4_name":"Evolutionary Biology",
+    "similarity":0.2568734533
+  },
+  {
+    "grant_id":"field-3108",
+    "neighbor_grant_id":"field-3102",
+    "neighbor_for4_name":"Bioinformatics and Computational Biology",
+    "similarity":0.1844650283
+  },
+  {
+    "grant_id":"field-3108",
+    "neighbor_grant_id":"field-3101",
+    "neighbor_for4_name":"Biochemistry and Cell Biology",
+    "similarity":0.1788933976
+  },
+  {
+    "grant_id":"field-3108",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3108",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3109",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3109",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3109",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3109",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3109",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3201",
+    "neighbor_grant_id":"field-3215",
+    "neighbor_for4_name":"Reproductive Medicine",
+    "similarity":0.2068458502
+  },
+  {
+    "grant_id":"field-3201",
+    "neighbor_grant_id":"field-4407",
+    "neighbor_for4_name":"Policy and Administration",
+    "similarity":0.0295672337
+  },
+  {
+    "grant_id":"field-3201",
+    "neighbor_grant_id":"field-3212",
+    "neighbor_for4_name":"Ophthalmology and Optometry",
+    "similarity":0.029050557
+  },
+  {
+    "grant_id":"field-3201",
+    "neighbor_grant_id":"field-3211",
+    "neighbor_for4_name":"Oncology and Carcinogenesis",
+    "similarity":0.029050557
+  },
+  {
+    "grant_id":"field-3201",
+    "neighbor_grant_id":"field-4105",
+    "neighbor_for4_name":"Pollution and Contamination",
+    "similarity":0.029050557
+  },
+  {
+    "grant_id":"field-3202",
+    "neighbor_grant_id":"field-5203",
+    "neighbor_for4_name":"Clinical and Health Psychology",
+    "similarity":0.243158144
+  },
+  {
+    "grant_id":"field-3202",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.1964701435
+  },
+  {
+    "grant_id":"field-3202",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.1964701435
+  },
+  {
+    "grant_id":"field-3202",
+    "neighbor_grant_id":"field-3009",
+    "neighbor_for4_name":"Veterinary Sciences",
+    "similarity":0.1964701435
+  },
+  {
+    "grant_id":"field-3202",
+    "neighbor_grant_id":"field-3701",
+    "neighbor_for4_name":"Atmospheric Sciences",
+    "similarity":0.1964701435
+  },
+  {
+    "grant_id":"field-3203",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3203",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3203",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3203",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3203",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3204",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3204",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3204",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3204",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3204",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3205",
+    "neighbor_grant_id":"field-3101",
+    "neighbor_for4_name":"Biochemistry and Cell Biology",
+    "similarity":0.3364394584
+  },
+  {
+    "grant_id":"field-3205",
+    "neighbor_grant_id":"field-3206",
+    "neighbor_for4_name":"Medical Biotechnology",
+    "similarity":0.1780224771
+  },
+  {
+    "grant_id":"field-3205",
+    "neighbor_grant_id":"field-3207",
+    "neighbor_for4_name":"Medical Microbiology",
+    "similarity":0.1720279237
+  },
+  {
+    "grant_id":"field-3205",
+    "neighbor_grant_id":"field-3208",
+    "neighbor_for4_name":"Medical Physiology",
+    "similarity":0.1672779938
+  },
+  {
+    "grant_id":"field-3205",
+    "neighbor_grant_id":"field-5105",
+    "neighbor_for4_name":"Medical and Biological Physics",
+    "similarity":0.1467697977
+  },
+  {
+    "grant_id":"field-3206",
+    "neighbor_grant_id":"field-4103",
+    "neighbor_for4_name":"Environmental Biotechnology",
+    "similarity":0.2969610121
+  },
+  {
+    "grant_id":"field-3206",
+    "neighbor_grant_id":"field-3106",
+    "neighbor_for4_name":"Industrial Biotechnology",
+    "similarity":0.283867508
+  },
+  {
+    "grant_id":"field-3206",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.2761908773
+  },
+  {
+    "grant_id":"field-3206",
+    "neighbor_grant_id":"field-3207",
+    "neighbor_for4_name":"Medical Microbiology",
+    "similarity":0.2642804897
+  },
+  {
+    "grant_id":"field-3206",
+    "neighbor_grant_id":"field-3208",
+    "neighbor_for4_name":"Medical Physiology",
+    "similarity":0.2569833384
+  },
+  {
+    "grant_id":"field-3207",
+    "neighbor_grant_id":"field-3107",
+    "neighbor_for4_name":"Microbiology",
+    "similarity":0.5860978923
+  },
+  {
+    "grant_id":"field-3207",
+    "neighbor_grant_id":"field-3206",
+    "neighbor_for4_name":"Medical Biotechnology",
+    "similarity":0.2642804897
+  },
+  {
+    "grant_id":"field-3207",
+    "neighbor_grant_id":"field-3208",
+    "neighbor_for4_name":"Medical Physiology",
+    "similarity":0.2483299348
+  },
+  {
+    "grant_id":"field-3207",
+    "neighbor_grant_id":"field-5105",
+    "neighbor_for4_name":"Medical and Biological Physics",
+    "similarity":0.1774935164
+  },
+  {
+    "grant_id":"field-3207",
+    "neighbor_grant_id":"field-3205",
+    "neighbor_for4_name":"Medical Biochemistry and Metabolomics",
+    "similarity":0.1720279237
+  },
+  {
+    "grant_id":"field-3208",
+    "neighbor_grant_id":"field-3206",
+    "neighbor_for4_name":"Medical Biotechnology",
+    "similarity":0.2569833384
+  },
+  {
+    "grant_id":"field-3208",
+    "neighbor_grant_id":"field-3207",
+    "neighbor_for4_name":"Medical Microbiology",
+    "similarity":0.2483299348
+  },
+  {
+    "grant_id":"field-3208",
+    "neighbor_grant_id":"field-5105",
+    "neighbor_for4_name":"Medical and Biological Physics",
+    "similarity":0.1725926739
+  },
+  {
+    "grant_id":"field-3208",
+    "neighbor_grant_id":"field-3205",
+    "neighbor_for4_name":"Medical Biochemistry and Metabolomics",
+    "similarity":0.1672779938
+  },
+  {
+    "grant_id":"field-3208",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3209",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3209",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3209",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3209",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3209",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3210",
+    "neighbor_grant_id":"field-4407",
+    "neighbor_for4_name":"Policy and Administration",
+    "similarity":0.0355776042
+  },
+  {
+    "grant_id":"field-3210",
+    "neighbor_grant_id":"field-3212",
+    "neighbor_for4_name":"Ophthalmology and Optometry",
+    "similarity":0.0349558984
+  },
+  {
+    "grant_id":"field-3210",
+    "neighbor_grant_id":"field-3211",
+    "neighbor_for4_name":"Oncology and Carcinogenesis",
+    "similarity":0.0349558984
+  },
+  {
+    "grant_id":"field-3210",
+    "neighbor_grant_id":"field-4604",
+    "neighbor_for4_name":"Cybersecurity and Privacy",
+    "similarity":0.0349558984
+  },
+  {
+    "grant_id":"field-3210",
+    "neighbor_grant_id":"field-4105",
+    "neighbor_for4_name":"Pollution and Contamination",
+    "similarity":0.0349558984
+  },
+  {
+    "grant_id":"field-3211",
+    "neighbor_grant_id":"field-4407",
+    "neighbor_for4_name":"Policy and Administration",
+    "similarity":0.0355776042
+  },
+  {
+    "grant_id":"field-3211",
+    "neighbor_grant_id":"field-3212",
+    "neighbor_for4_name":"Ophthalmology and Optometry",
+    "similarity":0.0349558984
+  },
+  {
+    "grant_id":"field-3211",
+    "neighbor_grant_id":"field-3210",
+    "neighbor_for4_name":"Nutrition and Dietetics",
+    "similarity":0.0349558984
+  },
+  {
+    "grant_id":"field-3211",
+    "neighbor_grant_id":"field-4604",
+    "neighbor_for4_name":"Cybersecurity and Privacy",
+    "similarity":0.0349558984
+  },
+  {
+    "grant_id":"field-3211",
+    "neighbor_grant_id":"field-4105",
+    "neighbor_for4_name":"Pollution and Contamination",
+    "similarity":0.0349558984
+  },
+  {
+    "grant_id":"field-3212",
+    "neighbor_grant_id":"field-4407",
+    "neighbor_for4_name":"Policy and Administration",
+    "similarity":0.0355776042
+  },
+  {
+    "grant_id":"field-3212",
+    "neighbor_grant_id":"field-3211",
+    "neighbor_for4_name":"Oncology and Carcinogenesis",
+    "similarity":0.0349558984
+  },
+  {
+    "grant_id":"field-3212",
+    "neighbor_grant_id":"field-3210",
+    "neighbor_for4_name":"Nutrition and Dietetics",
+    "similarity":0.0349558984
+  },
+  {
+    "grant_id":"field-3212",
+    "neighbor_grant_id":"field-4604",
+    "neighbor_for4_name":"Cybersecurity and Privacy",
+    "similarity":0.0349558984
+  },
+  {
+    "grant_id":"field-3212",
+    "neighbor_grant_id":"field-4105",
+    "neighbor_for4_name":"Pollution and Contamination",
+    "similarity":0.0349558984
+  },
+  {
+    "grant_id":"field-3213",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3213",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3213",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3213",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3213",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3214",
+    "neighbor_grant_id":"field-3202",
+    "neighbor_for4_name":"Clinical Sciences",
+    "similarity":0.1303267414
+  },
+  {
+    "grant_id":"field-3214",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.1264835987
+  },
+  {
+    "grant_id":"field-3214",
+    "neighbor_grant_id":"field-3007",
+    "neighbor_for4_name":"Forestry Sciences",
+    "similarity":0.1264835987
+  },
+  {
+    "grant_id":"field-3214",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.1264835987
+  },
+  {
+    "grant_id":"field-3214",
+    "neighbor_grant_id":"field-3009",
+    "neighbor_for4_name":"Veterinary Sciences",
+    "similarity":0.1264835987
+  },
+  {
+    "grant_id":"field-3215",
+    "neighbor_grant_id":"field-3201",
+    "neighbor_for4_name":"Cardiovascular Medicine and Haematology",
+    "similarity":0.2068458502
+  },
+  {
+    "grant_id":"field-3215",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3215",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3215",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3215",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3301",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3301",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3301",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3301",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3301",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3302",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3302",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3302",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3302",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3302",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3303",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3303",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3303",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3303",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3303",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3304",
+    "neighbor_grant_id":"field-4407",
+    "neighbor_for4_name":"Policy and Administration",
+    "similarity":0.0292197246
+  },
+  {
+    "grant_id":"field-3304",
+    "neighbor_grant_id":"field-3211",
+    "neighbor_for4_name":"Oncology and Carcinogenesis",
+    "similarity":0.0287091204
+  },
+  {
+    "grant_id":"field-3304",
+    "neighbor_grant_id":"field-3212",
+    "neighbor_for4_name":"Ophthalmology and Optometry",
+    "similarity":0.0287091204
+  },
+  {
+    "grant_id":"field-3304",
+    "neighbor_grant_id":"field-4604",
+    "neighbor_for4_name":"Cybersecurity and Privacy",
+    "similarity":0.0287091204
+  },
+  {
+    "grant_id":"field-3304",
+    "neighbor_grant_id":"field-4105",
+    "neighbor_for4_name":"Pollution and Contamination",
+    "similarity":0.0287091204
+  },
+  {
+    "grant_id":"field-3401",
+    "neighbor_grant_id":"field-3406",
+    "neighbor_for4_name":"Physical Chemistry",
+    "similarity":0.2236096379
+  },
+  {
+    "grant_id":"field-3401",
+    "neighbor_grant_id":"field-3402",
+    "neighbor_for4_name":"Inorganic Chemistry",
+    "similarity":0.2172352829
+  },
+  {
+    "grant_id":"field-3401",
+    "neighbor_grant_id":"field-3405",
+    "neighbor_for4_name":"Organic Chemistry",
+    "similarity":0.2172352829
+  },
+  {
+    "grant_id":"field-3401",
+    "neighbor_grant_id":"field-3407",
+    "neighbor_for4_name":"Theoretical and Computational Chemistry",
+    "similarity":0.1540234579
+  },
+  {
+    "grant_id":"field-3401",
+    "neighbor_grant_id":"field-3403",
+    "neighbor_for4_name":"Macromolecular and Materials Chemistry",
+    "similarity":0.1473110623
+  },
+  {
+    "grant_id":"field-3402",
+    "neighbor_grant_id":"field-3406",
+    "neighbor_for4_name":"Physical Chemistry",
+    "similarity":0.2236096379
+  },
+  {
+    "grant_id":"field-3402",
+    "neighbor_grant_id":"field-3401",
+    "neighbor_for4_name":"Analytical Chemistry",
+    "similarity":0.2172352829
+  },
+  {
+    "grant_id":"field-3402",
+    "neighbor_grant_id":"field-3405",
+    "neighbor_for4_name":"Organic Chemistry",
+    "similarity":0.2172352829
+  },
+  {
+    "grant_id":"field-3402",
+    "neighbor_grant_id":"field-3407",
+    "neighbor_for4_name":"Theoretical and Computational Chemistry",
+    "similarity":0.1540234579
+  },
+  {
+    "grant_id":"field-3402",
+    "neighbor_grant_id":"field-3403",
+    "neighbor_for4_name":"Macromolecular and Materials Chemistry",
+    "similarity":0.1473110623
+  },
+  {
+    "grant_id":"field-3403",
+    "neighbor_grant_id":"field-4016",
+    "neighbor_for4_name":"Materials Engineering",
+    "similarity":0.2449645239
+  },
+  {
+    "grant_id":"field-3403",
+    "neighbor_grant_id":"field-3406",
+    "neighbor_for4_name":"Physical Chemistry",
+    "similarity":0.1516336244
+  },
+  {
+    "grant_id":"field-3403",
+    "neighbor_grant_id":"field-3401",
+    "neighbor_for4_name":"Analytical Chemistry",
+    "similarity":0.1473110623
+  },
+  {
+    "grant_id":"field-3403",
+    "neighbor_grant_id":"field-3405",
+    "neighbor_for4_name":"Organic Chemistry",
+    "similarity":0.1473110623
+  },
+  {
+    "grant_id":"field-3403",
+    "neighbor_grant_id":"field-3402",
+    "neighbor_for4_name":"Inorganic Chemistry",
+    "similarity":0.1473110623
+  },
+  {
+    "grant_id":"field-3404",
+    "neighbor_grant_id":"field-3406",
+    "neighbor_for4_name":"Physical Chemistry",
+    "similarity":0.1497114318
+  },
+  {
+    "grant_id":"field-3404",
+    "neighbor_grant_id":"field-3401",
+    "neighbor_for4_name":"Analytical Chemistry",
+    "similarity":0.1454436649
+  },
+  {
+    "grant_id":"field-3404",
+    "neighbor_grant_id":"field-3402",
+    "neighbor_for4_name":"Inorganic Chemistry",
+    "similarity":0.1454436649
+  },
+  {
+    "grant_id":"field-3404",
+    "neighbor_grant_id":"field-3405",
+    "neighbor_for4_name":"Organic Chemistry",
+    "similarity":0.1454436649
+  },
+  {
+    "grant_id":"field-3404",
+    "neighbor_grant_id":"field-3407",
+    "neighbor_for4_name":"Theoretical and Computational Chemistry",
+    "similarity":0.1300407846
+  },
+  {
+    "grant_id":"field-3405",
+    "neighbor_grant_id":"field-3406",
+    "neighbor_for4_name":"Physical Chemistry",
+    "similarity":0.2236096379
+  },
+  {
+    "grant_id":"field-3405",
+    "neighbor_grant_id":"field-3401",
+    "neighbor_for4_name":"Analytical Chemistry",
+    "similarity":0.2172352829
+  },
+  {
+    "grant_id":"field-3405",
+    "neighbor_grant_id":"field-3402",
+    "neighbor_for4_name":"Inorganic Chemistry",
+    "similarity":0.2172352829
+  },
+  {
+    "grant_id":"field-3405",
+    "neighbor_grant_id":"field-3407",
+    "neighbor_for4_name":"Theoretical and Computational Chemistry",
+    "similarity":0.1540234579
+  },
+  {
+    "grant_id":"field-3405",
+    "neighbor_grant_id":"field-3403",
+    "neighbor_for4_name":"Macromolecular and Materials Chemistry",
+    "similarity":0.1473110623
+  },
+  {
+    "grant_id":"field-3406",
+    "neighbor_grant_id":"field-3401",
+    "neighbor_for4_name":"Analytical Chemistry",
+    "similarity":0.2236096379
+  },
+  {
+    "grant_id":"field-3406",
+    "neighbor_grant_id":"field-3402",
+    "neighbor_for4_name":"Inorganic Chemistry",
+    "similarity":0.2236096379
+  },
+  {
+    "grant_id":"field-3406",
+    "neighbor_grant_id":"field-3405",
+    "neighbor_for4_name":"Organic Chemistry",
+    "similarity":0.2236096379
+  },
+  {
+    "grant_id":"field-3406",
+    "neighbor_grant_id":"field-3709",
+    "neighbor_for4_name":"Physical Geography and Environmental Geoscience",
+    "similarity":0.2014521028
+  },
+  {
+    "grant_id":"field-3406",
+    "neighbor_grant_id":"field-3407",
+    "neighbor_for4_name":"Theoretical and Computational Chemistry",
+    "similarity":0.1585429825
+  },
+  {
+    "grant_id":"field-3407",
+    "neighbor_grant_id":"field-5204",
+    "neighbor_for4_name":"Cognitive and Computational Psychology",
+    "similarity":0.298160251
+  },
+  {
+    "grant_id":"field-3407",
+    "neighbor_grant_id":"field-3102",
+    "neighbor_for4_name":"Bioinformatics and Computational Biology",
+    "similarity":0.2965952754
+  },
+  {
+    "grant_id":"field-3407",
+    "neighbor_grant_id":"field-4903",
+    "neighbor_for4_name":"Numerical and Computational Mathematics",
+    "similarity":0.2946277276
+  },
+  {
+    "grant_id":"field-3407",
+    "neighbor_grant_id":"field-3406",
+    "neighbor_for4_name":"Physical Chemistry",
+    "similarity":0.1585429825
+  },
+  {
+    "grant_id":"field-3407",
+    "neighbor_grant_id":"field-3405",
+    "neighbor_for4_name":"Organic Chemistry",
+    "similarity":0.1540234579
+  },
+  {
+    "grant_id":"field-3502",
+    "neighbor_grant_id":"field-4407",
+    "neighbor_for4_name":"Policy and Administration",
+    "similarity":0.0292197246
+  },
+  {
+    "grant_id":"field-3502",
+    "neighbor_grant_id":"field-3211",
+    "neighbor_for4_name":"Oncology and Carcinogenesis",
+    "similarity":0.0287091204
+  },
+  {
+    "grant_id":"field-3502",
+    "neighbor_grant_id":"field-3212",
+    "neighbor_for4_name":"Ophthalmology and Optometry",
+    "similarity":0.0287091204
+  },
+  {
+    "grant_id":"field-3502",
+    "neighbor_grant_id":"field-4604",
+    "neighbor_for4_name":"Cybersecurity and Privacy",
+    "similarity":0.0287091204
+  },
+  {
+    "grant_id":"field-3502",
+    "neighbor_grant_id":"field-4105",
+    "neighbor_for4_name":"Pollution and Contamination",
+    "similarity":0.0287091204
+  },
+  {
+    "grant_id":"field-3503",
+    "neighbor_grant_id":"field-4804",
+    "neighbor_for4_name":"Law In Context",
+    "similarity":0.4981379634
+  },
+  {
+    "grant_id":"field-3503",
+    "neighbor_grant_id":"field-3903",
+    "neighbor_for4_name":"Education Systems",
+    "similarity":0.1591224014
+  },
+  {
+    "grant_id":"field-3503",
+    "neighbor_grant_id":"field-4609",
+    "neighbor_for4_name":"Information Systems",
+    "similarity":0.1536652917
+  },
+  {
+    "grant_id":"field-3503",
+    "neighbor_grant_id":"field-4805",
+    "neighbor_for4_name":"Legal Systems",
+    "similarity":0.1493485837
+  },
+  {
+    "grant_id":"field-3503",
+    "neighbor_grant_id":"field-3904",
+    "neighbor_for4_name":"Specialist Studies In Education",
+    "similarity":0.1272249934
+  },
+  {
+    "grant_id":"field-3504",
+    "neighbor_grant_id":"field-4801",
+    "neighbor_for4_name":"Commercial Law",
+    "similarity":0.3322814019
+  },
+  {
+    "grant_id":"field-3504",
+    "neighbor_grant_id":"field-4203",
+    "neighbor_for4_name":"Health Services and Systems",
+    "similarity":0.2293158181
+  },
+  {
+    "grant_id":"field-3504",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3504",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3504",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3505",
+    "neighbor_grant_id":"field-3106",
+    "neighbor_for4_name":"Industrial Biotechnology",
+    "similarity":0.195606084
+  },
+  {
+    "grant_id":"field-3505",
+    "neighbor_grant_id":"field-4406",
+    "neighbor_for4_name":"Human Geography",
+    "similarity":0.171538145
+  },
+  {
+    "grant_id":"field-3505",
+    "neighbor_grant_id":"field-4802",
+    "neighbor_for4_name":"Environmental and Resources Law",
+    "similarity":0.145783972
+  },
+  {
+    "grant_id":"field-3505",
+    "neighbor_grant_id":"field-4608",
+    "neighbor_for4_name":"Human-Centred Computing",
+    "similarity":0.1305050652
+  },
+  {
+    "grant_id":"field-3505",
+    "neighbor_grant_id":"field-4019",
+    "neighbor_for4_name":"Resources Engineering and Extractive Metallurgy",
+    "similarity":0.122696278
+  },
+  {
+    "grant_id":"field-3506",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3506",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3506",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3506",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3506",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3507",
+    "neighbor_grant_id":"field-4605",
+    "neighbor_for4_name":"Data Management and Data Science",
+    "similarity":0.1998014103
+  },
+  {
+    "grant_id":"field-3507",
+    "neighbor_grant_id":"field-4104",
+    "neighbor_for4_name":"Environmental Management",
+    "similarity":0.1633637388
+  },
+  {
+    "grant_id":"field-3507",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.1077035309
+  },
+  {
+    "grant_id":"field-3507",
+    "neighbor_grant_id":"field-4407",
+    "neighbor_for4_name":"Policy and Administration",
+    "similarity":0.0261153493
+  },
+  {
+    "grant_id":"field-3507",
+    "neighbor_grant_id":"field-3211",
+    "neighbor_for4_name":"Oncology and Carcinogenesis",
+    "similarity":0.025658993
+  },
+  {
+    "grant_id":"field-3508",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3508",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3508",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3508",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3508",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3509",
+    "neighbor_grant_id":"field-4407",
+    "neighbor_for4_name":"Policy and Administration",
+    "similarity":0.0253799375
+  },
+  {
+    "grant_id":"field-3509",
+    "neighbor_grant_id":"field-3211",
+    "neighbor_for4_name":"Oncology and Carcinogenesis",
+    "similarity":0.0249364322
+  },
+  {
+    "grant_id":"field-3509",
+    "neighbor_grant_id":"field-3212",
+    "neighbor_for4_name":"Ophthalmology and Optometry",
+    "similarity":0.0249364322
+  },
+  {
+    "grant_id":"field-3509",
+    "neighbor_grant_id":"field-4604",
+    "neighbor_for4_name":"Cybersecurity and Privacy",
+    "similarity":0.0249364322
+  },
+  {
+    "grant_id":"field-3509",
+    "neighbor_grant_id":"field-4105",
+    "neighbor_for4_name":"Pollution and Contamination",
+    "similarity":0.0249364322
+  },
+  {
+    "grant_id":"field-3601",
+    "neighbor_grant_id":"field-3803",
+    "neighbor_for4_name":"Economic Theory",
+    "similarity":0.1644300089
+  },
+  {
+    "grant_id":"field-3601",
+    "neighbor_grant_id":"field-4613",
+    "neighbor_for4_name":"Theory Of Computation",
+    "similarity":0.1291765317
+  },
+  {
+    "grant_id":"field-3601",
+    "neighbor_grant_id":"field-5002",
+    "neighbor_for4_name":"History and Philosophy Of Specific Fields",
+    "similarity":0.1167509923
+  },
+  {
+    "grant_id":"field-3601",
+    "neighbor_grant_id":"field-4407",
+    "neighbor_for4_name":"Policy and Administration",
+    "similarity":0.0259974397
+  },
+  {
+    "grant_id":"field-3601",
+    "neighbor_grant_id":"field-4105",
+    "neighbor_for4_name":"Pollution and Contamination",
+    "similarity":0.0255431438
+  },
+  {
+    "grant_id":"field-3602",
+    "neighbor_grant_id":"field-4407",
+    "neighbor_for4_name":"Policy and Administration",
+    "similarity":0.0292197246
+  },
+  {
+    "grant_id":"field-3602",
+    "neighbor_grant_id":"field-3211",
+    "neighbor_for4_name":"Oncology and Carcinogenesis",
+    "similarity":0.0287091204
+  },
+  {
+    "grant_id":"field-3602",
+    "neighbor_grant_id":"field-3212",
+    "neighbor_for4_name":"Ophthalmology and Optometry",
+    "similarity":0.0287091204
+  },
+  {
+    "grant_id":"field-3602",
+    "neighbor_grant_id":"field-4604",
+    "neighbor_for4_name":"Cybersecurity and Privacy",
+    "similarity":0.0287091204
+  },
+  {
+    "grant_id":"field-3602",
+    "neighbor_grant_id":"field-4105",
+    "neighbor_for4_name":"Pollution and Contamination",
+    "similarity":0.0287091204
+  },
+  {
+    "grant_id":"field-3603",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3603",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3603",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3603",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3603",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3604",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3604",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3604",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3604",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3604",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3605",
+    "neighbor_grant_id":"field-4009",
+    "neighbor_for4_name":"Electronics, Sensors and Digital Hardware",
+    "similarity":0.2772384206
+  },
+  {
+    "grant_id":"field-3605",
+    "neighbor_grant_id":"field-4701",
+    "neighbor_for4_name":"Communication and Media Studies",
+    "similarity":0.179414691
+  },
+  {
+    "grant_id":"field-3605",
+    "neighbor_grant_id":"field-4407",
+    "neighbor_for4_name":"Policy and Administration",
+    "similarity":0.0303011484
+  },
+  {
+    "grant_id":"field-3605",
+    "neighbor_grant_id":"field-3901",
+    "neighbor_for4_name":"Curriculum and Pedagogy",
+    "similarity":0.0297716468
+  },
+  {
+    "grant_id":"field-3605",
+    "neighbor_grant_id":"field-4105",
+    "neighbor_for4_name":"Pollution and Contamination",
+    "similarity":0.0297716468
+  },
+  {
+    "grant_id":"field-3701",
+    "neighbor_grant_id":"field-3202",
+    "neighbor_for4_name":"Clinical Sciences",
+    "similarity":0.1964701435
+  },
+  {
+    "grant_id":"field-3701",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-3701",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-3701",
+    "neighbor_grant_id":"field-3009",
+    "neighbor_for4_name":"Veterinary Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-3701",
+    "neighbor_grant_id":"field-3007",
+    "neighbor_for4_name":"Forestry Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-3702",
+    "neighbor_grant_id":"field-4101",
+    "neighbor_for4_name":"Climate Change Impacts and Adaptation",
+    "similarity":0.4510533921
+  },
+  {
+    "grant_id":"field-3702",
+    "neighbor_grant_id":"field-4408",
+    "neighbor_for4_name":"Political Science",
+    "similarity":0.1911915828
+  },
+  {
+    "grant_id":"field-3702",
+    "neighbor_grant_id":"field-4207",
+    "neighbor_for4_name":"Sports Science and Exercise",
+    "similarity":0.1291145237
+  },
+  {
+    "grant_id":"field-3702",
+    "neighbor_grant_id":"field-4201",
+    "neighbor_for4_name":"Allied Health and Rehabilitation Science",
+    "similarity":0.1135673333
+  },
+  {
+    "grant_id":"field-3702",
+    "neighbor_grant_id":"field-4605",
+    "neighbor_for4_name":"Data Management and Data Science",
+    "similarity":0.1016420531
+  },
+  {
+    "grant_id":"field-3703",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3703",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3703",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3703",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3703",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3704",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3704",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3704",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3704",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3704",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3705",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3705",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3705",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3705",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3705",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3706",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3706",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3706",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3706",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3706",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3707",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3707",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3707",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3707",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3707",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3708",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3708",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3708",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3708",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3708",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3709",
+    "neighbor_grant_id":"field-3406",
+    "neighbor_for4_name":"Physical Chemistry",
+    "similarity":0.2014521028
+  },
+  {
+    "grant_id":"field-3709",
+    "neighbor_grant_id":"field-4406",
+    "neighbor_for4_name":"Human Geography",
+    "similarity":0.1933540575
+  },
+  {
+    "grant_id":"field-3709",
+    "neighbor_grant_id":"field-4011",
+    "neighbor_for4_name":"Environmental Engineering",
+    "similarity":0.1652833721
+  },
+  {
+    "grant_id":"field-3709",
+    "neighbor_grant_id":"field-4103",
+    "neighbor_for4_name":"Environmental Biotechnology",
+    "similarity":0.1524285838
+  },
+  {
+    "grant_id":"field-3709",
+    "neighbor_grant_id":"field-4104",
+    "neighbor_for4_name":"Environmental Management",
+    "similarity":0.1524285838
+  },
+  {
+    "grant_id":"field-3801",
+    "neighbor_grant_id":"field-4601",
+    "neighbor_for4_name":"Applied Computing",
+    "similarity":0.2532081204
+  },
+  {
+    "grant_id":"field-3801",
+    "neighbor_grant_id":"field-4901",
+    "neighbor_for4_name":"Applied Mathematics",
+    "similarity":0.2532081204
+  },
+  {
+    "grant_id":"field-3801",
+    "neighbor_grant_id":"field-5001",
+    "neighbor_for4_name":"Applied Ethics",
+    "similarity":0.2414732004
+  },
+  {
+    "grant_id":"field-3801",
+    "neighbor_grant_id":"field-5201",
+    "neighbor_for4_name":"Applied and Developmental Psychology",
+    "similarity":0.1684489162
+  },
+  {
+    "grant_id":"field-3801",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3802",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3802",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3802",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3802",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3802",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3803",
+    "neighbor_grant_id":"field-4613",
+    "neighbor_for4_name":"Theory Of Computation",
+    "similarity":0.2165867197
+  },
+  {
+    "grant_id":"field-3803",
+    "neighbor_grant_id":"field-3601",
+    "neighbor_for4_name":"Art History, Theory and Criticism",
+    "similarity":0.1644300089
+  },
+  {
+    "grant_id":"field-3803",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3803",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3803",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-3901",
+    "neighbor_grant_id":"field-4407",
+    "neighbor_for4_name":"Policy and Administration",
+    "similarity":0.0355776042
+  },
+  {
+    "grant_id":"field-3901",
+    "neighbor_grant_id":"field-3212",
+    "neighbor_for4_name":"Ophthalmology and Optometry",
+    "similarity":0.0349558984
+  },
+  {
+    "grant_id":"field-3901",
+    "neighbor_grant_id":"field-3210",
+    "neighbor_for4_name":"Nutrition and Dietetics",
+    "similarity":0.0349558984
+  },
+  {
+    "grant_id":"field-3901",
+    "neighbor_grant_id":"field-4604",
+    "neighbor_for4_name":"Cybersecurity and Privacy",
+    "similarity":0.0349558984
+  },
+  {
+    "grant_id":"field-3901",
+    "neighbor_grant_id":"field-4105",
+    "neighbor_for4_name":"Pollution and Contamination",
+    "similarity":0.0349558984
+  },
+  {
+    "grant_id":"field-3902",
+    "neighbor_grant_id":"field-4410",
+    "neighbor_for4_name":"Sociology",
+    "similarity":0.3456844541
+  },
+  {
+    "grant_id":"field-3902",
+    "neighbor_grant_id":"field-5003",
+    "neighbor_for4_name":"Philosophy",
+    "similarity":0.3259186901
+  },
+  {
+    "grant_id":"field-3902",
+    "neighbor_grant_id":"field-5002",
+    "neighbor_for4_name":"History and Philosophy Of Specific Fields",
+    "similarity":0.2138880496
+  },
+  {
+    "grant_id":"field-3902",
+    "neighbor_grant_id":"field-4407",
+    "neighbor_for4_name":"Policy and Administration",
+    "similarity":0.1869826654
+  },
+  {
+    "grant_id":"field-3902",
+    "neighbor_grant_id":"field-3903",
+    "neighbor_for4_name":"Education Systems",
+    "similarity":0.1708908702
+  },
+  {
+    "grant_id":"field-3903",
+    "neighbor_grant_id":"field-4609",
+    "neighbor_for4_name":"Information Systems",
+    "similarity":0.250455582
+  },
+  {
+    "grant_id":"field-3903",
+    "neighbor_grant_id":"field-4805",
+    "neighbor_for4_name":"Legal Systems",
+    "similarity":0.2434198773
+  },
+  {
+    "grant_id":"field-3903",
+    "neighbor_grant_id":"field-4010",
+    "neighbor_for4_name":"Engineering Practice and Education",
+    "similarity":0.2010176058
+  },
+  {
+    "grant_id":"field-3903",
+    "neighbor_grant_id":"field-3904",
+    "neighbor_for4_name":"Specialist Studies In Education",
+    "similarity":0.1883110761
+  },
+  {
+    "grant_id":"field-3903",
+    "neighbor_grant_id":"field-4203",
+    "neighbor_for4_name":"Health Services and Systems",
+    "similarity":0.1728457457
+  },
+  {
+    "grant_id":"field-3904",
+    "neighbor_grant_id":"field-3903",
+    "neighbor_for4_name":"Education Systems",
+    "similarity":0.1883110761
+  },
+  {
+    "grant_id":"field-3904",
+    "neighbor_grant_id":"field-4804",
+    "neighbor_for4_name":"Law In Context",
+    "similarity":0.1553939998
+  },
+  {
+    "grant_id":"field-3904",
+    "neighbor_grant_id":"field-3503",
+    "neighbor_for4_name":"Business Systems In Context",
+    "similarity":0.1272249934
+  },
+  {
+    "grant_id":"field-3904",
+    "neighbor_grant_id":"field-4010",
+    "neighbor_for4_name":"Engineering Practice and Education",
+    "similarity":0.1250372083
+  },
+  {
+    "grant_id":"field-3904",
+    "neighbor_grant_id":"field-4404",
+    "neighbor_for4_name":"Development Studies",
+    "similarity":0.118215439
+  },
+  {
+    "grant_id":"field-4001",
+    "neighbor_grant_id":"field-4011",
+    "neighbor_for4_name":"Environmental Engineering",
+    "similarity":0.1593753652
+  },
+  {
+    "grant_id":"field-4001",
+    "neighbor_grant_id":"field-4005",
+    "neighbor_for4_name":"Civil Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4001",
+    "neighbor_grant_id":"field-4016",
+    "neighbor_for4_name":"Materials Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4001",
+    "neighbor_grant_id":"field-4612",
+    "neighbor_for4_name":"Software Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4001",
+    "neighbor_grant_id":"field-4003",
+    "neighbor_for4_name":"Biomedical Engineering",
+    "similarity":0.1465003379
+  },
+  {
+    "grant_id":"field-4002",
+    "neighbor_grant_id":"field-4011",
+    "neighbor_for4_name":"Environmental Engineering",
+    "similarity":0.1593753652
+  },
+  {
+    "grant_id":"field-4002",
+    "neighbor_grant_id":"field-4005",
+    "neighbor_for4_name":"Civil Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4002",
+    "neighbor_grant_id":"field-4016",
+    "neighbor_for4_name":"Materials Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4002",
+    "neighbor_grant_id":"field-4612",
+    "neighbor_for4_name":"Software Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4002",
+    "neighbor_grant_id":"field-4003",
+    "neighbor_for4_name":"Biomedical Engineering",
+    "similarity":0.1465003379
+  },
+  {
+    "grant_id":"field-4003",
+    "neighbor_grant_id":"field-4011",
+    "neighbor_for4_name":"Environmental Engineering",
+    "similarity":0.1593753652
+  },
+  {
+    "grant_id":"field-4003",
+    "neighbor_grant_id":"field-4005",
+    "neighbor_for4_name":"Civil Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4003",
+    "neighbor_grant_id":"field-4016",
+    "neighbor_for4_name":"Materials Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4003",
+    "neighbor_grant_id":"field-4612",
+    "neighbor_for4_name":"Software Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4003",
+    "neighbor_grant_id":"field-4002",
+    "neighbor_for4_name":"Automotive Engineering",
+    "similarity":0.1465003379
+  },
+  {
+    "grant_id":"field-4004",
+    "neighbor_grant_id":"field-4011",
+    "neighbor_for4_name":"Environmental Engineering",
+    "similarity":0.1593753652
+  },
+  {
+    "grant_id":"field-4004",
+    "neighbor_grant_id":"field-4005",
+    "neighbor_for4_name":"Civil Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4004",
+    "neighbor_grant_id":"field-4016",
+    "neighbor_for4_name":"Materials Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4004",
+    "neighbor_grant_id":"field-4612",
+    "neighbor_for4_name":"Software Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4004",
+    "neighbor_grant_id":"field-4001",
+    "neighbor_for4_name":"Aerospace Engineering",
+    "similarity":0.1465003379
+  },
+  {
+    "grant_id":"field-4005",
+    "neighbor_grant_id":"field-4806",
+    "neighbor_for4_name":"Private Law and Civil Obligations",
+    "similarity":0.2095441114
+  },
+  {
+    "grant_id":"field-4005",
+    "neighbor_grant_id":"field-4011",
+    "neighbor_for4_name":"Environmental Engineering",
+    "similarity":0.1644951035
+  },
+  {
+    "grant_id":"field-4005",
+    "neighbor_grant_id":"field-4016",
+    "neighbor_for4_name":"Materials Engineering",
+    "similarity":0.1560638047
+  },
+  {
+    "grant_id":"field-4005",
+    "neighbor_grant_id":"field-4612",
+    "neighbor_for4_name":"Software Engineering",
+    "similarity":0.1560638047
+  },
+  {
+    "grant_id":"field-4005",
+    "neighbor_grant_id":"field-4004",
+    "neighbor_for4_name":"Chemical Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4006",
+    "neighbor_grant_id":"field-4011",
+    "neighbor_for4_name":"Environmental Engineering",
+    "similarity":0.1593753652
+  },
+  {
+    "grant_id":"field-4006",
+    "neighbor_grant_id":"field-4005",
+    "neighbor_for4_name":"Civil Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4006",
+    "neighbor_grant_id":"field-4016",
+    "neighbor_for4_name":"Materials Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4006",
+    "neighbor_grant_id":"field-4612",
+    "neighbor_for4_name":"Software Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4006",
+    "neighbor_grant_id":"field-4001",
+    "neighbor_for4_name":"Aerospace Engineering",
+    "similarity":0.1465003379
+  },
+  {
+    "grant_id":"field-4007",
+    "neighbor_grant_id":"field-4011",
+    "neighbor_for4_name":"Environmental Engineering",
+    "similarity":0.0891551287
+  },
+  {
+    "grant_id":"field-4007",
+    "neighbor_grant_id":"field-4005",
+    "neighbor_for4_name":"Civil Engineering",
+    "similarity":0.0845854272
+  },
+  {
+    "grant_id":"field-4007",
+    "neighbor_grant_id":"field-4016",
+    "neighbor_for4_name":"Materials Engineering",
+    "similarity":0.0845854272
+  },
+  {
+    "grant_id":"field-4007",
+    "neighbor_grant_id":"field-4612",
+    "neighbor_for4_name":"Software Engineering",
+    "similarity":0.0845854272
+  },
+  {
+    "grant_id":"field-4007",
+    "neighbor_grant_id":"field-4006",
+    "neighbor_for4_name":"Communications Engineering",
+    "similarity":0.0819527941
+  },
+  {
+    "grant_id":"field-4008",
+    "neighbor_grant_id":"field-4011",
+    "neighbor_for4_name":"Environmental Engineering",
+    "similarity":0.1593753652
+  },
+  {
+    "grant_id":"field-4008",
+    "neighbor_grant_id":"field-4016",
+    "neighbor_for4_name":"Materials Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4008",
+    "neighbor_grant_id":"field-4005",
+    "neighbor_for4_name":"Civil Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4008",
+    "neighbor_grant_id":"field-4612",
+    "neighbor_for4_name":"Software Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4008",
+    "neighbor_grant_id":"field-4003",
+    "neighbor_for4_name":"Biomedical Engineering",
+    "similarity":0.1465003379
+  },
+  {
+    "grant_id":"field-4009",
+    "neighbor_grant_id":"field-3605",
+    "neighbor_for4_name":"Screen and Digital Media",
+    "similarity":0.2772384206
+  },
+  {
+    "grant_id":"field-4009",
+    "neighbor_grant_id":"field-4407",
+    "neighbor_for4_name":"Policy and Administration",
+    "similarity":0.0258395799
+  },
+  {
+    "grant_id":"field-4009",
+    "neighbor_grant_id":"field-3212",
+    "neighbor_for4_name":"Ophthalmology and Optometry",
+    "similarity":0.0253880425
+  },
+  {
+    "grant_id":"field-4009",
+    "neighbor_grant_id":"field-3901",
+    "neighbor_for4_name":"Curriculum and Pedagogy",
+    "similarity":0.0253880425
+  },
+  {
+    "grant_id":"field-4009",
+    "neighbor_grant_id":"field-4105",
+    "neighbor_for4_name":"Pollution and Contamination",
+    "similarity":0.0253880425
+  },
+  {
+    "grant_id":"field-4010",
+    "neighbor_grant_id":"field-3903",
+    "neighbor_for4_name":"Education Systems",
+    "similarity":0.2010176058
+  },
+  {
+    "grant_id":"field-4010",
+    "neighbor_grant_id":"field-3902",
+    "neighbor_for4_name":"Education Policy, Sociology and Philosophy",
+    "similarity":0.1372512617
+  },
+  {
+    "grant_id":"field-4010",
+    "neighbor_grant_id":"field-3904",
+    "neighbor_for4_name":"Specialist Studies In Education",
+    "similarity":0.1250372083
+  },
+  {
+    "grant_id":"field-4010",
+    "neighbor_grant_id":"field-4011",
+    "neighbor_for4_name":"Environmental Engineering",
+    "similarity":0.1071988291
+  },
+  {
+    "grant_id":"field-4010",
+    "neighbor_grant_id":"field-4016",
+    "neighbor_for4_name":"Materials Engineering",
+    "similarity":0.1017042864
+  },
+  {
+    "grant_id":"field-4011",
+    "neighbor_grant_id":"field-4103",
+    "neighbor_for4_name":"Environmental Biotechnology",
+    "similarity":0.2965539719
+  },
+  {
+    "grant_id":"field-4011",
+    "neighbor_grant_id":"field-4104",
+    "neighbor_for4_name":"Environmental Management",
+    "similarity":0.2965539719
+  },
+  {
+    "grant_id":"field-4011",
+    "neighbor_grant_id":"field-4802",
+    "neighbor_for4_name":"Environmental and Resources Law",
+    "similarity":0.1996747293
+  },
+  {
+    "grant_id":"field-4011",
+    "neighbor_grant_id":"field-3709",
+    "neighbor_for4_name":"Physical Geography and Environmental Geoscience",
+    "similarity":0.1652833721
+  },
+  {
+    "grant_id":"field-4011",
+    "neighbor_grant_id":"field-4005",
+    "neighbor_for4_name":"Civil Engineering",
+    "similarity":0.1644951035
+  },
+  {
+    "grant_id":"field-4012",
+    "neighbor_grant_id":"field-4011",
+    "neighbor_for4_name":"Environmental Engineering",
+    "similarity":0.0891551287
+  },
+  {
+    "grant_id":"field-4012",
+    "neighbor_grant_id":"field-4016",
+    "neighbor_for4_name":"Materials Engineering",
+    "similarity":0.0845854272
+  },
+  {
+    "grant_id":"field-4012",
+    "neighbor_grant_id":"field-4005",
+    "neighbor_for4_name":"Civil Engineering",
+    "similarity":0.0845854272
+  },
+  {
+    "grant_id":"field-4012",
+    "neighbor_grant_id":"field-4612",
+    "neighbor_for4_name":"Software Engineering",
+    "similarity":0.0845854272
+  },
+  {
+    "grant_id":"field-4012",
+    "neighbor_grant_id":"field-4003",
+    "neighbor_for4_name":"Biomedical Engineering",
+    "similarity":0.0819527941
+  },
+  {
+    "grant_id":"field-4013",
+    "neighbor_grant_id":"field-4011",
+    "neighbor_for4_name":"Environmental Engineering",
+    "similarity":0.1593753652
+  },
+  {
+    "grant_id":"field-4013",
+    "neighbor_grant_id":"field-4016",
+    "neighbor_for4_name":"Materials Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4013",
+    "neighbor_grant_id":"field-4005",
+    "neighbor_for4_name":"Civil Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4013",
+    "neighbor_grant_id":"field-4612",
+    "neighbor_for4_name":"Software Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4013",
+    "neighbor_grant_id":"field-4003",
+    "neighbor_for4_name":"Biomedical Engineering",
+    "similarity":0.1465003379
+  },
+  {
+    "grant_id":"field-4014",
+    "neighbor_grant_id":"field-4011",
+    "neighbor_for4_name":"Environmental Engineering",
+    "similarity":0.1593753652
+  },
+  {
+    "grant_id":"field-4014",
+    "neighbor_grant_id":"field-4016",
+    "neighbor_for4_name":"Materials Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4014",
+    "neighbor_grant_id":"field-4005",
+    "neighbor_for4_name":"Civil Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4014",
+    "neighbor_grant_id":"field-4612",
+    "neighbor_for4_name":"Software Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4014",
+    "neighbor_grant_id":"field-4003",
+    "neighbor_for4_name":"Biomedical Engineering",
+    "similarity":0.1465003379
+  },
+  {
+    "grant_id":"field-4015",
+    "neighbor_grant_id":"field-4011",
+    "neighbor_for4_name":"Environmental Engineering",
+    "similarity":0.1593753652
+  },
+  {
+    "grant_id":"field-4015",
+    "neighbor_grant_id":"field-4016",
+    "neighbor_for4_name":"Materials Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4015",
+    "neighbor_grant_id":"field-4005",
+    "neighbor_for4_name":"Civil Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4015",
+    "neighbor_grant_id":"field-4612",
+    "neighbor_for4_name":"Software Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4015",
+    "neighbor_grant_id":"field-4003",
+    "neighbor_for4_name":"Biomedical Engineering",
+    "similarity":0.1465003379
+  },
+  {
+    "grant_id":"field-4016",
+    "neighbor_grant_id":"field-3403",
+    "neighbor_for4_name":"Macromolecular and Materials Chemistry",
+    "similarity":0.2449645239
+  },
+  {
+    "grant_id":"field-4016",
+    "neighbor_grant_id":"field-4011",
+    "neighbor_for4_name":"Environmental Engineering",
+    "similarity":0.1644951035
+  },
+  {
+    "grant_id":"field-4016",
+    "neighbor_grant_id":"field-4005",
+    "neighbor_for4_name":"Civil Engineering",
+    "similarity":0.1560638047
+  },
+  {
+    "grant_id":"field-4016",
+    "neighbor_grant_id":"field-4612",
+    "neighbor_for4_name":"Software Engineering",
+    "similarity":0.1560638047
+  },
+  {
+    "grant_id":"field-4016",
+    "neighbor_grant_id":"field-4015",
+    "neighbor_for4_name":"Maritime Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4017",
+    "neighbor_grant_id":"field-4011",
+    "neighbor_for4_name":"Environmental Engineering",
+    "similarity":0.1593753652
+  },
+  {
+    "grant_id":"field-4017",
+    "neighbor_grant_id":"field-4016",
+    "neighbor_for4_name":"Materials Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4017",
+    "neighbor_grant_id":"field-4005",
+    "neighbor_for4_name":"Civil Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4017",
+    "neighbor_grant_id":"field-4612",
+    "neighbor_for4_name":"Software Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4017",
+    "neighbor_grant_id":"field-4003",
+    "neighbor_for4_name":"Biomedical Engineering",
+    "similarity":0.1465003379
+  },
+  {
+    "grant_id":"field-4018",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4018",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4018",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4018",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4018",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4019",
+    "neighbor_grant_id":"field-4802",
+    "neighbor_for4_name":"Environmental and Resources Law",
+    "similarity":0.1485171966
+  },
+  {
+    "grant_id":"field-4019",
+    "neighbor_grant_id":"field-3505",
+    "neighbor_for4_name":"Human Resources and Industrial Relations",
+    "similarity":0.122696278
+  },
+  {
+    "grant_id":"field-4019",
+    "neighbor_grant_id":"field-4011",
+    "neighbor_for4_name":"Environmental Engineering",
+    "similarity":0.0906112201
+  },
+  {
+    "grant_id":"field-4019",
+    "neighbor_grant_id":"field-4016",
+    "neighbor_for4_name":"Materials Engineering",
+    "similarity":0.0859668857
+  },
+  {
+    "grant_id":"field-4019",
+    "neighbor_grant_id":"field-4005",
+    "neighbor_for4_name":"Civil Engineering",
+    "similarity":0.0859668857
+  },
+  {
+    "grant_id":"field-4101",
+    "neighbor_grant_id":"field-3702",
+    "neighbor_for4_name":"Climate Change Science",
+    "similarity":0.4510533921
+  },
+  {
+    "grant_id":"field-4101",
+    "neighbor_grant_id":"field-4407",
+    "neighbor_for4_name":"Policy and Administration",
+    "similarity":0.0260789681
+  },
+  {
+    "grant_id":"field-4101",
+    "neighbor_grant_id":"field-3212",
+    "neighbor_for4_name":"Ophthalmology and Optometry",
+    "similarity":0.0256232475
+  },
+  {
+    "grant_id":"field-4101",
+    "neighbor_grant_id":"field-3901",
+    "neighbor_for4_name":"Curriculum and Pedagogy",
+    "similarity":0.0256232475
+  },
+  {
+    "grant_id":"field-4101",
+    "neighbor_grant_id":"field-4105",
+    "neighbor_for4_name":"Pollution and Contamination",
+    "similarity":0.0256232475
+  },
+  {
+    "grant_id":"field-4102",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4102",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4102",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4102",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4102",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4103",
+    "neighbor_grant_id":"field-3206",
+    "neighbor_for4_name":"Medical Biotechnology",
+    "similarity":0.2969610121
+  },
+  {
+    "grant_id":"field-4103",
+    "neighbor_grant_id":"field-4011",
+    "neighbor_for4_name":"Environmental Engineering",
+    "similarity":0.2965539719
+  },
+  {
+    "grant_id":"field-4103",
+    "neighbor_grant_id":"field-3106",
+    "neighbor_for4_name":"Industrial Biotechnology",
+    "similarity":0.283867508
+  },
+  {
+    "grant_id":"field-4103",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.2761908773
+  },
+  {
+    "grant_id":"field-4103",
+    "neighbor_grant_id":"field-4104",
+    "neighbor_for4_name":"Environmental Management",
+    "similarity":0.2734897127
+  },
+  {
+    "grant_id":"field-4104",
+    "neighbor_grant_id":"field-4011",
+    "neighbor_for4_name":"Environmental Engineering",
+    "similarity":0.2965539719
+  },
+  {
+    "grant_id":"field-4104",
+    "neighbor_grant_id":"field-4103",
+    "neighbor_for4_name":"Environmental Biotechnology",
+    "similarity":0.2734897127
+  },
+  {
+    "grant_id":"field-4104",
+    "neighbor_grant_id":"field-4802",
+    "neighbor_for4_name":"Environmental and Resources Law",
+    "similarity":0.1841451794
+  },
+  {
+    "grant_id":"field-4104",
+    "neighbor_grant_id":"field-3507",
+    "neighbor_for4_name":"Strategy, Management and Organisational Behaviour",
+    "similarity":0.1633637388
+  },
+  {
+    "grant_id":"field-4104",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.1618600353
+  },
+  {
+    "grant_id":"field-4105",
+    "neighbor_grant_id":"field-4407",
+    "neighbor_for4_name":"Policy and Administration",
+    "similarity":0.0355776042
+  },
+  {
+    "grant_id":"field-4105",
+    "neighbor_grant_id":"field-3212",
+    "neighbor_for4_name":"Ophthalmology and Optometry",
+    "similarity":0.0349558984
+  },
+  {
+    "grant_id":"field-4105",
+    "neighbor_grant_id":"field-3210",
+    "neighbor_for4_name":"Nutrition and Dietetics",
+    "similarity":0.0349558984
+  },
+  {
+    "grant_id":"field-4105",
+    "neighbor_grant_id":"field-4604",
+    "neighbor_for4_name":"Cybersecurity and Privacy",
+    "similarity":0.0349558984
+  },
+  {
+    "grant_id":"field-4105",
+    "neighbor_grant_id":"field-3901",
+    "neighbor_for4_name":"Curriculum and Pedagogy",
+    "similarity":0.0349558984
+  },
+  {
+    "grant_id":"field-4106",
+    "neighbor_grant_id":"field-3202",
+    "neighbor_for4_name":"Clinical Sciences",
+    "similarity":0.1964701435
+  },
+  {
+    "grant_id":"field-4106",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-4106",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-4106",
+    "neighbor_grant_id":"field-3009",
+    "neighbor_for4_name":"Veterinary Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-4106",
+    "neighbor_grant_id":"field-3701",
+    "neighbor_for4_name":"Atmospheric Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-4201",
+    "neighbor_grant_id":"field-4206",
+    "neighbor_for4_name":"Public Health",
+    "similarity":0.1584398113
+  },
+  {
+    "grant_id":"field-4201",
+    "neighbor_grant_id":"field-4408",
+    "neighbor_for4_name":"Political Science",
+    "similarity":0.1434344914
+  },
+  {
+    "grant_id":"field-4201",
+    "neighbor_grant_id":"field-4203",
+    "neighbor_for4_name":"Health Services and Systems",
+    "similarity":0.1349087801
+  },
+  {
+    "grant_id":"field-4201",
+    "neighbor_grant_id":"field-5203",
+    "neighbor_for4_name":"Clinical and Health Psychology",
+    "similarity":0.1325073492
+  },
+  {
+    "grant_id":"field-4201",
+    "neighbor_grant_id":"field-4207",
+    "neighbor_for4_name":"Sports Science and Exercise",
+    "similarity":0.1189061704
+  },
+  {
+    "grant_id":"field-4202",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4202",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4202",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4202",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4202",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4203",
+    "neighbor_grant_id":"field-4606",
+    "neighbor_for4_name":"Distributed Computing and Systems Software",
+    "similarity":0.2617116789
+  },
+  {
+    "grant_id":"field-4203",
+    "neighbor_grant_id":"field-3504",
+    "neighbor_for4_name":"Commercial Services",
+    "similarity":0.2293158181
+  },
+  {
+    "grant_id":"field-4203",
+    "neighbor_grant_id":"field-4206",
+    "neighbor_for4_name":"Public Health",
+    "similarity":0.1910177625
+  },
+  {
+    "grant_id":"field-4203",
+    "neighbor_grant_id":"field-3903",
+    "neighbor_for4_name":"Education Systems",
+    "similarity":0.1728457457
+  },
+  {
+    "grant_id":"field-4203",
+    "neighbor_grant_id":"field-4609",
+    "neighbor_for4_name":"Information Systems",
+    "similarity":0.1669179933
+  },
+  {
+    "grant_id":"field-4204",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4204",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4204",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4204",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4204",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4205",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4205",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4205",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4205",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4205",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4206",
+    "neighbor_grant_id":"field-4807",
+    "neighbor_for4_name":"Public Law",
+    "similarity":0.3428770704
+  },
+  {
+    "grant_id":"field-4206",
+    "neighbor_grant_id":"field-4203",
+    "neighbor_for4_name":"Health Services and Systems",
+    "similarity":0.1910177625
+  },
+  {
+    "grant_id":"field-4206",
+    "neighbor_grant_id":"field-5203",
+    "neighbor_for4_name":"Clinical and Health Psychology",
+    "similarity":0.1876175691
+  },
+  {
+    "grant_id":"field-4206",
+    "neighbor_grant_id":"field-4201",
+    "neighbor_for4_name":"Allied Health and Rehabilitation Science",
+    "similarity":0.1584398113
+  },
+  {
+    "grant_id":"field-4206",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4207",
+    "neighbor_grant_id":"field-4408",
+    "neighbor_for4_name":"Political Science",
+    "similarity":0.163070449
+  },
+  {
+    "grant_id":"field-4207",
+    "neighbor_grant_id":"field-3702",
+    "neighbor_for4_name":"Climate Change Science",
+    "similarity":0.1291145237
+  },
+  {
+    "grant_id":"field-4207",
+    "neighbor_grant_id":"field-4201",
+    "neighbor_for4_name":"Allied Health and Rehabilitation Science",
+    "similarity":0.1189061704
+  },
+  {
+    "grant_id":"field-4207",
+    "neighbor_grant_id":"field-4605",
+    "neighbor_for4_name":"Data Management and Data Science",
+    "similarity":0.1064202789
+  },
+  {
+    "grant_id":"field-4207",
+    "neighbor_grant_id":"field-4407",
+    "neighbor_for4_name":"Policy and Administration",
+    "similarity":0.0301238107
+  },
+  {
+    "grant_id":"field-4301",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4301",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4301",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4301",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4301",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4302",
+    "neighbor_grant_id":"field-4404",
+    "neighbor_for4_name":"Development Studies",
+    "similarity":0.104215175
+  },
+  {
+    "grant_id":"field-4302",
+    "neighbor_grant_id":"field-4405",
+    "neighbor_for4_name":"Gender Studies",
+    "similarity":0.104215175
+  },
+  {
+    "grant_id":"field-4302",
+    "neighbor_grant_id":"field-4303",
+    "neighbor_for4_name":"Historical Studies",
+    "similarity":0.104215175
+  },
+  {
+    "grant_id":"field-4302",
+    "neighbor_grant_id":"field-5004",
+    "neighbor_for4_name":"Religious Studies",
+    "similarity":0.104215175
+  },
+  {
+    "grant_id":"field-4302",
+    "neighbor_grant_id":"field-4702",
+    "neighbor_for4_name":"Cultural Studies",
+    "similarity":0.104215175
+  },
+  {
+    "grant_id":"field-4303",
+    "neighbor_grant_id":"field-4404",
+    "neighbor_for4_name":"Development Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-4303",
+    "neighbor_grant_id":"field-4405",
+    "neighbor_for4_name":"Gender Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-4303",
+    "neighbor_grant_id":"field-4703",
+    "neighbor_for4_name":"Language Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-4303",
+    "neighbor_grant_id":"field-5004",
+    "neighbor_for4_name":"Religious Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-4303",
+    "neighbor_grant_id":"field-4702",
+    "neighbor_for4_name":"Cultural Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-4401",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4401",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4401",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4401",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4401",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4402",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4402",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4402",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4402",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4402",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4403",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4403",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4403",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4403",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4403",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4404",
+    "neighbor_grant_id":"field-4303",
+    "neighbor_for4_name":"Historical Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-4404",
+    "neighbor_grant_id":"field-4405",
+    "neighbor_for4_name":"Gender Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-4404",
+    "neighbor_grant_id":"field-4703",
+    "neighbor_for4_name":"Language Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-4404",
+    "neighbor_grant_id":"field-5004",
+    "neighbor_for4_name":"Religious Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-4404",
+    "neighbor_grant_id":"field-4702",
+    "neighbor_for4_name":"Cultural Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-4405",
+    "neighbor_grant_id":"field-4404",
+    "neighbor_for4_name":"Development Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-4405",
+    "neighbor_grant_id":"field-4303",
+    "neighbor_for4_name":"Historical Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-4405",
+    "neighbor_grant_id":"field-4703",
+    "neighbor_for4_name":"Language Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-4405",
+    "neighbor_grant_id":"field-5004",
+    "neighbor_for4_name":"Religious Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-4405",
+    "neighbor_grant_id":"field-4702",
+    "neighbor_for4_name":"Cultural Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-4406",
+    "neighbor_grant_id":"field-4608",
+    "neighbor_for4_name":"Human-Centred Computing",
+    "similarity":0.2212529807
+  },
+  {
+    "grant_id":"field-4406",
+    "neighbor_grant_id":"field-3709",
+    "neighbor_for4_name":"Physical Geography and Environmental Geoscience",
+    "similarity":0.1933540575
+  },
+  {
+    "grant_id":"field-4406",
+    "neighbor_grant_id":"field-3505",
+    "neighbor_for4_name":"Human Resources and Industrial Relations",
+    "similarity":0.171538145
+  },
+  {
+    "grant_id":"field-4406",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4406",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4407",
+    "neighbor_grant_id":"field-3902",
+    "neighbor_for4_name":"Education Policy, Sociology and Philosophy",
+    "similarity":0.1869826654
+  },
+  {
+    "grant_id":"field-4407",
+    "neighbor_grant_id":"field-3212",
+    "neighbor_for4_name":"Ophthalmology and Optometry",
+    "similarity":0.0355776042
+  },
+  {
+    "grant_id":"field-4407",
+    "neighbor_grant_id":"field-3210",
+    "neighbor_for4_name":"Nutrition and Dietetics",
+    "similarity":0.0355776042
+  },
+  {
+    "grant_id":"field-4407",
+    "neighbor_grant_id":"field-3901",
+    "neighbor_for4_name":"Curriculum and Pedagogy",
+    "similarity":0.0355776042
+  },
+  {
+    "grant_id":"field-4407",
+    "neighbor_grant_id":"field-4105",
+    "neighbor_for4_name":"Pollution and Contamination",
+    "similarity":0.0355776042
+  },
+  {
+    "grant_id":"field-4408",
+    "neighbor_grant_id":"field-3702",
+    "neighbor_for4_name":"Climate Change Science",
+    "similarity":0.1911915828
+  },
+  {
+    "grant_id":"field-4408",
+    "neighbor_grant_id":"field-4207",
+    "neighbor_for4_name":"Sports Science and Exercise",
+    "similarity":0.163070449
+  },
+  {
+    "grant_id":"field-4408",
+    "neighbor_grant_id":"field-4201",
+    "neighbor_for4_name":"Allied Health and Rehabilitation Science",
+    "similarity":0.1434344914
+  },
+  {
+    "grant_id":"field-4408",
+    "neighbor_grant_id":"field-4605",
+    "neighbor_for4_name":"Data Management and Data Science",
+    "similarity":0.1283729728
+  },
+  {
+    "grant_id":"field-4408",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4409",
+    "neighbor_grant_id":"field-5205",
+    "neighbor_for4_name":"Social and Personality Psychology",
+    "similarity":0.2134063548
+  },
+  {
+    "grant_id":"field-4409",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4409",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4409",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4409",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4410",
+    "neighbor_grant_id":"field-3902",
+    "neighbor_for4_name":"Education Policy, Sociology and Philosophy",
+    "similarity":0.3456844541
+  },
+  {
+    "grant_id":"field-4410",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4410",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4410",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4410",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4601",
+    "neighbor_grant_id":"field-4901",
+    "neighbor_for4_name":"Applied Mathematics",
+    "similarity":0.2655133245
+  },
+  {
+    "grant_id":"field-4601",
+    "neighbor_grant_id":"field-5001",
+    "neighbor_for4_name":"Applied Ethics",
+    "similarity":0.2532081204
+  },
+  {
+    "grant_id":"field-4601",
+    "neighbor_grant_id":"field-3801",
+    "neighbor_for4_name":"Applied Economics",
+    "similarity":0.2532081204
+  },
+  {
+    "grant_id":"field-4601",
+    "neighbor_grant_id":"field-4608",
+    "neighbor_for4_name":"Human-Centred Computing",
+    "similarity":0.2311671005
+  },
+  {
+    "grant_id":"field-4601",
+    "neighbor_grant_id":"field-4606",
+    "neighbor_for4_name":"Distributed Computing and Systems Software",
+    "similarity":0.1830682203
+  },
+  {
+    "grant_id":"field-4602",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4602",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4602",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4602",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4602",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4603",
+    "neighbor_grant_id":"field-4613",
+    "neighbor_for4_name":"Theory Of Computation",
+    "similarity":0.1431354574
+  },
+  {
+    "grant_id":"field-4603",
+    "neighbor_grant_id":"field-4407",
+    "neighbor_for4_name":"Policy and Administration",
+    "similarity":0.0256066652
+  },
+  {
+    "grant_id":"field-4603",
+    "neighbor_grant_id":"field-3212",
+    "neighbor_for4_name":"Ophthalmology and Optometry",
+    "similarity":0.025159198
+  },
+  {
+    "grant_id":"field-4603",
+    "neighbor_grant_id":"field-4105",
+    "neighbor_for4_name":"Pollution and Contamination",
+    "similarity":0.025159198
+  },
+  {
+    "grant_id":"field-4603",
+    "neighbor_grant_id":"field-3901",
+    "neighbor_for4_name":"Curriculum and Pedagogy",
+    "similarity":0.025159198
+  },
+  {
+    "grant_id":"field-4604",
+    "neighbor_grant_id":"field-4407",
+    "neighbor_for4_name":"Policy and Administration",
+    "similarity":0.0355776042
+  },
+  {
+    "grant_id":"field-4604",
+    "neighbor_grant_id":"field-3212",
+    "neighbor_for4_name":"Ophthalmology and Optometry",
+    "similarity":0.0349558984
+  },
+  {
+    "grant_id":"field-4604",
+    "neighbor_grant_id":"field-3210",
+    "neighbor_for4_name":"Nutrition and Dietetics",
+    "similarity":0.0349558984
+  },
+  {
+    "grant_id":"field-4604",
+    "neighbor_grant_id":"field-4105",
+    "neighbor_for4_name":"Pollution and Contamination",
+    "similarity":0.0349558984
+  },
+  {
+    "grant_id":"field-4604",
+    "neighbor_grant_id":"field-3901",
+    "neighbor_for4_name":"Curriculum and Pedagogy",
+    "similarity":0.0349558984
+  },
+  {
+    "grant_id":"field-4605",
+    "neighbor_grant_id":"field-3507",
+    "neighbor_for4_name":"Strategy, Management and Organisational Behaviour",
+    "similarity":0.1998014103
+  },
+  {
+    "grant_id":"field-4605",
+    "neighbor_grant_id":"field-4104",
+    "neighbor_for4_name":"Environmental Management",
+    "similarity":0.1483433446
+  },
+  {
+    "grant_id":"field-4605",
+    "neighbor_grant_id":"field-4408",
+    "neighbor_for4_name":"Political Science",
+    "similarity":0.1283729728
+  },
+  {
+    "grant_id":"field-4605",
+    "neighbor_grant_id":"field-4207",
+    "neighbor_for4_name":"Sports Science and Exercise",
+    "similarity":0.1064202789
+  },
+  {
+    "grant_id":"field-4605",
+    "neighbor_grant_id":"field-3702",
+    "neighbor_for4_name":"Climate Change Science",
+    "similarity":0.1016420531
+  },
+  {
+    "grant_id":"field-4606",
+    "neighbor_grant_id":"field-4203",
+    "neighbor_for4_name":"Health Services and Systems",
+    "similarity":0.2617116789
+  },
+  {
+    "grant_id":"field-4606",
+    "neighbor_grant_id":"field-4612",
+    "neighbor_for4_name":"Software Engineering",
+    "similarity":0.2150272141
+  },
+  {
+    "grant_id":"field-4606",
+    "neighbor_grant_id":"field-4601",
+    "neighbor_for4_name":"Applied Computing",
+    "similarity":0.1830682203
+  },
+  {
+    "grant_id":"field-4606",
+    "neighbor_grant_id":"field-3903",
+    "neighbor_for4_name":"Education Systems",
+    "similarity":0.145945257
+  },
+  {
+    "grant_id":"field-4606",
+    "neighbor_grant_id":"field-4609",
+    "neighbor_for4_name":"Information Systems",
+    "similarity":0.140940058
+  },
+  {
+    "grant_id":"field-4607",
+    "neighbor_grant_id":"field-4407",
+    "neighbor_for4_name":"Policy and Administration",
+    "similarity":0.0253799375
+  },
+  {
+    "grant_id":"field-4607",
+    "neighbor_grant_id":"field-3212",
+    "neighbor_for4_name":"Ophthalmology and Optometry",
+    "similarity":0.0249364322
+  },
+  {
+    "grant_id":"field-4607",
+    "neighbor_grant_id":"field-3210",
+    "neighbor_for4_name":"Nutrition and Dietetics",
+    "similarity":0.0249364322
+  },
+  {
+    "grant_id":"field-4607",
+    "neighbor_grant_id":"field-4105",
+    "neighbor_for4_name":"Pollution and Contamination",
+    "similarity":0.0249364322
+  },
+  {
+    "grant_id":"field-4607",
+    "neighbor_grant_id":"field-3901",
+    "neighbor_for4_name":"Curriculum and Pedagogy",
+    "similarity":0.0249364322
+  },
+  {
+    "grant_id":"field-4608",
+    "neighbor_grant_id":"field-4601",
+    "neighbor_for4_name":"Applied Computing",
+    "similarity":0.2311671005
+  },
+  {
+    "grant_id":"field-4608",
+    "neighbor_grant_id":"field-4406",
+    "neighbor_for4_name":"Human Geography",
+    "similarity":0.2212529807
+  },
+  {
+    "grant_id":"field-4608",
+    "neighbor_grant_id":"field-4606",
+    "neighbor_for4_name":"Distributed Computing and Systems Software",
+    "similarity":0.1333038592
+  },
+  {
+    "grant_id":"field-4608",
+    "neighbor_grant_id":"field-3505",
+    "neighbor_for4_name":"Human Resources and Industrial Relations",
+    "similarity":0.1305050652
+  },
+  {
+    "grant_id":"field-4608",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4609",
+    "neighbor_grant_id":"field-3903",
+    "neighbor_for4_name":"Education Systems",
+    "similarity":0.250455582
+  },
+  {
+    "grant_id":"field-4609",
+    "neighbor_grant_id":"field-4805",
+    "neighbor_for4_name":"Legal Systems",
+    "similarity":0.235071782
+  },
+  {
+    "grant_id":"field-4609",
+    "neighbor_grant_id":"field-4610",
+    "neighbor_for4_name":"Library and Information Studies",
+    "similarity":0.234415587
+  },
+  {
+    "grant_id":"field-4609",
+    "neighbor_grant_id":"field-4203",
+    "neighbor_for4_name":"Health Services and Systems",
+    "similarity":0.1669179933
+  },
+  {
+    "grant_id":"field-4609",
+    "neighbor_grant_id":"field-3503",
+    "neighbor_for4_name":"Business Systems In Context",
+    "similarity":0.1536652917
+  },
+  {
+    "grant_id":"field-4610",
+    "neighbor_grant_id":"field-4609",
+    "neighbor_for4_name":"Information Systems",
+    "similarity":0.234415587
+  },
+  {
+    "grant_id":"field-4610",
+    "neighbor_grant_id":"field-4404",
+    "neighbor_for4_name":"Development Studies",
+    "similarity":0.12301206
+  },
+  {
+    "grant_id":"field-4610",
+    "neighbor_grant_id":"field-4303",
+    "neighbor_for4_name":"Historical Studies",
+    "similarity":0.12301206
+  },
+  {
+    "grant_id":"field-4610",
+    "neighbor_grant_id":"field-4405",
+    "neighbor_for4_name":"Gender Studies",
+    "similarity":0.12301206
+  },
+  {
+    "grant_id":"field-4610",
+    "neighbor_grant_id":"field-4702",
+    "neighbor_for4_name":"Cultural Studies",
+    "similarity":0.12301206
+  },
+  {
+    "grant_id":"field-4611",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4611",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4611",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4611",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4611",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4612",
+    "neighbor_grant_id":"field-4606",
+    "neighbor_for4_name":"Distributed Computing and Systems Software",
+    "similarity":0.2150272141
+  },
+  {
+    "grant_id":"field-4612",
+    "neighbor_grant_id":"field-4011",
+    "neighbor_for4_name":"Environmental Engineering",
+    "similarity":0.1644951035
+  },
+  {
+    "grant_id":"field-4612",
+    "neighbor_grant_id":"field-4005",
+    "neighbor_for4_name":"Civil Engineering",
+    "similarity":0.1560638047
+  },
+  {
+    "grant_id":"field-4612",
+    "neighbor_grant_id":"field-4016",
+    "neighbor_for4_name":"Materials Engineering",
+    "similarity":0.1560638047
+  },
+  {
+    "grant_id":"field-4612",
+    "neighbor_grant_id":"field-4002",
+    "neighbor_for4_name":"Automotive Engineering",
+    "similarity":0.1512064817
+  },
+  {
+    "grant_id":"field-4613",
+    "neighbor_grant_id":"field-3803",
+    "neighbor_for4_name":"Economic Theory",
+    "similarity":0.2165867197
+  },
+  {
+    "grant_id":"field-4613",
+    "neighbor_grant_id":"field-4603",
+    "neighbor_for4_name":"Computer Vision and Multimedia Computation",
+    "similarity":0.1431354574
+  },
+  {
+    "grant_id":"field-4613",
+    "neighbor_grant_id":"field-5002",
+    "neighbor_for4_name":"History and Philosophy Of Specific Fields",
+    "similarity":0.1315313261
+  },
+  {
+    "grant_id":"field-4613",
+    "neighbor_grant_id":"field-3601",
+    "neighbor_for4_name":"Art History, Theory and Criticism",
+    "similarity":0.1291765317
+  },
+  {
+    "grant_id":"field-4613",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4701",
+    "neighbor_grant_id":"field-3605",
+    "neighbor_for4_name":"Screen and Digital Media",
+    "similarity":0.179414691
+  },
+  {
+    "grant_id":"field-4701",
+    "neighbor_grant_id":"field-4405",
+    "neighbor_for4_name":"Gender Studies",
+    "similarity":0.12301206
+  },
+  {
+    "grant_id":"field-4701",
+    "neighbor_grant_id":"field-4404",
+    "neighbor_for4_name":"Development Studies",
+    "similarity":0.12301206
+  },
+  {
+    "grant_id":"field-4701",
+    "neighbor_grant_id":"field-4702",
+    "neighbor_for4_name":"Cultural Studies",
+    "similarity":0.12301206
+  },
+  {
+    "grant_id":"field-4701",
+    "neighbor_grant_id":"field-4703",
+    "neighbor_for4_name":"Language Studies",
+    "similarity":0.12301206
+  },
+  {
+    "grant_id":"field-4702",
+    "neighbor_grant_id":"field-4405",
+    "neighbor_for4_name":"Gender Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-4702",
+    "neighbor_grant_id":"field-4303",
+    "neighbor_for4_name":"Historical Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-4702",
+    "neighbor_grant_id":"field-4404",
+    "neighbor_for4_name":"Development Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-4702",
+    "neighbor_grant_id":"field-5004",
+    "neighbor_for4_name":"Religious Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-4702",
+    "neighbor_grant_id":"field-4705",
+    "neighbor_for4_name":"Literary Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-4703",
+    "neighbor_grant_id":"field-4405",
+    "neighbor_for4_name":"Gender Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-4703",
+    "neighbor_grant_id":"field-4303",
+    "neighbor_for4_name":"Historical Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-4703",
+    "neighbor_grant_id":"field-4404",
+    "neighbor_for4_name":"Development Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-4703",
+    "neighbor_grant_id":"field-5004",
+    "neighbor_for4_name":"Religious Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-4703",
+    "neighbor_grant_id":"field-4705",
+    "neighbor_for4_name":"Literary Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-4704",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4704",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4704",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4704",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4704",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4705",
+    "neighbor_grant_id":"field-4405",
+    "neighbor_for4_name":"Gender Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-4705",
+    "neighbor_grant_id":"field-4303",
+    "neighbor_for4_name":"Historical Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-4705",
+    "neighbor_grant_id":"field-4404",
+    "neighbor_for4_name":"Development Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-4705",
+    "neighbor_grant_id":"field-5004",
+    "neighbor_for4_name":"Religious Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-4705",
+    "neighbor_grant_id":"field-4703",
+    "neighbor_for4_name":"Language Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-4801",
+    "neighbor_grant_id":"field-3504",
+    "neighbor_for4_name":"Commercial Services",
+    "similarity":0.3322814019
+  },
+  {
+    "grant_id":"field-4801",
+    "neighbor_grant_id":"field-4807",
+    "neighbor_for4_name":"Public Law",
+    "similarity":0.2418661969
+  },
+  {
+    "grant_id":"field-4801",
+    "neighbor_grant_id":"field-4804",
+    "neighbor_for4_name":"Law In Context",
+    "similarity":0.1876884696
+  },
+  {
+    "grant_id":"field-4801",
+    "neighbor_grant_id":"field-4802",
+    "neighbor_for4_name":"Environmental and Resources Law",
+    "similarity":0.1670184488
+  },
+  {
+    "grant_id":"field-4801",
+    "neighbor_grant_id":"field-4803",
+    "neighbor_for4_name":"International and Comparative Law",
+    "similarity":0.1580123711
+  },
+  {
+    "grant_id":"field-4802",
+    "neighbor_grant_id":"field-4011",
+    "neighbor_for4_name":"Environmental Engineering",
+    "similarity":0.1996747293
+  },
+  {
+    "grant_id":"field-4802",
+    "neighbor_grant_id":"field-4104",
+    "neighbor_for4_name":"Environmental Management",
+    "similarity":0.1841451794
+  },
+  {
+    "grant_id":"field-4802",
+    "neighbor_grant_id":"field-4103",
+    "neighbor_for4_name":"Environmental Biotechnology",
+    "similarity":0.1841451794
+  },
+  {
+    "grant_id":"field-4802",
+    "neighbor_grant_id":"field-4801",
+    "neighbor_for4_name":"Commercial Law",
+    "similarity":0.1670184488
+  },
+  {
+    "grant_id":"field-4802",
+    "neighbor_grant_id":"field-4807",
+    "neighbor_for4_name":"Public Law",
+    "similarity":0.1670184488
+  },
+  {
+    "grant_id":"field-4803",
+    "neighbor_grant_id":"field-4801",
+    "neighbor_for4_name":"Commercial Law",
+    "similarity":0.1580123711
+  },
+  {
+    "grant_id":"field-4803",
+    "neighbor_grant_id":"field-4807",
+    "neighbor_for4_name":"Public Law",
+    "similarity":0.1580123711
+  },
+  {
+    "grant_id":"field-4803",
+    "neighbor_grant_id":"field-4802",
+    "neighbor_for4_name":"Environmental and Resources Law",
+    "similarity":0.1358078474
+  },
+  {
+    "grant_id":"field-4803",
+    "neighbor_grant_id":"field-4804",
+    "neighbor_for4_name":"Law In Context",
+    "similarity":0.1226177965
+  },
+  {
+    "grant_id":"field-4803",
+    "neighbor_grant_id":"field-4806",
+    "neighbor_for4_name":"Private Law and Civil Obligations",
+    "similarity":0.111680384
+  },
+  {
+    "grant_id":"field-4804",
+    "neighbor_grant_id":"field-3503",
+    "neighbor_for4_name":"Business Systems In Context",
+    "similarity":0.4981379634
+  },
+  {
+    "grant_id":"field-4804",
+    "neighbor_grant_id":"field-4801",
+    "neighbor_for4_name":"Commercial Law",
+    "similarity":0.1876884696
+  },
+  {
+    "grant_id":"field-4804",
+    "neighbor_grant_id":"field-4807",
+    "neighbor_for4_name":"Public Law",
+    "similarity":0.1876884696
+  },
+  {
+    "grant_id":"field-4804",
+    "neighbor_grant_id":"field-3904",
+    "neighbor_for4_name":"Specialist Studies In Education",
+    "similarity":0.1553939998
+  },
+  {
+    "grant_id":"field-4804",
+    "neighbor_grant_id":"field-4802",
+    "neighbor_for4_name":"Environmental and Resources Law",
+    "similarity":0.129606524
+  },
+  {
+    "grant_id":"field-4805",
+    "neighbor_grant_id":"field-3903",
+    "neighbor_for4_name":"Education Systems",
+    "similarity":0.2434198773
+  },
+  {
+    "grant_id":"field-4805",
+    "neighbor_grant_id":"field-4609",
+    "neighbor_for4_name":"Information Systems",
+    "similarity":0.235071782
+  },
+  {
+    "grant_id":"field-4805",
+    "neighbor_grant_id":"field-4203",
+    "neighbor_for4_name":"Health Services and Systems",
+    "similarity":0.1622289953
+  },
+  {
+    "grant_id":"field-4805",
+    "neighbor_grant_id":"field-3503",
+    "neighbor_for4_name":"Business Systems In Context",
+    "similarity":0.1493485837
+  },
+  {
+    "grant_id":"field-4805",
+    "neighbor_grant_id":"field-4606",
+    "neighbor_for4_name":"Distributed Computing and Systems Software",
+    "similarity":0.1369808225
+  },
+  {
+    "grant_id":"field-4806",
+    "neighbor_grant_id":"field-4005",
+    "neighbor_for4_name":"Civil Engineering",
+    "similarity":0.2095441114
+  },
+  {
+    "grant_id":"field-4806",
+    "neighbor_grant_id":"field-4801",
+    "neighbor_for4_name":"Commercial Law",
+    "similarity":0.1373461464
+  },
+  {
+    "grant_id":"field-4806",
+    "neighbor_grant_id":"field-4807",
+    "neighbor_for4_name":"Public Law",
+    "similarity":0.1373461464
+  },
+  {
+    "grant_id":"field-4806",
+    "neighbor_grant_id":"field-4802",
+    "neighbor_for4_name":"Environmental and Resources Law",
+    "similarity":0.1180457224
+  },
+  {
+    "grant_id":"field-4806",
+    "neighbor_grant_id":"field-4803",
+    "neighbor_for4_name":"International and Comparative Law",
+    "similarity":0.111680384
+  },
+  {
+    "grant_id":"field-4807",
+    "neighbor_grant_id":"field-4206",
+    "neighbor_for4_name":"Public Health",
+    "similarity":0.3428770704
+  },
+  {
+    "grant_id":"field-4807",
+    "neighbor_grant_id":"field-4801",
+    "neighbor_for4_name":"Commercial Law",
+    "similarity":0.2418661969
+  },
+  {
+    "grant_id":"field-4807",
+    "neighbor_grant_id":"field-4804",
+    "neighbor_for4_name":"Law In Context",
+    "similarity":0.1876884696
+  },
+  {
+    "grant_id":"field-4807",
+    "neighbor_grant_id":"field-4802",
+    "neighbor_for4_name":"Environmental and Resources Law",
+    "similarity":0.1670184488
+  },
+  {
+    "grant_id":"field-4807",
+    "neighbor_grant_id":"field-4803",
+    "neighbor_for4_name":"International and Comparative Law",
+    "similarity":0.1580123711
+  },
+  {
+    "grant_id":"field-4901",
+    "neighbor_grant_id":"field-4904",
+    "neighbor_for4_name":"Pure Mathematics",
+    "similarity":0.2958440052
+  },
+  {
+    "grant_id":"field-4901",
+    "neighbor_grant_id":"field-4601",
+    "neighbor_for4_name":"Applied Computing",
+    "similarity":0.2655133245
+  },
+  {
+    "grant_id":"field-4901",
+    "neighbor_grant_id":"field-3801",
+    "neighbor_for4_name":"Applied Economics",
+    "similarity":0.2532081204
+  },
+  {
+    "grant_id":"field-4901",
+    "neighbor_grant_id":"field-5001",
+    "neighbor_for4_name":"Applied Ethics",
+    "similarity":0.2532081204
+  },
+  {
+    "grant_id":"field-4901",
+    "neighbor_grant_id":"field-4903",
+    "neighbor_for4_name":"Numerical and Computational Mathematics",
+    "similarity":0.2137655422
+  },
+  {
+    "grant_id":"field-4902",
+    "neighbor_grant_id":"field-5103",
+    "neighbor_for4_name":"Classical Physics",
+    "similarity":0.2073667964
+  },
+  {
+    "grant_id":"field-4902",
+    "neighbor_grant_id":"field-5108",
+    "neighbor_for4_name":"Quantum Physics",
+    "similarity":0.2073667964
+  },
+  {
+    "grant_id":"field-4902",
+    "neighbor_grant_id":"field-5104",
+    "neighbor_for4_name":"Condensed Matter Physics",
+    "similarity":0.1548793439
+  },
+  {
+    "grant_id":"field-4902",
+    "neighbor_grant_id":"field-5105",
+    "neighbor_for4_name":"Medical and Biological Physics",
+    "similarity":0.1449913092
+  },
+  {
+    "grant_id":"field-4902",
+    "neighbor_grant_id":"field-5106",
+    "neighbor_for4_name":"Nuclear and Plasma Physics",
+    "similarity":0.1383561389
+  },
+  {
+    "grant_id":"field-4903",
+    "neighbor_grant_id":"field-3407",
+    "neighbor_for4_name":"Theoretical and Computational Chemistry",
+    "similarity":0.2946277276
+  },
+  {
+    "grant_id":"field-4903",
+    "neighbor_grant_id":"field-5204",
+    "neighbor_for4_name":"Cognitive and Computational Psychology",
+    "similarity":0.2922894991
+  },
+  {
+    "grant_id":"field-4903",
+    "neighbor_grant_id":"field-3102",
+    "neighbor_for4_name":"Bioinformatics and Computational Biology",
+    "similarity":0.2907553377
+  },
+  {
+    "grant_id":"field-4903",
+    "neighbor_grant_id":"field-4901",
+    "neighbor_for4_name":"Applied Mathematics",
+    "similarity":0.2137655422
+  },
+  {
+    "grant_id":"field-4903",
+    "neighbor_grant_id":"field-4904",
+    "neighbor_for4_name":"Pure Mathematics",
+    "similarity":0.199206824
+  },
+  {
+    "grant_id":"field-4904",
+    "neighbor_grant_id":"field-4901",
+    "neighbor_for4_name":"Applied Mathematics",
+    "similarity":0.2958440052
+  },
+  {
+    "grant_id":"field-4904",
+    "neighbor_grant_id":"field-4903",
+    "neighbor_for4_name":"Numerical and Computational Mathematics",
+    "similarity":0.199206824
+  },
+  {
+    "grant_id":"field-4904",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4904",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4904",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4905",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4905",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4905",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4905",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-4905",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-5001",
+    "neighbor_grant_id":"field-4601",
+    "neighbor_for4_name":"Applied Computing",
+    "similarity":0.2532081204
+  },
+  {
+    "grant_id":"field-5001",
+    "neighbor_grant_id":"field-4901",
+    "neighbor_for4_name":"Applied Mathematics",
+    "similarity":0.2532081204
+  },
+  {
+    "grant_id":"field-5001",
+    "neighbor_grant_id":"field-3801",
+    "neighbor_for4_name":"Applied Economics",
+    "similarity":0.2414732004
+  },
+  {
+    "grant_id":"field-5001",
+    "neighbor_grant_id":"field-5201",
+    "neighbor_for4_name":"Applied and Developmental Psychology",
+    "similarity":0.1684489162
+  },
+  {
+    "grant_id":"field-5001",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-5002",
+    "neighbor_grant_id":"field-5003",
+    "neighbor_for4_name":"Philosophy",
+    "similarity":0.2834463383
+  },
+  {
+    "grant_id":"field-5002",
+    "neighbor_grant_id":"field-3902",
+    "neighbor_for4_name":"Education Policy, Sociology and Philosophy",
+    "similarity":0.2138880496
+  },
+  {
+    "grant_id":"field-5002",
+    "neighbor_grant_id":"field-4613",
+    "neighbor_for4_name":"Theory Of Computation",
+    "similarity":0.1315313261
+  },
+  {
+    "grant_id":"field-5002",
+    "neighbor_grant_id":"field-3601",
+    "neighbor_for4_name":"Art History, Theory and Criticism",
+    "similarity":0.1167509923
+  },
+  {
+    "grant_id":"field-5002",
+    "neighbor_grant_id":"field-4407",
+    "neighbor_for4_name":"Policy and Administration",
+    "similarity":0.0235307079
+  },
+  {
+    "grant_id":"field-5003",
+    "neighbor_grant_id":"field-3902",
+    "neighbor_for4_name":"Education Policy, Sociology and Philosophy",
+    "similarity":0.3259186901
+  },
+  {
+    "grant_id":"field-5003",
+    "neighbor_grant_id":"field-5002",
+    "neighbor_for4_name":"History and Philosophy Of Specific Fields",
+    "similarity":0.2834463383
+  },
+  {
+    "grant_id":"field-5003",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-5003",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-5003",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-5004",
+    "neighbor_grant_id":"field-4405",
+    "neighbor_for4_name":"Gender Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-5004",
+    "neighbor_grant_id":"field-4303",
+    "neighbor_for4_name":"Historical Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-5004",
+    "neighbor_grant_id":"field-4404",
+    "neighbor_for4_name":"Development Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-5004",
+    "neighbor_grant_id":"field-4705",
+    "neighbor_for4_name":"Literary Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-5004",
+    "neighbor_grant_id":"field-4702",
+    "neighbor_for4_name":"Cultural Studies",
+    "similarity":0.1835014931
+  },
+  {
+    "grant_id":"field-5005",
+    "neighbor_grant_id":"field-3001",
+    "neighbor_for4_name":"Agricultural Biotechnology",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-5005",
+    "neighbor_grant_id":"field-3003",
+    "neighbor_for4_name":"Animal Production",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-5005",
+    "neighbor_grant_id":"field-3002",
+    "neighbor_for4_name":"Agriculture, Land and Farm Management",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-5005",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-5005",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.0
+  },
+  {
+    "grant_id":"field-5101",
+    "neighbor_grant_id":"field-3202",
+    "neighbor_for4_name":"Clinical Sciences",
+    "similarity":0.1964701435
+  },
+  {
+    "grant_id":"field-5101",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-5101",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-5101",
+    "neighbor_grant_id":"field-3009",
+    "neighbor_for4_name":"Veterinary Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-5101",
+    "neighbor_grant_id":"field-3701",
+    "neighbor_for4_name":"Atmospheric Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-5102",
+    "neighbor_grant_id":"field-5108",
+    "neighbor_for4_name":"Quantum Physics",
+    "similarity":0.1189524897
+  },
+  {
+    "grant_id":"field-5102",
+    "neighbor_grant_id":"field-4902",
+    "neighbor_for4_name":"Mathematical Physics",
+    "similarity":0.1189524897
+  },
+  {
+    "grant_id":"field-5102",
+    "neighbor_grant_id":"field-5103",
+    "neighbor_for4_name":"Classical Physics",
+    "similarity":0.1189524897
+  },
+  {
+    "grant_id":"field-5102",
+    "neighbor_grant_id":"field-5105",
+    "neighbor_for4_name":"Medical and Biological Physics",
+    "similarity":0.1062028277
+  },
+  {
+    "grant_id":"field-5102",
+    "neighbor_grant_id":"field-5106",
+    "neighbor_for4_name":"Nuclear and Plasma Physics",
+    "similarity":0.1013427167
+  },
+  {
+    "grant_id":"field-5103",
+    "neighbor_grant_id":"field-4902",
+    "neighbor_for4_name":"Mathematical Physics",
+    "similarity":0.2073667964
+  },
+  {
+    "grant_id":"field-5103",
+    "neighbor_grant_id":"field-5108",
+    "neighbor_for4_name":"Quantum Physics",
+    "similarity":0.2073667964
+  },
+  {
+    "grant_id":"field-5103",
+    "neighbor_grant_id":"field-5104",
+    "neighbor_for4_name":"Condensed Matter Physics",
+    "similarity":0.1548793439
+  },
+  {
+    "grant_id":"field-5103",
+    "neighbor_grant_id":"field-5105",
+    "neighbor_for4_name":"Medical and Biological Physics",
+    "similarity":0.1449913092
+  },
+  {
+    "grant_id":"field-5103",
+    "neighbor_grant_id":"field-5106",
+    "neighbor_for4_name":"Nuclear and Plasma Physics",
+    "similarity":0.1383561389
+  },
+  {
+    "grant_id":"field-5104",
+    "neighbor_grant_id":"field-5108",
+    "neighbor_for4_name":"Quantum Physics",
+    "similarity":0.1548793439
+  },
+  {
+    "grant_id":"field-5104",
+    "neighbor_grant_id":"field-4902",
+    "neighbor_for4_name":"Mathematical Physics",
+    "similarity":0.1548793439
+  },
+  {
+    "grant_id":"field-5104",
+    "neighbor_grant_id":"field-5103",
+    "neighbor_for4_name":"Classical Physics",
+    "similarity":0.1548793439
+  },
+  {
+    "grant_id":"field-5104",
+    "neighbor_grant_id":"field-5105",
+    "neighbor_for4_name":"Medical and Biological Physics",
+    "similarity":0.1082919698
+  },
+  {
+    "grant_id":"field-5104",
+    "neighbor_grant_id":"field-5106",
+    "neighbor_for4_name":"Nuclear and Plasma Physics",
+    "similarity":0.1033362543
+  },
+  {
+    "grant_id":"field-5105",
+    "neighbor_grant_id":"field-5202",
+    "neighbor_for4_name":"Biological Psychology",
+    "similarity":0.2387446244
+  },
+  {
+    "grant_id":"field-5105",
+    "neighbor_grant_id":"field-3206",
+    "neighbor_for4_name":"Medical Biotechnology",
+    "similarity":0.183678526
+  },
+  {
+    "grant_id":"field-5105",
+    "neighbor_grant_id":"field-3207",
+    "neighbor_for4_name":"Medical Microbiology",
+    "similarity":0.1774935164
+  },
+  {
+    "grant_id":"field-5105",
+    "neighbor_grant_id":"field-3208",
+    "neighbor_for4_name":"Medical Physiology",
+    "similarity":0.1725926739
+  },
+  {
+    "grant_id":"field-5105",
+    "neighbor_grant_id":"field-3205",
+    "neighbor_for4_name":"Medical Biochemistry and Metabolomics",
+    "similarity":0.1467697977
+  },
+  {
+    "grant_id":"field-5106",
+    "neighbor_grant_id":"field-5108",
+    "neighbor_for4_name":"Quantum Physics",
+    "similarity":0.1383561389
+  },
+  {
+    "grant_id":"field-5106",
+    "neighbor_grant_id":"field-4902",
+    "neighbor_for4_name":"Mathematical Physics",
+    "similarity":0.1383561389
+  },
+  {
+    "grant_id":"field-5106",
+    "neighbor_grant_id":"field-5103",
+    "neighbor_for4_name":"Classical Physics",
+    "similarity":0.1383561389
+  },
+  {
+    "grant_id":"field-5106",
+    "neighbor_grant_id":"field-5105",
+    "neighbor_for4_name":"Medical and Biological Physics",
+    "similarity":0.1235267393
+  },
+  {
+    "grant_id":"field-5106",
+    "neighbor_grant_id":"field-5104",
+    "neighbor_for4_name":"Condensed Matter Physics",
+    "similarity":0.1033362543
+  },
+  {
+    "grant_id":"field-5107",
+    "neighbor_grant_id":"field-5108",
+    "neighbor_for4_name":"Quantum Physics",
+    "similarity":0.1189524897
+  },
+  {
+    "grant_id":"field-5107",
+    "neighbor_grant_id":"field-4902",
+    "neighbor_for4_name":"Mathematical Physics",
+    "similarity":0.1189524897
+  },
+  {
+    "grant_id":"field-5107",
+    "neighbor_grant_id":"field-5103",
+    "neighbor_for4_name":"Classical Physics",
+    "similarity":0.1189524897
+  },
+  {
+    "grant_id":"field-5107",
+    "neighbor_grant_id":"field-5105",
+    "neighbor_for4_name":"Medical and Biological Physics",
+    "similarity":0.1062028277
+  },
+  {
+    "grant_id":"field-5107",
+    "neighbor_grant_id":"field-5106",
+    "neighbor_for4_name":"Nuclear and Plasma Physics",
+    "similarity":0.1013427167
+  },
+  {
+    "grant_id":"field-5108",
+    "neighbor_grant_id":"field-5103",
+    "neighbor_for4_name":"Classical Physics",
+    "similarity":0.2073667964
+  },
+  {
+    "grant_id":"field-5108",
+    "neighbor_grant_id":"field-4902",
+    "neighbor_for4_name":"Mathematical Physics",
+    "similarity":0.2073667964
+  },
+  {
+    "grant_id":"field-5108",
+    "neighbor_grant_id":"field-5104",
+    "neighbor_for4_name":"Condensed Matter Physics",
+    "similarity":0.1548793439
+  },
+  {
+    "grant_id":"field-5108",
+    "neighbor_grant_id":"field-5105",
+    "neighbor_for4_name":"Medical and Biological Physics",
+    "similarity":0.1449913092
+  },
+  {
+    "grant_id":"field-5108",
+    "neighbor_grant_id":"field-5106",
+    "neighbor_for4_name":"Nuclear and Plasma Physics",
+    "similarity":0.1383561389
+  },
+  {
+    "grant_id":"field-5109",
+    "neighbor_grant_id":"field-3202",
+    "neighbor_for4_name":"Clinical Sciences",
+    "similarity":0.1964701435
+  },
+  {
+    "grant_id":"field-5109",
+    "neighbor_grant_id":"field-3005",
+    "neighbor_for4_name":"Fisheries Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-5109",
+    "neighbor_grant_id":"field-3006",
+    "neighbor_for4_name":"Food Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-5109",
+    "neighbor_grant_id":"field-3009",
+    "neighbor_for4_name":"Veterinary Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-5109",
+    "neighbor_grant_id":"field-3701",
+    "neighbor_for4_name":"Atmospheric Sciences",
+    "similarity":0.1906765297
+  },
+  {
+    "grant_id":"field-5110",
+    "neighbor_grant_id":"field-4407",
+    "neighbor_for4_name":"Policy and Administration",
+    "similarity":0.0355776042
+  },
+  {
+    "grant_id":"field-5110",
+    "neighbor_grant_id":"field-3211",
+    "neighbor_for4_name":"Oncology and Carcinogenesis",
+    "similarity":0.0349558984
+  },
+  {
+    "grant_id":"field-5110",
+    "neighbor_grant_id":"field-3212",
+    "neighbor_for4_name":"Ophthalmology and Optometry",
+    "similarity":0.0349558984
+  },
+  {
+    "grant_id":"field-5110",
+    "neighbor_grant_id":"field-4604",
+    "neighbor_for4_name":"Cybersecurity and Privacy",
+    "similarity":0.0349558984
+  },
+  {
+    "grant_id":"field-5110",
+    "neighbor_grant_id":"field-4105",
+    "neighbor_for4_name":"Pollution and Contamination",
+    "similarity":0.0349558984
+  },
+  {
+    "grant_id":"field-5201",
+    "neighbor_grant_id":"field-4601",
+    "neighbor_for4_name":"Applied Computing",
+    "similarity":0.1766350609
+  },
+  {
+    "grant_id":"field-5201",
+    "neighbor_grant_id":"field-4901",
+    "neighbor_for4_name":"Applied Mathematics",
+    "similarity":0.1766350609
+  },
+  {
+    "grant_id":"field-5201",
+    "neighbor_grant_id":"field-5202",
+    "neighbor_for4_name":"Biological Psychology",
+    "similarity":0.173232095
+  },
+  {
+    "grant_id":"field-5201",
+    "neighbor_grant_id":"field-5001",
+    "neighbor_for4_name":"Applied Ethics",
+    "similarity":0.1684489162
+  },
+  {
+    "grant_id":"field-5201",
+    "neighbor_grant_id":"field-3801",
+    "neighbor_for4_name":"Applied Economics",
+    "similarity":0.1684489162
+  },
+  {
+    "grant_id":"field-5202",
+    "neighbor_grant_id":"field-5105",
+    "neighbor_for4_name":"Medical and Biological Physics",
+    "similarity":0.2387446244
+  },
+  {
+    "grant_id":"field-5202",
+    "neighbor_grant_id":"field-5204",
+    "neighbor_for4_name":"Cognitive and Computational Psychology",
+    "similarity":0.1774415543
+  },
+  {
+    "grant_id":"field-5202",
+    "neighbor_grant_id":"field-5203",
+    "neighbor_for4_name":"Clinical and Health Psychology",
+    "similarity":0.1746718509
+  },
+  {
+    "grant_id":"field-5202",
+    "neighbor_grant_id":"field-5201",
+    "neighbor_for4_name":"Applied and Developmental Psychology",
+    "similarity":0.173232095
+  },
+  {
+    "grant_id":"field-5202",
+    "neighbor_grant_id":"field-5205",
+    "neighbor_for4_name":"Social and Personality Psychology",
+    "similarity":0.1698230838
+  },
+  {
+    "grant_id":"field-5203",
+    "neighbor_grant_id":"field-3202",
+    "neighbor_for4_name":"Clinical Sciences",
+    "similarity":0.243158144
+  },
+  {
+    "grant_id":"field-5203",
+    "neighbor_grant_id":"field-4206",
+    "neighbor_for4_name":"Public Health",
+    "similarity":0.1876175691
+  },
+  {
+    "grant_id":"field-5203",
+    "neighbor_grant_id":"field-5202",
+    "neighbor_for4_name":"Biological Psychology",
+    "similarity":0.1746718509
+  },
+  {
+    "grant_id":"field-5203",
+    "neighbor_grant_id":"field-4203",
+    "neighbor_for4_name":"Health Services and Systems",
+    "similarity":0.15975314
+  },
+  {
+    "grant_id":"field-5203",
+    "neighbor_grant_id":"field-5204",
+    "neighbor_for4_name":"Cognitive and Computational Psychology",
+    "similarity":0.1489819003
+  },
+  {
+    "grant_id":"field-5204",
+    "neighbor_grant_id":"field-3407",
+    "neighbor_for4_name":"Theoretical and Computational Chemistry",
+    "similarity":0.298160251
+  },
+  {
+    "grant_id":"field-5204",
+    "neighbor_grant_id":"field-3102",
+    "neighbor_for4_name":"Bioinformatics and Computational Biology",
+    "similarity":0.294241432
+  },
+  {
+    "grant_id":"field-5204",
+    "neighbor_grant_id":"field-4903",
+    "neighbor_for4_name":"Numerical and Computational Mathematics",
+    "similarity":0.2922894991
+  },
+  {
+    "grant_id":"field-5204",
+    "neighbor_grant_id":"field-5202",
+    "neighbor_for4_name":"Biological Psychology",
+    "similarity":0.1774415543
+  },
+  {
+    "grant_id":"field-5204",
+    "neighbor_grant_id":"field-5203",
+    "neighbor_for4_name":"Clinical and Health Psychology",
+    "similarity":0.1489819003
+  },
+  {
+    "grant_id":"field-5205",
+    "neighbor_grant_id":"field-4409",
+    "neighbor_for4_name":"Social Work",
+    "similarity":0.2134063548
+  },
+  {
+    "grant_id":"field-5205",
+    "neighbor_grant_id":"field-5202",
+    "neighbor_for4_name":"Biological Psychology",
+    "similarity":0.1698230838
+  },
+  {
+    "grant_id":"field-5205",
+    "neighbor_grant_id":"field-5204",
+    "neighbor_for4_name":"Cognitive and Computational Psychology",
+    "similarity":0.1448462681
+  },
+  {
+    "grant_id":"field-5205",
+    "neighbor_grant_id":"field-5203",
+    "neighbor_for4_name":"Clinical and Health Psychology",
+    "similarity":0.1425853479
+  },
+  {
+    "grant_id":"field-5205",
+    "neighbor_grant_id":"field-5201",
+    "neighbor_for4_name":"Applied and Developmental Psychology",
+    "similarity":0.1414100692
+  }
+]
