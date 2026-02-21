@@ -1,0 +1,842 @@
+[
+  {
+    "FOR4_NAME":"Agricultural Biotechnology",
+    "AAU_total":5031594.0,
+    "under_target_gap":0.000166691
+  },
+  {
+    "FOR4_NAME":"Agriculture, Land and Farm Management",
+    "AAU_total":10894251.0,
+    "under_target_gap":0.0003747345
+  },
+  {
+    "FOR4_NAME":"Animal Production",
+    "AAU_total":6676531.0,
+    "under_target_gap":0.0000409597
+  },
+  {
+    "FOR4_NAME":"Crop and Pasture Production",
+    "AAU_total":217588413.0,
+    "under_target_gap":0.0041440768
+  },
+  {
+    "FOR4_NAME":"Fisheries Sciences",
+    "AAU_total":2275261.0,
+    "under_target_gap":0.0
+  },
+  {
+    "FOR4_NAME":"Food Sciences",
+    "AAU_total":9285195.0,
+    "under_target_gap":0.0
+  },
+  {
+    "FOR4_NAME":"Forestry Sciences",
+    "AAU_total":68291672.0,
+    "under_target_gap":0.0019344428
+  },
+  {
+    "FOR4_NAME":"Horticultural Production",
+    "AAU_total":42242131.0,
+    "under_target_gap":0.0005156928
+  },
+  {
+    "FOR4_NAME":"Veterinary Sciences",
+    "AAU_total":29899355.0,
+    "under_target_gap":0.0008889477
+  },
+  {
+    "FOR4_NAME":"Biochemistry and Cell Biology",
+    "AAU_total":699112150.0,
+    "under_target_gap":0.01050112
+  },
+  {
+    "FOR4_NAME":"Bioinformatics and Computational Biology",
+    "AAU_total":321396747.0,
+    "under_target_gap":-0.0009895127
+  },
+  {
+    "FOR4_NAME":"Ecology",
+    "AAU_total":329468338.0,
+    "under_target_gap":0.0079455954
+  },
+  {
+    "FOR4_NAME":"Evolutionary Biology",
+    "AAU_total":79719541.0,
+    "under_target_gap":0.0013282911
+  },
+  {
+    "FOR4_NAME":"Genetics",
+    "AAU_total":379439237.0,
+    "under_target_gap":0.0070664452
+  },
+  {
+    "FOR4_NAME":"Industrial Biotechnology",
+    "AAU_total":194846843.0,
+    "under_target_gap":0.0056013739
+  },
+  {
+    "FOR4_NAME":"Microbiology",
+    "AAU_total":276662080.0,
+    "under_target_gap":-0.0016011567
+  },
+  {
+    "FOR4_NAME":"Plant Biology",
+    "AAU_total":240117365.0,
+    "under_target_gap":0.0027564907
+  },
+  {
+    "FOR4_NAME":"Zoology",
+    "AAU_total":40028227.0,
+    "under_target_gap":0.0011558499
+  },
+  {
+    "FOR4_NAME":"Cardiovascular Medicine and Haematology",
+    "AAU_total":60840084.0,
+    "under_target_gap":0.0016549865
+  },
+  {
+    "FOR4_NAME":"Clinical Sciences",
+    "AAU_total":968568105.0,
+    "under_target_gap":0.0188671387
+  },
+  {
+    "FOR4_NAME":"Dentistry",
+    "AAU_total":19993204.0,
+    "under_target_gap":0.0001617088
+  },
+  {
+    "FOR4_NAME":"Immunology",
+    "AAU_total":301457223.0,
+    "under_target_gap":0.008000573
+  },
+  {
+    "FOR4_NAME":"Medical Biochemistry and Metabolomics",
+    "AAU_total":43602926.0,
+    "under_target_gap":0.000614977
+  },
+  {
+    "FOR4_NAME":"Medical Biotechnology",
+    "AAU_total":152024860.0,
+    "under_target_gap":0.0049535441
+  },
+  {
+    "FOR4_NAME":"Medical Microbiology",
+    "AAU_total":337968976.0,
+    "under_target_gap":0.0024495553
+  },
+  {
+    "FOR4_NAME":"Medical Physiology",
+    "AAU_total":40360491.0,
+    "under_target_gap":0.0011887929
+  },
+  {
+    "FOR4_NAME":"Neurosciences",
+    "AAU_total":161527026.0,
+    "under_target_gap":-0.0009192406
+  },
+  {
+    "FOR4_NAME":"Nutrition and Dietetics",
+    "AAU_total":37158746.0,
+    "under_target_gap":0.0008455463
+  },
+  {
+    "FOR4_NAME":"Oncology and Carcinogenesis",
+    "AAU_total":315223448.0,
+    "under_target_gap":0.0052254394
+  },
+  {
+    "FOR4_NAME":"Ophthalmology and Optometry",
+    "AAU_total":33309895.0,
+    "under_target_gap":0.0004951018
+  },
+  {
+    "FOR4_NAME":"Paediatrics",
+    "AAU_total":81247372.0,
+    "under_target_gap":0.0022863797
+  },
+  {
+    "FOR4_NAME":"Pharmacology and Pharmaceutical Sciences",
+    "AAU_total":130759933.0,
+    "under_target_gap":0.0019947921
+  },
+  {
+    "FOR4_NAME":"Reproductive Medicine",
+    "AAU_total":127898523.0,
+    "under_target_gap":0.0036394087
+  },
+  {
+    "FOR4_NAME":"Architecture",
+    "AAU_total":154764802.0,
+    "under_target_gap":-0.0118510932
+  },
+  {
+    "FOR4_NAME":"Building",
+    "AAU_total":829160836.0,
+    "under_target_gap":0.0888098931
+  },
+  {
+    "FOR4_NAME":"Design",
+    "AAU_total":85503040.0,
+    "under_target_gap":-0.018774525
+  },
+  {
+    "FOR4_NAME":"Urban and Regional Planning",
+    "AAU_total":91636630.0,
+    "under_target_gap":-0.0010735028
+  },
+  {
+    "FOR4_NAME":"Analytical Chemistry",
+    "AAU_total":54260158.0,
+    "under_target_gap":-0.0045437447
+  },
+  {
+    "FOR4_NAME":"Inorganic Chemistry",
+    "AAU_total":136554498.0,
+    "under_target_gap":0.0009073235
+  },
+  {
+    "FOR4_NAME":"Macromolecular and Materials Chemistry",
+    "AAU_total":1193272530.0,
+    "under_target_gap":-0.0238222556
+  },
+  {
+    "FOR4_NAME":"Medicinal and Biomolecular Chemistry",
+    "AAU_total":46760782.0,
+    "under_target_gap":0.0004842711
+  },
+  {
+    "FOR4_NAME":"Organic Chemistry",
+    "AAU_total":162938848.0,
+    "under_target_gap":-0.0016792833
+  },
+  {
+    "FOR4_NAME":"Physical Chemistry",
+    "AAU_total":655026183.0,
+    "under_target_gap":0.0192164465
+  },
+  {
+    "FOR4_NAME":"Theoretical and Computational Chemistry",
+    "AAU_total":27004039.0,
+    "under_target_gap":0.0006634632
+  },
+  {
+    "FOR4_NAME":"Banking, Finance and Investment",
+    "AAU_total":40721659.0,
+    "under_target_gap":0.0003411734
+  },
+  {
+    "FOR4_NAME":"Business Systems In Context",
+    "AAU_total":27840231.0,
+    "under_target_gap":0.0030229164
+  },
+  {
+    "FOR4_NAME":"Commercial Services",
+    "AAU_total":9159068.0,
+    "under_target_gap":0.0005100313
+  },
+  {
+    "FOR4_NAME":"Human Resources and Industrial Relations",
+    "AAU_total":36740391.0,
+    "under_target_gap":0.0003987125
+  },
+  {
+    "FOR4_NAME":"Marketing",
+    "AAU_total":4491607.0,
+    "under_target_gap":0.000004432
+  },
+  {
+    "FOR4_NAME":"Strategy, Management and Organisational Behaviour",
+    "AAU_total":488072620.0,
+    "under_target_gap":-0.0086659755
+  },
+  {
+    "FOR4_NAME":"Tourism",
+    "AAU_total":1763370.0,
+    "under_target_gap":0.0000219122
+  },
+  {
+    "FOR4_NAME":"Transportation, Logistics and Supply Chains",
+    "AAU_total":132272491.0,
+    "under_target_gap":0.0000327415
+  },
+  {
+    "FOR4_NAME":"Art History, Theory and Criticism",
+    "AAU_total":6677045.0,
+    "under_target_gap":0.0001162093
+  },
+  {
+    "FOR4_NAME":"Creative and Professional Writing",
+    "AAU_total":40002959.0,
+    "under_target_gap":-0.0015305765
+  },
+  {
+    "FOR4_NAME":"Music",
+    "AAU_total":23955468.0,
+    "under_target_gap":0.0003850756
+  },
+  {
+    "FOR4_NAME":"Performing Arts",
+    "AAU_total":10732769.0,
+    "under_target_gap":0.000262991
+  },
+  {
+    "FOR4_NAME":"Screen and Digital Media",
+    "AAU_total":130223275.0,
+    "under_target_gap":0.0010727805
+  },
+  {
+    "FOR4_NAME":"Atmospheric Sciences",
+    "AAU_total":328361531.0,
+    "under_target_gap":-0.0120373896
+  },
+  {
+    "FOR4_NAME":"Climate Change Science",
+    "AAU_total":31327023.0,
+    "under_target_gap":0.0003649801
+  },
+  {
+    "FOR4_NAME":"Geochemistry",
+    "AAU_total":108321151.0,
+    "under_target_gap":0.0028555175
+  },
+  {
+    "FOR4_NAME":"Geoinformatics",
+    "AAU_total":43456961.0,
+    "under_target_gap":0.0006484575
+  },
+  {
+    "FOR4_NAME":"Geology",
+    "AAU_total":436113546.0,
+    "under_target_gap":0.0111706091
+  },
+  {
+    "FOR4_NAME":"Geophysics",
+    "AAU_total":189013728.0,
+    "under_target_gap":0.0009182424
+  },
+  {
+    "FOR4_NAME":"Hydrology",
+    "AAU_total":62072332.0,
+    "under_target_gap":-0.0116433671
+  },
+  {
+    "FOR4_NAME":"Oceanography",
+    "AAU_total":330571722.0,
+    "under_target_gap":0.0093889146
+  },
+  {
+    "FOR4_NAME":"Physical Geography and Environmental Geoscience",
+    "AAU_total":295910880.0,
+    "under_target_gap":-0.007730759
+  },
+  {
+    "FOR4_NAME":"Applied Economics",
+    "AAU_total":140725069.0,
+    "under_target_gap":0.0026938002
+  },
+  {
+    "FOR4_NAME":"Econometrics",
+    "AAU_total":16533495.0,
+    "under_target_gap":0.0000867775
+  },
+  {
+    "FOR4_NAME":"Economic Theory",
+    "AAU_total":35757068.0,
+    "under_target_gap":0.000727234
+  },
+  {
+    "FOR4_NAME":"Curriculum and Pedagogy",
+    "AAU_total":1018077466.0,
+    "under_target_gap":-0.00404017
+  },
+  {
+    "FOR4_NAME":"Education Policy, Sociology and Philosophy",
+    "AAU_total":224108825.0,
+    "under_target_gap":0.0031029295
+  },
+  {
+    "FOR4_NAME":"Education Systems",
+    "AAU_total":1603842557.0,
+    "under_target_gap":-0.0475409198
+  },
+  {
+    "FOR4_NAME":"Specialist Studies In Education",
+    "AAU_total":471831757.0,
+    "under_target_gap":0.0063424812
+  },
+  {
+    "FOR4_NAME":"Aerospace Engineering",
+    "AAU_total":144146154.0,
+    "under_target_gap":0.0015879112
+  },
+  {
+    "FOR4_NAME":"Automotive Engineering",
+    "AAU_total":46879654.0,
+    "under_target_gap":0.0004914495
+  },
+  {
+    "FOR4_NAME":"Biomedical Engineering",
+    "AAU_total":248867139.0,
+    "under_target_gap":0.0006612645
+  },
+  {
+    "FOR4_NAME":"Chemical Engineering",
+    "AAU_total":157323327.0,
+    "under_target_gap":0.0026785771
+  },
+  {
+    "FOR4_NAME":"Civil Engineering",
+    "AAU_total":201927357.0,
+    "under_target_gap":0.0000914242
+  },
+  {
+    "FOR4_NAME":"Communications Engineering",
+    "AAU_total":172316559.0,
+    "under_target_gap":-0.0022093909
+  },
+  {
+    "FOR4_NAME":"Control Engineering, Mechatronics and Robotics",
+    "AAU_total":53400048.0,
+    "under_target_gap":0.0006468762
+  },
+  {
+    "FOR4_NAME":"Electrical Engineering",
+    "AAU_total":161481683.0,
+    "under_target_gap":0.0013156058
+  },
+  {
+    "FOR4_NAME":"Electronics, Sensors and Digital Hardware",
+    "AAU_total":695904189.0,
+    "under_target_gap":0.007143081
+  },
+  {
+    "FOR4_NAME":"Engineering Practice and Education",
+    "AAU_total":109269945.0,
+    "under_target_gap":0.0019625632
+  },
+  {
+    "FOR4_NAME":"Environmental Engineering",
+    "AAU_total":59194610.0,
+    "under_target_gap":0.0013194225
+  },
+  {
+    "FOR4_NAME":"Fluid Mechanics and Thermal Engineering",
+    "AAU_total":133398567.0,
+    "under_target_gap":0.002710416
+  },
+  {
+    "FOR4_NAME":"Geomatic Engineering",
+    "AAU_total":26166504.0,
+    "under_target_gap":-0.0014129426
+  },
+  {
+    "FOR4_NAME":"Manufacturing Engineering",
+    "AAU_total":309484338.0,
+    "under_target_gap":-0.0042546028
+  },
+  {
+    "FOR4_NAME":"Maritime Engineering",
+    "AAU_total":84937293.0,
+    "under_target_gap":0.0015332656
+  },
+  {
+    "FOR4_NAME":"Materials Engineering",
+    "AAU_total":530535451.0,
+    "under_target_gap":-0.0606930171
+  },
+  {
+    "FOR4_NAME":"Mechanical Engineering",
+    "AAU_total":52203899.0,
+    "under_target_gap":0.0007619257
+  },
+  {
+    "FOR4_NAME":"Nanotechnology",
+    "AAU_total":76746510.0,
+    "under_target_gap":-0.0047665497
+  },
+  {
+    "FOR4_NAME":"Resources Engineering and Extractive Metallurgy",
+    "AAU_total":53659106.0,
+    "under_target_gap":0.0017494169
+  },
+  {
+    "FOR4_NAME":"Climate Change Impacts and Adaptation",
+    "AAU_total":262499979.0,
+    "under_target_gap":0.0109730961
+  },
+  {
+    "FOR4_NAME":"Ecological Applications",
+    "AAU_total":146775377.0,
+    "under_target_gap":0.0030114802
+  },
+  {
+    "FOR4_NAME":"Environmental Biotechnology",
+    "AAU_total":4655337.0,
+    "under_target_gap":0.000042764
+  },
+  {
+    "FOR4_NAME":"Environmental Management",
+    "AAU_total":175520204.0,
+    "under_target_gap":0.0042900411
+  },
+  {
+    "FOR4_NAME":"Pollution and Contamination",
+    "AAU_total":60131565.0,
+    "under_target_gap":0.0023134049
+  },
+  {
+    "FOR4_NAME":"Soil Sciences",
+    "AAU_total":31498137.0,
+    "under_target_gap":0.0004856184
+  },
+  {
+    "FOR4_NAME":"Allied Health and Rehabilitation Science",
+    "AAU_total":101884420.0,
+    "under_target_gap":0.0020225825
+  },
+  {
+    "FOR4_NAME":"Epidemiology",
+    "AAU_total":93699872.0,
+    "under_target_gap":0.0010335561
+  },
+  {
+    "FOR4_NAME":"Health Services and Systems",
+    "AAU_total":1598345484.0,
+    "under_target_gap":0.0096276701
+  },
+  {
+    "FOR4_NAME":"Midwifery",
+    "AAU_total":40426351.0,
+    "under_target_gap":0.0008550238
+  },
+  {
+    "FOR4_NAME":"Nursing",
+    "AAU_total":69938193.0,
+    "under_target_gap":0.0022272488
+  },
+  {
+    "FOR4_NAME":"Public Health",
+    "AAU_total":725433524.0,
+    "under_target_gap":0.0188908117
+  },
+  {
+    "FOR4_NAME":"Sports Science and Exercise",
+    "AAU_total":17664168.0,
+    "under_target_gap":0.000054285
+  },
+  {
+    "FOR4_NAME":"Archaeology",
+    "AAU_total":40683050.0,
+    "under_target_gap":0.0009838782
+  },
+  {
+    "FOR4_NAME":"Heritage, Archive and Museum Studies",
+    "AAU_total":49125736.0,
+    "under_target_gap":-0.0029366468
+  },
+  {
+    "FOR4_NAME":"Historical Studies",
+    "AAU_total":50211843.0,
+    "under_target_gap":-0.0017232815
+  },
+  {
+    "FOR4_NAME":"Anthropology",
+    "AAU_total":17229329.0,
+    "under_target_gap":0.0002581901
+  },
+  {
+    "FOR4_NAME":"Criminology",
+    "AAU_total":56890480.0,
+    "under_target_gap":0.0008606963
+  },
+  {
+    "FOR4_NAME":"Demography",
+    "AAU_total":37055545.0,
+    "under_target_gap":0.0002932814
+  },
+  {
+    "FOR4_NAME":"Development Studies",
+    "AAU_total":63814589.0,
+    "under_target_gap":0.0015671085
+  },
+  {
+    "FOR4_NAME":"Gender Studies",
+    "AAU_total":38354054.0,
+    "under_target_gap":0.0009106672
+  },
+  {
+    "FOR4_NAME":"Human Geography",
+    "AAU_total":274108344.0,
+    "under_target_gap":0.0098834666
+  },
+  {
+    "FOR4_NAME":"Policy and Administration",
+    "AAU_total":187333394.0,
+    "under_target_gap":0.0055637094
+  },
+  {
+    "FOR4_NAME":"Political Science",
+    "AAU_total":89923214.0,
+    "under_target_gap":0.0013737524
+  },
+  {
+    "FOR4_NAME":"Social Work",
+    "AAU_total":114480137.0,
+    "under_target_gap":0.0023811225
+  },
+  {
+    "FOR4_NAME":"Sociology",
+    "AAU_total":29143978.0,
+    "under_target_gap":0.0007872148
+  },
+  {
+    "FOR4_NAME":"Applied Computing",
+    "AAU_total":227229223.0,
+    "under_target_gap":0.0075678245
+  },
+  {
+    "FOR4_NAME":"Artificial Intelligence",
+    "AAU_total":424556629.0,
+    "under_target_gap":-0.0705647726
+  },
+  {
+    "FOR4_NAME":"Computer Vision and Multimedia Computation",
+    "AAU_total":38240422.0,
+    "under_target_gap":0.000412958
+  },
+  {
+    "FOR4_NAME":"Cybersecurity and Privacy",
+    "AAU_total":362154436.0,
+    "under_target_gap":-0.0980156135
+  },
+  {
+    "FOR4_NAME":"Data Management and Data Science",
+    "AAU_total":381571987.0,
+    "under_target_gap":-0.034522951
+  },
+  {
+    "FOR4_NAME":"Distributed Computing and Systems Software",
+    "AAU_total":403791206.0,
+    "under_target_gap":-0.0162942385
+  },
+  {
+    "FOR4_NAME":"Graphics, Augmented Reality and Games",
+    "AAU_total":67038612.0,
+    "under_target_gap":-0.0071473559
+  },
+  {
+    "FOR4_NAME":"Human-Centred Computing",
+    "AAU_total":966264268.0,
+    "under_target_gap":-0.0228379974
+  },
+  {
+    "FOR4_NAME":"Information Systems",
+    "AAU_total":29778361.0,
+    "under_target_gap":-0.0038376156
+  },
+  {
+    "FOR4_NAME":"Library and Information Studies",
+    "AAU_total":331604141.0,
+    "under_target_gap":0.0160890206
+  },
+  {
+    "FOR4_NAME":"Machine Learning",
+    "AAU_total":401767252.0,
+    "under_target_gap":-0.0217417099
+  },
+  {
+    "FOR4_NAME":"Software Engineering",
+    "AAU_total":230070428.0,
+    "under_target_gap":-0.0282012177
+  },
+  {
+    "FOR4_NAME":"Theory Of Computation",
+    "AAU_total":82295658.0,
+    "under_target_gap":0.002400606
+  },
+  {
+    "FOR4_NAME":"Communication and Media Studies",
+    "AAU_total":75460002.0,
+    "under_target_gap":0.0001550607
+  },
+  {
+    "FOR4_NAME":"Cultural Studies",
+    "AAU_total":40726032.0,
+    "under_target_gap":0.0002695232
+  },
+  {
+    "FOR4_NAME":"Language Studies",
+    "AAU_total":36206692.0,
+    "under_target_gap":0.0003868279
+  },
+  {
+    "FOR4_NAME":"Linguistics",
+    "AAU_total":121653189.0,
+    "under_target_gap":0.0024401491
+  },
+  {
+    "FOR4_NAME":"Literary Studies",
+    "AAU_total":18114884.0,
+    "under_target_gap":0.0002745409
+  },
+  {
+    "FOR4_NAME":"Commercial Law",
+    "AAU_total":22912926.0,
+    "under_target_gap":0.0002882444
+  },
+  {
+    "FOR4_NAME":"Environmental and Resources Law",
+    "AAU_total":637000432.0,
+    "under_target_gap":0.0046940808
+  },
+  {
+    "FOR4_NAME":"International and Comparative Law",
+    "AAU_total":12452497.0,
+    "under_target_gap":0.000016317
+  },
+  {
+    "FOR4_NAME":"Law In Context",
+    "AAU_total":18209838.0,
+    "under_target_gap":0.0003197697
+  },
+  {
+    "FOR4_NAME":"Legal Systems",
+    "AAU_total":21851911.0,
+    "under_target_gap":0.0006250536
+  },
+  {
+    "FOR4_NAME":"Private Law and Civil Obligations",
+    "AAU_total":6572924.0,
+    "under_target_gap":0.0
+  },
+  {
+    "FOR4_NAME":"Public Law",
+    "AAU_total":15263110.0,
+    "under_target_gap":0.0000353061
+  },
+  {
+    "FOR4_NAME":"Applied Mathematics",
+    "AAU_total":70514408.0,
+    "under_target_gap":0.0001680576
+  },
+  {
+    "FOR4_NAME":"Mathematical Physics",
+    "AAU_total":93640463.0,
+    "under_target_gap":0.0041250996
+  },
+  {
+    "FOR4_NAME":"Numerical and Computational Mathematics",
+    "AAU_total":43155716.0,
+    "under_target_gap":0.0012565555
+  },
+  {
+    "FOR4_NAME":"Pure Mathematics",
+    "AAU_total":214402368.0,
+    "under_target_gap":0.0024774768
+  },
+  {
+    "FOR4_NAME":"Statistics",
+    "AAU_total":57071525.0,
+    "under_target_gap":0.0005205146
+  },
+  {
+    "FOR4_NAME":"Applied Ethics",
+    "AAU_total":11083727.0,
+    "under_target_gap":0.0001764278
+  },
+  {
+    "FOR4_NAME":"History and Philosophy Of Specific Fields",
+    "AAU_total":365052285.0,
+    "under_target_gap":-0.00836411
+  },
+  {
+    "FOR4_NAME":"Philosophy",
+    "AAU_total":18832311.0,
+    "under_target_gap":0.0002029667
+  },
+  {
+    "FOR4_NAME":"Religious Studies",
+    "AAU_total":10053251.0,
+    "under_target_gap":0.0000381269
+  },
+  {
+    "FOR4_NAME":"Theology",
+    "AAU_total":8106553.0,
+    "under_target_gap":0.0001762975
+  },
+  {
+    "FOR4_NAME":"Astronomical Sciences",
+    "AAU_total":779248475.0,
+    "under_target_gap":0.0552031068
+  },
+  {
+    "FOR4_NAME":"Atomic, Molecular and Optical Physics",
+    "AAU_total":319824506.0,
+    "under_target_gap":0.0078255608
+  },
+  {
+    "FOR4_NAME":"Classical Physics",
+    "AAU_total":43654134.0,
+    "under_target_gap":0.0015220908
+  },
+  {
+    "FOR4_NAME":"Condensed Matter Physics",
+    "AAU_total":359612876.0,
+    "under_target_gap":-0.0022546801
+  },
+  {
+    "FOR4_NAME":"Medical and Biological Physics",
+    "AAU_total":10396387.0,
+    "under_target_gap":0.0005439298
+  },
+  {
+    "FOR4_NAME":"Nuclear and Plasma Physics",
+    "AAU_total":2296093617.0,
+    "under_target_gap":0.0490668465
+  },
+  {
+    "FOR4_NAME":"Particle and High Energy Physics",
+    "AAU_total":1476859612.0,
+    "under_target_gap":0.0026188839
+  },
+  {
+    "FOR4_NAME":"Quantum Physics",
+    "AAU_total":1100759684.0,
+    "under_target_gap":0.0100648805
+  },
+  {
+    "FOR4_NAME":"Space Sciences",
+    "AAU_total":116190383.0,
+    "under_target_gap":0.0016028371
+  },
+  {
+    "FOR4_NAME":"Synchrotrons and Accelerators",
+    "AAU_total":1407604484.0,
+    "under_target_gap":0.0324763145
+  },
+  {
+    "FOR4_NAME":"Applied and Developmental Psychology",
+    "AAU_total":24233269.0,
+    "under_target_gap":-0.0166661016
+  },
+  {
+    "FOR4_NAME":"Biological Psychology",
+    "AAU_total":257014774.0,
+    "under_target_gap":0.0014126601
+  },
+  {
+    "FOR4_NAME":"Clinical and Health Psychology",
+    "AAU_total":40308651.0,
+    "under_target_gap":0.0005702418
+  },
+  {
+    "FOR4_NAME":"Cognitive and Computational Psychology",
+    "AAU_total":166594010.0,
+    "under_target_gap":0.0012856983
+  },
+  {
+    "FOR4_NAME":"Social and Personality Psychology",
+    "AAU_total":21442903.0,
+    "under_target_gap":0.000885569
+  }
+]

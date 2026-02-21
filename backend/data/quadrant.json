@@ -1,0 +1,1178 @@
+[
+  {
+    "FOR4_CODE":"3001",
+    "FOR4_NAME":"Agricultural Biotechnology",
+    "targeting_index":0.0,
+    "growth_rate":-0.4487921294,
+    "AAU_total":5031594.0
+  },
+  {
+    "FOR4_CODE":"3002",
+    "FOR4_NAME":"Agriculture, Land and Farm Management",
+    "targeting_index":0.0,
+    "growth_rate":0.3280093848,
+    "AAU_total":10894251.0
+  },
+  {
+    "FOR4_CODE":"3003",
+    "FOR4_NAME":"Animal Production",
+    "targeting_index":0.0,
+    "growth_rate":-1.1761929546,
+    "AAU_total":6676531.0
+  },
+  {
+    "FOR4_CODE":"3004",
+    "FOR4_NAME":"Crop and Pasture Production",
+    "targeting_index":0.3364667842,
+    "growth_rate":0.7188535466,
+    "AAU_total":217588413.0
+  },
+  {
+    "FOR4_CODE":"3005",
+    "FOR4_NAME":"Fisheries Sciences",
+    "targeting_index":0.0,
+    "growth_rate":0.0,
+    "AAU_total":2275261.0
+  },
+  {
+    "FOR4_CODE":"3006",
+    "FOR4_NAME":"Food Sciences",
+    "targeting_index":0.0,
+    "growth_rate":0.0,
+    "AAU_total":9285195.0
+  },
+  {
+    "FOR4_CODE":"3007",
+    "FOR4_NAME":"Forestry Sciences",
+    "targeting_index":0.0,
+    "growth_rate":0.1692598723,
+    "AAU_total":68291672.0
+  },
+  {
+    "FOR4_CODE":"3008",
+    "FOR4_NAME":"Horticultural Production",
+    "targeting_index":0.0,
+    "growth_rate":-0.6287870599,
+    "AAU_total":42242131.0
+  },
+  {
+    "FOR4_CODE":"3009",
+    "FOR4_NAME":"Veterinary Sciences",
+    "targeting_index":0.0,
+    "growth_rate":0.3037591811,
+    "AAU_total":29899355.0
+  },
+  {
+    "FOR4_CODE":"3101",
+    "FOR4_NAME":"Biochemistry and Cell Biology",
+    "targeting_index":0.3443208502,
+    "growth_rate":-0.2493489017,
+    "AAU_total":699112150.0
+  },
+  {
+    "FOR4_CODE":"3102",
+    "FOR4_NAME":"Bioinformatics and Computational Biology",
+    "targeting_index":1.135732279,
+    "growth_rate":-0.1367156392,
+    "AAU_total":321396747.0
+  },
+  {
+    "FOR4_CODE":"3103",
+    "FOR4_NAME":"Ecology",
+    "targeting_index":0.0,
+    "growth_rate":-0.0962050933,
+    "AAU_total":329468338.0
+  },
+  {
+    "FOR4_CODE":"3104",
+    "FOR4_NAME":"Evolutionary Biology",
+    "targeting_index":0.0,
+    "growth_rate":-0.7072375342,
+    "AAU_total":79719541.0
+  },
+  {
+    "FOR4_CODE":"3105",
+    "FOR4_NAME":"Genetics",
+    "targeting_index":0.0462981138,
+    "growth_rate":-0.403053812,
+    "AAU_total":379439237.0
+  },
+  {
+    "FOR4_CODE":"3106",
+    "FOR4_NAME":"Industrial Biotechnology",
+    "targeting_index":0.0,
+    "growth_rate":-0.0119131871,
+    "AAU_total":194846843.0
+  },
+  {
+    "FOR4_CODE":"3107",
+    "FOR4_NAME":"Microbiology",
+    "targeting_index":1.3560530964,
+    "growth_rate":-0.3265211725,
+    "AAU_total":276662080.0
+  },
+  {
+    "FOR4_CODE":"3108",
+    "FOR4_NAME":"Plant Biology",
+    "targeting_index":0.0,
+    "growth_rate":-0.5299899307,
+    "AAU_total":240117365.0
+  },
+  {
+    "FOR4_CODE":"3109",
+    "FOR4_NAME":"Zoology",
+    "targeting_index":0.0,
+    "growth_rate":-0.090913423,
+    "AAU_total":40028227.0
+  },
+  {
+    "FOR4_CODE":"3201",
+    "FOR4_NAME":"Cardiovascular Medicine and Haematology",
+    "targeting_index":0.1716916729,
+    "growth_rate":0.4123645169,
+    "AAU_total":60840084.0
+  },
+  {
+    "FOR4_CODE":"3202",
+    "FOR4_NAME":"Clinical Sciences",
+    "targeting_index":0.4133538748,
+    "growth_rate":0.2579302887,
+    "AAU_total":968568105.0
+  },
+  {
+    "FOR4_CODE":"3203",
+    "FOR4_NAME":"Dentistry",
+    "targeting_index":0.0,
+    "growth_rate":-0.5620510169,
+    "AAU_total":19993204.0
+  },
+  {
+    "FOR4_CODE":"3204",
+    "FOR4_NAME":"Immunology",
+    "targeting_index":0.0,
+    "growth_rate":-0.0816786472,
+    "AAU_total":301457223.0
+  },
+  {
+    "FOR4_CODE":"3205",
+    "FOR4_NAME":"Medical Biochemistry and Metabolomics",
+    "targeting_index":0.0,
+    "growth_rate":-1.2973167786,
+    "AAU_total":43602926.0
+  },
+  {
+    "FOR4_CODE":"3206",
+    "FOR4_NAME":"Medical Biotechnology",
+    "targeting_index":0.0,
+    "growth_rate":-0.4777688996,
+    "AAU_total":152024860.0
+  },
+  {
+    "FOR4_CODE":"3207",
+    "FOR4_NAME":"Medical Microbiology",
+    "targeting_index":0.5107581083,
+    "growth_rate":-0.4103850856,
+    "AAU_total":337968976.0
+  },
+  {
+    "FOR4_CODE":"3208",
+    "FOR4_NAME":"Medical Physiology",
+    "targeting_index":0.0,
+    "growth_rate":-0.3946380791,
+    "AAU_total":40360491.0
+  },
+  {
+    "FOR4_CODE":"3209",
+    "FOR4_NAME":"Neurosciences",
+    "targeting_index":1.3141492682,
+    "growth_rate":-1.1719031256,
+    "AAU_total":161527026.0
+  },
+  {
+    "FOR4_CODE":"3210",
+    "FOR4_NAME":"Nutrition and Dietetics",
+    "targeting_index":0.0,
+    "growth_rate":-0.8921060567,
+    "AAU_total":37158746.0
+  },
+  {
+    "FOR4_CODE":"3211",
+    "FOR4_NAME":"Oncology and Carcinogenesis",
+    "targeting_index":0.4108641847,
+    "growth_rate":0.1171397535,
+    "AAU_total":315223448.0
+  },
+  {
+    "FOR4_CODE":"3212",
+    "FOR4_NAME":"Ophthalmology and Optometry",
+    "targeting_index":0.0,
+    "growth_rate":-0.3305521351,
+    "AAU_total":33309895.0
+  },
+  {
+    "FOR4_CODE":"3213",
+    "FOR4_NAME":"Paediatrics",
+    "targeting_index":0.0,
+    "growth_rate":0.4408915095,
+    "AAU_total":81247372.0
+  },
+  {
+    "FOR4_CODE":"3214",
+    "FOR4_NAME":"Pharmacology and Pharmaceutical Sciences",
+    "targeting_index":0.0,
+    "growth_rate":-0.4214568006,
+    "AAU_total":130759933.0
+  },
+  {
+    "FOR4_CODE":"3215",
+    "FOR4_NAME":"Reproductive Medicine",
+    "targeting_index":0.0,
+    "growth_rate":-0.3694547788,
+    "AAU_total":127898523.0
+  },
+  {
+    "FOR4_CODE":"3301",
+    "FOR4_NAME":"Architecture",
+    "targeting_index":3.6837213469,
+    "growth_rate":0.0568999783,
+    "AAU_total":154764802.0
+  },
+  {
+    "FOR4_CODE":"3302",
+    "FOR4_NAME":"Building",
+    "targeting_index":0.0,
+    "growth_rate":3.0109616571,
+    "AAU_total":829160836.0
+  },
+  {
+    "FOR4_CODE":"3303",
+    "FOR4_NAME":"Design",
+    "targeting_index":20.2481991359,
+    "growth_rate":-0.9486512915,
+    "AAU_total":85503040.0
+  },
+  {
+    "FOR4_CODE":"3304",
+    "FOR4_NAME":"Urban and Regional Planning",
+    "targeting_index":1.6911382841,
+    "growth_rate":-0.5460621233,
+    "AAU_total":91636630.0
+  },
+  {
+    "FOR4_CODE":"3401",
+    "FOR4_NAME":"Analytical Chemistry",
+    "targeting_index":5.8041543516,
+    "growth_rate":-0.2744114941,
+    "AAU_total":54260158.0
+  },
+  {
+    "FOR4_CODE":"3402",
+    "FOR4_NAME":"Inorganic Chemistry",
+    "targeting_index":0.7764890108,
+    "growth_rate":-0.376775633,
+    "AAU_total":136554498.0
+  },
+  {
+    "FOR4_CODE":"3403",
+    "FOR4_NAME":"Macromolecular and Materials Chemistry",
+    "targeting_index":1.9081789503,
+    "growth_rate":-0.5567131184,
+    "AAU_total":1193272530.0
+  },
+  {
+    "FOR4_CODE":"3404",
+    "FOR4_NAME":"Medicinal and Biomolecular Chemistry",
+    "targeting_index":0.0,
+    "growth_rate":0.3967709267,
+    "AAU_total":46760782.0
+  },
+  {
+    "FOR4_CODE":"3405",
+    "FOR4_NAME":"Organic Chemistry",
+    "targeting_index":1.7332274286,
+    "growth_rate":-0.8510736049,
+    "AAU_total":162938848.0
+  },
+  {
+    "FOR4_CODE":"3406",
+    "FOR4_NAME":"Physical Chemistry",
+    "targeting_index":0.0905056414,
+    "growth_rate":0.2006369605,
+    "AAU_total":655026183.0
+  },
+  {
+    "FOR4_CODE":"3407",
+    "FOR4_NAME":"Theoretical and Computational Chemistry",
+    "targeting_index":0.0,
+    "growth_rate":-0.3003576267,
+    "AAU_total":27004039.0
+  },
+  {
+    "FOR4_CODE":"3502",
+    "FOR4_NAME":"Banking, Finance and Investment",
+    "targeting_index":0.0,
+    "growth_rate":-2.4476290534,
+    "AAU_total":40721659.0
+  },
+  {
+    "FOR4_CODE":"3503",
+    "FOR4_NAME":"Business Systems In Context",
+    "targeting_index":0.0,
+    "growth_rate":2.801008864,
+    "AAU_total":27840231.0
+  },
+  {
+    "FOR4_CODE":"3504",
+    "FOR4_NAME":"Commercial Services",
+    "targeting_index":0.0,
+    "growth_rate":1.0452661607,
+    "AAU_total":9159068.0
+  },
+  {
+    "FOR4_CODE":"3505",
+    "FOR4_NAME":"Human Resources and Industrial Relations",
+    "targeting_index":0.0,
+    "growth_rate":-0.8569321077,
+    "AAU_total":36740391.0
+  },
+  {
+    "FOR4_CODE":"3506",
+    "FOR4_NAME":"Marketing",
+    "targeting_index":0.0,
+    "growth_rate":-4.5509979023,
+    "AAU_total":4491607.0
+  },
+  {
+    "FOR4_CODE":"3507",
+    "FOR4_NAME":"Strategy, Management and Organisational Behaviour",
+    "targeting_index":2.9662356151,
+    "growth_rate":-0.6179977282,
+    "AAU_total":488072620.0
+  },
+  {
+    "FOR4_CODE":"3508",
+    "FOR4_NAME":"Tourism",
+    "targeting_index":0.0,
+    "growth_rate":-1.7932825889,
+    "AAU_total":1763370.0
+  },
+  {
+    "FOR4_CODE":"3509",
+    "FOR4_NAME":"Transportation, Logistics and Supply Chains",
+    "targeting_index":0.9876887582,
+    "growth_rate":-0.5569390232,
+    "AAU_total":132272491.0
+  },
+  {
+    "FOR4_CODE":"3601",
+    "FOR4_NAME":"Art History, Theory and Criticism",
+    "targeting_index":0.0,
+    "growth_rate":-0.3473428798,
+    "AAU_total":6677045.0
+  },
+  {
+    "FOR4_CODE":"3602",
+    "FOR4_NAME":"Creative and Professional Writing",
+    "targeting_index":3.1577670811,
+    "growth_rate":-0.4722770075,
+    "AAU_total":40002959.0
+  },
+  {
+    "FOR4_CODE":"3603",
+    "FOR4_NAME":"Music",
+    "targeting_index":0.0,
+    "growth_rate":-1.0282993005,
+    "AAU_total":23955468.0
+  },
+  {
+    "FOR4_CODE":"3604",
+    "FOR4_NAME":"Performing Arts",
+    "targeting_index":0.0,
+    "growth_rate":0.0106171642,
+    "AAU_total":10732769.0
+  },
+  {
+    "FOR4_CODE":"3605",
+    "FOR4_NAME":"Screen and Digital Media",
+    "targeting_index":0.0,
+    "growth_rate":-2.399891596,
+    "AAU_total":130223275.0
+  },
+  {
+    "FOR4_CODE":"3701",
+    "FOR4_NAME":"Atmospheric Sciences",
+    "targeting_index":2.9058342073,
+    "growth_rate":-0.0525877226,
+    "AAU_total":328361531.0
+  },
+  {
+    "FOR4_CODE":"3702",
+    "FOR4_NAME":"Climate Change Science",
+    "targeting_index":0.0,
+    "growth_rate":-0.3052610202,
+    "AAU_total":31327023.0
+  },
+  {
+    "FOR4_CODE":"3703",
+    "FOR4_NAME":"Geochemistry",
+    "targeting_index":0.0,
+    "growth_rate":0.059818482,
+    "AAU_total":108321151.0
+  },
+  {
+    "FOR4_CODE":"3704",
+    "FOR4_NAME":"Geoinformatics",
+    "targeting_index":0.0,
+    "growth_rate":-1.5575619843,
+    "AAU_total":43456961.0
+  },
+  {
+    "FOR4_CODE":"3705",
+    "FOR4_NAME":"Geology",
+    "targeting_index":0.0,
+    "growth_rate":-0.1662550835,
+    "AAU_total":436113546.0
+  },
+  {
+    "FOR4_CODE":"3706",
+    "FOR4_NAME":"Geophysics",
+    "targeting_index":0.7498294254,
+    "growth_rate":-0.3419795113,
+    "AAU_total":189013728.0
+  },
+  {
+    "FOR4_CODE":"3707",
+    "FOR4_NAME":"Hydrology",
+    "targeting_index":8.7969434462,
+    "growth_rate":-0.3986199131,
+    "AAU_total":62072332.0
+  },
+  {
+    "FOR4_CODE":"3708",
+    "FOR4_NAME":"Oceanography",
+    "targeting_index":0.0,
+    "growth_rate":0.3752566372,
+    "AAU_total":330571722.0
+  },
+  {
+    "FOR4_CODE":"3709",
+    "FOR4_NAME":"Physical Geography and Environmental Geoscience",
+    "targeting_index":2.0248917496,
+    "growth_rate":-0.0531253683,
+    "AAU_total":295910880.0
+  },
+  {
+    "FOR4_CODE":"3801",
+    "FOR4_NAME":"Applied Economics",
+    "targeting_index":0.0,
+    "growth_rate":-0.7047770025,
+    "AAU_total":140725069.0
+  },
+  {
+    "FOR4_CODE":"3802",
+    "FOR4_NAME":"Econometrics",
+    "targeting_index":0.0,
+    "growth_rate":-2.2729091652,
+    "AAU_total":16533495.0
+  },
+  {
+    "FOR4_CODE":"3803",
+    "FOR4_NAME":"Economic Theory",
+    "targeting_index":0.0,
+    "growth_rate":-0.1796919811,
+    "AAU_total":35757068.0
+  },
+  {
+    "FOR4_CODE":"3901",
+    "FOR4_NAME":"Curriculum and Pedagogy",
+    "targeting_index":1.1472856745,
+    "growth_rate":0.226784488,
+    "AAU_total":1018077466.0
+  },
+  {
+    "FOR4_CODE":"3902",
+    "FOR4_NAME":"Education Policy, Sociology and Philosophy",
+    "targeting_index":0.1192886234,
+    "growth_rate":-1.0338488376,
+    "AAU_total":224108825.0
+  },
+  {
+    "FOR4_CODE":"3903",
+    "FOR4_NAME":"Education Systems",
+    "targeting_index":3.1507193974,
+    "growth_rate":-0.4794252261,
+    "AAU_total":1603842557.0
+  },
+  {
+    "FOR4_CODE":"3904",
+    "FOR4_NAME":"Specialist Studies In Education",
+    "targeting_index":0.7721743432,
+    "growth_rate":1.1932276974,
+    "AAU_total":471831757.0
+  },
+  {
+    "FOR4_CODE":"4001",
+    "FOR4_NAME":"Aerospace Engineering",
+    "targeting_index":0.0,
+    "growth_rate":-1.4241250598,
+    "AAU_total":144146154.0
+  },
+  {
+    "FOR4_CODE":"4002",
+    "FOR4_NAME":"Automotive Engineering",
+    "targeting_index":0.0,
+    "growth_rate":-0.9507545955,
+    "AAU_total":46879654.0
+  },
+  {
+    "FOR4_CODE":"4003",
+    "FOR4_NAME":"Biomedical Engineering",
+    "targeting_index":0.8805408813,
+    "growth_rate":-0.2335640254,
+    "AAU_total":248867139.0
+  },
+  {
+    "FOR4_CODE":"4004",
+    "FOR4_NAME":"Chemical Engineering",
+    "targeting_index":0.5992516302,
+    "growth_rate":0.3582222183,
+    "AAU_total":157323327.0
+  },
+  {
+    "FOR4_CODE":"4005",
+    "FOR4_NAME":"Civil Engineering",
+    "targeting_index":0.9583074158,
+    "growth_rate":-0.643106042,
+    "AAU_total":201927357.0
+  },
+  {
+    "FOR4_CODE":"4006",
+    "FOR4_NAME":"Communications Engineering",
+    "targeting_index":1.7257963145,
+    "growth_rate":-0.1415398487,
+    "AAU_total":172316559.0
+  },
+  {
+    "FOR4_CODE":"4007",
+    "FOR4_NAME":"Control Engineering, Mechatronics and Robotics",
+    "targeting_index":0.0,
+    "growth_rate":-1.228369052,
+    "AAU_total":53400048.0
+  },
+  {
+    "FOR4_CODE":"4008",
+    "FOR4_NAME":"Electrical Engineering",
+    "targeting_index":0.7449811862,
+    "growth_rate":-0.1083458193,
+    "AAU_total":161481683.0
+  },
+  {
+    "FOR4_CODE":"4009",
+    "FOR4_NAME":"Electronics, Sensors and Digital Hardware",
+    "targeting_index":0.6968591447,
+    "growth_rate":0.0542966101,
+    "AAU_total":695904189.0
+  },
+  {
+    "FOR4_CODE":"4010",
+    "FOR4_NAME":"Engineering Practice and Education",
+    "targeting_index":0.6489735542,
+    "growth_rate":0.6241329814,
+    "AAU_total":109269945.0
+  },
+  {
+    "FOR4_CODE":"4011",
+    "FOR4_NAME":"Environmental Engineering",
+    "targeting_index":0.0,
+    "growth_rate":-0.6695277603,
+    "AAU_total":59194610.0
+  },
+  {
+    "FOR4_CODE":"4012",
+    "FOR4_NAME":"Fluid Mechanics and Thermal Engineering",
+    "targeting_index":0.3042368968,
+    "growth_rate":0.1687735254,
+    "AAU_total":133398567.0
+  },
+  {
+    "FOR4_CODE":"4013",
+    "FOR4_NAME":"Geomatic Engineering",
+    "targeting_index":2.705332949,
+    "growth_rate":0.1038634128,
+    "AAU_total":26166504.0
+  },
+  {
+    "FOR4_CODE":"4014",
+    "FOR4_NAME":"Manufacturing Engineering",
+    "targeting_index":1.7915596654,
+    "growth_rate":-0.0471650806,
+    "AAU_total":309484338.0
+  },
+  {
+    "FOR4_CODE":"4015",
+    "FOR4_NAME":"Maritime Engineering",
+    "targeting_index":0.0,
+    "growth_rate":-0.2218904757,
+    "AAU_total":84937293.0
+  },
+  {
+    "FOR4_CODE":"4016",
+    "FOR4_NAME":"Materials Engineering",
+    "targeting_index":5.6693151861,
+    "growth_rate":-0.3260883878,
+    "AAU_total":530535451.0
+  },
+  {
+    "FOR4_CODE":"4017",
+    "FOR4_NAME":"Mechanical Engineering",
+    "targeting_index":0.0,
+    "growth_rate":-0.357921831,
+    "AAU_total":52203899.0
+  },
+  {
+    "FOR4_CODE":"4018",
+    "FOR4_NAME":"Nanotechnology",
+    "targeting_index":5.0142822549,
+    "growth_rate":-1.117358607,
+    "AAU_total":76746510.0
+  },
+  {
+    "FOR4_CODE":"4019",
+    "FOR4_NAME":"Resources Engineering and Extractive Metallurgy",
+    "targeting_index":0.0,
+    "growth_rate":0.5204305836,
+    "AAU_total":53659106.0
+  },
+  {
+    "FOR4_CODE":"4101",
+    "FOR4_NAME":"Climate Change Impacts and Adaptation",
+    "targeting_index":0.0,
+    "growth_rate":1.4857548357,
+    "AAU_total":262499979.0
+  },
+  {
+    "FOR4_CODE":"4102",
+    "FOR4_NAME":"Ecological Applications",
+    "targeting_index":0.0,
+    "growth_rate":0.2596872443,
+    "AAU_total":146775377.0
+  },
+  {
+    "FOR4_CODE":"4103",
+    "FOR4_NAME":"Environmental Biotechnology",
+    "targeting_index":0.0,
+    "growth_rate":-1.7518228341,
+    "AAU_total":4655337.0
+  },
+  {
+    "FOR4_CODE":"4104",
+    "FOR4_NAME":"Environmental Management",
+    "targeting_index":0.0,
+    "growth_rate":0.1502421152,
+    "AAU_total":175520204.0
+  },
+  {
+    "FOR4_CODE":"4105",
+    "FOR4_NAME":"Pollution and Contamination",
+    "targeting_index":0.0,
+    "growth_rate":0.3297652609,
+    "AAU_total":60131565.0
+  },
+  {
+    "FOR4_CODE":"4106",
+    "FOR4_NAME":"Soil Sciences",
+    "targeting_index":0.0,
+    "growth_rate":-1.2932942063,
+    "AAU_total":31498137.0
+  },
+  {
+    "FOR4_CODE":"4201",
+    "FOR4_NAME":"Allied Health and Rehabilitation Science",
+    "targeting_index":0.2061862552,
+    "growth_rate":-0.0856228718,
+    "AAU_total":101884420.0
+  },
+  {
+    "FOR4_CODE":"4202",
+    "FOR4_NAME":"Epidemiology",
+    "targeting_index":0.0,
+    "growth_rate":-0.0793746516,
+    "AAU_total":93699872.0
+  },
+  {
+    "FOR4_CODE":"4203",
+    "FOR4_NAME":"Health Services and Systems",
+    "targeting_index":0.682460286,
+    "growth_rate":-0.2512215521,
+    "AAU_total":1598345484.0
+  },
+  {
+    "FOR4_CODE":"4204",
+    "FOR4_NAME":"Midwifery",
+    "targeting_index":0.0,
+    "growth_rate":-0.5089694554,
+    "AAU_total":40426351.0
+  },
+  {
+    "FOR4_CODE":"4205",
+    "FOR4_NAME":"Nursing",
+    "targeting_index":0.0,
+    "growth_rate":-0.1226320512,
+    "AAU_total":69938193.0
+  },
+  {
+    "FOR4_CODE":"4206",
+    "FOR4_NAME":"Public Health",
+    "targeting_index":0.0,
+    "growth_rate":-0.1170138936,
+    "AAU_total":725433524.0
+  },
+  {
+    "FOR4_CODE":"4207",
+    "FOR4_NAME":"Sports Science and Exercise",
+    "targeting_index":0.0,
+    "growth_rate":-3.0558393457,
+    "AAU_total":17664168.0
+  },
+  {
+    "FOR4_CODE":"4301",
+    "FOR4_NAME":"Archaeology",
+    "targeting_index":0.0,
+    "growth_rate":-0.6076335375,
+    "AAU_total":40683050.0
+  },
+  {
+    "FOR4_CODE":"4302",
+    "FOR4_NAME":"Heritage, Archive and Museum Studies",
+    "targeting_index":6.6182076636,
+    "growth_rate":-0.2352195171,
+    "AAU_total":49125736.0
+  },
+  {
+    "FOR4_CODE":"4303",
+    "FOR4_NAME":"Historical Studies",
+    "targeting_index":1.9926353094,
+    "growth_rate":0.1772144992,
+    "AAU_total":50211843.0
+  },
+  {
+    "FOR4_CODE":"4401",
+    "FOR4_NAME":"Anthropology",
+    "targeting_index":0.0,
+    "growth_rate":-1.3527474751,
+    "AAU_total":17229329.0
+  },
+  {
+    "FOR4_CODE":"4402",
+    "FOR4_NAME":"Criminology",
+    "targeting_index":0.0,
+    "growth_rate":-0.6952816281,
+    "AAU_total":56890480.0
+  },
+  {
+    "FOR4_CODE":"4403",
+    "FOR4_NAME":"Demography",
+    "targeting_index":0.0,
+    "growth_rate":-1.6494699976,
+    "AAU_total":37055545.0
+  },
+  {
+    "FOR4_CODE":"4404",
+    "FOR4_NAME":"Development Studies",
+    "targeting_index":0.0,
+    "growth_rate":-0.3305301775,
+    "AAU_total":63814589.0
+  },
+  {
+    "FOR4_CODE":"4405",
+    "FOR4_NAME":"Gender Studies",
+    "targeting_index":0.185111057,
+    "growth_rate":-0.0586587956,
+    "AAU_total":38354054.0
+  },
+  {
+    "FOR4_CODE":"4406",
+    "FOR4_NAME":"Human Geography",
+    "targeting_index":0.0,
+    "growth_rate":0.6022801863,
+    "AAU_total":274108344.0
+  },
+  {
+    "FOR4_CODE":"4407",
+    "FOR4_NAME":"Policy and Administration",
+    "targeting_index":0.0,
+    "growth_rate":-0.2829028322,
+    "AAU_total":187333394.0
+  },
+  {
+    "FOR4_CODE":"4408",
+    "FOR4_NAME":"Political Science",
+    "targeting_index":0.4016131512,
+    "growth_rate":0.0577683009,
+    "AAU_total":89923214.0
+  },
+  {
+    "FOR4_CODE":"4409",
+    "FOR4_NAME":"Social Work",
+    "targeting_index":0.0,
+    "growth_rate":-0.4979467382,
+    "AAU_total":114480137.0
+  },
+  {
+    "FOR4_CODE":"4410",
+    "FOR4_NAME":"Sociology",
+    "targeting_index":0.0,
+    "growth_rate":0.6907714308,
+    "AAU_total":29143978.0
+  },
+  {
+    "FOR4_CODE":"4601",
+    "FOR4_NAME":"Applied Computing",
+    "targeting_index":0.294040581,
+    "growth_rate":1.2105070198,
+    "AAU_total":227229223.0
+  },
+  {
+    "FOR4_CODE":"4602",
+    "FOR4_NAME":"Artificial Intelligence",
+    "targeting_index":6.5937639814,
+    "growth_rate":0.3680498466,
+    "AAU_total":424556629.0
+  },
+  {
+    "FOR4_CODE":"4603",
+    "FOR4_NAME":"Computer Vision and Multimedia Computation",
+    "targeting_index":0.0,
+    "growth_rate":-0.8173180154,
+    "AAU_total":38240422.0
+  },
+  {
+    "FOR4_CODE":"4604",
+    "FOR4_NAME":"Cybersecurity and Privacy",
+    "targeting_index":6.9244300099,
+    "growth_rate":0.395709227,
+    "AAU_total":362154436.0
+  },
+  {
+    "FOR4_CODE":"4605",
+    "FOR4_NAME":"Data Management and Data Science",
+    "targeting_index":5.51765576,
+    "growth_rate":-0.4966705818,
+    "AAU_total":381571987.0
+  },
+  {
+    "FOR4_CODE":"4606",
+    "FOR4_NAME":"Distributed Computing and Systems Software",
+    "targeting_index":3.0548553261,
+    "growth_rate":-0.9039842357,
+    "AAU_total":403791206.0
+  },
+  {
+    "FOR4_CODE":"4607",
+    "FOR4_NAME":"Graphics, Augmented Reality and Games",
+    "targeting_index":6.4221813485,
+    "growth_rate":-0.6940199353,
+    "AAU_total":67038612.0
+  },
+  {
+    "FOR4_CODE":"4608",
+    "FOR4_NAME":"Human-Centred Computing",
+    "targeting_index":1.6789270395,
+    "growth_rate":0.1741151128,
+    "AAU_total":966264268.0
+  },
+  {
+    "FOR4_CODE":"4609",
+    "FOR4_NAME":"Information Systems",
+    "targeting_index":11.5823765058,
+    "growth_rate":-1.3730671648,
+    "AAU_total":29778361.0
+  },
+  {
+    "FOR4_CODE":"4610",
+    "FOR4_NAME":"Library and Information Studies",
+    "targeting_index":0.0,
+    "growth_rate":0.5043767571,
+    "AAU_total":331604141.0
+  },
+  {
+    "FOR4_CODE":"4611",
+    "FOR4_NAME":"Machine Learning",
+    "targeting_index":3.3684907159,
+    "growth_rate":-0.4983252439,
+    "AAU_total":401767252.0
+  },
+  {
+    "FOR4_CODE":"4612",
+    "FOR4_NAME":"Software Engineering",
+    "targeting_index":7.2792648611,
+    "growth_rate":-0.3545528779,
+    "AAU_total":230070428.0
+  },
+  {
+    "FOR4_CODE":"4613",
+    "FOR4_NAME":"Theory Of Computation",
+    "targeting_index":0.0,
+    "growth_rate":0.1222601435,
+    "AAU_total":82295658.0
+  },
+  {
+    "FOR4_CODE":"4701",
+    "FOR4_NAME":"Communication and Media Studies",
+    "targeting_index":0.8172576034,
+    "growth_rate":-0.6946244336,
+    "AAU_total":75460002.0
+  },
+  {
+    "FOR4_CODE":"4702",
+    "FOR4_NAME":"Cultural Studies",
+    "targeting_index":0.0,
+    "growth_rate":-1.4504652651,
+    "AAU_total":40726032.0
+  },
+  {
+    "FOR4_CODE":"4703",
+    "FOR4_NAME":"Language Studies",
+    "targeting_index":0.0,
+    "growth_rate":-1.4868216087,
+    "AAU_total":36206692.0
+  },
+  {
+    "FOR4_CODE":"4704",
+    "FOR4_NAME":"Linguistics",
+    "targeting_index":0.0,
+    "growth_rate":-0.4019774573,
+    "AAU_total":121653189.0
+  },
+  {
+    "FOR4_CODE":"4705",
+    "FOR4_NAME":"Literary Studies",
+    "targeting_index":0.0,
+    "growth_rate":-0.8195012444,
+    "AAU_total":18114884.0
+  },
+  {
+    "FOR4_CODE":"4801",
+    "FOR4_NAME":"Commercial Law",
+    "targeting_index":0.0,
+    "growth_rate":-0.5261655143,
+    "AAU_total":22912926.0
+  },
+  {
+    "FOR4_CODE":"4802",
+    "FOR4_NAME":"Environmental and Resources Law",
+    "targeting_index":0.0,
+    "growth_rate":1.3286717669,
+    "AAU_total":637000432.0
+  },
+  {
+    "FOR4_CODE":"4803",
+    "FOR4_NAME":"International and Comparative Law",
+    "targeting_index":0.0,
+    "growth_rate":-3.3944537856,
+    "AAU_total":12452497.0
+  },
+  {
+    "FOR4_CODE":"4804",
+    "FOR4_NAME":"Law In Context",
+    "targeting_index":0.0,
+    "growth_rate":-0.8142837308,
+    "AAU_total":18209838.0
+  },
+  {
+    "FOR4_CODE":"4805",
+    "FOR4_NAME":"Legal Systems",
+    "targeting_index":0.0,
+    "growth_rate":-0.2049995659,
+    "AAU_total":21851911.0
+  },
+  {
+    "FOR4_CODE":"4806",
+    "FOR4_NAME":"Private Law and Civil Obligations",
+    "targeting_index":0.0,
+    "growth_rate":0.0,
+    "AAU_total":6572924.0
+  },
+  {
+    "FOR4_CODE":"4807",
+    "FOR4_NAME":"Public Law",
+    "targeting_index":0.0,
+    "growth_rate":-2.3528486743,
+    "AAU_total":15263110.0
+  },
+  {
+    "FOR4_CODE":"4901",
+    "FOR4_NAME":"Applied Mathematics",
+    "targeting_index":0.9183913478,
+    "growth_rate":-0.091505399,
+    "AAU_total":70514408.0
+  },
+  {
+    "FOR4_CODE":"4902",
+    "FOR4_NAME":"Mathematical Physics",
+    "targeting_index":0.0,
+    "growth_rate":0.733651458,
+    "AAU_total":93640463.0
+  },
+  {
+    "FOR4_CODE":"4903",
+    "FOR4_NAME":"Numerical and Computational Mathematics",
+    "targeting_index":0.0,
+    "growth_rate":-0.1896915751,
+    "AAU_total":43155716.0
+  },
+  {
+    "FOR4_CODE":"4904",
+    "FOR4_NAME":"Pure Mathematics",
+    "targeting_index":0.4905770844,
+    "growth_rate":-0.3652789824,
+    "AAU_total":214402368.0
+  },
+  {
+    "FOR4_CODE":"4905",
+    "FOR4_NAME":"Statistics",
+    "targeting_index":0.7077977523,
+    "growth_rate":-0.0361469733,
+    "AAU_total":57071525.0
+  },
+  {
+    "FOR4_CODE":"5001",
+    "FOR4_NAME":"Applied Ethics",
+    "targeting_index":0.0,
+    "growth_rate":-1.0004011224,
+    "AAU_total":11083727.0
+  },
+  {
+    "FOR4_CODE":"5002",
+    "FOR4_NAME":"History and Philosophy Of Specific Fields",
+    "targeting_index":2.2546299073,
+    "growth_rate":-0.7009647033,
+    "AAU_total":365052285.0
+  },
+  {
+    "FOR4_CODE":"5003",
+    "FOR4_NAME":"Philosophy",
+    "targeting_index":0.0,
+    "growth_rate":-0.6456634532,
+    "AAU_total":18832311.0
+  },
+  {
+    "FOR4_CODE":"5004",
+    "FOR4_NAME":"Religious Studies",
+    "targeting_index":0.0,
+    "growth_rate":-2.0201044252,
+    "AAU_total":10053251.0
+  },
+  {
+    "FOR4_CODE":"5005",
+    "FOR4_NAME":"Theology",
+    "targeting_index":0.0,
+    "growth_rate":-0.3662168304,
+    "AAU_total":8106553.0
+  },
+  {
+    "FOR4_CODE":"5101",
+    "FOR4_NAME":"Astronomical Sciences",
+    "targeting_index":0.0,
+    "growth_rate":1.0808648955,
+    "AAU_total":779248475.0
+  },
+  {
+    "FOR4_CODE":"5102",
+    "FOR4_NAME":"Atomic, Molecular and Optical Physics",
+    "targeting_index":0.1645233691,
+    "growth_rate":0.2096815248,
+    "AAU_total":319824506.0
+  },
+  {
+    "FOR4_CODE":"5103",
+    "FOR4_NAME":"Classical Physics",
+    "targeting_index":0.0,
+    "growth_rate":0.0043748846,
+    "AAU_total":43654134.0
+  },
+  {
+    "FOR4_CODE":"5104",
+    "FOR4_NAME":"Condensed Matter Physics",
+    "targeting_index":1.2948552775,
+    "growth_rate":-0.2363815474,
+    "AAU_total":359612876.0
+  },
+  {
+    "FOR4_CODE":"5105",
+    "FOR4_NAME":"Medical and Biological Physics",
+    "targeting_index":0.0,
+    "growth_rate":1.2866048544,
+    "AAU_total":10396387.0
+  },
+  {
+    "FOR4_CODE":"5106",
+    "FOR4_NAME":"Nuclear and Plasma Physics",
+    "targeting_index":0.1929745257,
+    "growth_rate":0.1155304973,
+    "AAU_total":2296093617.0
+  },
+  {
+    "FOR4_CODE":"5107",
+    "FOR4_NAME":"Particle and High Energy Physics",
+    "targeting_index":0.8513968724,
+    "growth_rate":-0.7359109803,
+    "AAU_total":1476859612.0
+  },
+  {
+    "FOR4_CODE":"5108",
+    "FOR4_NAME":"Quantum Physics",
+    "targeting_index":0.5672597097,
+    "growth_rate":-0.0281089696,
+    "AAU_total":1100759684.0
+  },
+  {
+    "FOR4_CODE":"5109",
+    "FOR4_NAME":"Space Sciences",
+    "targeting_index":0.0,
+    "growth_rate":-1.3837944385,
+    "AAU_total":116190383.0
+  },
+  {
+    "FOR4_CODE":"5110",
+    "FOR4_NAME":"Synchrotrons and Accelerators",
+    "targeting_index":0.0,
+    "growth_rate":1.2581614186,
+    "AAU_total":1407604484.0
+  },
+  {
+    "FOR4_CODE":"5201",
+    "FOR4_NAME":"Applied and Developmental Psychology",
+    "targeting_index":20.8889534806,
+    "growth_rate":-0.0577655302,
+    "AAU_total":24233269.0
+  },
+  {
+    "FOR4_CODE":"5202",
+    "FOR4_NAME":"Biological Psychology",
+    "targeting_index":0.7723788648,
+    "growth_rate":-0.2854767814,
+    "AAU_total":257014774.0
+  },
+  {
+    "FOR4_CODE":"5203",
+    "FOR4_NAME":"Clinical and Health Psychology",
+    "targeting_index":0.3433854828,
+    "growth_rate":0.117227841,
+    "AAU_total":40308651.0
+  },
+  {
+    "FOR4_CODE":"5204",
+    "FOR4_NAME":"Cognitive and Computational Psychology",
+    "targeting_index":0.6935246969,
+    "growth_rate":-0.6179542452,
+    "AAU_total":166594010.0
+  },
+  {
+    "FOR4_CODE":"5205",
+    "FOR4_NAME":"Social and Personality Psychology",
+    "targeting_index":0.0,
+    "growth_rate":0.4947154715,
+    "AAU_total":21442903.0
+  }
+]

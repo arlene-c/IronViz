@@ -1,0 +1,911 @@
+[
+  {
+    "source":"Australian Research Council",
+    "target":"Building",
+    "value":349887.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"3302",
+    "log_growth":3.0109616571,
+    "growth_weighted_value":1053496.3413237887
+  },
+  {
+    "source":"Australian Research Council",
+    "target":"Business Systems In Context",
+    "value":267409.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"3503",
+    "log_growth":2.801008864,
+    "growth_weighted_value":749014.9793053819
+  },
+  {
+    "source":"Australian Research Council",
+    "target":"Oceanography",
+    "value":735821.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"3708",
+    "log_growth":0.3752566372,
+    "growth_weighted_value":276121.7140208432
+  },
+  {
+    "source":"Australian Research Council",
+    "target":"Climate Change Impacts and Adaptation",
+    "value":52766434.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4101",
+    "log_growth":1.4857548357,
+    "growth_weighted_value":78397984.4777356535
+  },
+  {
+    "source":"Australian Research Council",
+    "target":"Ecological Applications",
+    "value":692139.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4102",
+    "log_growth":0.2596872443,
+    "growth_weighted_value":179739.669589526
+  },
+  {
+    "source":"Australian Research Council",
+    "target":"Environmental Management",
+    "value":4601669.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4104",
+    "log_growth":0.1502421152,
+    "growth_weighted_value":691364.4841071253
+  },
+  {
+    "source":"Australian Research Council",
+    "target":"Human Geography",
+    "value":593636.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4406",
+    "log_growth":0.6022801863,
+    "growth_weighted_value":357535.2006656047
+  },
+  {
+    "source":"Australian Research Council",
+    "target":"Environmental and Resources Law",
+    "value":23584685.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4802",
+    "log_growth":1.3286717669,
+    "growth_weighted_value":31336305.0906937793
+  },
+  {
+    "source":"Australian Research Council",
+    "target":"Astronomical Sciences",
+    "value":46038236.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"5101",
+    "log_growth":1.0808648955,
+    "growth_weighted_value":49761113.1423521116
+  },
+  {
+    "source":"Bill & Melinda Gates Foundation",
+    "target":"Paediatrics",
+    "value":20375327.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"3213",
+    "log_growth":0.4408915095,
+    "growth_weighted_value":8983308.6767096017
+  },
+  {
+    "source":"Bill & Melinda Gates Foundation",
+    "target":"Business Systems In Context",
+    "value":539502.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"3503",
+    "log_growth":2.801008864,
+    "growth_weighted_value":1511149.8841295997
+  },
+  {
+    "source":"Bill & Melinda Gates Foundation",
+    "target":"Climate Change Impacts and Adaptation",
+    "value":8216155.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4101",
+    "log_growth":1.4857548357,
+    "growth_weighted_value":12207192.0220470112
+  },
+  {
+    "source":"Bill & Melinda Gates Foundation",
+    "target":"Ecological Applications",
+    "value":3945834.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4102",
+    "log_growth":0.2596872443,
+    "growth_weighted_value":1024682.7579649718
+  },
+  {
+    "source":"Bill & Melinda Gates Foundation",
+    "target":"Public Health",
+    "value":30974117.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4206",
+    "log_growth":-0.1170138936,
+    "growth_weighted_value":-3624402.0301253828
+  },
+  {
+    "source":"Bill & Melinda Gates Foundation",
+    "target":"Human Geography",
+    "value":61080677.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4406",
+    "log_growth":0.6022801863,
+    "growth_weighted_value":36787681.5219865143
+  },
+  {
+    "source":"Bill & Melinda Gates Foundation",
+    "target":"Library and Information Studies",
+    "value":10550947.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4610",
+    "log_growth":0.5043767571,
+    "growth_weighted_value":5321652.432530378
+  },
+  {
+    "source":"Bill & Melinda Gates Foundation",
+    "target":"Environmental and Resources Law",
+    "value":2845294.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4802",
+    "log_growth":1.3286717669,
+    "growth_weighted_value":3780461.8063256079
+  },
+  {
+    "source":"Bill & Melinda Gates Foundation",
+    "target":"Mathematical Physics",
+    "value":5063034.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4902",
+    "log_growth":0.733651458,
+    "growth_weighted_value":3714502.2758785565
+  },
+  {
+    "source":"Canadian Institutes of Health Research",
+    "target":"Paediatrics",
+    "value":30780537.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"3213",
+    "log_growth":0.4408915095,
+    "growth_weighted_value":13570877.4198264852
+  },
+  {
+    "source":"Canadian Institutes of Health Research",
+    "target":"Building",
+    "value":621847.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"3302",
+    "log_growth":3.0109616571,
+    "growth_weighted_value":1872357.4735934001
+  },
+  {
+    "source":"Canadian Institutes of Health Research",
+    "target":"Climate Change Impacts and Adaptation",
+    "value":26686.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4101",
+    "log_growth":1.4857548357,
+    "growth_weighted_value":39648.8535452832
+  },
+  {
+    "source":"Canadian Institutes of Health Research",
+    "target":"Ecological Applications",
+    "value":13787.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4102",
+    "log_growth":0.2596872443,
+    "growth_weighted_value":3580.3080373029
+  },
+  {
+    "source":"Canadian Institutes of Health Research",
+    "target":"Environmental Management",
+    "value":191247.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4104",
+    "log_growth":0.1502421152,
+    "growth_weighted_value":28733.3538096798
+  },
+  {
+    "source":"Canadian Institutes of Health Research",
+    "target":"Public Health",
+    "value":296705832.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4206",
+    "log_growth":-0.1170138936,
+    "growth_weighted_value":-34718704.6478464827
+  },
+  {
+    "source":"Canadian Institutes of Health Research",
+    "target":"Human Geography",
+    "value":21617968.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4406",
+    "log_growth":0.6022801863,
+    "growth_weighted_value":13020073.7941476293
+  },
+  {
+    "source":"Canadian Institutes of Health Research",
+    "target":"Library and Information Studies",
+    "value":265282.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4610",
+    "log_growth":0.5043767571,
+    "growth_weighted_value":133802.0748854604
+  },
+  {
+    "source":"Canadian Institutes of Health Research",
+    "target":"Environmental and Resources Law",
+    "value":519349.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4802",
+    "log_growth":1.3286717669,
+    "growth_weighted_value":690044.3534669521
+  },
+  {
+    "source":"Canadian Institutes of Health Research",
+    "target":"Medical and Biological Physics",
+    "value":1748122.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"5105",
+    "log_growth":1.2866048544,
+    "growth_weighted_value":2249142.2513070838
+  },
+  {
+    "source":"Directorate for Biological Sciences",
+    "target":"Oceanography",
+    "value":5317489.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"3708",
+    "log_growth":0.3752566372,
+    "growth_weighted_value":1995423.0403413048
+  },
+  {
+    "source":"Directorate for Biological Sciences",
+    "target":"Climate Change Impacts and Adaptation",
+    "value":59645988.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4101",
+    "log_growth":1.4857548357,
+    "growth_weighted_value":88619315.1006415784
+  },
+  {
+    "source":"Directorate for Biological Sciences",
+    "target":"Ecological Applications",
+    "value":61073865.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4102",
+    "log_growth":0.2596872443,
+    "growth_weighted_value":15860103.701215094
+  },
+  {
+    "source":"Directorate for Biological Sciences",
+    "target":"Environmental Management",
+    "value":22199928.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4104",
+    "log_growth":0.1502421152,
+    "growth_weighted_value":3335364.1404749728
+  },
+  {
+    "source":"Directorate for Biological Sciences",
+    "target":"Public Health",
+    "value":459256.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4206",
+    "log_growth":-0.1170138936,
+    "growth_weighted_value":-53739.3327063129
+  },
+  {
+    "source":"Directorate for Biological Sciences",
+    "target":"Human Geography",
+    "value":2198414.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4406",
+    "log_growth":0.6022801863,
+    "growth_weighted_value":1324061.1934520055
+  },
+  {
+    "source":"Directorate for Biological Sciences",
+    "target":"Library and Information Studies",
+    "value":31877647.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4610",
+    "log_growth":0.5043767571,
+    "growth_weighted_value":16078344.2188549247
+  },
+  {
+    "source":"Directorate for Biological Sciences",
+    "target":"Environmental and Resources Law",
+    "value":990992.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4802",
+    "log_growth":1.3286717669,
+    "growth_weighted_value":1316703.091622246
+  },
+  {
+    "source":"Directorate for Biological Sciences",
+    "target":"Astronomical Sciences",
+    "value":13748687.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"5101",
+    "log_growth":1.0808648955,
+    "growth_weighted_value":14860473.1372806206
+  },
+  {
+    "source":"Directorate for Computer & Information Science & Engineering",
+    "target":"Paediatrics",
+    "value":525000.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"3213",
+    "log_growth":0.4408915095,
+    "growth_weighted_value":231468.0424649156
+  },
+  {
+    "source":"Directorate for Computer & Information Science & Engineering",
+    "target":"Building",
+    "value":475856523.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"3302",
+    "log_growth":3.0109616571,
+    "growth_weighted_value":1432785745.0421402454
+  },
+  {
+    "source":"Directorate for Computer & Information Science & Engineering",
+    "target":"Business Systems In Context",
+    "value":3298038.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"3503",
+    "log_growth":2.801008864,
+    "growth_weighted_value":9237833.6717102379
+  },
+  {
+    "source":"Directorate for Computer & Information Science & Engineering",
+    "target":"Oceanography",
+    "value":3157925.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"3708",
+    "log_growth":0.3752566372,
+    "growth_weighted_value":1185032.3159426968
+  },
+  {
+    "source":"Directorate for Computer & Information Science & Engineering",
+    "target":"Climate Change Impacts and Adaptation",
+    "value":1922306.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4101",
+    "log_growth":1.4857548357,
+    "growth_weighted_value":2856075.4351802152
+  },
+  {
+    "source":"Directorate for Computer & Information Science & Engineering",
+    "target":"Ecological Applications",
+    "value":393758.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4102",
+    "log_growth":0.2596872443,
+    "growth_weighted_value":102253.9299450437
+  },
+  {
+    "source":"Directorate for Computer & Information Science & Engineering",
+    "target":"Environmental Management",
+    "value":4073330.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4104",
+    "log_growth":0.1502421152,
+    "growth_weighted_value":611985.715193352
+  },
+  {
+    "source":"Directorate for Computer & Information Science & Engineering",
+    "target":"Public Health",
+    "value":7500642.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4206",
+    "log_growth":-0.1170138936,
+    "growth_weighted_value":-877679.3247098444
+  },
+  {
+    "source":"Directorate for Computer & Information Science & Engineering",
+    "target":"Human Geography",
+    "value":12401821.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4406",
+    "log_growth":0.6022801863,
+    "growth_weighted_value":7469371.0621557832
+  },
+  {
+    "source":"Directorate for Computer & Information Science & Engineering",
+    "target":"Library and Information Studies",
+    "value":46790562.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4610",
+    "log_growth":0.5043767571,
+    "growth_weighted_value":23600071.9259383492
+  },
+  {
+    "source":"Directorate for Computer & Information Science & Engineering",
+    "target":"Environmental and Resources Law",
+    "value":620000.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4802",
+    "log_growth":1.3286717669,
+    "growth_weighted_value":823776.4954770497
+  },
+  {
+    "source":"Directorate for Computer & Information Science & Engineering",
+    "target":"Astronomical Sciences",
+    "value":673017.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"5101",
+    "log_growth":1.0808648955,
+    "growth_weighted_value":727440.4493631423
+  },
+  {
+    "source":"Directorate for Computer & Information Science & Engineering",
+    "target":"Medical and Biological Physics",
+    "value":600000.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"5105",
+    "log_growth":1.2866048544,
+    "growth_weighted_value":771962.9126481162
+  },
+  {
+    "source":"Directorate for Computer & Information Science & Engineering",
+    "target":"Synchrotrons and Accelerators",
+    "value":594614.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"5110",
+    "log_growth":1.2581614186,
+    "growth_weighted_value":748120.3937457541
+  },
+  {
+    "source":"Directorate for Engineering",
+    "target":"Paediatrics",
+    "value":403394.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"3213",
+    "log_growth":0.4408915095,
+    "growth_weighted_value":177852.9895658898
+  },
+  {
+    "source":"Directorate for Engineering",
+    "target":"Building",
+    "value":39721176.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"3302",
+    "log_growth":3.0109616571,
+    "growth_weighted_value":119598937.9116065502
+  },
+  {
+    "source":"Directorate for Engineering",
+    "target":"Business Systems In Context",
+    "value":743253.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"3503",
+    "log_growth":2.801008864,
+    "growth_weighted_value":2081858.2411723726
+  },
+  {
+    "source":"Directorate for Engineering",
+    "target":"Oceanography",
+    "value":1750829.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"3708",
+    "log_growth":0.3752566372,
+    "growth_weighted_value":657010.2028039412
+  },
+  {
+    "source":"Directorate for Engineering",
+    "target":"Climate Change Impacts and Adaptation",
+    "value":5631203.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4101",
+    "log_growth":1.4857548357,
+    "growth_weighted_value":8366587.0880146734
+  },
+  {
+    "source":"Directorate for Engineering",
+    "target":"Ecological Applications",
+    "value":3440709.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4102",
+    "log_growth":0.2596872443,
+    "growth_weighted_value":893508.2386828489
+  },
+  {
+    "source":"Directorate for Engineering",
+    "target":"Environmental Management",
+    "value":22540146.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4104",
+    "log_growth":0.1502421152,
+    "growth_weighted_value":3386479.2124312473
+  },
+  {
+    "source":"Directorate for Engineering",
+    "target":"Public Health",
+    "value":3431831.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4206",
+    "log_growth":-0.1170138936,
+    "growth_weighted_value":-401571.9073911686
+  },
+  {
+    "source":"Directorate for Engineering",
+    "target":"Human Geography",
+    "value":30669485.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4406",
+    "log_growth":0.6022801863,
+    "growth_weighted_value":18471623.1390713416
+  },
+  {
+    "source":"Directorate for Engineering",
+    "target":"Library and Information Studies",
+    "value":23697558.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4610",
+    "log_growth":0.5043767571,
+    "growth_weighted_value":11952497.4559847303
+  },
+  {
+    "source":"Directorate for Engineering",
+    "target":"Environmental and Resources Law",
+    "value":3611653.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4802",
+    "log_growth":1.3286717669,
+    "growth_weighted_value":4798701.3729341505
+  },
+  {
+    "source":"Directorate for Engineering",
+    "target":"Astronomical Sciences",
+    "value":1886505.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"5101",
+    "log_growth":1.0808648955,
+    "growth_weighted_value":2039057.0296527646
+  },
+  {
+    "source":"Directorate for Engineering",
+    "target":"Medical and Biological Physics",
+    "value":325487.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"5105",
+    "log_growth":1.2866048544,
+    "growth_weighted_value":418773.1542484957
+  },
+  {
+    "source":"Directorate for Geosciences",
+    "target":"Building",
+    "value":7043480.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"3302",
+    "log_growth":3.0109616571,
+    "growth_weighted_value":21207648.2126723155
+  },
+  {
+    "source":"Directorate for Geosciences",
+    "target":"Oceanography",
+    "value":178836059.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"3708",
+    "log_growth":0.3752566372,
+    "growth_weighted_value":67109418.105507493
+  },
+  {
+    "source":"Directorate for Geosciences",
+    "target":"Climate Change Impacts and Adaptation",
+    "value":19389914.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4101",
+    "log_growth":1.4857548357,
+    "growth_weighted_value":28808658.4891567491
+  },
+  {
+    "source":"Directorate for Geosciences",
+    "target":"Ecological Applications",
+    "value":16879462.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4102",
+    "log_growth":0.2596872443,
+    "growth_weighted_value":4383380.9722165046
+  },
+  {
+    "source":"Directorate for Geosciences",
+    "target":"Environmental Management",
+    "value":35420591.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4104",
+    "log_growth":0.1502421152,
+    "growth_weighted_value":5321664.5142196203
+  },
+  {
+    "source":"Directorate for Geosciences",
+    "target":"Public Health",
+    "value":1460805.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4206",
+    "log_growth":-0.1170138936,
+    "growth_weighted_value":-170934.4807994788
+  },
+  {
+    "source":"Directorate for Geosciences",
+    "target":"Human Geography",
+    "value":11576883.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4406",
+    "log_growth":0.6022801863,
+    "growth_weighted_value":6972527.2498420384
+  },
+  {
+    "source":"Directorate for Geosciences",
+    "target":"Library and Information Studies",
+    "value":11404626.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4610",
+    "log_growth":0.5043767571,
+    "growth_weighted_value":5752228.2781819673
+  },
+  {
+    "source":"Directorate for Geosciences",
+    "target":"Environmental and Resources Law",
+    "value":4903816.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4802",
+    "log_growth":1.3286717669,
+    "growth_weighted_value":6515561.8692649743
+  },
+  {
+    "source":"Directorate for Geosciences",
+    "target":"Astronomical Sciences",
+    "value":29671639.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"5101",
+    "log_growth":1.0808648955,
+    "growth_weighted_value":32071032.9865381345
+  },
+  {
+    "source":"Directorate for Mathematical & Physical Sciences",
+    "target":"Building",
+    "value":3921091.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"3302",
+    "log_growth":3.0109616571,
+    "growth_weighted_value":11806254.6550675947
+  },
+  {
+    "source":"Directorate for Mathematical & Physical Sciences",
+    "target":"Oceanography",
+    "value":1293098.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"3708",
+    "log_growth":0.3752566372,
+    "growth_weighted_value":485243.6070143747
+  },
+  {
+    "source":"Directorate for Mathematical & Physical Sciences",
+    "target":"Climate Change Impacts and Adaptation",
+    "value":17254316.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4101",
+    "log_growth":1.4857548357,
+    "growth_weighted_value":25635683.4335620627
+  },
+  {
+    "source":"Directorate for Mathematical & Physical Sciences",
+    "target":"Ecological Applications",
+    "value":1756987.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4102",
+    "log_growth":0.2596872443,
+    "growth_weighted_value":456267.112318613
+  },
+  {
+    "source":"Directorate for Mathematical & Physical Sciences",
+    "target":"Environmental Management",
+    "value":1146347.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4104",
+    "log_growth":0.1502421152,
+    "growth_weighted_value":172229.5980573029
+  },
+  {
+    "source":"Directorate for Mathematical & Physical Sciences",
+    "target":"Public Health",
+    "value":1799442.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4206",
+    "log_growth":-0.1170138936,
+    "growth_weighted_value":-210559.7146770279
+  },
+  {
+    "source":"Directorate for Mathematical & Physical Sciences",
+    "target":"Library and Information Studies",
+    "value":60263582.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4610",
+    "log_growth":0.5043767571,
+    "growth_weighted_value":30395550.0623113625
+  },
+  {
+    "source":"Directorate for Mathematical & Physical Sciences",
+    "target":"Mathematical Physics",
+    "value":60216954.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4902",
+    "log_growth":0.733651458,
+    "growth_weighted_value":44178256.0969320685
+  },
+  {
+    "source":"Directorate for Mathematical & Physical Sciences",
+    "target":"Astronomical Sciences",
+    "value":503009394.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"5101",
+    "log_growth":1.0808648955,
+    "growth_weighted_value":543685196.0726724863
+  },
+  {
+    "source":"Directorate for Mathematical & Physical Sciences",
+    "target":"Medical and Biological Physics",
+    "value":250001.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"5105",
+    "log_growth":1.2866048544,
+    "growth_weighted_value":321652.5002082362
+  },
+  {
+    "source":"Directorate for Mathematical & Physical Sciences",
+    "target":"Synchrotrons and Accelerators",
+    "value":75210766.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"5110",
+    "log_growth":1.2581614186,
+    "growth_weighted_value":94627284.0428240597
+  },
+  {
+    "source":"Engineering and Physical Sciences Research Council",
+    "target":"Building",
+    "value":11493947.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"3302",
+    "log_growth":3.0109616571,
+    "growth_weighted_value":34607833.7059380189
+  },
+  {
+    "source":"Engineering and Physical Sciences Research Council",
+    "target":"Oceanography",
+    "value":308796.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"3708",
+    "log_growth":0.3752566372,
+    "growth_weighted_value":115877.7485322929
+  },
+  {
+    "source":"Engineering and Physical Sciences Research Council",
+    "target":"Climate Change Impacts and Adaptation",
+    "value":22911852.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4101",
+    "log_growth":1.4857548357,
+    "growth_weighted_value":34041394.9036650211
+  },
+  {
+    "source":"Engineering and Physical Sciences Research Council",
+    "target":"Environmental Management",
+    "value":1722467.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4104",
+    "log_growth":0.1502421152,
+    "growth_weighted_value":258787.0854784531
+  },
+  {
+    "source":"Engineering and Physical Sciences Research Council",
+    "target":"Public Health",
+    "value":13560866.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4206",
+    "log_growth":-0.1170138936,
+    "growth_weighted_value":-1586809.7308684629
+  },
+  {
+    "source":"Engineering and Physical Sciences Research Council",
+    "target":"Environmental and Resources Law",
+    "value":572381280.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4802",
+    "log_growth":1.3286717669,
+    "growth_weighted_value":760506846.637206316
+  },
+  {
+    "source":"Engineering and Physical Sciences Research Council",
+    "target":"Mathematical Physics",
+    "value":2479138.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4902",
+    "log_growth":0.733651458,
+    "growth_weighted_value":1818823.2082219895
+  },
+  {
+    "source":"Engineering and Physical Sciences Research Council",
+    "target":"Synchrotrons and Accelerators",
+    "value":17659972.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"5110",
+    "log_growth":1.2581614186,
+    "growth_weighted_value":22219095.4235503934
+  },
+  {
+    "source":"Office of Nuclear Physics",
+    "target":"Astronomical Sciences",
+    "value":1711999.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"5101",
+    "log_growth":1.0808648955,
+    "growth_weighted_value":1850439.6202016443
+  },
+  {
+    "source":"Office of Nuclear Physics",
+    "target":"Synchrotrons and Accelerators",
+    "value":1253806173.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"5110",
+    "log_growth":1.2581614186,
+    "growth_weighted_value":1577490553.2423005104
+  },
+  {
+    "source":"Patient-Centered Outcomes Research Institute",
+    "target":"Building",
+    "value":201528072.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"3302",
+    "log_growth":3.0109616571,
+    "growth_weighted_value":606793297.6247675419
+  },
+  {
+    "source":"Patient-Centered Outcomes Research Institute",
+    "target":"Public Health",
+    "value":613748.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4206",
+    "log_growth":-0.1170138936,
+    "growth_weighted_value":-71817.0431520419
+  },
+  {
+    "source":"Robert Wood Johnson Foundation",
+    "target":"Public Health",
+    "value":142169295.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4206",
+    "log_growth":-0.1170138936,
+    "growth_weighted_value":-16635782.7543395162
+  },
+  {
+    "source":"Robert Wood Johnson Foundation",
+    "target":"Human Geography",
+    "value":15396045.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4406",
+    "log_growth":0.6022801863,
+    "growth_weighted_value":9272732.8506554198
+  },
+  {
+    "source":"Robert Wood Johnson Foundation",
+    "target":"Library and Information Studies",
+    "value":3936300.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4610",
+    "log_growth":0.5043767571,
+    "growth_weighted_value":1985378.2290982341
+  },
+  {
+    "source":"Robert Wood Johnson Foundation",
+    "target":"Environmental and Resources Law",
+    "value":1845140.0,
+    "cmu_field_total":0.0,
+    "FOR4_CODE":"4802",
+    "log_growth":1.3286717669,
+    "growth_weighted_value":2451585.4239750379
+  }
+]
