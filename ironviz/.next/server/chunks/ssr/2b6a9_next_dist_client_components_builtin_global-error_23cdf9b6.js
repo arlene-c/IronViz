@@ -1,0 +1,3 @@
+module.exports=[21820,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(39423);a.n(d("[project]/ironviz/node_modules/next/dist/client/components/builtin/global-error.js <module evaluation>"))},71951,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(39423);a.n(d("[project]/ironviz/node_modules/next/dist/client/components/builtin/global-error.js"))},56708,a=>{"use strict";a.i(21820);var b=a.i(71951);a.n(b)}];
+
+//# sourceMappingURL=2b6a9_next_dist_client_components_builtin_global-error_23cdf9b6.js.map

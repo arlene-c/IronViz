@@ -1,0 +1,10 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/models/forecast/route": "app/api/models/forecast/route.js",
+  "/api/models/meta/route": "app/api/models/meta/route.js",
+  "/api/models/opportunity/route": "app/api/models/opportunity/route.js",
+  "/api/models/similarity/route": "app/api/models/similarity/route.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/page": "app/page.js"
+}

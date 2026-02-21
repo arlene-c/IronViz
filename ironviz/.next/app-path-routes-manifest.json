@@ -1,0 +1,10 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/api/models/forecast/route": "/api/models/forecast",
+  "/api/models/meta/route": "/api/models/meta",
+  "/api/models/opportunity/route": "/api/models/opportunity",
+  "/api/models/similarity/route": "/api/models/similarity",
+  "/favicon.ico/route": "/favicon.ico",
+  "/page": "/"
+}
