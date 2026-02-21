@@ -1,6 +1,7 @@
 "use client";
 
 import { ResponsiveContainer, Tooltip, Treemap } from "recharts";
+import { formatCompactUsd, formatSigned } from "@/lib/format";
 
 export type OpportunityRow = {
   FOR4_CODE: string;
@@ -37,7 +38,19 @@ export default function UnderTargetedTreemap({ data }: Props) {
       <p className="text-sm text-gray-600 mb-4">Top 25 by under-target gap, sized by AAU funding.</p>
       <ResponsiveContainer width="100%" height={420}>
         <Treemap data={rows} dataKey="size" stroke="#fff" fill="#3b82f6">
-          <Tooltip />
+          <Tooltip
+            content={({ active, payload }: any) => {
+              if (!active || !payload?.length) return null;
+              const p = payload[0].payload as TreemapRow;
+              return (
+                <div className="bg-white p-3 border rounded shadow text-sm">
+                  <p className="font-semibold">{p.name}</p>
+                  <p>AAU Funding: {formatCompactUsd(p.size)}</p>
+                  <p>Under-target gap: {formatSigned(p.gap, 4)}</p>
+                </div>
+              );
+            }}
+          />
         </Treemap>
       </ResponsiveContainer>
     </div>

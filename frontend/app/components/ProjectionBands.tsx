@@ -10,6 +10,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
+import { formatCompactUsd } from "@/lib/format";
 
 type ForecastRow = {
   FOR4_CODE: string;
@@ -38,6 +39,21 @@ export default function ProjectionBands({ data }: Props) {
       label: `${d.FOR4_NAME} (${d.year})`,
     }));
 
+  const ForecastTooltip = ({ active, payload, label }: any) => {
+    if (!active || !payload?.length) return null;
+    const points = payload.filter((p: any) => p.value !== null && p.value !== undefined);
+    return (
+      <div className="bg-white p-3 border rounded shadow text-sm">
+        <p className="font-semibold">{label}</p>
+        {points.map((p: any) => (
+          <p key={p.dataKey}>
+            {p.name}: {formatCompactUsd(Number(p.value))}
+          </p>
+        ))}
+      </div>
+    );
+  };
+
   return (
     <div className="bg-white p-6 rounded shadow">
       <h2 className="text-xl font-semibold mb-1">Projection Bands (AAU Forecast)</h2>
@@ -46,8 +62,8 @@ export default function ProjectionBands({ data }: Props) {
         <LineChart data={filtered}>
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="label" minTickGap={20} />
-          <YAxis tickFormatter={(v) => `$${(Number(v) / 1_000_000).toFixed(0)}M`} />
-          <Tooltip />
+          <YAxis tickFormatter={(v) => formatCompactUsd(Number(v))} />
+          <Tooltip content={<ForecastTooltip />} />
           <Legend />
           <Line type="monotone" dataKey="aau_forecast" stroke="#2563eb" dot={false} name="Forecast" />
           <Line type="monotone" dataKey="aau_forecast_low" stroke="#93c5fd" dot={false} name="Low band" />
