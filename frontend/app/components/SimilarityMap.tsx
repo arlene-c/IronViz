@@ -63,23 +63,36 @@ export default function SimilarityMap({ data }: Props) {
       <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Idea Similarity Map</h2>
       {loading && <p className="text-sm text-gray-500 mb-2">Loading model data...</p>}
       {error && <p className="text-sm text-red-600 mb-2">Error: {error}</p>}
-      <Plot
-        data={[
-          {
-            x: rows.map((d) => d.x_coord),
-            y: rows.map((d) => d.y_coord),
-            text: rows.map(
-              (d) =>
-                `Field: ${d.for4_name}<br>Code: ${d.for4_code}<br>Group: ${d.institution_group}<br>Funding: ${formatCompactUsd(d.funding)}`,
-            ),
-            mode: "markers",
-            type: "scatter",
-            marker: { size: markerSize, color: markerColor, opacity: 0.8 },
-            hovertemplate: "%{text}<extra></extra>",
-          },
-        ]}
-        layout={{ width: 800, height: 400, margin: { l: 30, r: 20, t: 10, b: 30 } }}
-      />
+
+      <div className="w-full overflow-hidden flex justify-center">
+        <Plot
+          data={[
+            {
+              x: rows.map((d) => d.x_coord),
+              y: rows.map((d) => d.y_coord),
+              text: rows.map(
+                (d) =>
+                  `Field: ${d.for4_name}<br>Code: ${d.for4_code}<br>Group: ${d.institution_group}<br>Funding: ${formatCompactUsd(d.funding)}`,
+              ),
+              mode: "markers",
+              type: "scatter",
+              marker: { size: markerSize, color: markerColor, opacity: 0.8 },
+              hovertemplate: "%{text}<extra></extra>",
+            },
+          ]}
+          layout={{
+            width: 800,
+            height: 400,
+            margin: { t: 20, b: 20, l: 20, r: 20 },
+            paper_bgcolor: "transparent",
+            plot_bgcolor: "transparent",
+            font: { color: "#888888" },
+            xaxis: { showgrid: false, zeroline: false, showticklabels: false },
+            yaxis: { showgrid: false, zeroline: false, showticklabels: false },
+          }}
+          config={{ responsive: true, displayModeBar: false }}
+        />
+      </div>
     </div>
   );
 }
