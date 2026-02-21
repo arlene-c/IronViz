@@ -39,12 +39,21 @@ const CustomTooltip = ({ active, payload }: any) => {
   return null;
 };
 
-export default function OpportunityQuadrant() {
+type Props = {
+  data?: OpportunityRow[];
+};
+
+export default function OpportunityQuadrant({ data }: Props) {
   const [rows, setRows] = useState<OpportunityRow[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    if (data && data.length > 0) {
+      setRows(data);
+      setLoading(false);
+      return;
+    }
     let isMounted = true;
     (async () => {
       try {
@@ -69,7 +78,7 @@ export default function OpportunityQuadrant() {
     return () => {
       isMounted = false;
     };
-  }, []);
+  }, [data]);
 
   const chartData = useMemo(
     () =>
