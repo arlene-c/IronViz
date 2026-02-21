@@ -14,15 +14,6 @@ import {
   Cell
 } from "recharts";
 
-<<<<<<< HEAD
-const mockData = [
-  { field: "AI", targetingIndex: 0.4, growth: 0.8, funding: 20000000 },
-  { field: "Robotics", targetingIndex: 1.2, growth: 0.4, funding: 15000000 },
-  { field: "Climate", targetingIndex: 0.3, growth: 0.5, funding: 18000000 },
-  { field: "Quantum", targetingIndex: 1.5, growth: 0.9, funding: 10000000 },
-  { field: "Bio", targetingIndex: 0.8, growth: 0.2, funding: 8000000 },
-];
-=======
 type OpportunityRow = {
   FOR4_CODE: string;
   FOR4_NAME: string;
@@ -31,7 +22,6 @@ type OpportunityRow = {
   under_target_gap: number;
   AAU_total: number;
 };
->>>>>>> 66f539b5e985224c8e803bfbd6c0eab03cce9574
 
 // Custom tooltip so big funding numbers are readable
 const CustomTooltip = ({ active, payload }: any) => {
@@ -104,49 +94,6 @@ export default function OpportunityQuadrant() {
       {loading && <p className="text-sm text-gray-500 mb-2">Loading model data...</p>}
       {error && <p className="text-sm text-red-600 mb-2">Error: {error}</p>}
 
-<<<<<<< HEAD
-      <div className="h-[400px] w-full">
-        <ResponsiveContainer width="100%" height="100%">
-          <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
-            <CartesianGrid strokeDasharray="3 3" strokeOpacity={0.2} />
-            <XAxis
-              type="number"
-              dataKey="targetingIndex"
-              name="CMU Targeting Index"
-              stroke="#888888"
-            />
-            <YAxis
-              type="number"
-              dataKey="growth"
-              name="AAU Growth Rate"
-              stroke="#888888"
-              tickFormatter={(tick) => `${(tick * 100).toFixed(0)}%`}
-            />
-            <ZAxis
-              type="number"
-              dataKey="funding"
-              range={[100, 1000]} // Controls min and max bubble size
-            />
-            <Tooltip content={<CustomTooltip />} cursor={{ strokeDasharray: "3 3" }} />
-            
-            {/* Quadrant Crosshairs */}
-            <ReferenceLine x={1.0} stroke="#666" strokeDasharray="3 3" label={{ position: 'top', value: 'CMU Parity', fill: '#888' }} />
-            <ReferenceLine y={0.3} stroke="#666" strokeDasharray="3 3" label={{ position: 'right', value: 'High Growth', fill: '#888' }} />
-
-            <Scatter data={mockData} name="Fields">
-              {mockData.map((entry, index) => (
-                <Cell 
-                  key={`cell-${index}`} 
-                  // Red if under-targeted (Index < 1.0), Blue if strong (Index >= 1.0)
-                  fill={entry.targetingIndex < 1.0 ? "#ef4444" : "#3b82f6"} 
-                  opacity={0.8}
-                />
-              ))}
-            </Scatter>
-          </ScatterChart>
-        </ResponsiveContainer>
-      </div>
-=======
       <ResponsiveContainer width="100%" height={400}>
         <ScatterChart>
           <CartesianGrid />
@@ -169,7 +116,6 @@ export default function OpportunityQuadrant() {
           <Scatter data={chartData} fill="#2563eb" />
         </ScatterChart>
       </ResponsiveContainer>
->>>>>>> 66f539b5e985224c8e803bfbd6c0eab03cce9574
     </div>
   );
 }
