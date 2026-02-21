@@ -1,0 +1,63 @@
+{
+  "version": "v1",
+  "generated_at": "2026-02-21T20:24:27.155782+00:00",
+  "pipeline": {
+    "name": "baseline_models",
+    "forecast_model": "LinearRegression per FOR4_CODE",
+    "opportunity_model": "weighted normalized score",
+    "similarity_model": "TF-IDF + cosine + SVD(2d)"
+  },
+  "input_manifest": {
+    "version": "v1",
+    "generated_at": "2026-02-21T20:24:26.715412+00:00",
+    "inputs": {
+      "field_summary_rows": 168,
+      "forecast_rows": 1184,
+      "sankey_rows": 101,
+      "field_summary_columns": [
+        "AAU_funding",
+        "AAU_total",
+        "CMU_funding",
+        "CMU_total",
+        "FOR4_CODE",
+        "FOR4_NAME",
+        "START_YEAR",
+        "aau_share",
+        "cmu_share",
+        "growth_norm",
+        "growth_rate",
+        "inverse_targeting",
+        "inverse_targeting_norm",
+        "opportunity_score",
+        "scale_norm",
+        "targeting_index",
+        "under_target_gap"
+      ],
+      "forecast_columns": [
+        "FOR4_CODE",
+        "FOR4_NAME",
+        "aau_forecast",
+        "aau_funding",
+        "cmu_forecast",
+        "cmu_funding",
+        "year"
+      ],
+      "sankey_columns": [
+        "FOR4_CODE",
+        "cmu_field_total",
+        "growth_weighted_value",
+        "log_growth",
+        "source",
+        "target",
+        "value"
+      ]
+    }
+  },
+  "metrics": {
+    "forecast_mae_2024": 28020700.57142857,
+    "forecast_mape_2024": 1.411800111560627,
+    "opportunity_score_growth_corr": 0.8883486032581968,
+    "similarity_nodes": 168,
+    "similarity_avg_neighbors": 5.0
+  }
+}
