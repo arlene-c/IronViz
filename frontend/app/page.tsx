@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import AdminDashboard from "./components/AdminDashboard";
+import DecisionAssistant from "./components/DecisionAssistant";
 import ResearchDashboard from "./components/ResearchDashboard";
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
       
       <div className="flex justify-between items-center mb-6">
         {/* Left Side: Dashboard Toggles */}
-        <div className="flex gap-4">
+        <div className="flex gap-4 flex-wrap">
           <button
             onClick={() => setView("admin")}
             className={`px-4 py-2 rounded font-medium transition-colors ${
@@ -35,6 +36,7 @@ export default function Home() {
           >
             Research View
           </button>
+
         </div>
 
         {/* Right Side: Dark Mode Toggle Button */}
@@ -46,8 +48,21 @@ export default function Home() {
         </button>
       </div>
 
-      {/* Dashboards */}
-      {view === "admin" ? <AdminDashboard/> : <ResearchDashboard/>}
+      <div className="grid grid-cols-1 gap-6">
+        <section>
+          <h2 className="text-lg font-semibold mb-3">
+            {view === "admin" ? "Admin Decision Workspace" : "Researcher Decision Workspace"}
+          </h2>
+          <DecisionAssistant role={view} />
+        </section>
+
+        <section>
+          <h2 className="text-lg font-semibold mb-3">
+            {view === "admin" ? "Admin Insights & Predictive Analytics" : "Research Insights & Predictive Analytics"}
+          </h2>
+          {view === "admin" ? <AdminDashboard /> : <ResearchDashboard />}
+        </section>
+      </div>
     </div>
   );
 }
