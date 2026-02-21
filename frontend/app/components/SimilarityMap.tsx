@@ -20,6 +20,17 @@ type Props = {
   data?: SimilarityNode[];
 };
 
+function HelpTip({ text }: { text: string }) {
+  return (
+    <span
+      className="ml-1 inline-flex h-4 w-4 items-center justify-center rounded-full bg-gray-200 text-[10px] text-gray-700 cursor-help"
+      title={text}
+    >
+      ?
+    </span>
+  );
+}
+
 export default function SimilarityMap({ data }: Props) {
   const [rows, setRows] = useState<SimilarityNode[]>([]);
   const [loading, setLoading] = useState(true);
@@ -60,7 +71,14 @@ export default function SimilarityMap({ data }: Props) {
 
   return (
     <div className="bg-white dark:bg-gray-800 p-6 rounded shadow transition-colors duration-200">
-      <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Idea Similarity Map</h2>
+      <h2 className="text-xl font-semibold mb-1 text-gray-900 dark:text-white">
+        Idea Similarity Map
+        <HelpTip text="Points that are closer are more conceptually similar. Larger circles indicate higher field funding. Green points indicate stronger CMU-relative positioning." />
+      </h2>
+      <p className="text-xs text-gray-600 mb-3">
+        Insight: Clustered points suggest nearby research themes you can leverage for proposals.
+        <HelpTip text="Try targeting funders active in neighboring clusters to improve proposal fit." />
+      </p>
       {loading && <p className="text-sm text-gray-500 mb-2">Loading model data...</p>}
       {error && <p className="text-sm text-red-600 mb-2">Error: {error}</p>}
 
@@ -87,8 +105,22 @@ export default function SimilarityMap({ data }: Props) {
             paper_bgcolor: "transparent",
             plot_bgcolor: "transparent",
             font: { color: "#888888" },
-            xaxis: { showgrid: false, zeroline: false, showticklabels: false },
-            yaxis: { showgrid: false, zeroline: false, showticklabels: false },
+            xaxis: {
+              title: { text: "Similarity Dimension 1" },
+              showgrid: true,
+              gridcolor: "rgba(148,163,184,0.25)",
+              zeroline: true,
+              zerolinecolor: "rgba(100,116,139,0.45)",
+              showticklabels: true,
+            },
+            yaxis: {
+              title: { text: "Similarity Dimension 2" },
+              showgrid: true,
+              gridcolor: "rgba(148,163,184,0.25)",
+              zeroline: true,
+              zerolinecolor: "rgba(100,116,139,0.45)",
+              showticklabels: true,
+            },
           }}
           config={{ responsive: true, displayModeBar: false }}
         />
