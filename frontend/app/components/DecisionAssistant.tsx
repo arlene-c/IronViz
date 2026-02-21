@@ -34,6 +34,12 @@ type ResearcherResult = {
     selected_budget: number;
     already_received: number;
     remaining_need: number;
+    basis?: {
+      method: string;
+      base_field_aau_total: number;
+      length_factor: number;
+      note: string;
+    };
   };
   top_funders: Array<{
     funder_name: string;
@@ -65,6 +71,7 @@ type AdminResult = {
 type SavedIdea = {
   id: string;
   created_at: string;
+  project_start_date?: string;
   idea_text: string;
   field_code: string;
   field_name: string;
@@ -78,6 +85,7 @@ type SavedIdea = {
 
 type PortfolioProject = {
   id: string;
+  project_start_date?: string;
   idea_text: string;
   field_code: string;
   field_name?: string;
@@ -123,6 +131,7 @@ export default function DecisionAssistant({ role }: Props) {
   const [campusCode, setCampusCode] = useState("");
   const [fieldCode, setFieldCode] = useState("");
   const [lengthMonths, setLengthMonths] = useState(24);
+  const [projectStartDate, setProjectStartDate] = useState("");
   const [budgetMode, setBudgetMode] = useState<"manual" | "auto">("auto");
   const [requestedBudget, setRequestedBudget] = useState<number>(0);
   const [alreadyReceived, setAlreadyReceived] = useState<number>(0);
@@ -130,6 +139,7 @@ export default function DecisionAssistant({ role }: Props) {
     { area: "", amount: 0 },
   ]);
   const [researcherResult, setResearcherResult] = useState<ResearcherResult | null>(null);
+  const [saveNotice, setSaveNotice] = useState("");
 
   // Admin controls
   const [adminCurrentFunding, setAdminCurrentFunding] = useState<number>(0);
@@ -229,12 +239,15 @@ export default function DecisionAssistant({ role }: Props) {
       field_name: selectedField?.name || fieldCode,
       campus_code: campusCode,
       project_length_months: lengthMonths,
+      project_start_date: projectStartDate || undefined,
       budget_mode: budgetMode,
       requested_budget: budgetMode === "manual" ? requestedBudget : undefined,
       already_received: alreadyReceived,
       result: researcherResult ?? undefined,
     };
     persistSavedIdeas([item, ...savedIdeas].slice(0, 100));
+    setSaveNotice("Saved. This idea is now visible in Admin Inbox.");
+    setTimeout(() => setSaveNotice(""), 2500);
   };
 
   const addInboxIdeaToPortfolio = (idea: SavedIdea) => {
@@ -247,6 +260,7 @@ export default function DecisionAssistant({ role }: Props) {
         field_name: idea.field_name,
         campus_code: idea.campus_code,
         project_length_months: idea.project_length_months,
+        project_start_date: idea.project_start_date,
         budget_mode: idea.budget_mode,
         requested_budget: idea.requested_budget,
         already_received: idea.already_received,
@@ -279,8 +293,9 @@ export default function DecisionAssistant({ role }: Props) {
         project_length_months: p.project_length_months,
         budget_mode: p.budget_mode,
         requested_budget: p.budget_mode === "manual" ? p.requested_budget : undefined,
-        already_received: p.already_received ?? 0,
-      }));
+          already_received: p.already_received ?? 0,
+          project_start_date: p.project_start_date,
+        }));
       const res = await fetch("/api/decision/admin", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -308,8 +323,18 @@ export default function DecisionAssistant({ role }: Props) {
     const withRaw = savedIdeas.map((idea) => {
       const remaining = Number(idea.result?.budget.remaining_need || idea.requested_budget || 0);
       const opp = Number(idea.result?.summary.opportunity_score || 0.2);
-      const raw = remaining * (1 + opp);
-      return { ...idea, urgency_raw: raw };
+      const startDate = idea.project_start_date ? new Date(idea.project_start_date) : null;
+      const today = new Date();
+      let timeFactor = 1;
+      if (startDate && !Number.isNaN(startDate.getTime())) {
+        const diffDays = Math.floor((startDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+        if (diffDays <= 0) timeFactor = 1.5;
+        else if (diffDays <= 30) timeFactor = 1.4;
+        else if (diffDays <= 90) timeFactor = 1.25;
+        else if (diffDays <= 180) timeFactor = 1.1;
+      }
+      const raw = remaining * (1 + opp) * timeFactor;
+      return { ...idea, urgency_raw: raw, time_factor: timeFactor };
     });
     const max = Math.max(1, ...withRaw.map((x) => x.urgency_raw));
     return withRaw
@@ -360,6 +385,9 @@ export default function DecisionAssistant({ role }: Props) {
             <label className="text-sm text-gray-700">Project length (months)
               <input className="w-full border rounded p-2 text-sm mt-1" type="number" min={6} max={60} value={lengthMonths} onChange={(e) => setLengthMonths(Number(e.target.value || 24))} />
             </label>
+            <label className="text-sm text-gray-700">Project start date<HelpTip text="Used to increase urgency for near-term projects in Admin Inbox." />
+              <input className="w-full border rounded p-2 text-sm mt-1" type="date" value={projectStartDate} onChange={(e) => setProjectStartDate(e.target.value)} />
+            </label>
             <div className="text-sm">
               <p className="text-gray-700">Budget mode<HelpTip text="Use generated estimate or override with your own requested budget." /></p>
               <div className="flex gap-3 mt-1">
@@ -389,6 +417,7 @@ export default function DecisionAssistant({ role }: Props) {
               <button className="flex-1 bg-blue-600 text-white rounded p-2 text-sm disabled:opacity-60" onClick={runResearcher} disabled={running || !fieldCode || !campusCode}>{running ? "Running..." : "Run"}</button>
               <button className="flex-1 border rounded p-2 text-sm" onClick={saveCurrentIdea} disabled={!fieldCode || !campusCode}>Save Idea</button>
             </div>
+            {saveNotice && <p className="text-xs text-green-700">{saveNotice}</p>}
           </div>
 
           <div className="xl:col-span-2 grid grid-cols-1 gap-4">
@@ -402,7 +431,12 @@ export default function DecisionAssistant({ role }: Props) {
             {researcherResult && (
               <>
                 <div className="bg-white p-6 rounded shadow">
-                  <h3 className="font-semibold mb-2">Funder Likelihood</h3>
+                  <h3 className="font-semibold mb-2">
+                    Funder Likelihood
+                    <HelpTip
+                      text={`Budget estimate basis: ${researcherResult.budget.basis?.method || "historical field signal"} Base AAU field total: ${formatCompactUsd(researcherResult.budget.basis?.base_field_aau_total || 0)}. Length factor: ${Number(researcherResult.budget.basis?.length_factor || 1).toFixed(2)}. ${researcherResult.budget.basis?.note || ""}`}
+                    />
+                  </h3>
                   <ResponsiveContainer width="100%" height={240}>
                     <BarChart data={researcherResult.top_funders}>
                       <CartesianGrid strokeDasharray="3 3" />
@@ -428,11 +462,14 @@ export default function DecisionAssistant({ role }: Props) {
                   </ResponsiveContainer>
                 </div>
                 <div className="bg-white p-6 rounded shadow">
-                  <h3 className="font-semibold mb-2">Why funding may be unlikely</h3>
+                  <h3 className="font-semibold mb-2">Funding likelihood rationale</h3>
                   <ul className="text-sm list-disc pl-5 space-y-1">
                     {researcherResult.top_funders.slice(0, 3).map((f) => (
                       <li key={f.funder_name}>
-                        <span className="font-medium">{f.funder_name}:</span> {likelihoodReason(f.cmu_win_probability, f.fit_score)}
+                        <span className="font-medium">{f.funder_name}:</span>{" "}
+                        {f.cmu_win_probability >= 0.5
+                          ? `Likely (${formatPercent(f.cmu_win_probability)}): strong fit and timing window (${f.award_timing_window}).`
+                          : `Lower likelihood (${formatPercent(f.cmu_win_probability)}): ${likelihoodReason(f.cmu_win_probability, f.fit_score)}`}
                       </li>
                     ))}
                     {researcherResult.risk_flags.map((r) => (<li key={r}>{r}</li>))}
@@ -479,7 +516,10 @@ export default function DecisionAssistant({ role }: Props) {
 
           <div className="xl:col-span-2 grid grid-cols-1 gap-4">
             <div className="bg-white p-6 rounded shadow">
-              <h3 className="font-semibold mb-2">Admin Inbox</h3>
+              <h3 className="font-semibold mb-2">
+                Admin Inbox
+                <HelpTip text="Urgency formula: remaining need x (1 + opportunity score) x date factor. Date factor: overdue/<=30d=1.40-1.50, <=90d=1.25, <=180d=1.10, else=1.00." />
+              </h3>
               <p className="text-xs text-gray-600 mb-2">Urgency is shown as a percent relative to the highest-urgency submission in this inbox.</p>
               {adminInboxItems.length === 0 ? (
                 <p className="text-sm text-gray-600">No saved ideas yet.</p>
@@ -492,6 +532,9 @@ export default function DecisionAssistant({ role }: Props) {
                           <p className="font-medium">{idea.field_name || idea.field_code}</p>
                           <p className="text-xs text-gray-600 mt-1">{idea.idea_text}</p>
                           <p className="text-xs text-gray-500 mt-1">Remaining: {formatCompactUsd(idea.result?.budget.remaining_need || idea.requested_budget || 0)}</p>
+                          <p className="text-xs text-gray-500">
+                            Start: {idea.project_start_date ? new Date(idea.project_start_date).toLocaleDateString() : "Not set"}
+                          </p>
                         </div>
                         <div className="text-right">
                           <p
@@ -500,6 +543,7 @@ export default function DecisionAssistant({ role }: Props) {
                           >
                             Urgency {idea.urgency_percent}%
                           </p>
+                          <p className="text-[10px] text-gray-500 mt-1">Date factor x{Number(idea.time_factor || 1).toFixed(2)}</p>
                           <button className="mt-2 text-xs border rounded px-2 py-1" onClick={() => addInboxIdeaToPortfolio(idea)}>Add to portfolio</button>
                         </div>
                       </div>
