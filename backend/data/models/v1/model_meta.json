@@ -1,6 +1,6 @@
 {
   "version": "v1",
-  "generated_at": "2026-02-21T20:47:03.222335+00:00",
+  "generated_at": "2026-02-21T20:58:51.906056+00:00",
   "pipeline": {
     "name": "baseline_models",
     "forecast_model": "LinearRegression per FOR4_CODE",
@@ -9,7 +9,7 @@
   },
   "input_manifest": {
     "version": "v1",
-    "generated_at": "2026-02-21T20:47:02.785396+00:00",
+    "generated_at": "2026-02-21T20:58:51.442075+00:00",
     "inputs": {
       "field_summary_rows": 168,
       "forecast_rows": 1184,

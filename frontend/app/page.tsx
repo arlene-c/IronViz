@@ -12,14 +12,14 @@ export default function Home() {
       <div className="flex gap-4 mb-6">
         <button
           onClick={() => setView("admin")}
-          className="px-4 py-2 bg-blue-600 text-white rounded"
+          className={`px-4 py-2 rounded ${view === "admin" ? "bg-blue-700 text-white" : "bg-blue-100 text-blue-800"}`}
         >
-          Strategic View
+          Admin View
         </button>
 
         <button
           onClick={() => setView("research")}
-          className="px-4 py-2 bg-green-600 text-white rounded"
+          className={`px-4 py-2 rounded ${view === "research" ? "bg-green-700 text-white" : "bg-green-100 text-green-800"}`}
         >
           Research View
         </button>

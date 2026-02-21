@@ -15,12 +15,21 @@ type SimilarityNode = {
   institution_group: string;
 };
 
-export default function SimilarityMap() {
+type Props = {
+  data?: SimilarityNode[];
+};
+
+export default function SimilarityMap({ data }: Props) {
   const [rows, setRows] = useState<SimilarityNode[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
+    if (data && data.length > 0) {
+      setRows(data);
+      setLoading(false);
+      return;
+    }
     let isMounted = true;
     (async () => {
       try {
@@ -45,7 +54,7 @@ export default function SimilarityMap() {
     return () => {
       isMounted = false;
     };
-  }, []);
+  }, [data]);
 
   const markerSize = useMemo(() => rows.map((d) => Math.max(8, Math.sqrt((d.funding ?? 0) / 2_000_000))), [rows]);
   const markerColor = useMemo(() => rows.map((d) => (d.institution_group === "CMU" ? "#16a34a" : "#2563eb")), [rows]);
