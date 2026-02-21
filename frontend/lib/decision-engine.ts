@@ -45,6 +45,7 @@ type FunderRecommendation = {
   award_timing_window: string;
   cmu_win_probability: number;
   fit_score: number;
+  source_type?: "field_observed" | "global_fallback" | "baseline_fallback";
 };
 
 const clamp01 = (x: number) => Math.max(0, Math.min(1, x));
@@ -139,10 +140,53 @@ export async function runResearcherDecision(request: DecisionRequest) {
     prev.cmuTotal += Number(r.cmu_field_total || 0);
     funderAgg.set(key, prev);
   }
-  const sortedFunders = [...funderAgg.entries()]
+  let sortedFunders = [...funderAgg.entries()]
     .map(([funder, m]) => ({ funder, ...m }))
     .sort((a, b) => b.flow - a.flow)
     .slice(0, 6);
+  let funderDataMode: "field_observed" | "global_fallback" | "baseline_fallback" = "field_observed";
+  let funderFallbackNote = "";
+
+  // Fallback when field-specific links are sparse: use broad historical CMU-active funders
+  if (sortedFunders.length < 3) {
+    const global = new Map<string, { flow: number; cmuTotal: number }>();
+    for (const r of sankey) {
+      const key = r.source || "Unknown funder";
+      const prev = global.get(key) || { flow: 0, cmuTotal: 0 };
+      prev.flow += Number(r.value || 0);
+      prev.cmuTotal += Number(r.cmu_field_total || 0);
+      global.set(key, prev);
+    }
+    const globalTop = [...global.entries()]
+      .map(([funder, m]) => ({ funder, ...m }))
+      .sort((a, b) => (b.flow + b.cmuTotal) - (a.flow + a.cmuTotal))
+      .slice(0, 8);
+    const existing = new Set(sortedFunders.map((f) => f.funder));
+    let added = 0;
+    for (const g of globalTop) {
+      if (!existing.has(g.funder)) {
+        sortedFunders.push(g);
+        added += 1;
+      }
+      if (sortedFunders.length >= 6) break;
+    }
+    if (added > 0) {
+      funderDataMode = "global_fallback";
+      funderFallbackNote = "Used global AAU/CMU historical funder activity because field-specific funder links were sparse.";
+    }
+  }
+
+  // Hard fallback: if still sparse (e.g. missing sankey data), provide baseline plausible funders.
+  if (sortedFunders.length === 0) {
+    const baseline = ["NSF", "NIH", "Department of Defense", "DARPA", "Private Foundations"];
+    sortedFunders = baseline.map((f, i) => ({
+      funder: f,
+      flow: Math.max(1, 100 - i * 10),
+      cmuTotal: Math.max(1, 60 - i * 8),
+    }));
+    funderDataMode = "baseline_fallback";
+    funderFallbackNote = "Used baseline funder priors because no historical field/funder link data was available in loaded artifacts.";
+  }
 
   const topFlow = sortedFunders[0]?.flow || 1;
   const topCmu = Math.max(1, ...sortedFunders.map((f) => f.cmuTotal));
@@ -152,7 +196,9 @@ export async function runResearcherDecision(request: DecisionRequest) {
     const fit = clamp01(f.flow / topFlow);
     const cmuPresence = clamp01(Math.log1p(f.cmuTotal) / Math.log1p(topCmu));
     const gapPenalty = clamp01(Number(field.under_target_gap || 0) * 6);
-    const win = clamp01(0.2 + 0.45 * fit + 0.25 * cmuPresence - 0.2 * gapPenalty);
+    // Keep a realistic non-zero floor based on CMU historical presence + field momentum
+    const winFloor = clamp01(0.12 + 0.12 * cmuPresence + 0.08 * clamp01(Number(field.opportunity_score_v1 || 0)));
+    const win = Math.max(winFloor, clamp01(0.2 + 0.45 * fit + 0.25 * cmuPresence - 0.2 * gapPenalty));
     const expected = Math.round(Math.min(Math.max(80_000, f.flow * 0.25), Math.max(120_000, remainingNeed * 0.7)));
     return {
       funder_name: f.funder,
@@ -160,6 +206,7 @@ export async function runResearcherDecision(request: DecisionRequest) {
       award_timing_window: timing,
       cmu_win_probability: win,
       fit_score: fit,
+      source_type: funderDataMode === "field_observed" ? "field_observed" : funderDataMode,
     };
   });
 
@@ -198,6 +245,11 @@ export async function runResearcherDecision(request: DecisionRequest) {
     top_funders: topFunders,
     risk_flags: riskFlags,
     grant_plan: grantPlan,
+    likelihood_context: {
+      funder_data_mode: funderDataMode,
+      fallback_note: funderFallbackNote,
+      field_funder_links_found: funderRows.length,
+    },
   };
 }
 

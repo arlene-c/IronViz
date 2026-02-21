@@ -47,8 +47,14 @@ type ResearcherResult = {
     award_timing_window: string;
     cmu_win_probability: number;
     fit_score: number;
+    source_type?: "field_observed" | "global_fallback" | "baseline_fallback";
   }>;
   risk_flags: string[];
+  likelihood_context?: {
+    funder_data_mode: "field_observed" | "global_fallback" | "baseline_fallback";
+    fallback_note: string;
+    field_funder_links_found: number;
+  };
 };
 
 type AdminResult = {
@@ -90,10 +96,10 @@ type PortfolioProject = {
   field_code: string;
   field_name?: string;
   campus_code: string;
-  project_length_months: number;
+  project_length_months: number | "";
   budget_mode: "manual" | "auto";
-  requested_budget?: number;
-  already_received?: number;
+  requested_budget?: number | "";
+  already_received?: number | "";
 };
 
 const SAVED_IDEAS_KEY = "ironviz_saved_ideas_v1";
@@ -119,6 +125,7 @@ function likelihoodReason(prob: number, fit: number) {
 type Props = { role: Role };
 
 export default function DecisionAssistant({ role }: Props) {
+  const parseInputNumber = (raw: string): number | "" => (raw === "" ? "" : Number(raw));
   const [fields, setFields] = useState<FieldOption[]>([]);
   const [campuses, setCampuses] = useState<CampusOption[]>([]);
   const [savedIdeas, setSavedIdeas] = useState<SavedIdea[]>([]);
@@ -130,11 +137,11 @@ export default function DecisionAssistant({ role }: Props) {
   const [ideaText, setIdeaText] = useState("");
   const [campusCode, setCampusCode] = useState("");
   const [fieldCode, setFieldCode] = useState("");
-  const [lengthMonths, setLengthMonths] = useState(24);
+  const [lengthMonths, setLengthMonths] = useState<number | "">(24);
   const [projectStartDate, setProjectStartDate] = useState("");
   const [budgetMode, setBudgetMode] = useState<"manual" | "auto">("auto");
-  const [requestedBudget, setRequestedBudget] = useState<number>(0);
-  const [alreadyReceived, setAlreadyReceived] = useState<number>(0);
+  const [requestedBudget, setRequestedBudget] = useState<number | "">(0);
+  const [alreadyReceived, setAlreadyReceived] = useState<number | "">(0);
   const [subjectAllocations, setSubjectAllocations] = useState<Array<{ area: string; amount: number }>>([
     { area: "", amount: 0 },
   ]);
@@ -142,8 +149,8 @@ export default function DecisionAssistant({ role }: Props) {
   const [saveNotice, setSaveNotice] = useState("");
 
   // Admin controls
-  const [adminCurrentFunding, setAdminCurrentFunding] = useState<number>(0);
-  const [planningHorizon, setPlanningHorizon] = useState<number>(18);
+  const [adminCurrentFunding, setAdminCurrentFunding] = useState<number | "">(0);
+  const [planningHorizon, setPlanningHorizon] = useState<number | "">(18);
   const [portfolio, setPortfolio] = useState<PortfolioProject[]>([]);
   const [adminResult, setAdminResult] = useState<AdminResult | null>(null);
   const [quickProject, setQuickProject] = useState<PortfolioProject>({
@@ -213,10 +220,10 @@ export default function DecisionAssistant({ role }: Props) {
           idea_text: ideaText,
           cmu_campus_code: campusCode,
           for4_code: fieldCode,
-          project_length_months: lengthMonths,
+          project_length_months: Number(lengthMonths || 24),
           budget_mode: budgetMode,
-          requested_budget: budgetMode === "manual" ? requestedBudget : undefined,
-          already_received: alreadyReceived,
+          requested_budget: budgetMode === "manual" ? Number(requestedBudget || 0) : undefined,
+          already_received: Number(alreadyReceived || 0),
           subject_allocations: subjectAllocations.filter((s) => s.area && Number(s.amount) > 0),
         }),
       });
@@ -238,11 +245,11 @@ export default function DecisionAssistant({ role }: Props) {
       field_code: fieldCode,
       field_name: selectedField?.name || fieldCode,
       campus_code: campusCode,
-      project_length_months: lengthMonths,
+      project_length_months: Number(lengthMonths || 24),
       project_start_date: projectStartDate || undefined,
       budget_mode: budgetMode,
-      requested_budget: budgetMode === "manual" ? requestedBudget : undefined,
-      already_received: alreadyReceived,
+      requested_budget: budgetMode === "manual" ? Number(requestedBudget || 0) : undefined,
+      already_received: Number(alreadyReceived || 0),
       result: researcherResult ?? undefined,
     };
     persistSavedIdeas([item, ...savedIdeas].slice(0, 100));
@@ -290,18 +297,18 @@ export default function DecisionAssistant({ role }: Props) {
         idea_text: p.idea_text || "Portfolio project",
         cmu_campus_code: p.campus_code,
         for4_code: p.field_code,
-        project_length_months: p.project_length_months,
+        project_length_months: Number(p.project_length_months || 24),
         budget_mode: p.budget_mode,
-        requested_budget: p.budget_mode === "manual" ? p.requested_budget : undefined,
-          already_received: p.already_received ?? 0,
+        requested_budget: p.budget_mode === "manual" ? Number(p.requested_budget || 0) : undefined,
+          already_received: Number(p.already_received || 0),
           project_start_date: p.project_start_date,
         }));
       const res = await fetch("/api/decision/admin", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          planning_horizon_months: planningHorizon,
-          current_funding: adminCurrentFunding,
+          planning_horizon_months: Number(planningHorizon || 18),
+          current_funding: Number(adminCurrentFunding || 0),
           portfolio: payload,
         }),
       });
@@ -383,7 +390,7 @@ export default function DecisionAssistant({ role }: Props) {
               </select>
             </label>
             <label className="text-sm text-gray-700">Project length (months)
-              <input className="w-full border rounded p-2 text-sm mt-1" type="number" min={6} max={60} value={lengthMonths} onChange={(e) => setLengthMonths(Number(e.target.value || 24))} />
+              <input className="w-full border rounded p-2 text-sm mt-1" type="number" min={6} max={60} value={lengthMonths} onChange={(e) => setLengthMonths(parseInputNumber(e.target.value))} />
             </label>
             <label className="text-sm text-gray-700">Project start date<HelpTip text="Used to increase urgency for near-term projects in Admin Inbox." />
               <input className="w-full border rounded p-2 text-sm mt-1" type="date" value={projectStartDate} onChange={(e) => setProjectStartDate(e.target.value)} />
@@ -397,11 +404,11 @@ export default function DecisionAssistant({ role }: Props) {
             </div>
             {budgetMode === "manual" && (
               <label className="text-sm text-gray-700">Manual requested budget (USD)
-                <input className="w-full border rounded p-2 text-sm mt-1" type="number" min={0} value={requestedBudget} onChange={(e) => setRequestedBudget(Number(e.target.value || 0))} />
+                <input className="w-full border rounded p-2 text-sm mt-1" type="number" min={0} value={requestedBudget} onChange={(e) => setRequestedBudget(parseInputNumber(e.target.value))} />
               </label>
             )}
             <label className="text-sm text-gray-700">Already received (USD)
-              <input className="w-full border rounded p-2 text-sm mt-1" type="number" min={0} value={alreadyReceived} onChange={(e) => setAlreadyReceived(Number(e.target.value || 0))} />
+              <input className="w-full border rounded p-2 text-sm mt-1" type="number" min={0} value={alreadyReceived} onChange={(e) => setAlreadyReceived(parseInputNumber(e.target.value))} />
             </label>
             <div className="border rounded p-2 space-y-2">
               <p className="text-xs font-semibold text-gray-600">Subject allocations<HelpTip text="Optional breakdown by subject area; helps constrain budget recommendations." /></p>
@@ -463,6 +470,13 @@ export default function DecisionAssistant({ role }: Props) {
                 </div>
                 <div className="bg-white p-6 rounded shadow">
                   <h3 className="font-semibold mb-2">Funding likelihood rationale</h3>
+                  {researcherResult.likelihood_context?.funder_data_mode !== "field_observed" && (
+                    <div className="mb-3 rounded border border-amber-300 bg-amber-50 p-2 text-xs text-amber-800">
+                      Fallback used: {researcherResult.likelihood_context?.fallback_note}
+                      {" "}
+                      (field links found: {researcherResult.likelihood_context?.field_funder_links_found ?? 0})
+                    </div>
+                  )}
                   <ul className="text-sm list-disc pl-5 space-y-1">
                     {researcherResult.top_funders.slice(0, 3).map((f) => (
                       <li key={f.funder_name}>
@@ -486,10 +500,10 @@ export default function DecisionAssistant({ role }: Props) {
           <div className="xl:col-span-1 bg-white p-6 rounded shadow space-y-3">
             <h2 className="font-semibold text-lg">Admin Controls</h2>
             <label className="text-sm text-gray-700">Current funding (USD)<HelpTip text="Total funds currently available to cover portfolio gaps." />
-              <input className="w-full border rounded p-2 text-sm mt-1" type="number" min={0} value={adminCurrentFunding} onChange={(e) => setAdminCurrentFunding(Number(e.target.value || 0))} />
+              <input className="w-full border rounded p-2 text-sm mt-1" type="number" min={0} value={adminCurrentFunding} onChange={(e) => setAdminCurrentFunding(parseInputNumber(e.target.value))} />
             </label>
             <label className="text-sm text-gray-700">Planning horizon (months)<HelpTip text="Window for expected grant inflow and sequencing decisions." />
-              <input className="w-full border rounded p-2 text-sm mt-1" type="number" min={6} max={48} value={planningHorizon} onChange={(e) => setPlanningHorizon(Number(e.target.value || 18))} />
+              <input className="w-full border rounded p-2 text-sm mt-1" type="number" min={6} max={48} value={planningHorizon} onChange={(e) => setPlanningHorizon(parseInputNumber(e.target.value))} />
             </label>
 
             <div className="border rounded p-3 space-y-2">
@@ -504,8 +518,8 @@ export default function DecisionAssistant({ role }: Props) {
                 {campuses.map((c) => (<option key={c.code} value={c.code}>{c.label}</option>))}
               </select>
               <div className="grid grid-cols-2 gap-2">
-                <input className="border rounded p-2 text-sm" type="number" min={6} max={60} placeholder="Months" value={quickProject.project_length_months} onChange={(e) => setQuickProject((p) => ({ ...p, project_length_months: Number(e.target.value || 24) }))} />
-                <input className="border rounded p-2 text-sm" type="number" min={0} placeholder="Already received" value={quickProject.already_received || 0} onChange={(e) => setQuickProject((p) => ({ ...p, already_received: Number(e.target.value || 0) }))} />
+                <input className="border rounded p-2 text-sm" type="number" min={6} max={60} placeholder="Months" value={quickProject.project_length_months} onChange={(e) => setQuickProject((p) => ({ ...p, project_length_months: parseInputNumber(e.target.value) }))} />
+                <input className="border rounded p-2 text-sm" type="number" min={0} placeholder="Already received" value={quickProject.already_received || ""} onChange={(e) => setQuickProject((p) => ({ ...p, already_received: parseInputNumber(e.target.value) }))} />
               </div>
               <div className="flex gap-2">
                 <button className="flex-1 border rounded p-2 text-sm" onClick={addQuickProject}>Add Project</button>
