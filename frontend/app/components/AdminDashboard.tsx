@@ -69,26 +69,26 @@ export default function AdminDashboard() {
 
   return (
     <div className="grid grid-cols-1 gap-6">
-      <div className="bg-white p-6 rounded shadow">
+      <div className="bg-white dark:bg-gray-800 p-6 rounded shadow text-gray-900 dark:text-white transition-colors duration-200">
         <h1 className="text-2xl font-bold">Admin Strategy Console</h1>
-        <p className="text-sm text-gray-600 mt-1">
+        <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
           Prioritize where CMU is under-indexed while external momentum is highest.
         </p>
-        {loading && <p className="text-sm text-gray-500 mt-2">Loading admin insights...</p>}
-        {error && <p className="text-sm text-red-600 mt-2">Error: {error}</p>}
+        {loading && <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">Loading admin insights...</p>}
+        {error && <p className="text-sm text-red-600 dark:text-red-400 mt-2">Error: {error}</p>}
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="bg-white p-4 rounded shadow">
-          <p className="text-sm text-gray-500">Fields analyzed</p>
+        <div className="bg-white dark:bg-gray-800 p-4 rounded shadow text-gray-900 dark:text-white transition-colors duration-200">
+          <p className="text-sm text-gray-500 dark:text-gray-400">Fields analyzed</p>
           <p className="text-2xl font-bold">{opportunity.length}</p>
         </div>
-        <div className="bg-white p-4 rounded shadow">
-          <p className="text-sm text-gray-500">Total AAU funding</p>
+        <div className="bg-white dark:bg-gray-800 p-4 rounded shadow text-gray-900 dark:text-white transition-colors duration-200">
+          <p className="text-sm text-gray-500 dark:text-gray-400">Total AAU funding</p>
           <p className="text-2xl font-bold">${Math.round(stats.totalAau).toLocaleString()}</p>
         </div>
-        <div className="bg-white p-4 rounded shadow">
-          <p className="text-sm text-gray-500">Top opportunity score</p>
+        <div className="bg-white dark:bg-gray-800 p-4 rounded shadow text-gray-900 dark:text-white transition-colors duration-200">
+          <p className="text-sm text-gray-500 dark:text-gray-400">Top opportunity score</p>
           <p className="text-2xl font-bold">{Number(stats.topScore).toFixed(3)}</p>
         </div>
       </div>
@@ -97,7 +97,7 @@ export default function AdminDashboard() {
         <div className="xl:col-span-2">
           <OpportunityQuadrant data={opportunity} />
         </div>
-        <div className="bg-white p-6 rounded shadow">
+        <div className="bg-white dark:bg-gray-800 p-6 rounded shadow text-gray-900 dark:text-white transition-colors duration-200">
           <h2 className="text-xl font-semibold mb-1">Top 5 Opportunity Rankings</h2>
           <p className="text-sm text-gray-600 mb-4">Fast shortlist for strategic action.</p>
           <ul className="text-xs text-gray-600 mb-4 list-disc pl-5 space-y-1">
@@ -106,16 +106,16 @@ export default function AdminDashboard() {
           </ul>
           <ol className="space-y-2">
             {topOpportunities.map((row, idx) => (
-              <li key={row.FOR4_CODE} className="flex justify-between items-start gap-3 border-b pb-2 last:border-b-0">
+              <li key={row.FOR4_CODE} className="flex justify-between items-start gap-3 border-b dark:border-gray-700 pb-2 last:border-b-0">
                 <div>
                   <p className="font-semibold">{idx + 1}. {row.FOR4_NAME}</p>
-                  <p className="text-xs text-gray-500">Gap: {(Number(row.under_target_gap) || 0).toFixed(4)}</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">Gap: {(Number(row.under_target_gap) || 0).toFixed(4)}</p>
                 </div>
                 <span className="font-bold">{(Number(row.opportunity_score_v1) || 0).toFixed(3)}</span>
               </li>
             ))}
           </ol>
-          <p className="text-xs text-gray-500 mt-4">Average under-target gap: {stats.avgGap.toFixed(4)}</p>
+          <p className="text-xs text-gray-500 dark:text-gray-400 mt-4">Average under-target gap: {stats.avgGap.toFixed(4)}</p>
         </div>
       </div>
 

@@ -71,9 +71,9 @@ export default function ResearchDashboard() {
 
   return (
     <div className="grid grid-cols-1 gap-6">
-      <div className="bg-white p-6 rounded shadow">
+      <div className="bg-white dark:bg-gray-800 p-6 rounded shadow text-gray-900 dark:text-white transition-colors duration-200">
         <h1 className="text-2xl font-bold">Research Discovery Console</h1>
-        <p className="text-sm text-gray-600 mt-1">
+        <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
           Explore nearby fields, identify high-growth themes, and inspect 2026 funding trajectories.
         </p>
         {loading && <p className="text-sm text-gray-500 mt-2">Loading research insights...</p>}
@@ -81,16 +81,16 @@ export default function ResearchDashboard() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="bg-white p-4 rounded shadow">
-          <p className="text-sm text-gray-500">Similarity nodes</p>
+        <div className="bg-white dark:bg-gray-800 p-4 rounded shadow text-gray-900 dark:text-white transition-colors duration-200">
+          <p className="text-sm text-gray-500 dark:text-gray-400">Similarity nodes</p>
           <p className="text-2xl font-bold">{similarity.length}</p>
         </div>
-        <div className="bg-white p-4 rounded shadow">
-          <p className="text-sm text-gray-500">Forecast rows</p>
+        <div className="bg-white dark:bg-gray-800 p-4 rounded shadow text-gray-900 dark:text-white transition-colors duration-200">
+          <p className="text-sm text-gray-500 dark:text-gray-400">Forecast rows</p>
           <p className="text-2xl font-bold">{forecast.length}</p>
         </div>
-        <div className="bg-white p-4 rounded shadow">
-          <p className="text-sm text-gray-500">Top 2026 forecast</p>
+        <div className="bg-white dark:bg-gray-800 p-4 rounded shadow text-gray-900 dark:text-white transition-colors duration-200">
+          <p className="text-sm text-gray-500 dark:text-gray-400">Top 2026 forecast</p>
           <p className="text-2xl font-bold">
             ${Math.round(Number(topForecastFields[0]?.aau_forecast || 0)).toLocaleString()}
           </p>
@@ -101,7 +101,7 @@ export default function ResearchDashboard() {
         <div className="xl:col-span-2">
           <SimilarityMap data={similarity} />
         </div>
-        <div className="bg-white p-6 rounded shadow">
+        <div className="bg-white dark:bg-gray-800 p-6 rounded shadow text-gray-900 dark:text-white transition-colors duration-200">
           <h2 className="text-xl font-semibold mb-1">Top 2026 Field Forecasts</h2>
           <p className="text-sm text-gray-600 mb-4">Ranked by predicted AAU funding.</p>
           <ul className="text-xs text-gray-600 mb-4 list-disc pl-5 space-y-1">
@@ -110,10 +110,10 @@ export default function ResearchDashboard() {
           </ul>
           <ol className="space-y-2">
             {topForecastFields.map((row, idx) => (
-              <li key={`${row.FOR4_CODE}-${row.year}`} className="flex justify-between items-start gap-3 border-b pb-2 last:border-b-0">
+              <li key={`${row.FOR4_CODE}-${row.year}`} className="flex justify-between items-start gap-3 border-b dark:border-gray-700 pb-2 last:border-b-0">
                 <div>
                   <p className="font-semibold">{idx + 1}. {row.FOR4_NAME}</p>
-                  <p className="text-xs text-gray-500">Code: {row.FOR4_CODE}</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">Code: {row.FOR4_CODE}</p>
                 </div>
                 <span className="font-bold">${Math.round(Number(row.aau_forecast) || 0).toLocaleString()}</span>
               </li>

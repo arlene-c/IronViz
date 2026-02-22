@@ -24,7 +24,7 @@ type Props = {
 function HelpTip({ text }: { text: string }) {
   return (
     <span
-      className="ml-1 inline-flex h-4 w-4 items-center justify-center rounded-full bg-gray-200 text-[10px] text-gray-700 cursor-help"
+      className="ml-1 inline-flex h-4 w-4 items-center justify-center rounded-full bg-gray-200 dark:bg-gray-600 text-[10px] text-gray-700 dark:text-gray-200 cursor-help"
       title={text}
     >
       ?
@@ -125,18 +125,18 @@ export default function SimilarityMap({ data }: Props) {
             xaxis: {
               title: { text: "Similarity Dimension 1", standoff: 12 },
               showgrid: true,
-              gridcolor: chartTheme.similarity.grid,
+              gridcolor: "#4b5563",
               zeroline: true,
-              zerolinecolor: chartTheme.similarity.zero,
+              zerolinecolor: "#4b5563",
               showticklabels: true,
               automargin: true,
             },
             yaxis: {
               title: { text: "Similarity Dimension 2", standoff: 12 },
               showgrid: true,
-              gridcolor: chartTheme.similarity.grid,
+              gridcolor: "#4b5563",
               zeroline: true,
-              zerolinecolor: chartTheme.similarity.zero,
+              zerolinecolor: "#4b5563",
               showticklabels: true,
               automargin: true,
             },

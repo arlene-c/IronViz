@@ -62,7 +62,7 @@ export default function UnderTargetedTreemap({ data }: Props) {
               if (!active || !payload?.length) return null;
               const p = payload[0].payload as TreemapRow;
               return (
-                <div className="bg-white p-3 border rounded shadow text-sm">
+                <div className="bg-white dark:bg-gray-800 p-3 border border-gray-200 dark:border-gray-700 rounded shadow text-sm text-gray-900 dark:text-white">
                   <p className="font-semibold">{p.name}</p>
                   <p>FOR2: {p.for2}xx</p>
                   <p>AAU Funding: {formatCompactUsd(p.size)}</p>

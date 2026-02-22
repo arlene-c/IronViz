@@ -26,7 +26,6 @@ type OpportunityRow = {
   AAU_total: number;
 };
 
-// Custom tooltip so big funding numbers are readable
 const CustomTooltip = ({ active, payload }: any) => {
   if (active && payload && payload.length) {
     const data = payload[0].payload;
@@ -37,7 +36,7 @@ const CustomTooltip = ({ active, payload }: any) => {
         <p className="text-sm text-gray-600 dark:text-gray-300">Gap: {formatSigned(data.targetingGap, 4)}</p>
         <p className="text-sm text-gray-600 dark:text-gray-300">Growth: {formatPercent(data.growth, 1)}</p>
         <p className="text-sm text-gray-600 dark:text-gray-300">AAU Funding: {formatCompactUsd(data.funding)}</p>
-        <p className={`text-xs mt-1 ${isUnderTargeted ? "text-red-600" : "text-blue-600"}`}>
+        <p className={`text-xs mt-1 ${isUnderTargeted ? "text-red-600 dark:text-red-400" : "text-blue-600 dark:text-blue-400"}`}>
           {isUnderTargeted ? "CMU is under-targeted here" : "CMU is at/above external focus"}
         </p>
       </div>
@@ -131,7 +130,7 @@ export default function OpportunityQuadrant({ data }: Props) {
               type="number"
               dataKey="targetingGap"
               name="Under-target gap"
-              stroke={chartTheme.quadrant.xAxis}
+              stroke="#888888"
               tickFormatter={(tick) => Number(tick).toFixed(2)}
             >
               <Label value="Under-Target Gap (AAU share - CMU share)" position="insideBottom" offset={-8} />
@@ -140,7 +139,7 @@ export default function OpportunityQuadrant({ data }: Props) {
               type="number"
               dataKey="growth"
               name="Growth Rate"
-              stroke={chartTheme.quadrant.yAxis}
+              stroke="#888888"
               tickFormatter={(tick) => `${(tick * 100).toFixed(0)}%`}
               width={60}
               label={{ value: "AAU Growth Rate", angle: -90, position: "insideLeft", offset: -4 }}
@@ -152,9 +151,8 @@ export default function OpportunityQuadrant({ data }: Props) {
             />
             <Tooltip content={<CustomTooltip />} cursor={{ strokeDasharray: "3 3" }} />
             
-            {/* Quadrant Crosshairs */}
-            <ReferenceLine x={0} stroke={chartTheme.quadrant.refX} strokeDasharray="3 3" label={{ position: "top", value: "Parity", fill: chartTheme.quadrant.xAxis }} />
-            <ReferenceLine y={0} stroke={chartTheme.quadrant.refY} strokeDasharray="3 3" />
+            <ReferenceLine x={0} stroke="#888888" strokeDasharray="3 3" label={{ position: "top", value: "Parity", fill: "#888888" }} />
+            <ReferenceLine y={0} stroke="#888888" strokeDasharray="3 3" />
 
             <Scatter data={chartData} name="Fields">
               {chartData.map((entry, index) => (
