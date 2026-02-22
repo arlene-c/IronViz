@@ -27,6 +27,7 @@ def main() -> None:
         MODELS_DIR / "opportunity_scores_v1.json",
         MODELS_DIR / "similarity_map_v1.json",
         MODELS_DIR / "similarity_neighbors_v1.json",
+        MODELS_DIR / "radar_competitiveness_v1.json",
         MODELS_DIR / "model_meta.json",
     ]
     for f in required_files:
@@ -36,6 +37,7 @@ def main() -> None:
     opportunity = pd.read_json(MODELS_DIR / "opportunity_scores_v1.json")
     sim_map = pd.read_json(MODELS_DIR / "similarity_map_v1.json")
     sim_neighbors = pd.read_json(MODELS_DIR / "similarity_neighbors_v1.json")
+    radar = pd.read_json(MODELS_DIR / "radar_competitiveness_v1.json")
 
     _validate_columns(
         "forecast_v1.json",
@@ -57,8 +59,13 @@ def main() -> None:
         sim_neighbors,
         {"grant_id", "neighbor_grant_id", "similarity"},
     )
+    _validate_columns(
+        "radar_competitiveness_v1.json",
+        radar,
+        {"view", "axis", "for4_code", "cmu", "aau_avg", "gap", "priority_score"},
+    )
 
-    if forecast.empty or opportunity.empty or sim_map.empty:
+    if forecast.empty or opportunity.empty or sim_map.empty or radar.empty:
         raise ValueError("One or more key artifacts are empty.")
 
     if (opportunity["opportunity_score_v1"] < 0).any() or (opportunity["opportunity_score_v1"] > 1).any():
@@ -73,6 +80,7 @@ def main() -> None:
     print(f"opportunity rows: {len(opportunity)}")
     print(f"similarity nodes: {len(sim_map)}")
     print(f"neighbor links: {len(sim_neighbors)}")
+    print(f"radar axes: {len(radar)}")
 
 
 if __name__ == "__main__":

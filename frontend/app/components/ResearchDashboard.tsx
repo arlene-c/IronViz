@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import AdjacentExpansionWeb from "./AdjacentExpansionWeb";
 import ProjectionBands from "./ProjectionBands";
 import SimilarityMap from "./SimilarityMap";
 
@@ -123,6 +124,7 @@ export default function ResearchDashboard() {
       </div>
 
       <ProjectionBands data={forecast} />
+      <AdjacentExpansionWeb nodes={similarity} />
     </div>
   );
 }

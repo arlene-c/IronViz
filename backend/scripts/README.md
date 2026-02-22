@@ -24,6 +24,7 @@ Artifacts are written to:
 - `opportunity_scores_v1.json`
 - `similarity_map_v1.json`
 - `similarity_neighbors_v1.json`
+- `radar_competitiveness_v1.json`
 - `model_meta.json`
 
 Input snapshots are written to:

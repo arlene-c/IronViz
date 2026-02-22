@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import FunderFlowRanking from "./FunderFlowRanking";
 import OpportunityQuadrant from "./OpportunityQuadrant";
+import RadarComparisons, { RadarRow } from "./RadarComparisons";
 import UnderTargetedTreemap, { OpportunityRow } from "./UnderTargetedTreemap";
 
 type SankeyRow = {
@@ -15,6 +16,7 @@ type SankeyRow = {
 export default function AdminDashboard() {
   const [opportunity, setOpportunity] = useState<OpportunityRow[]>([]);
   const [sankey, setSankey] = useState<SankeyRow[]>([]);
+  const [radar, setRadar] = useState<RadarRow[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -22,17 +24,19 @@ export default function AdminDashboard() {
     let isMounted = true;
     (async () => {
       try {
-        const [oppRes, sankeyRes] = await Promise.all([
+        const [oppRes, sankeyRes, radarRes] = await Promise.all([
           fetch("/api/models/opportunity", { cache: "no-store" }),
           fetch("/api/data/sankey", { cache: "no-store" }),
+          fetch("/api/models/radar", { cache: "no-store" }),
         ]);
-        if (!oppRes.ok || !sankeyRes.ok) {
-          throw new Error(`Opportunity ${oppRes.status}, Sankey ${sankeyRes.status}`);
+        if (!oppRes.ok || !sankeyRes.ok || !radarRes.ok) {
+          throw new Error(`Opportunity ${oppRes.status}, Sankey ${sankeyRes.status}, Radar ${radarRes.status}`);
         }
-        const [oppJson, sankeyJson] = await Promise.all([oppRes.json(), sankeyRes.json()]);
+        const [oppJson, sankeyJson, radarJson] = await Promise.all([oppRes.json(), sankeyRes.json(), radarRes.json()]);
         if (isMounted) {
           setOpportunity(Array.isArray(oppJson.data) ? oppJson.data : []);
           setSankey(Array.isArray(sankeyJson.data) ? sankeyJson.data : []);
+          setRadar(Array.isArray(radarJson.data) ? radarJson.data : []);
         }
       } catch (e) {
         if (isMounted) {
@@ -120,6 +124,7 @@ export default function AdminDashboard() {
       </div>
 
       <UnderTargetedTreemap data={opportunity} />
+      <RadarComparisons data={radar} />
       <FunderFlowRanking data={sankey} />
     </div>
   );

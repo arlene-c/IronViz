@@ -31,4 +31,13 @@ export const chartTheme = {
     cardBorder: "#a7f3d0",
     cardBackground: "linear-gradient(135deg, #ecfdf5 0%, #ffffff 45%, #f0f9ff 100%)",
   },
+  radar: {
+    cmu: "#22d3ee",
+    aau: "#f97316",
+    glow: "rgba(34, 211, 238, 0.25)",
+    grid: "#bae6fd",
+    axis: "#0f172a",
+    cardBorder: "#7dd3fc",
+    cardBackground: "linear-gradient(145deg, #ecfeff 0%, #ffffff 50%, #fff7ed 100%)",
+  },
 };

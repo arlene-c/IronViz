@@ -1,0 +1,110 @@
+[
+  {
+    "view":"opportunity",
+    "axis":"Building",
+    "for4_code":"3302",
+    "cmu":0.0,
+    "aau_avg":100.0,
+    "gap":0.08881,
+    "priority_score":0.712282
+  },
+  {
+    "view":"opportunity",
+    "axis":"Nuclear and Plasma Physics",
+    "for4_code":"5106",
+    "cmu":16.85,
+    "aau_avg":68.46,
+    "gap":0.049067,
+    "priority_score":0.676753
+  },
+  {
+    "view":"opportunity",
+    "axis":"Synchrotrons and Accelerators",
+    "for4_code":"5110",
+    "cmu":0.0,
+    "aau_avg":36.57,
+    "gap":0.032476,
+    "priority_score":0.484688
+  },
+  {
+    "view":"opportunity",
+    "axis":"Astronomical Sciences",
+    "for4_code":"5101",
+    "cmu":0.0,
+    "aau_avg":62.16,
+    "gap":0.055203,
+    "priority_score":0.454974
+  },
+  {
+    "view":"opportunity",
+    "axis":"Health Services and Systems",
+    "for4_code":"4203",
+    "cmu":29.71,
+    "aau_avg":34.14,
+    "gap":0.009628,
+    "priority_score":0.35651
+  },
+  {
+    "view":"opportunity",
+    "axis":"Education Systems",
+    "for4_code":"3903",
+    "cmu":100.0,
+    "aau_avg":24.89,
+    "gap":-0.047541,
+    "priority_score":0.314225
+  },
+  {
+    "view":"strength",
+    "axis":"Cybersecurity and Privacy",
+    "for4_code":"4604",
+    "cmu":100.0,
+    "aau_avg":49.18,
+    "gap":-0.098016,
+    "priority_score":0.946758
+  },
+  {
+    "view":"strength",
+    "axis":"Artificial Intelligence",
+    "for4_code":"4602",
+    "cmu":72.61,
+    "aau_avg":37.5,
+    "gap":-0.070565,
+    "priority_score":0.713137
+  },
+  {
+    "view":"strength",
+    "axis":"Materials Engineering",
+    "for4_code":"4016",
+    "cmu":64.33,
+    "aau_avg":38.64,
+    "gap":-0.060693,
+    "priority_score":0.639848
+  },
+  {
+    "view":"strength",
+    "axis":"Education Systems",
+    "for4_code":"3903",
+    "cmu":60.79,
+    "aau_avg":65.71,
+    "gap":-0.047541,
+    "priority_score":0.594124
+  },
+  {
+    "view":"strength",
+    "axis":"Human-Centred Computing",
+    "for4_code":"4608",
+    "cmu":49.3,
+    "aau_avg":100.0,
+    "gap":-0.022838,
+    "priority_score":0.400891
+  },
+  {
+    "view":"strength",
+    "axis":"Macromolecular and Materials Chemistry",
+    "for4_code":"3403",
+    "cmu":43.69,
+    "aau_avg":77.98,
+    "gap":-0.023822,
+    "priority_score":0.39686
+  }
+]

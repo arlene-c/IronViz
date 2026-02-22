@@ -8,10 +8,6 @@ from typing import Any
 
 import numpy as np
 import pandas as pd
-from sklearn.decomposition import TruncatedSVD
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.linear_model import LinearRegression
-from sklearn.metrics.pairwise import cosine_similarity
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -28,6 +24,15 @@ def _normalize(series: pd.Series) -> pd.Series:
     return (s - s.min()) / span
 
 
+def _fit_line(years: np.ndarray, values: np.ndarray) -> tuple[float, float]:
+    slope, intercept = np.polyfit(years.astype(float), values.astype(float), 1)
+    return float(slope), float(intercept)
+
+
+def _predict_line(slope: float, intercept: float, years: np.ndarray) -> np.ndarray:
+    return slope * years.astype(float) + intercept
+
+
 @dataclass
 class PipelineMetrics:
     forecast_mae_2024: float | None
@@ -35,6 +40,7 @@ class PipelineMetrics:
     opportunity_score_growth_corr: float | None
     similarity_nodes: int
     similarity_avg_neighbors: float
+    radar_axes: int
 
 
 def build_inputs() -> dict[str, Any]:
@@ -101,14 +107,12 @@ def _build_forecast_model(forecast_snapshot: pd.DataFrame) -> tuple[pd.DataFrame
         if len(g) < 3:
             continue
 
-        model = LinearRegression()
-        model.fit(X, y)
-
-        preds = model.predict(np.array([[2025], [2026]])).clip(min=0)
+        slope, intercept = _fit_line(X[:, 0], y)
+        preds = _predict_line(slope, intercept, np.array([2025, 2026])).clip(min=0)
 
         residual_std = None
         if len(g) >= 4:
-            fit_residuals = y - model.predict(X)
+            fit_residuals = y - _predict_line(slope, intercept, X[:, 0])
             residual_std = float(np.std(fit_residuals, ddof=1))
 
         for target_year, pred_val in zip([2025, 2026], preds):
@@ -120,7 +124,7 @@ def _build_forecast_model(forecast_snapshot: pd.DataFrame) -> tuple[pd.DataFrame
                     "aau_forecast": float(pred_val),
                     "aau_forecast_low": float(max(0, pred_val - (1.96 * residual_std))) if residual_std else None,
                     "aau_forecast_high": float(pred_val + (1.96 * residual_std)) if residual_std else None,
-                    "trend_slope": float(model.coef_[0]),
+                    "trend_slope": slope,
                     "points_used": int(len(g)),
                 }
             )
@@ -129,9 +133,11 @@ def _build_forecast_model(forecast_snapshot: pd.DataFrame) -> tuple[pd.DataFrame
         g_train = g[g["year"] <= 2023]
         g_holdout = g[g["year"] == 2024]
         if len(g_train) >= 3 and len(g_holdout) == 1:
-            h_model = LinearRegression()
-            h_model.fit(g_train["year"].values.reshape(-1, 1), g_train["aau_funding"].astype(float).values)
-            pred_2024 = float(h_model.predict(np.array([[2024]]))[0])
+            h_slope, h_intercept = _fit_line(
+                g_train["year"].values.astype(float),
+                g_train["aau_funding"].astype(float).values,
+            )
+            pred_2024 = float(_predict_line(h_slope, h_intercept, np.array([2024]))[0])
             actual_2024 = float(g_holdout["aau_funding"].iloc[0])
             holdout_errors.append(abs(pred_2024 - actual_2024))
             if actual_2024 > 0:
@@ -194,15 +200,26 @@ def _build_similarity_model(field_summary_snapshot: pd.DataFrame) -> tuple[pd.Da
     df["cmu_share"] = pd.to_numeric(df.get("cmu_share", 0), errors="coerce").fillna(0.0)
     df["aau_share"] = pd.to_numeric(df.get("aau_share", 0), errors="coerce").fillna(0.0)
 
-    texts = df["FOR4_NAME"].replace("", "unknown-field")
-    vectorizer = TfidfVectorizer(ngram_range=(1, 2), min_df=1)
-    X = vectorizer.fit_transform(texts)
+    feature_cols = pd.DataFrame(
+        {
+            "AAU_total_log": np.log1p(df["AAU_total"].astype(float)),
+            "cmu_share": df["cmu_share"].astype(float),
+            "aau_share": df["aau_share"].astype(float),
+            "growth_rate": pd.to_numeric(df.get("growth_rate", 0), errors="coerce").fillna(0.0),
+            "under_target_gap": pd.to_numeric(df.get("under_target_gap", 0), errors="coerce").fillna(0.0),
+        }
+    )
+    for col in feature_cols.columns:
+        feature_cols[col] = _normalize(feature_cols[col])
 
-    n_components = 2 if X.shape[1] >= 2 else 1
-    svd = TruncatedSVD(n_components=n_components, random_state=42)
-    coords = svd.fit_transform(X)
-    if n_components == 1:
-        coords = np.hstack([coords, np.zeros((coords.shape[0], 1))])
+    X = feature_cols.values.astype(float)
+    X_centered = X - X.mean(axis=0, keepdims=True)
+    if X_centered.shape[1] >= 2:
+        _, _, vt = np.linalg.svd(X_centered, full_matrices=False)
+        basis = vt[:2].T
+        coords = X_centered @ basis
+    else:
+        coords = np.hstack([X_centered, np.zeros((X_centered.shape[0], 1))])
 
     inst = np.where(df["cmu_share"] > df["aau_share"], "CMU", "AAU")
     map_rows = pd.DataFrame(
@@ -218,7 +235,10 @@ def _build_similarity_model(field_summary_snapshot: pd.DataFrame) -> tuple[pd.Da
         }
     )
 
-    sim = cosine_similarity(X)
+    row_norm = np.linalg.norm(X, axis=1, keepdims=True)
+    row_norm[row_norm == 0] = 1.0
+    X_unit = X / row_norm
+    sim = X_unit @ X_unit.T
     neighbors_rows: list[dict[str, Any]] = []
     for i, row in map_rows.iterrows():
         sims = sim[i]
@@ -240,6 +260,77 @@ def _build_similarity_model(field_summary_snapshot: pd.DataFrame) -> tuple[pd.Da
     return map_rows, neighbors, metrics
 
 
+def _build_radar_competitiveness_model(
+    field_summary_snapshot: pd.DataFrame,
+    max_axes: int = 6,
+) -> tuple[pd.DataFrame, dict[str, float]]:
+    df = field_summary_snapshot.copy()
+    required = {"FOR4_CODE", "FOR4_NAME", "AAU_total", "cmu_share", "aau_share", "under_target_gap", "growth_rate"}
+    missing = sorted(required - set(df.columns))
+    if missing:
+        raise ValueError(f"field_summary snapshot missing for radar model: {missing}")
+
+    for col in ["AAU_total", "cmu_share", "aau_share", "under_target_gap", "growth_rate"]:
+        df[col] = pd.to_numeric(df[col], errors="coerce").fillna(0.0)
+    df["FOR4_CODE"] = df["FOR4_CODE"].astype(str).str.strip()
+    df["FOR4_NAME"] = df["FOR4_NAME"].astype(str).fillna("").str.strip()
+
+    df["opportunity_axis_score"] = (
+        0.45 * _normalize(df["AAU_total"])
+        + 0.40 * _normalize(df["under_target_gap"].clip(lower=0.0))
+        + 0.15 * _normalize(df["growth_rate"].clip(lower=0.0))
+    )
+    opportunity_selected = (
+        df.sort_values(["opportunity_axis_score", "AAU_total"], ascending=False)
+        .head(max_axes)
+        .copy()
+        .reset_index(drop=True)
+    )
+
+    df["cmu_advantage_raw"] = (df["cmu_share"] - df["aau_share"]).astype(float)
+    strengths_pool = df[df["cmu_advantage_raw"] > 0].copy()
+    if strengths_pool.empty:
+        strengths_pool = df.copy()
+    strengths_pool["strength_axis_score"] = (
+        0.55 * _normalize(strengths_pool["cmu_advantage_raw"].clip(lower=0.0))
+        + 0.30 * _normalize(strengths_pool["cmu_share"])
+        + 0.15 * _normalize(np.log1p(strengths_pool["AAU_total"]))
+    )
+    strengths_selected = (
+        strengths_pool.sort_values(["strength_axis_score", "cmu_share"], ascending=False)
+        .head(max_axes)
+        .copy()
+        .reset_index(drop=True)
+    )
+
+    def _format_block(block: pd.DataFrame, view: str, score_col: str) -> pd.DataFrame:
+        if block.empty:
+            return pd.DataFrame(columns=["view", "axis", "for4_code", "cmu", "aau_avg", "gap", "priority_score"])
+        cmu_max = float(block["cmu_share"].max()) if float(block["cmu_share"].max()) > 0 else 1.0
+        aau_max = float(block["aau_share"].max()) if float(block["aau_share"].max()) > 0 else 1.0
+        return pd.DataFrame(
+            {
+                "view": view,
+                "axis": block["FOR4_NAME"],
+                "for4_code": block["FOR4_CODE"],
+                "cmu": (block["cmu_share"] / cmu_max * 100.0).round(2),
+                "aau_avg": (block["aau_share"] / aau_max * 100.0).round(2),
+                "gap": block["under_target_gap"].astype(float).round(6),
+                "priority_score": block[score_col].astype(float).round(6),
+            }
+        )
+
+    out = pd.concat(
+        [
+            _format_block(opportunity_selected, "opportunity", "opportunity_axis_score"),
+            _format_block(strengths_selected, "strength", "strength_axis_score"),
+        ],
+        ignore_index=True,
+    )
+    metrics = {"radar_axes": int(len(out))}
+    return out, metrics
+
+
 def train_and_evaluate() -> PipelineMetrics:
     MODELS_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -249,11 +340,13 @@ def train_and_evaluate() -> PipelineMetrics:
     forecast_out, forecast_metrics = _build_forecast_model(forecast_snapshot)
     opportunity_out, opp_metrics = _build_opportunity_model(field_summary_snapshot)
     sim_map, sim_neighbors, sim_metrics = _build_similarity_model(field_summary_snapshot)
+    radar_out, radar_metrics = _build_radar_competitiveness_model(field_summary_snapshot)
 
     forecast_out.to_json(MODELS_DIR / "forecast_v1.json", orient="records", indent=2)
     opportunity_out.to_json(MODELS_DIR / "opportunity_scores_v1.json", orient="records", indent=2)
     sim_map.to_json(MODELS_DIR / "similarity_map_v1.json", orient="records", indent=2)
     sim_neighbors.to_json(MODELS_DIR / "similarity_neighbors_v1.json", orient="records", indent=2)
+    radar_out.to_json(MODELS_DIR / "radar_competitiveness_v1.json", orient="records", indent=2)
 
     metrics = PipelineMetrics(
         forecast_mae_2024=forecast_metrics["forecast_mae_2024"],
@@ -261,6 +354,7 @@ def train_and_evaluate() -> PipelineMetrics:
         opportunity_score_growth_corr=opp_metrics["opportunity_score_growth_corr"],
         similarity_nodes=sim_metrics["similarity_nodes"],
         similarity_avg_neighbors=sim_metrics["similarity_avg_neighbors"],
+        radar_axes=radar_metrics["radar_axes"],
     )
     return metrics
 
@@ -273,7 +367,8 @@ def write_meta(manifest: dict[str, Any], metrics: PipelineMetrics) -> None:
             "name": "baseline_models",
             "forecast_model": "LinearRegression per FOR4_CODE",
             "opportunity_model": "weighted normalized score",
-            "similarity_model": "TF-IDF + cosine + SVD(2d)",
+            "similarity_model": "normalized numeric features + cosine + SVD(2d)",
+            "radar_model": "Top-axis normalized CMU vs AAU profile",
         },
         "input_manifest": manifest,
         "metrics": {
@@ -282,6 +377,7 @@ def write_meta(manifest: dict[str, Any], metrics: PipelineMetrics) -> None:
             "opportunity_score_growth_corr": metrics.opportunity_score_growth_corr,
             "similarity_nodes": metrics.similarity_nodes,
             "similarity_avg_neighbors": metrics.similarity_avg_neighbors,
+            "radar_axes": metrics.radar_axes,
         },
     }
     (MODELS_DIR / "model_meta.json").write_text(json.dumps(payload, indent=2), encoding="utf-8")
