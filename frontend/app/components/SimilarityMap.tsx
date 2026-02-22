@@ -73,8 +73,8 @@ export default function SimilarityMap({ data }: Props) {
 
   return (
     <div
-      className="dark:bg-gray-800 p-6 rounded shadow transition-colors duration-200 border"
-      style={{ background: chartTheme.similarity.cardBackground, borderColor: chartTheme.similarity.cardBorder }}
+      className="p-6 rounded shadow transition-colors duration-200 border bg-gradient-to-br from-emerald-50 via-white to-sky-50 dark:bg-slate-900 dark:border-slate-700"
+      style={{ borderColor: chartTheme.similarity.cardBorder }}
     >
       <h2 className="text-xl font-semibold mb-1 text-gray-900 dark:text-white">
         Idea Similarity Map
@@ -148,7 +148,7 @@ export default function SimilarityMap({ data }: Props) {
       </div>
       {zoomed && (
         <div className="fixed inset-0 z-50 bg-black/50 p-6">
-          <div className="bg-white rounded shadow-xl h-full w-full p-4">
+          <div className="bg-white dark:bg-slate-900 rounded shadow-xl h-full w-full p-4 border dark:border-slate-700">
             <div className="flex justify-between items-center mb-2">
               <h3 className="font-semibold">Idea Similarity Map (Zoomed)</h3>
               <button className="text-xs border rounded px-2 py-1" onClick={() => setZoomed(false)}>

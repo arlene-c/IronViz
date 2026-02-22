@@ -384,6 +384,13 @@ export default function DecisionAssistant({ role }: Props) {
   const adminFundingNeeded = Math.round(Number(adminResult?.total_remaining_need ?? portfolioManualNeed));
   const adminProjectsCount = adminResult?.projects_analyzed ?? portfolio.length;
   const adminFundingGap = Math.max(0, adminFundingNeeded - adminFundingAvailable);
+  const expectedByField = useMemo(() => {
+    const map = new Map<string, number>();
+    for (const row of adminResult?.portfolio_rankings || []) {
+      map.set(row.field_code, Number(row.expected_inflow || 0));
+    }
+    return map;
+  }, [adminResult]);
 
   const coverageTooltip = ({ active, payload }: any) => {
     if (!active || !payload?.length) return null;
@@ -587,6 +594,7 @@ export default function DecisionAssistant({ role }: Props) {
               <label className="text-sm text-gray-700">Planning horizon (months)<HelpTip text="Window for expected grant inflow and sequencing decisions." />
                 <input className="w-full border rounded p-2 text-sm mt-1" type="number" min={6} max={48} value={planningHorizon} onChange={(e) => setPlanningHorizon(parseInputNumber(e.target.value))} />
               </label>
+              <p className="text-xs text-gray-500 mt-1">Example: 12 = next year of funding planning.</p>
               <div className="border rounded p-3 space-y-2">
                 <p className="text-xs font-semibold text-gray-600">Add project to portfolio<HelpTip text="One place to add projects. Use Inbox or quick form below." /></p>
                 <input className="w-full border rounded p-2 text-sm" placeholder="Project title/description" value={quickProject.idea_text} onChange={(e) => setQuickProject((p) => ({ ...p, idea_text: e.target.value }))} />
@@ -599,8 +607,14 @@ export default function DecisionAssistant({ role }: Props) {
                   {campuses.map((c) => (<option key={c.code} value={c.code}>{c.label}</option>))}
                 </select>
                 <div className="grid grid-cols-2 gap-2">
-                  <input className="border rounded p-2 text-sm" type="number" min={6} max={60} placeholder="Months" value={quickProject.project_length_months} onChange={(e) => setQuickProject((p) => ({ ...p, project_length_months: parseInputNumber(e.target.value) }))} />
-                  <input className="border rounded p-2 text-sm" type="number" min={0} placeholder="Already received" value={quickProject.already_received || ""} onChange={(e) => setQuickProject((p) => ({ ...p, already_received: parseInputNumber(e.target.value) }))} />
+                  <label className="text-xs text-gray-600">
+                    Project length (months)
+                    <input className="border rounded p-2 text-sm mt-1 w-full" type="number" min={6} max={60} placeholder="e.g., 18" value={quickProject.project_length_months} onChange={(e) => setQuickProject((p) => ({ ...p, project_length_months: parseInputNumber(e.target.value) }))} />
+                  </label>
+                  <label className="text-xs text-gray-600">
+                    Already received (USD)
+                    <input className="border rounded p-2 text-sm mt-1 w-full" type="number" min={0} placeholder="e.g., 250000" value={quickProject.already_received || ""} onChange={(e) => setQuickProject((p) => ({ ...p, already_received: parseInputNumber(e.target.value) }))} />
+                  </label>
                 </div>
                 <div className="flex gap-2">
                   <button className="flex-1 border rounded p-2 text-sm" onClick={addQuickProject}>Add Project</button>
@@ -659,7 +673,10 @@ export default function DecisionAssistant({ role }: Props) {
                   <div key={p.id} className="border rounded p-2 flex items-center justify-between gap-3">
                     <div>
                       <p className="text-sm font-medium">{p.idea_text || p.field_name || p.field_code}</p>
-                      <p className="text-xs text-gray-600">{p.field_name || p.field_code} | {p.project_length_months} months | received {formatCompactUsd(p.already_received || 0)}</p>
+                      <p className="text-xs text-gray-600">
+                        {p.field_name || p.field_code} | {p.project_length_months} months | received {formatCompactUsd(p.already_received || 0)}
+                        {" | "}expected funding {formatCompactUsd(expectedByField.get(p.field_code) || 0)}
+                      </p>
                     </div>
                     <button className="text-xs border rounded px-2 py-1" onClick={() => removePortfolioProject(p.id)}>Remove</button>
                   </div>
@@ -720,8 +737,8 @@ export default function DecisionAssistant({ role }: Props) {
               <div className="bg-white p-6 rounded shadow">
                 <h3 className="font-semibold mb-2">Explicit Low-Likelihood Reasons</h3>
                 <ul className="text-sm list-disc pl-5 space-y-1">
-                  {adminResult.portfolio_rankings.slice(0, 6).map((r) => (
-                    <li key={r.field_code}>
+                  {adminResult.portfolio_rankings.slice(0, 6).map((r, idx) => (
+                    <li key={`${r.field_code}-${r.top_funder}-${idx}`}>
                       <span className="font-medium">{r.field_name}:</span>{" "}
                       {r.top_funder_probability < 0.35
                         ? "Low expected funding likelihood. Primary reason: weak top-funder probability and high competition."

@@ -8,7 +8,6 @@ import ResearchDashboard from "./components/ResearchDashboard";
 export default function Home() {
   const [view, setView] = useState<"admin" | "research">("admin");
   const [isDark, setIsDark] = useState(false);
-  const [darkApplied, setDarkApplied] = useState(false);
 
   useEffect(() => {
     const root = document.documentElement;
@@ -20,12 +19,16 @@ export default function Home() {
       root.classList.remove("dark");
       body.classList.remove("dark");
     }
-    const applied = root.classList.contains("dark") && body.classList.contains("dark");
-    setDarkApplied(applied);
   }, [isDark]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-rose-50 text-gray-900 dark:bg-gray-900 dark:text-white p-6 transition-colors duration-200">
+    <div
+      className={`min-h-screen p-6 transition-colors duration-200 ${
+        isDark
+          ? "dark bg-slate-950 text-slate-100"
+          : "bg-gradient-to-br from-slate-50 via-white to-rose-50 text-gray-900"
+      }`}
+    >
       
       <div className="flex justify-between items-center mb-6">
         {/* Left Side: Dashboard Toggles */}
@@ -62,10 +65,6 @@ export default function Home() {
           {isDark ? "Light Mode" : "Dark Mode"}
         </button>
       </div>
-      <p className={`text-xs mb-4 ${darkApplied ? "text-blue-700 dark:text-blue-300" : "text-red-700 dark:text-red-300"}`}>
-        Theme check: {darkApplied ? "Dark mode styles applied" : "Dark mode styles not applied"}
-      </p>
-
       <div className="grid grid-cols-1 gap-6">
         <section>
           <h2 className="text-lg font-semibold mb-3">
