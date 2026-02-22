@@ -1,5 +1,3 @@
-# IronViz
-
 IronViz is a dual-workspace grant analytics app with two user views:
 
 - Admin Strategy Console: portfolio prioritization, under-targeted fields, funding flow, and competitiveness radar models.
