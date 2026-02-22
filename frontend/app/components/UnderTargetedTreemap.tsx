@@ -34,20 +34,17 @@ export default function UnderTargetedTreemap({ data }: Props) {
     .slice(0, 25);
 
   return (
-    <div
-      className="p-6 rounded shadow border"
-      style={{ background: chartTheme.treemap.cardBackground, borderColor: chartTheme.treemap.cardBorder }}
-    >
+    <div className="bg-white dark:bg-gray-800 p-6 rounded shadow border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white transition-colors duration-200">
       <h2 className="text-xl font-semibold mb-1">Under-Targeted Field Treemap</h2>
-      <p className="text-sm text-gray-600 mb-4">Top 25 by under-target gap, sized by AAU funding.</p>
+      <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">Top 25 by under-target gap, sized by AAU funding.</p>
       <ResponsiveContainer width="100%" height={420}>
-        <Treemap data={rows} dataKey="size" stroke={chartTheme.treemap.stroke} fill={chartTheme.treemap.fill}>
+        <Treemap data={rows} dataKey="size" stroke="#1f2937" fill={chartTheme.treemap.fill}>
           <Tooltip
             content={({ active, payload }: any) => {
               if (!active || !payload?.length) return null;
               const p = payload[0].payload as TreemapRow;
               return (
-                <div className="bg-white p-3 border rounded shadow text-sm">
+                <div className="bg-white dark:bg-gray-800 p-3 border border-gray-200 dark:border-gray-700 rounded shadow text-sm text-gray-900 dark:text-white">
                   <p className="font-semibold">{p.name}</p>
                   <p>AAU Funding: {formatCompactUsd(p.size)}</p>
                   <p>Under-target gap: {formatSigned(p.gap, 4)}</p>

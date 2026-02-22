@@ -44,7 +44,7 @@ export default function ProjectionBands({ data }: Props) {
     if (!active || !payload?.length) return null;
     const points = payload.filter((p: any) => p.value !== null && p.value !== undefined);
     return (
-      <div className="bg-white p-3 border rounded shadow text-sm">
+      <div className="bg-white dark:bg-gray-800 p-3 border border-gray-200 dark:border-gray-700 rounded shadow text-sm text-gray-900 dark:text-white">
         <p className="font-semibold">{label}</p>
         {points.map((p: any) => (
           <p key={p.dataKey}>
@@ -56,17 +56,14 @@ export default function ProjectionBands({ data }: Props) {
   };
 
   return (
-    <div
-      className="p-6 rounded shadow border"
-      style={{ background: chartTheme.projection.cardBackground, borderColor: chartTheme.projection.cardBorder }}
-    >
+    <div className="bg-white dark:bg-gray-800 p-6 rounded shadow border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white transition-colors duration-200">
       <h2 className="text-xl font-semibold mb-1">Projection Bands (AAU Forecast)</h2>
-      <p className="text-sm text-gray-600 mb-4">Top 3 fields by predicted 2026 AAU funding.</p>
+      <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">Top 3 fields by predicted 2026 AAU funding.</p>
       <ResponsiveContainer width="100%" height={380}>
         <LineChart data={filtered}>
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="label" minTickGap={20} />
-          <YAxis tickFormatter={(v) => formatCompactUsd(Number(v))} />
+          <CartesianGrid strokeDasharray="3 3" stroke="#555" />
+          <XAxis dataKey="label" minTickGap={20} stroke="#888" />
+          <YAxis tickFormatter={(v) => formatCompactUsd(Number(v))} stroke="#888" />
           <Tooltip content={<ForecastTooltip />} />
           <Legend />
           <Line type="monotone" dataKey="aau_forecast" stroke={chartTheme.projection.forecast} dot={false} name="Forecast" />

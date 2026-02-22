@@ -24,7 +24,7 @@ type Props = {
 function HelpTip({ text }: { text: string }) {
   return (
     <span
-      className="ml-1 inline-flex h-4 w-4 items-center justify-center rounded-full bg-gray-200 text-[10px] text-gray-700 cursor-help"
+      className="ml-1 inline-flex h-4 w-4 items-center justify-center rounded-full bg-gray-200 dark:bg-gray-600 text-[10px] text-gray-700 dark:text-gray-200 cursor-help"
       title={text}
     >
       ?
@@ -71,15 +71,12 @@ export default function SimilarityMap({ data }: Props) {
   );
 
   return (
-    <div
-      className="dark:bg-gray-800 p-6 rounded shadow transition-colors duration-200 border"
-      style={{ background: chartTheme.similarity.cardBackground, borderColor: chartTheme.similarity.cardBorder }}
-    >
+    <div className="bg-white dark:bg-gray-800 p-6 rounded shadow transition-colors duration-200 border border-gray-200 dark:border-gray-700">
       <h2 className="text-xl font-semibold mb-1 text-gray-900 dark:text-white">
         Idea Similarity Map
         <HelpTip text="Points that are closer are more conceptually similar. Larger circles indicate higher field funding. Green points indicate stronger CMU-relative positioning." />
       </h2>
-      <p className="text-xs text-gray-600 mb-3">
+      <p className="text-xs text-gray-600 dark:text-gray-400 mb-3">
         Insight: Clustered points suggest nearby research themes you can leverage for proposals.
         <HelpTip text="Try targeting funders active in neighboring clusters to improve proposal fit." />
       </p>
@@ -106,23 +103,23 @@ export default function SimilarityMap({ data }: Props) {
             width: 800,
             height: 400,
             margin: { t: 20, b: 20, l: 20, r: 20 },
-            paper_bgcolor: "transparent",
-            plot_bgcolor: "transparent",
+            paper_bgcolor: "rgba(0,0,0,0)",
+            plot_bgcolor: "rgba(0,0,0,0)",
             font: { color: "#888888" },
             xaxis: {
               title: { text: "Similarity Dimension 1" },
               showgrid: true,
-              gridcolor: chartTheme.similarity.grid,
+              gridcolor: "#4b5563",
               zeroline: true,
-              zerolinecolor: chartTheme.similarity.zero,
+              zerolinecolor: "#4b5563",
               showticklabels: true,
             },
             yaxis: {
               title: { text: "Similarity Dimension 2" },
               showgrid: true,
-              gridcolor: chartTheme.similarity.grid,
+              gridcolor: "#4b5563",
               zeroline: true,
-              zerolinecolor: chartTheme.similarity.zero,
+              zerolinecolor: "#4b5563",
               showticklabels: true,
             },
           }}

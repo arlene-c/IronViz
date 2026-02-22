@@ -25,7 +25,6 @@ type OpportunityRow = {
   AAU_total: number;
 };
 
-// Custom tooltip so big funding numbers are readable
 const CustomTooltip = ({ active, payload }: any) => {
   if (active && payload && payload.length) {
     const data = payload[0].payload;
@@ -36,7 +35,7 @@ const CustomTooltip = ({ active, payload }: any) => {
         <p className="text-sm text-gray-600 dark:text-gray-300">Gap: {formatSigned(data.targetingGap, 4)}</p>
         <p className="text-sm text-gray-600 dark:text-gray-300">Growth: {formatPercent(data.growth, 1)}</p>
         <p className="text-sm text-gray-600 dark:text-gray-300">AAU Funding: {formatCompactUsd(data.funding)}</p>
-        <p className={`text-xs mt-1 ${isUnderTargeted ? "text-red-600" : "text-blue-600"}`}>
+        <p className={`text-xs mt-1 ${isUnderTargeted ? "text-red-600 dark:text-red-400" : "text-blue-600 dark:text-blue-400"}`}>
           {isUnderTargeted ? "CMU is under-targeted here" : "CMU is at/above external focus"}
         </p>
       </div>
@@ -99,14 +98,11 @@ export default function OpportunityQuadrant({ data }: Props) {
   );
 
   return (
-    <div
-      className="dark:bg-gray-800 p-6 rounded shadow transition-colors duration-200 border"
-      style={{ background: chartTheme.quadrant.cardBackground, borderColor: chartTheme.quadrant.cardBorder }}
-    >
+    <div className="bg-white dark:bg-gray-800 p-6 rounded shadow transition-colors duration-200 border border-gray-200 dark:border-gray-700">
       <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
         Opportunity Quadrant
       </h2>
-      <p className="text-sm text-gray-600 mb-3">
+      <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
         X: under-target gap | Y: growth rate | bubble: AAU funding
       </p>
       {loading && <p className="text-sm text-gray-500 mb-2">Loading model data...</p>}
@@ -115,19 +111,19 @@ export default function OpportunityQuadrant({ data }: Props) {
       <div className="h-[400px] w-full">
         <ResponsiveContainer width="100%" height="100%">
           <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
-            <CartesianGrid strokeDasharray="3 3" strokeOpacity={0.25} stroke={chartTheme.quadrant.grid} />
+            <CartesianGrid strokeDasharray="3 3" strokeOpacity={0.25} stroke="#888888" />
             <XAxis
               type="number"
               dataKey="targetingGap"
               name="Under-target gap"
-              stroke={chartTheme.quadrant.xAxis}
+              stroke="#888888"
               tickFormatter={(tick) => Number(tick).toFixed(2)}
             />
             <YAxis
               type="number"
               dataKey="growth"
               name="Growth Rate"
-              stroke={chartTheme.quadrant.yAxis}
+              stroke="#888888"
               tickFormatter={(tick) => `${(tick * 100).toFixed(0)}%`}
             />
             <ZAxis
@@ -137,9 +133,8 @@ export default function OpportunityQuadrant({ data }: Props) {
             />
             <Tooltip content={<CustomTooltip />} cursor={{ strokeDasharray: "3 3" }} />
             
-            {/* Quadrant Crosshairs */}
-            <ReferenceLine x={0} stroke={chartTheme.quadrant.refX} strokeDasharray="3 3" label={{ position: "top", value: "Parity", fill: chartTheme.quadrant.xAxis }} />
-            <ReferenceLine y={0} stroke={chartTheme.quadrant.refY} strokeDasharray="3 3" />
+            <ReferenceLine x={0} stroke="#888888" strokeDasharray="3 3" label={{ position: "top", value: "Parity", fill: "#888888" }} />
+            <ReferenceLine y={0} stroke="#888888" strokeDasharray="3 3" />
 
             <Scatter data={chartData} name="Fields">
               {chartData.map((entry, index) => (
