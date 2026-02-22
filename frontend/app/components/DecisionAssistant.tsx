@@ -210,6 +210,10 @@ export default function DecisionAssistant({ role }: Props) {
     localStorage.setItem(SAVED_IDEAS_KEY, JSON.stringify(ideas));
   };
 
+  const removeSavedIdea = (id: string) => {
+    persistSavedIdeas(savedIdeas.filter((idea) => idea.id !== id));
+  };
+
   const runResearcher = async () => {
     setRunning(true);
     setError(null);
@@ -274,6 +278,7 @@ export default function DecisionAssistant({ role }: Props) {
         already_received: idea.already_received,
       },
     ]);
+    removeSavedIdea(idea.id);
   };
 
   const addQuickProject = () => {
@@ -355,13 +360,41 @@ export default function DecisionAssistant({ role }: Props) {
     const covered = Math.min(adminResult.total_remaining_need, adminResult.expected_funding_inflow);
     const gap = Math.max(0, adminResult.total_remaining_need - covered);
     return [
-      { name: "Covered", value: covered, color: "#16a34a" },
+      { name: "Covered", value: covered, color: "#2563eb" },
       { name: "Gap", value: gap, color: "#ef4444" },
     ];
   }, [adminResult]);
 
-  // Reusable input styling
-  const inputStyle = "w-full border border-gray-300 dark:border-gray-600 rounded p-2 text-sm mt-1 bg-white dark:bg-gray-700 text-gray-900 dark:text-white";
+  const portfolioManualNeed = useMemo(() => {
+    return portfolio.reduce((acc, p) => {
+      const requested = p.budget_mode === "manual" ? Number(p.requested_budget || 0) : 0;
+      const received = Number(p.already_received || 0);
+      return acc + Math.max(0, requested - received);
+    }, 0);
+  }, [portfolio]);
+
+  const adminFundingAvailable = Math.round(Number(adminCurrentFunding || 0));
+  const adminFundingNeeded = Math.round(Number(adminResult?.total_remaining_need ?? portfolioManualNeed));
+  const adminProjectsCount = adminResult?.projects_analyzed ?? portfolio.length;
+  const adminFundingGap = Math.max(0, adminFundingNeeded - adminFundingAvailable);
+  const expectedByField = useMemo(() => {
+    const map = new Map<string, number>();
+    for (const row of adminResult?.portfolio_rankings || []) {
+      map.set(row.field_code, Number(row.expected_inflow || 0));
+    }
+    return map;
+  }, [adminResult]);
+
+  const coverageTooltip = ({ active, payload }: any) => {
+    if (!active || !payload?.length) return null;
+    const p = payload[0];
+    return (
+      <div className="bg-white border rounded shadow p-2 text-xs">
+        <p className="font-semibold">{p.name}</p>
+        <p>{formatCompactUsd(Number(p.value || 0))}</p>
+      </div>
+    );
+  };
 
   return (
     <div className="grid grid-cols-1 gap-6 text-gray-900 dark:text-white">
@@ -526,39 +559,39 @@ export default function DecisionAssistant({ role }: Props) {
 
       {role === "admin" && (
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
-          <div className="xl:col-span-1 bg-white dark:bg-gray-800 p-6 rounded shadow space-y-3 transition-colors duration-200">
+          <div className="xl:col-span-1 bg-white p-6 rounded shadow space-y-3">
             <h2 className="font-semibold text-lg">Admin Controls</h2>
-            <label className="text-sm text-gray-700 dark:text-gray-300 block">Current funding (USD)<HelpTip text="Total funds currently available to cover portfolio gaps." />
-              <input className={inputStyle} type="number" min={0} value={adminCurrentFunding} onChange={(e) => setAdminCurrentFunding(parseInputNumber(e.target.value))} />
+            <label className="text-sm text-gray-700">Current funding (USD)<HelpTip text="Total funds currently available to cover portfolio gaps." />
+              <input className="w-full border rounded p-2 text-sm mt-1" type="number" min={0} value={adminCurrentFunding} onChange={(e) => setAdminCurrentFunding(parseInputNumber(e.target.value))} />
             </label>
-            <label className="text-sm text-gray-700 dark:text-gray-300 block">Planning horizon (months)<HelpTip text="Window for expected grant inflow and sequencing decisions." />
-              <input className={inputStyle} type="number" min={6} max={48} value={planningHorizon} onChange={(e) => setPlanningHorizon(parseInputNumber(e.target.value))} />
+            <label className="text-sm text-gray-700">Planning horizon (months)<HelpTip text="Window for expected grant inflow and sequencing decisions." />
+              <input className="w-full border rounded p-2 text-sm mt-1" type="number" min={6} max={48} value={planningHorizon} onChange={(e) => setPlanningHorizon(parseInputNumber(e.target.value))} />
             </label>
 
-            <div className="border dark:border-gray-600 rounded p-3 space-y-2">
-              <p className="text-xs font-semibold text-gray-600 dark:text-gray-400">Add project to portfolio<HelpTip text="One place to add projects. Use Inbox or quick form below." /></p>
-              <input className={inputStyle} placeholder="Project title/description" value={quickProject.idea_text} onChange={(e) => setQuickProject((p) => ({ ...p, idea_text: e.target.value }))} />
-              <select className={inputStyle} value={quickProject.field_code} onChange={(e) => setQuickProject((p) => ({ ...p, field_code: e.target.value }))}>
+            <div className="border rounded p-3 space-y-2">
+              <p className="text-xs font-semibold text-gray-600">Add project to portfolio<HelpTip text="One place to add projects. Use Inbox or quick form below." /></p>
+              <input className="w-full border rounded p-2 text-sm" placeholder="Project title/description" value={quickProject.idea_text} onChange={(e) => setQuickProject((p) => ({ ...p, idea_text: e.target.value }))} />
+              <select className="w-full border rounded p-2 text-sm" value={quickProject.field_code} onChange={(e) => setQuickProject((p) => ({ ...p, field_code: e.target.value }))}>
                 <option value="">Select field...</option>
                 {fields.slice(0, 100).map((f) => (<option key={f.code} value={f.code}>{f.name}</option>))}
               </select>
-              <select className={inputStyle} value={quickProject.campus_code} onChange={(e) => setQuickProject((p) => ({ ...p, campus_code: e.target.value }))}>
+              <select className="w-full border rounded p-2 text-sm" value={quickProject.campus_code} onChange={(e) => setQuickProject((p) => ({ ...p, campus_code: e.target.value }))}>
                 <option value="">Select campus...</option>
                 {campuses.map((c) => (<option key={c.code} value={c.code}>{c.label}</option>))}
               </select>
               <div className="grid grid-cols-2 gap-2">
-                <input className={inputStyle} type="number" min={6} max={60} placeholder="Months" value={quickProject.project_length_months} onChange={(e) => setQuickProject((p) => ({ ...p, project_length_months: parseInputNumber(e.target.value) }))} />
-                <input className={inputStyle} type="number" min={0} placeholder="Already received" value={quickProject.already_received || ""} onChange={(e) => setQuickProject((p) => ({ ...p, already_received: parseInputNumber(e.target.value) }))} />
+                <input className="border rounded p-2 text-sm" type="number" min={6} max={60} placeholder="Months" value={quickProject.project_length_months} onChange={(e) => setQuickProject((p) => ({ ...p, project_length_months: parseInputNumber(e.target.value) }))} />
+                <input className="border rounded p-2 text-sm" type="number" min={0} placeholder="Already received" value={quickProject.already_received || ""} onChange={(e) => setQuickProject((p) => ({ ...p, already_received: parseInputNumber(e.target.value) }))} />
               </div>
-              <div className="flex gap-2 mt-2">
-                <button className="flex-1 border dark:border-gray-600 rounded p-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-700" onClick={addQuickProject}>Add Project</button>
+              <div className="flex gap-2">
+                <button className="flex-1 border rounded p-2 text-sm" onClick={addQuickProject}>Add Project</button>
                 <button className="flex-1 bg-blue-600 text-white rounded p-2 text-sm disabled:opacity-60" onClick={runAdmin} disabled={running || portfolio.length === 0}>{running ? "Running..." : "Run Plan"}</button>
               </div>
             </div>
           </div>
 
           <div className="xl:col-span-2 grid grid-cols-1 gap-4">
-            <div className="bg-white dark:bg-gray-800 p-6 rounded shadow transition-colors duration-200">
+            <div className="bg-white p-6 rounded shadow">
               <h3 className="font-semibold mb-2">
                 Admin Inbox
                 <HelpTip text="Urgency formula: remaining need x (1 + opportunity score) x date factor. Date factor: overdue/<=30d=1.40-1.50, <=90d=1.25, <=180d=1.10, else=1.00." />
@@ -569,25 +602,23 @@ export default function DecisionAssistant({ role }: Props) {
               ) : (
                 <div className="space-y-2">
                   {adminInboxItems.slice(0, 8).map((idea) => (
-                    <div key={idea.id} className="border dark:border-gray-700 rounded p-3">
+                    <div key={idea.id} className="border rounded p-3">
                       <div className="flex items-start justify-between gap-3">
                         <div>
                           <p className="font-medium">{idea.field_name || idea.field_code}</p>
                           <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">{idea.idea_text}</p>
                           <p className="text-xs text-gray-500 mt-1">Remaining: {formatCompactUsd(idea.result?.budget.remaining_need || idea.requested_budget || 0)}</p>
-                          <p className="text-xs text-gray-500">
-                            Start: {idea.project_start_date ? new Date(idea.project_start_date).toLocaleDateString() : "Not set"}
-                          </p>
+                          <p className="text-xs text-gray-500">Start: {idea.project_start_date ? new Date(idea.project_start_date).toLocaleDateString() : "Not set"}</p>
                         </div>
                         <div className="text-right">
                           <p
-                            className={`text-xs px-2 py-1 rounded ${idea.urgency_percent >= 70 ? "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300" : idea.urgency_percent >= 40 ? "bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300" : "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-300"}`}
+                            className={`text-xs px-2 py-1 rounded ${idea.urgency_percent >= 70 ? "bg-red-100 text-red-700" : idea.urgency_percent >= 40 ? "bg-amber-100 text-amber-700" : "bg-green-100 text-green-700"}`}
                             title="Higher urgency % means this idea is more critical versus other inbox ideas."
                           >
                             Urgency {idea.urgency_percent}%
                           </p>
                           <p className="text-[10px] text-gray-500 mt-1">Date factor x{Number(idea.time_factor || 1).toFixed(2)}</p>
-                          <button className="mt-2 text-xs border dark:border-gray-600 rounded px-2 py-1 hover:bg-gray-50 dark:hover:bg-gray-700" onClick={() => addInboxIdeaToPortfolio(idea)}>Add to portfolio</button>
+                          <button className="mt-2 text-xs border rounded px-2 py-1" onClick={() => addInboxIdeaToPortfolio(idea)}>Add to portfolio</button>
                         </div>
                       </div>
                     </div>
@@ -595,20 +626,21 @@ export default function DecisionAssistant({ role }: Props) {
                 </div>
               )}
             </div>
+          </div>
 
-            <div className="bg-white dark:bg-gray-800 p-6 rounded shadow transition-colors duration-200">
+            <div className="bg-white p-6 rounded shadow">
               <h3 className="font-semibold mb-2">Portfolio (single list used for planning)</h3>
               {portfolio.length === 0 ? (
-                <p className="text-sm text-gray-600 dark:text-gray-400">No projects added yet.</p>
+                <p className="text-sm text-gray-600">No projects added yet.</p>
               ) : (
                 <div className="space-y-2">
                   {portfolio.map((p) => (
-                    <div key={p.id} className="border dark:border-gray-700 rounded p-2 flex items-center justify-between gap-3">
+                    <div key={p.id} className="border rounded p-2 flex items-center justify-between gap-3">
                       <div>
                         <p className="text-sm font-medium">{p.idea_text || p.field_name || p.field_code}</p>
-                        <p className="text-xs text-gray-600 dark:text-gray-400">{p.field_name || p.field_code} | {p.project_length_months} months | received {formatCompactUsd(p.already_received || 0)}</p>
+                        <p className="text-xs text-gray-600">{p.field_name || p.field_code} | {p.project_length_months} months | received {formatCompactUsd(p.already_received || 0)}</p>
                       </div>
-                      <button className="text-xs border dark:border-gray-600 rounded px-2 py-1 hover:bg-gray-50 dark:hover:bg-gray-700" onClick={() => removePortfolioProject(p.id)}>Remove</button>
+                      <button className="text-xs border rounded px-2 py-1" onClick={() => removePortfolioProject(p.id)}>Remove</button>
                     </div>
                   ))}
                 </div>
@@ -618,13 +650,13 @@ export default function DecisionAssistant({ role }: Props) {
             {adminResult && (
               <>
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                  <div className="bg-white dark:bg-gray-800 p-4 rounded shadow"><p className="text-xs text-gray-500 dark:text-gray-400">Projects</p><p className="font-semibold">{adminResult.projects_analyzed}</p></div>
-                  <div className="bg-white dark:bg-gray-800 p-4 rounded shadow"><p className="text-xs text-gray-500 dark:text-gray-400">Need</p><p className="font-semibold">{formatCompactUsd(adminResult.total_remaining_need)}</p></div>
-                  <div className="bg-white dark:bg-gray-800 p-4 rounded shadow"><p className="text-xs text-gray-500 dark:text-gray-400">Expected Inflow</p><p className="font-semibold">{formatCompactUsd(adminResult.expected_funding_inflow)}</p></div>
-                  <div className="bg-white dark:bg-gray-800 p-4 rounded shadow"><p className="text-xs text-gray-500 dark:text-gray-400">Coverage</p><p className="font-semibold">{formatPercent(adminResult.coverage_ratio)}</p></div>
+                  <div className="bg-white p-4 rounded shadow"><p className="text-xs text-gray-500">Projects</p><p className="font-semibold">{adminResult.projects_analyzed}</p></div>
+                  <div className="bg-white p-4 rounded shadow"><p className="text-xs text-gray-500">Need</p><p className="font-semibold">{formatCompactUsd(adminResult.total_remaining_need)}</p></div>
+                  <div className="bg-white p-4 rounded shadow"><p className="text-xs text-gray-500">Expected Inflow</p><p className="font-semibold">{formatCompactUsd(adminResult.expected_funding_inflow)}</p></div>
+                  <div className="bg-white p-4 rounded shadow"><p className="text-xs text-gray-500">Coverage</p><p className="font-semibold">{formatPercent(adminResult.coverage_ratio)}</p></div>
                 </div>
 
-                <div className="bg-white dark:bg-gray-800 p-6 rounded shadow transition-colors duration-200">
+                <div className="bg-white p-6 rounded shadow">
                   <h3 className="font-semibold mb-2">Coverage & Risk Visuals</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="h-56">
@@ -633,17 +665,17 @@ export default function DecisionAssistant({ role }: Props) {
                           <Pie data={coverageData} dataKey="value" nameKey="name" outerRadius={80} label>
                             {coverageData.map((c) => <Cell key={c.name} fill={c.color} />)}
                           </Pie>
-                          <Tooltip contentStyle={{ backgroundColor: '#1f2937', borderColor: '#374151', color: '#f9fafb' }} />
+                          <Tooltip />
                         </PieChart>
                       </ResponsiveContainer>
                     </div>
                     <div className="h-56">
                       <ResponsiveContainer width="100%" height="100%">
                         <BarChart data={adminResult.portfolio_rankings.slice(0, 6)}>
-                          <CartesianGrid strokeDasharray="3 3" stroke="#4b5563" />
+                          <CartesianGrid strokeDasharray="3 3" />
                           <XAxis dataKey="field_name" hide />
-                          <YAxis tickFormatter={(v) => formatPercent(Number(v))} stroke="#9ca3af" />
-                          <Tooltip contentStyle={{ backgroundColor: '#1f2937', borderColor: '#374151', color: '#f9fafb' }} />
+                          <YAxis tickFormatter={(v) => formatPercent(Number(v))} />
+                          <Tooltip />
                           <Bar dataKey="top_funder_probability" name="Top funder likelihood">
                             {adminResult.portfolio_rankings.slice(0, 6).map((r, i) => (
                               <Cell key={i} fill={r.top_funder_probability < 0.35 ? "#ef4444" : "#22c55e"} />
@@ -655,7 +687,7 @@ export default function DecisionAssistant({ role }: Props) {
                   </div>
                 </div>
 
-                <div className="bg-white dark:bg-gray-800 p-6 rounded shadow transition-colors duration-200">
+                <div className="bg-white p-6 rounded shadow">
                   <h3 className="font-semibold mb-2">Explicit Low-Likelihood Reasons</h3>
                   <ul className="text-sm list-disc pl-5 space-y-1">
                     {adminResult.portfolio_rankings.slice(0, 6).map((r) => (

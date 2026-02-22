@@ -1,0 +1,1547 @@
+{
+  "version": "v1",
+  "source": {
+    "for2_csv": "C:\\Users\\psrin\\Downloads\\DIMENSIONS_FIELD_OF_RESEARCH_TWO_DIGIT.csv",
+    "for4_csv": "C:\\Users\\psrin\\Downloads\\DIMENSIONS_FIELD_OF_RESEARCH_FOUR_DIGIT.csv",
+    "join_key": "GRANT_ID",
+    "mapping_rule": "Most frequent FOR2 per FOR4 by shared grants"
+  },
+  "counts": {
+    "for2_rows": 178191,
+    "for4_rows": 172358,
+    "joined_rows": 272801,
+    "for4_mapped": 170
+  },
+  "records": [
+    {
+      "for4_code": "3001",
+      "for4_name": "Agricultural Biotechnology",
+      "for2_code": "30",
+      "for2_name": "Agricultural, Veterinary and Food Sciences",
+      "support_pairs": 201,
+      "for4_total_pairs": 246,
+      "confidence": 0.817073
+    },
+    {
+      "for4_code": "3002",
+      "for4_name": "Agriculture, Land and Farm Management",
+      "for2_code": "30",
+      "for2_name": "Agricultural, Veterinary and Food Sciences",
+      "support_pairs": 287,
+      "for4_total_pairs": 393,
+      "confidence": 0.73028
+    },
+    {
+      "for4_code": "3003",
+      "for4_name": "Animal Production",
+      "for2_code": "30",
+      "for2_name": "Agricultural, Veterinary and Food Sciences",
+      "support_pairs": 358,
+      "for4_total_pairs": 599,
+      "confidence": 0.597663
+    },
+    {
+      "for4_code": "3004",
+      "for4_name": "Crop and Pasture Production",
+      "for2_code": "30",
+      "for2_name": "Agricultural, Veterinary and Food Sciences",
+      "support_pairs": 1088,
+      "for4_total_pairs": 1738,
+      "confidence": 0.626007
+    },
+    {
+      "for4_code": "3005",
+      "for4_name": "Fisheries Sciences",
+      "for2_code": "30",
+      "for2_name": "Agricultural, Veterinary and Food Sciences",
+      "support_pairs": 99,
+      "for4_total_pairs": 179,
+      "confidence": 0.553073
+    },
+    {
+      "for4_code": "3006",
+      "for4_name": "Food Sciences",
+      "for2_code": "30",
+      "for2_name": "Agricultural, Veterinary and Food Sciences",
+      "support_pairs": 347,
+      "for4_total_pairs": 582,
+      "confidence": 0.59622
+    },
+    {
+      "for4_code": "3007",
+      "for4_name": "Forestry Sciences",
+      "for2_code": "30",
+      "for2_name": "Agricultural, Veterinary and Food Sciences",
+      "support_pairs": 453,
+      "for4_total_pairs": 974,
+      "confidence": 0.465092
+    },
+    {
+      "for4_code": "3008",
+      "for4_name": "Horticultural Production",
+      "for2_code": "30",
+      "for2_name": "Agricultural, Veterinary and Food Sciences",
+      "support_pairs": 524,
+      "for4_total_pairs": 720,
+      "confidence": 0.727778
+    },
+    {
+      "for4_code": "3009",
+      "for4_name": "Veterinary Sciences",
+      "for2_code": "30",
+      "for2_name": "Agricultural, Veterinary and Food Sciences",
+      "support_pairs": 398,
+      "for4_total_pairs": 653,
+      "confidence": 0.609495
+    },
+    {
+      "for4_code": "3101",
+      "for4_name": "Biochemistry and Cell Biology",
+      "for2_code": "31",
+      "for2_name": "Biological Sciences",
+      "support_pairs": 9998,
+      "for4_total_pairs": 14949,
+      "confidence": 0.668807
+    },
+    {
+      "for4_code": "3102",
+      "for4_name": "Bioinformatics and Computational Biology",
+      "for2_code": "31",
+      "for2_name": "Biological Sciences",
+      "support_pairs": 2615,
+      "for4_total_pairs": 3475,
+      "confidence": 0.752518
+    },
+    {
+      "for4_code": "3103",
+      "for4_name": "Ecology",
+      "for2_code": "31",
+      "for2_name": "Biological Sciences",
+      "support_pairs": 1884,
+      "for4_total_pairs": 3371,
+      "confidence": 0.558885
+    },
+    {
+      "for4_code": "3104",
+      "for4_name": "Evolutionary Biology",
+      "for2_code": "31",
+      "for2_name": "Biological Sciences",
+      "support_pairs": 430,
+      "for4_total_pairs": 646,
+      "confidence": 0.665635
+    },
+    {
+      "for4_code": "3105",
+      "for4_name": "Genetics",
+      "for2_code": "31",
+      "for2_name": "Biological Sciences",
+      "support_pairs": 4542,
+      "for4_total_pairs": 7465,
+      "confidence": 0.608439
+    },
+    {
+      "for4_code": "3106",
+      "for4_name": "Industrial Biotechnology",
+      "for2_code": "31",
+      "for2_name": "Biological Sciences",
+      "support_pairs": 549,
+      "for4_total_pairs": 871,
+      "confidence": 0.63031
+    },
+    {
+      "for4_code": "3107",
+      "for4_name": "Microbiology",
+      "for2_code": "31",
+      "for2_name": "Biological Sciences",
+      "support_pairs": 2655,
+      "for4_total_pairs": 4616,
+      "confidence": 0.575173
+    },
+    {
+      "for4_code": "3108",
+      "for4_name": "Plant Biology",
+      "for2_code": "31",
+      "for2_name": "Biological Sciences",
+      "support_pairs": 795,
+      "for4_total_pairs": 1305,
+      "confidence": 0.609195
+    },
+    {
+      "for4_code": "3109",
+      "for4_name": "Zoology",
+      "for2_code": "31",
+      "for2_name": "Biological Sciences",
+      "support_pairs": 367,
+      "for4_total_pairs": 598,
+      "confidence": 0.613712
+    },
+    {
+      "for4_code": "3201",
+      "for4_name": "Cardiovascular Medicine and Haematology",
+      "for2_code": "32",
+      "for2_name": "Biomedical and Clinical Sciences",
+      "support_pairs": 1161,
+      "for4_total_pairs": 1452,
+      "confidence": 0.799587
+    },
+    {
+      "for4_code": "3202",
+      "for4_name": "Clinical Sciences",
+      "for2_code": "32",
+      "for2_name": "Biomedical and Clinical Sciences",
+      "support_pairs": 8618,
+      "for4_total_pairs": 12889,
+      "confidence": 0.668632
+    },
+    {
+      "for4_code": "3203",
+      "for4_name": "Dentistry",
+      "for2_code": "32",
+      "for2_name": "Biomedical and Clinical Sciences",
+      "support_pairs": 390,
+      "for4_total_pairs": 496,
+      "confidence": 0.78629
+    },
+    {
+      "for4_code": "3204",
+      "for4_name": "Immunology",
+      "for2_code": "32",
+      "for2_name": "Biomedical and Clinical Sciences",
+      "support_pairs": 5074,
+      "for4_total_pairs": 6018,
+      "confidence": 0.843137
+    },
+    {
+      "for4_code": "3205",
+      "for4_name": "Medical Biochemistry and Metabolomics",
+      "for2_code": "32",
+      "for2_name": "Biomedical and Clinical Sciences",
+      "support_pairs": 596,
+      "for4_total_pairs": 1040,
+      "confidence": 0.573077
+    },
+    {
+      "for4_code": "3206",
+      "for4_name": "Medical Biotechnology",
+      "for2_code": "32",
+      "for2_name": "Biomedical and Clinical Sciences",
+      "support_pairs": 1405,
+      "for4_total_pairs": 2028,
+      "confidence": 0.692801
+    },
+    {
+      "for4_code": "3207",
+      "for4_name": "Medical Microbiology",
+      "for2_code": "32",
+      "for2_name": "Biomedical and Clinical Sciences",
+      "support_pairs": 3425,
+      "for4_total_pairs": 5057,
+      "confidence": 0.677279
+    },
+    {
+      "for4_code": "3208",
+      "for4_name": "Medical Physiology",
+      "for2_code": "32",
+      "for2_name": "Biomedical and Clinical Sciences",
+      "support_pairs": 1359,
+      "for4_total_pairs": 1830,
+      "confidence": 0.742623
+    },
+    {
+      "for4_code": "3209",
+      "for4_name": "Neurosciences",
+      "for2_code": "32",
+      "for2_name": "Biomedical and Clinical Sciences",
+      "support_pairs": 2537,
+      "for4_total_pairs": 4403,
+      "confidence": 0.576198
+    },
+    {
+      "for4_code": "3210",
+      "for4_name": "Nutrition and Dietetics",
+      "for2_code": "32",
+      "for2_name": "Biomedical and Clinical Sciences",
+      "support_pairs": 532,
+      "for4_total_pairs": 946,
+      "confidence": 0.562368
+    },
+    {
+      "for4_code": "3211",
+      "for4_name": "Oncology and Carcinogenesis",
+      "for2_code": "32",
+      "for2_name": "Biomedical and Clinical Sciences",
+      "support_pairs": 6278,
+      "for4_total_pairs": 8610,
+      "confidence": 0.729152
+    },
+    {
+      "for4_code": "3212",
+      "for4_name": "Ophthalmology and Optometry",
+      "for2_code": "32",
+      "for2_name": "Biomedical and Clinical Sciences",
+      "support_pairs": 912,
+      "for4_total_pairs": 1164,
+      "confidence": 0.783505
+    },
+    {
+      "for4_code": "3213",
+      "for4_name": "Paediatrics",
+      "for2_code": "32",
+      "for2_name": "Biomedical and Clinical Sciences",
+      "support_pairs": 672,
+      "for4_total_pairs": 976,
+      "confidence": 0.688525
+    },
+    {
+      "for4_code": "3214",
+      "for4_name": "Pharmacology and Pharmaceutical Sciences",
+      "for2_code": "32",
+      "for2_name": "Biomedical and Clinical Sciences",
+      "support_pairs": 2111,
+      "for4_total_pairs": 3746,
+      "confidence": 0.563534
+    },
+    {
+      "for4_code": "3215",
+      "for4_name": "Reproductive Medicine",
+      "for2_code": "32",
+      "for2_name": "Biomedical and Clinical Sciences",
+      "support_pairs": 1554,
+      "for4_total_pairs": 2531,
+      "confidence": 0.613987
+    },
+    {
+      "for4_code": "3301",
+      "for4_name": "Architecture",
+      "for2_code": "33",
+      "for2_name": "Built Environment and Design",
+      "support_pairs": 511,
+      "for4_total_pairs": 926,
+      "confidence": 0.551836
+    },
+    {
+      "for4_code": "3302",
+      "for4_name": "Building",
+      "for2_code": "33",
+      "for2_name": "Built Environment and Design",
+      "support_pairs": 585,
+      "for4_total_pairs": 1184,
+      "confidence": 0.494088
+    },
+    {
+      "for4_code": "3303",
+      "for4_name": "Design",
+      "for2_code": "33",
+      "for2_name": "Built Environment and Design",
+      "support_pairs": 380,
+      "for4_total_pairs": 803,
+      "confidence": 0.473225
+    },
+    {
+      "for4_code": "3304",
+      "for4_name": "Urban and Regional Planning",
+      "for2_code": "33",
+      "for2_name": "Built Environment and Design",
+      "support_pairs": 535,
+      "for4_total_pairs": 1313,
+      "confidence": 0.407464
+    },
+    {
+      "for4_code": "3401",
+      "for4_name": "Analytical Chemistry",
+      "for2_code": "34",
+      "for2_name": "Chemical Sciences",
+      "support_pairs": 532,
+      "for4_total_pairs": 894,
+      "confidence": 0.595078
+    },
+    {
+      "for4_code": "3402",
+      "for4_name": "Inorganic Chemistry",
+      "for2_code": "34",
+      "for2_name": "Chemical Sciences",
+      "support_pairs": 671,
+      "for4_total_pairs": 800,
+      "confidence": 0.83875
+    },
+    {
+      "for4_code": "3403",
+      "for4_name": "Macromolecular and Materials Chemistry",
+      "for2_code": "34",
+      "for2_name": "Chemical Sciences",
+      "support_pairs": 2978,
+      "for4_total_pairs": 5659,
+      "confidence": 0.526241
+    },
+    {
+      "for4_code": "3404",
+      "for4_name": "Medicinal and Biomolecular Chemistry",
+      "for2_code": "34",
+      "for2_name": "Chemical Sciences",
+      "support_pairs": 508,
+      "for4_total_pairs": 894,
+      "confidence": 0.568233
+    },
+    {
+      "for4_code": "3405",
+      "for4_name": "Organic Chemistry",
+      "for2_code": "34",
+      "for2_name": "Chemical Sciences",
+      "support_pairs": 723,
+      "for4_total_pairs": 832,
+      "confidence": 0.86899
+    },
+    {
+      "for4_code": "3406",
+      "for4_name": "Physical Chemistry",
+      "for2_code": "34",
+      "for2_name": "Chemical Sciences",
+      "support_pairs": 1807,
+      "for4_total_pairs": 3193,
+      "confidence": 0.565925
+    },
+    {
+      "for4_code": "3407",
+      "for4_name": "Theoretical and Computational Chemistry",
+      "for2_code": "34",
+      "for2_name": "Chemical Sciences",
+      "support_pairs": 117,
+      "for4_total_pairs": 187,
+      "confidence": 0.625668
+    },
+    {
+      "for4_code": "3501",
+      "for4_name": "Accounting, Auditing and Accountability",
+      "for2_code": "35",
+      "for2_name": "Commerce, Management, Tourism and Services",
+      "support_pairs": 33,
+      "for4_total_pairs": 49,
+      "confidence": 0.673469
+    },
+    {
+      "for4_code": "3502",
+      "for4_name": "Banking, Finance and Investment",
+      "for2_code": "35",
+      "for2_name": "Commerce, Management, Tourism and Services",
+      "support_pairs": 207,
+      "for4_total_pairs": 389,
+      "confidence": 0.532134
+    },
+    {
+      "for4_code": "3503",
+      "for4_name": "Business Systems In Context",
+      "for2_code": "35",
+      "for2_name": "Commerce, Management, Tourism and Services",
+      "support_pairs": 87,
+      "for4_total_pairs": 153,
+      "confidence": 0.568627
+    },
+    {
+      "for4_code": "3504",
+      "for4_name": "Commercial Services",
+      "for2_code": "35",
+      "for2_name": "Commerce, Management, Tourism and Services",
+      "support_pairs": 130,
+      "for4_total_pairs": 284,
+      "confidence": 0.457746
+    },
+    {
+      "for4_code": "3505",
+      "for4_name": "Human Resources and Industrial Relations",
+      "for2_code": "35",
+      "for2_name": "Commerce, Management, Tourism and Services",
+      "support_pairs": 216,
+      "for4_total_pairs": 390,
+      "confidence": 0.553846
+    },
+    {
+      "for4_code": "3506",
+      "for4_name": "Marketing",
+      "for2_code": "35",
+      "for2_name": "Commerce, Management, Tourism and Services",
+      "support_pairs": 84,
+      "for4_total_pairs": 139,
+      "confidence": 0.604317
+    },
+    {
+      "for4_code": "3507",
+      "for4_name": "Strategy, Management and Organisational Behaviour",
+      "for2_code": "35",
+      "for2_name": "Commerce, Management, Tourism and Services",
+      "support_pairs": 844,
+      "for4_total_pairs": 1539,
+      "confidence": 0.548408
+    },
+    {
+      "for4_code": "3508",
+      "for4_name": "Tourism",
+      "for2_code": "35",
+      "for2_name": "Commerce, Management, Tourism and Services",
+      "support_pairs": 60,
+      "for4_total_pairs": 101,
+      "confidence": 0.594059
+    },
+    {
+      "for4_code": "3509",
+      "for4_name": "Transportation, Logistics and Supply Chains",
+      "for2_code": "35",
+      "for2_name": "Commerce, Management, Tourism and Services",
+      "support_pairs": 914,
+      "for4_total_pairs": 2072,
+      "confidence": 0.44112
+    },
+    {
+      "for4_code": "3601",
+      "for4_name": "Art History, Theory and Criticism",
+      "for2_code": "36",
+      "for2_name": "Creative Arts and Writing",
+      "support_pairs": 173,
+      "for4_total_pairs": 290,
+      "confidence": 0.596552
+    },
+    {
+      "for4_code": "3602",
+      "for4_name": "Creative and Professional Writing",
+      "for2_code": "36",
+      "for2_name": "Creative Arts and Writing",
+      "support_pairs": 272,
+      "for4_total_pairs": 466,
+      "confidence": 0.583691
+    },
+    {
+      "for4_code": "3603",
+      "for4_name": "Music",
+      "for2_code": "36",
+      "for2_name": "Creative Arts and Writing",
+      "support_pairs": 376,
+      "for4_total_pairs": 673,
+      "confidence": 0.558692
+    },
+    {
+      "for4_code": "3604",
+      "for4_name": "Performing Arts",
+      "for2_code": "36",
+      "for2_name": "Creative Arts and Writing",
+      "support_pairs": 224,
+      "for4_total_pairs": 343,
+      "confidence": 0.653061
+    },
+    {
+      "for4_code": "3605",
+      "for4_name": "Screen and Digital Media",
+      "for2_code": "36",
+      "for2_name": "Creative Arts and Writing",
+      "support_pairs": 418,
+      "for4_total_pairs": 891,
+      "confidence": 0.469136
+    },
+    {
+      "for4_code": "3701",
+      "for4_name": "Atmospheric Sciences",
+      "for2_code": "37",
+      "for2_name": "Earth Sciences",
+      "support_pairs": 1305,
+      "for4_total_pairs": 1662,
+      "confidence": 0.785199
+    },
+    {
+      "for4_code": "3702",
+      "for4_name": "Climate Change Science",
+      "for2_code": "37",
+      "for2_name": "Earth Sciences",
+      "support_pairs": 103,
+      "for4_total_pairs": 138,
+      "confidence": 0.746377
+    },
+    {
+      "for4_code": "3703",
+      "for4_name": "Geochemistry",
+      "for2_code": "37",
+      "for2_name": "Earth Sciences",
+      "support_pairs": 588,
+      "for4_total_pairs": 678,
+      "confidence": 0.867257
+    },
+    {
+      "for4_code": "3704",
+      "for4_name": "Geoinformatics",
+      "for2_code": "37",
+      "for2_name": "Earth Sciences",
+      "support_pairs": 216,
+      "for4_total_pairs": 359,
+      "confidence": 0.601671
+    },
+    {
+      "for4_code": "3705",
+      "for4_name": "Geology",
+      "for2_code": "37",
+      "for2_name": "Earth Sciences",
+      "support_pairs": 1925,
+      "for4_total_pairs": 2604,
+      "confidence": 0.739247
+    },
+    {
+      "for4_code": "3706",
+      "for4_name": "Geophysics",
+      "for2_code": "37",
+      "for2_name": "Earth Sciences",
+      "support_pairs": 913,
+      "for4_total_pairs": 1095,
+      "confidence": 0.83379
+    },
+    {
+      "for4_code": "3707",
+      "for4_name": "Hydrology",
+      "for2_code": "37",
+      "for2_name": "Earth Sciences",
+      "support_pairs": 344,
+      "for4_total_pairs": 538,
+      "confidence": 0.639405
+    },
+    {
+      "for4_code": "3708",
+      "for4_name": "Oceanography",
+      "for2_code": "37",
+      "for2_name": "Earth Sciences",
+      "support_pairs": 1054,
+      "for4_total_pairs": 1556,
+      "confidence": 0.677378
+    },
+    {
+      "for4_code": "3709",
+      "for4_name": "Physical Geography and Environmental Geoscience",
+      "for2_code": "37",
+      "for2_name": "Earth Sciences",
+      "support_pairs": 1021,
+      "for4_total_pairs": 1284,
+      "confidence": 0.795171
+    },
+    {
+      "for4_code": "3801",
+      "for4_name": "Applied Economics",
+      "for2_code": "38",
+      "for2_name": "Economics",
+      "support_pairs": 792,
+      "for4_total_pairs": 1498,
+      "confidence": 0.528705
+    },
+    {
+      "for4_code": "3802",
+      "for4_name": "Econometrics",
+      "for2_code": "38",
+      "for2_name": "Economics",
+      "support_pairs": 166,
+      "for4_total_pairs": 291,
+      "confidence": 0.570447
+    },
+    {
+      "for4_code": "3803",
+      "for4_name": "Economic Theory",
+      "for2_code": "38",
+      "for2_name": "Economics",
+      "support_pairs": 194,
+      "for4_total_pairs": 302,
+      "confidence": 0.642384
+    },
+    {
+      "for4_code": "3901",
+      "for4_name": "Curriculum and Pedagogy",
+      "for2_code": "39",
+      "for2_name": "Education",
+      "support_pairs": 1773,
+      "for4_total_pairs": 2487,
+      "confidence": 0.712907
+    },
+    {
+      "for4_code": "3902",
+      "for4_name": "Education Policy, Sociology and Philosophy",
+      "for2_code": "39",
+      "for2_name": "Education",
+      "support_pairs": 539,
+      "for4_total_pairs": 724,
+      "confidence": 0.744475
+    },
+    {
+      "for4_code": "3903",
+      "for4_name": "Education Systems",
+      "for2_code": "39",
+      "for2_name": "Education",
+      "support_pairs": 1596,
+      "for4_total_pairs": 2159,
+      "confidence": 0.739231
+    },
+    {
+      "for4_code": "3904",
+      "for4_name": "Specialist Studies In Education",
+      "for2_code": "39",
+      "for2_name": "Education",
+      "support_pairs": 1136,
+      "for4_total_pairs": 1695,
+      "confidence": 0.670206
+    },
+    {
+      "for4_code": "4001",
+      "for4_name": "Aerospace Engineering",
+      "for2_code": "40",
+      "for2_name": "Engineering",
+      "support_pairs": 694,
+      "for4_total_pairs": 964,
+      "confidence": 0.719917
+    },
+    {
+      "for4_code": "4002",
+      "for4_name": "Automotive Engineering",
+      "for2_code": "40",
+      "for2_name": "Engineering",
+      "support_pairs": 229,
+      "for4_total_pairs": 271,
+      "confidence": 0.845018
+    },
+    {
+      "for4_code": "4003",
+      "for4_name": "Biomedical Engineering",
+      "for2_code": "40",
+      "for2_name": "Engineering",
+      "support_pairs": 2929,
+      "for4_total_pairs": 5167,
+      "confidence": 0.566867
+    },
+    {
+      "for4_code": "4004",
+      "for4_name": "Chemical Engineering",
+      "for2_code": "40",
+      "for2_name": "Engineering",
+      "support_pairs": 526,
+      "for4_total_pairs": 805,
+      "confidence": 0.653416
+    },
+    {
+      "for4_code": "4005",
+      "for4_name": "Civil Engineering",
+      "for2_code": "40",
+      "for2_name": "Engineering",
+      "support_pairs": 910,
+      "for4_total_pairs": 1968,
+      "confidence": 0.462398
+    },
+    {
+      "for4_code": "4006",
+      "for4_name": "Communications Engineering",
+      "for2_code": "40",
+      "for2_name": "Engineering",
+      "support_pairs": 740,
+      "for4_total_pairs": 1345,
+      "confidence": 0.550186
+    },
+    {
+      "for4_code": "4007",
+      "for4_name": "Control Engineering, Mechatronics and Robotics",
+      "for2_code": "40",
+      "for2_name": "Engineering",
+      "support_pairs": 399,
+      "for4_total_pairs": 622,
+      "confidence": 0.641479
+    },
+    {
+      "for4_code": "4008",
+      "for4_name": "Electrical Engineering",
+      "for2_code": "40",
+      "for2_name": "Engineering",
+      "support_pairs": 631,
+      "for4_total_pairs": 868,
+      "confidence": 0.726959
+    },
+    {
+      "for4_code": "4009",
+      "for4_name": "Electronics, Sensors and Digital Hardware",
+      "for2_code": "40",
+      "for2_name": "Engineering",
+      "support_pairs": 1778,
+      "for4_total_pairs": 3199,
+      "confidence": 0.555799
+    },
+    {
+      "for4_code": "4010",
+      "for4_name": "Engineering Practice and Education",
+      "for2_code": "40",
+      "for2_name": "Engineering",
+      "support_pairs": 415,
+      "for4_total_pairs": 690,
+      "confidence": 0.601449
+    },
+    {
+      "for4_code": "4011",
+      "for4_name": "Environmental Engineering",
+      "for2_code": "40",
+      "for2_name": "Engineering",
+      "support_pairs": 251,
+      "for4_total_pairs": 396,
+      "confidence": 0.633838
+    },
+    {
+      "for4_code": "4012",
+      "for4_name": "Fluid Mechanics and Thermal Engineering",
+      "for2_code": "40",
+      "for2_name": "Engineering",
+      "support_pairs": 792,
+      "for4_total_pairs": 1083,
+      "confidence": 0.731302
+    },
+    {
+      "for4_code": "4013",
+      "for4_name": "Geomatic Engineering",
+      "for2_code": "40",
+      "for2_name": "Engineering",
+      "support_pairs": 287,
+      "for4_total_pairs": 480,
+      "confidence": 0.597917
+    },
+    {
+      "for4_code": "4014",
+      "for4_name": "Manufacturing Engineering",
+      "for2_code": "40",
+      "for2_name": "Engineering",
+      "support_pairs": 880,
+      "for4_total_pairs": 1077,
+      "confidence": 0.817084
+    },
+    {
+      "for4_code": "4015",
+      "for4_name": "Maritime Engineering",
+      "for2_code": "40",
+      "for2_name": "Engineering",
+      "support_pairs": 347,
+      "for4_total_pairs": 528,
+      "confidence": 0.657197
+    },
+    {
+      "for4_code": "4016",
+      "for4_name": "Materials Engineering",
+      "for2_code": "40",
+      "for2_name": "Engineering",
+      "support_pairs": 2171,
+      "for4_total_pairs": 3922,
+      "confidence": 0.553544
+    },
+    {
+      "for4_code": "4017",
+      "for4_name": "Mechanical Engineering",
+      "for2_code": "40",
+      "for2_name": "Engineering",
+      "support_pairs": 247,
+      "for4_total_pairs": 284,
+      "confidence": 0.869718
+    },
+    {
+      "for4_code": "4018",
+      "for4_name": "Nanotechnology",
+      "for2_code": "40",
+      "for2_name": "Engineering",
+      "support_pairs": 446,
+      "for4_total_pairs": 831,
+      "confidence": 0.536703
+    },
+    {
+      "for4_code": "4019",
+      "for4_name": "Resources Engineering and Extractive Metallurgy",
+      "for2_code": "40",
+      "for2_name": "Engineering",
+      "support_pairs": 186,
+      "for4_total_pairs": 308,
+      "confidence": 0.603896
+    },
+    {
+      "for4_code": "4101",
+      "for4_name": "Climate Change Impacts and Adaptation",
+      "for2_code": "41",
+      "for2_name": "Environmental Sciences",
+      "support_pairs": 832,
+      "for4_total_pairs": 1571,
+      "confidence": 0.529599
+    },
+    {
+      "for4_code": "4102",
+      "for4_name": "Ecological Applications",
+      "for2_code": "41",
+      "for2_name": "Environmental Sciences",
+      "support_pairs": 743,
+      "for4_total_pairs": 1455,
+      "confidence": 0.510653
+    },
+    {
+      "for4_code": "4103",
+      "for4_name": "Environmental Biotechnology",
+      "for2_code": "41",
+      "for2_name": "Environmental Sciences",
+      "support_pairs": 139,
+      "for4_total_pairs": 218,
+      "confidence": 0.637615
+    },
+    {
+      "for4_code": "4104",
+      "for4_name": "Environmental Management",
+      "for2_code": "41",
+      "for2_name": "Environmental Sciences",
+      "support_pairs": 879,
+      "for4_total_pairs": 1647,
+      "confidence": 0.533698
+    },
+    {
+      "for4_code": "4105",
+      "for4_name": "Pollution and Contamination",
+      "for2_code": "41",
+      "for2_name": "Environmental Sciences",
+      "support_pairs": 469,
+      "for4_total_pairs": 741,
+      "confidence": 0.632928
+    },
+    {
+      "for4_code": "4106",
+      "for4_name": "Soil Sciences",
+      "for2_code": "41",
+      "for2_name": "Environmental Sciences",
+      "support_pairs": 150,
+      "for4_total_pairs": 247,
+      "confidence": 0.607287
+    },
+    {
+      "for4_code": "4201",
+      "for4_name": "Allied Health and Rehabilitation Science",
+      "for2_code": "42",
+      "for2_name": "Health Sciences",
+      "support_pairs": 1057,
+      "for4_total_pairs": 2017,
+      "confidence": 0.524046
+    },
+    {
+      "for4_code": "4202",
+      "for4_name": "Epidemiology",
+      "for2_code": "42",
+      "for2_name": "Health Sciences",
+      "support_pairs": 643,
+      "for4_total_pairs": 1172,
+      "confidence": 0.548635
+    },
+    {
+      "for4_code": "4203",
+      "for4_name": "Health Services and Systems",
+      "for2_code": "42",
+      "for2_name": "Health Sciences",
+      "support_pairs": 8301,
+      "for4_total_pairs": 13728,
+      "confidence": 0.604677
+    },
+    {
+      "for4_code": "4204",
+      "for4_name": "Midwifery",
+      "for2_code": "42",
+      "for2_name": "Health Sciences",
+      "support_pairs": 251,
+      "for4_total_pairs": 535,
+      "confidence": 0.469159
+    },
+    {
+      "for4_code": "4205",
+      "for4_name": "Nursing",
+      "for2_code": "42",
+      "for2_name": "Health Sciences",
+      "support_pairs": 859,
+      "for4_total_pairs": 1173,
+      "confidence": 0.73231
+    },
+    {
+      "for4_code": "4206",
+      "for4_name": "Public Health",
+      "for2_code": "42",
+      "for2_name": "Health Sciences",
+      "support_pairs": 4094,
+      "for4_total_pairs": 7213,
+      "confidence": 0.567586
+    },
+    {
+      "for4_code": "4207",
+      "for4_name": "Sports Science and Exercise",
+      "for2_code": "42",
+      "for2_name": "Health Sciences",
+      "support_pairs": 378,
+      "for4_total_pairs": 602,
+      "confidence": 0.627907
+    },
+    {
+      "for4_code": "4208",
+      "for4_name": "Traditional, Complementary and Integrative Medicine",
+      "for2_code": "42",
+      "for2_name": "Health Sciences",
+      "support_pairs": 23,
+      "for4_total_pairs": 40,
+      "confidence": 0.575
+    },
+    {
+      "for4_code": "4301",
+      "for4_name": "Archaeology",
+      "for2_code": "43",
+      "for2_name": "History, Heritage and Archaeology",
+      "support_pairs": 450,
+      "for4_total_pairs": 779,
+      "confidence": 0.577664
+    },
+    {
+      "for4_code": "4302",
+      "for4_name": "Heritage, Archive and Museum Studies",
+      "for2_code": "43",
+      "for2_name": "History, Heritage and Archaeology",
+      "support_pairs": 280,
+      "for4_total_pairs": 450,
+      "confidence": 0.622222
+    },
+    {
+      "for4_code": "4303",
+      "for4_name": "Historical Studies",
+      "for2_code": "43",
+      "for2_name": "History, Heritage and Archaeology",
+      "support_pairs": 860,
+      "for4_total_pairs": 1630,
+      "confidence": 0.527607
+    },
+    {
+      "for4_code": "4401",
+      "for4_name": "Anthropology",
+      "for2_code": "44",
+      "for2_name": "Human Society",
+      "support_pairs": 188,
+      "for4_total_pairs": 433,
+      "confidence": 0.43418
+    },
+    {
+      "for4_code": "4402",
+      "for4_name": "Criminology",
+      "for2_code": "44",
+      "for2_name": "Human Society",
+      "support_pairs": 493,
+      "for4_total_pairs": 975,
+      "confidence": 0.505641
+    },
+    {
+      "for4_code": "4403",
+      "for4_name": "Demography",
+      "for2_code": "44",
+      "for2_name": "Human Society",
+      "support_pairs": 456,
+      "for4_total_pairs": 777,
+      "confidence": 0.586873
+    },
+    {
+      "for4_code": "4404",
+      "for4_name": "Development Studies",
+      "for2_code": "44",
+      "for2_name": "Human Society",
+      "support_pairs": 302,
+      "for4_total_pairs": 450,
+      "confidence": 0.671111
+    },
+    {
+      "for4_code": "4405",
+      "for4_name": "Gender Studies",
+      "for2_code": "44",
+      "for2_name": "Human Society",
+      "support_pairs": 519,
+      "for4_total_pairs": 904,
+      "confidence": 0.574115
+    },
+    {
+      "for4_code": "4406",
+      "for4_name": "Human Geography",
+      "for2_code": "44",
+      "for2_name": "Human Society",
+      "support_pairs": 756,
+      "for4_total_pairs": 1506,
+      "confidence": 0.501992
+    },
+    {
+      "for4_code": "4407",
+      "for4_name": "Policy and Administration",
+      "for2_code": "44",
+      "for2_name": "Human Society",
+      "support_pairs": 804,
+      "for4_total_pairs": 1300,
+      "confidence": 0.618462
+    },
+    {
+      "for4_code": "4408",
+      "for4_name": "Political Science",
+      "for2_code": "44",
+      "for2_name": "Human Society",
+      "support_pairs": 743,
+      "for4_total_pairs": 1140,
+      "confidence": 0.651754
+    },
+    {
+      "for4_code": "4409",
+      "for4_name": "Social Work",
+      "for2_code": "44",
+      "for2_name": "Human Society",
+      "support_pairs": 638,
+      "for4_total_pairs": 1338,
+      "confidence": 0.476831
+    },
+    {
+      "for4_code": "4410",
+      "for4_name": "Sociology",
+      "for2_code": "44",
+      "for2_name": "Human Society",
+      "support_pairs": 342,
+      "for4_total_pairs": 557,
+      "confidence": 0.614004
+    },
+    {
+      "for4_code": "4601",
+      "for4_name": "Applied Computing",
+      "for2_code": "46",
+      "for2_name": "Information and Computing Sciences",
+      "support_pairs": 517,
+      "for4_total_pairs": 842,
+      "confidence": 0.614014
+    },
+    {
+      "for4_code": "4602",
+      "for4_name": "Artificial Intelligence",
+      "for2_code": "46",
+      "for2_name": "Information and Computing Sciences",
+      "support_pairs": 1692,
+      "for4_total_pairs": 2228,
+      "confidence": 0.759425
+    },
+    {
+      "for4_code": "4603",
+      "for4_name": "Computer Vision and Multimedia Computation",
+      "for2_code": "46",
+      "for2_name": "Information and Computing Sciences",
+      "support_pairs": 327,
+      "for4_total_pairs": 507,
+      "confidence": 0.64497
+    },
+    {
+      "for4_code": "4604",
+      "for4_name": "Cybersecurity and Privacy",
+      "for2_code": "46",
+      "for2_name": "Information and Computing Sciences",
+      "support_pairs": 1081,
+      "for4_total_pairs": 1290,
+      "confidence": 0.837984
+    },
+    {
+      "for4_code": "4605",
+      "for4_name": "Data Management and Data Science",
+      "for2_code": "46",
+      "for2_name": "Information and Computing Sciences",
+      "support_pairs": 1853,
+      "for4_total_pairs": 2825,
+      "confidence": 0.655929
+    },
+    {
+      "for4_code": "4606",
+      "for4_name": "Distributed Computing and Systems Software",
+      "for2_code": "46",
+      "for2_name": "Information and Computing Sciences",
+      "support_pairs": 1153,
+      "for4_total_pairs": 1470,
+      "confidence": 0.784354
+    },
+    {
+      "for4_code": "4607",
+      "for4_name": "Graphics, Augmented Reality and Games",
+      "for2_code": "46",
+      "for2_name": "Information and Computing Sciences",
+      "support_pairs": 300,
+      "for4_total_pairs": 374,
+      "confidence": 0.802139
+    },
+    {
+      "for4_code": "4608",
+      "for4_name": "Human-Centred Computing",
+      "for2_code": "46",
+      "for2_name": "Information and Computing Sciences",
+      "support_pairs": 2663,
+      "for4_total_pairs": 3763,
+      "confidence": 0.70768
+    },
+    {
+      "for4_code": "4609",
+      "for4_name": "Information Systems",
+      "for2_code": "46",
+      "for2_name": "Information and Computing Sciences",
+      "support_pairs": 222,
+      "for4_total_pairs": 347,
+      "confidence": 0.639769
+    },
+    {
+      "for4_code": "4610",
+      "for4_name": "Library and Information Studies",
+      "for2_code": "46",
+      "for2_name": "Information and Computing Sciences",
+      "support_pairs": 971,
+      "for4_total_pairs": 1443,
+      "confidence": 0.672904
+    },
+    {
+      "for4_code": "4611",
+      "for4_name": "Machine Learning",
+      "for2_code": "46",
+      "for2_name": "Information and Computing Sciences",
+      "support_pairs": 2900,
+      "for4_total_pairs": 4658,
+      "confidence": 0.622585
+    },
+    {
+      "for4_code": "4612",
+      "for4_name": "Software Engineering",
+      "for2_code": "46",
+      "for2_name": "Information and Computing Sciences",
+      "support_pairs": 866,
+      "for4_total_pairs": 1031,
+      "confidence": 0.839961
+    },
+    {
+      "for4_code": "4613",
+      "for4_name": "Theory Of Computation",
+      "for2_code": "46",
+      "for2_name": "Information and Computing Sciences",
+      "support_pairs": 383,
+      "for4_total_pairs": 725,
+      "confidence": 0.528276
+    },
+    {
+      "for4_code": "4701",
+      "for4_name": "Communication and Media Studies",
+      "for2_code": "47",
+      "for2_name": "Language, Communication and Culture",
+      "support_pairs": 448,
+      "for4_total_pairs": 953,
+      "confidence": 0.470094
+    },
+    {
+      "for4_code": "4702",
+      "for4_name": "Cultural Studies",
+      "for2_code": "47",
+      "for2_name": "Language, Communication and Culture",
+      "support_pairs": 449,
+      "for4_total_pairs": 851,
+      "confidence": 0.527615
+    },
+    {
+      "for4_code": "4703",
+      "for4_name": "Language Studies",
+      "for2_code": "47",
+      "for2_name": "Language, Communication and Culture",
+      "support_pairs": 345,
+      "for4_total_pairs": 538,
+      "confidence": 0.641264
+    },
+    {
+      "for4_code": "4704",
+      "for4_name": "Linguistics",
+      "for2_code": "47",
+      "for2_name": "Language, Communication and Culture",
+      "support_pairs": 1008,
+      "for4_total_pairs": 1850,
+      "confidence": 0.544865
+    },
+    {
+      "for4_code": "4705",
+      "for4_name": "Literary Studies",
+      "for2_code": "47",
+      "for2_name": "Language, Communication and Culture",
+      "support_pairs": 478,
+      "for4_total_pairs": 862,
+      "confidence": 0.554524
+    },
+    {
+      "for4_code": "4801",
+      "for4_name": "Commercial Law",
+      "for2_code": "48",
+      "for2_name": "Law and Legal Studies",
+      "support_pairs": 126,
+      "for4_total_pairs": 186,
+      "confidence": 0.677419
+    },
+    {
+      "for4_code": "4802",
+      "for4_name": "Environmental and Resources Law",
+      "for2_code": "48",
+      "for2_name": "Law and Legal Studies",
+      "support_pairs": 227,
+      "for4_total_pairs": 426,
+      "confidence": 0.532864
+    },
+    {
+      "for4_code": "4803",
+      "for4_name": "International and Comparative Law",
+      "for2_code": "48",
+      "for2_name": "Law and Legal Studies",
+      "support_pairs": 172,
+      "for4_total_pairs": 308,
+      "confidence": 0.558442
+    },
+    {
+      "for4_code": "4804",
+      "for4_name": "Law In Context",
+      "for2_code": "48",
+      "for2_name": "Law and Legal Studies",
+      "support_pairs": 287,
+      "for4_total_pairs": 592,
+      "confidence": 0.484797
+    },
+    {
+      "for4_code": "4805",
+      "for4_name": "Legal Systems",
+      "for2_code": "48",
+      "for2_name": "Law and Legal Studies",
+      "support_pairs": 277,
+      "for4_total_pairs": 601,
+      "confidence": 0.460899
+    },
+    {
+      "for4_code": "4806",
+      "for4_name": "Private Law and Civil Obligations",
+      "for2_code": "48",
+      "for2_name": "Law and Legal Studies",
+      "support_pairs": 99,
+      "for4_total_pairs": 163,
+      "confidence": 0.607362
+    },
+    {
+      "for4_code": "4807",
+      "for4_name": "Public Law",
+      "for2_code": "48",
+      "for2_name": "Law and Legal Studies",
+      "support_pairs": 182,
+      "for4_total_pairs": 273,
+      "confidence": 0.666667
+    },
+    {
+      "for4_code": "4901",
+      "for4_name": "Applied Mathematics",
+      "for2_code": "49",
+      "for2_name": "Mathematical Sciences",
+      "support_pairs": 513,
+      "for4_total_pairs": 816,
+      "confidence": 0.628676
+    },
+    {
+      "for4_code": "4902",
+      "for4_name": "Mathematical Physics",
+      "for2_code": "49",
+      "for2_name": "Mathematical Sciences",
+      "support_pairs": 646,
+      "for4_total_pairs": 961,
+      "confidence": 0.672216
+    },
+    {
+      "for4_code": "4903",
+      "for4_name": "Numerical and Computational Mathematics",
+      "for2_code": "49",
+      "for2_name": "Mathematical Sciences",
+      "support_pairs": 356,
+      "for4_total_pairs": 490,
+      "confidence": 0.726531
+    },
+    {
+      "for4_code": "4904",
+      "for4_name": "Pure Mathematics",
+      "for2_code": "49",
+      "for2_name": "Mathematical Sciences",
+      "support_pairs": 1576,
+      "for4_total_pairs": 2194,
+      "confidence": 0.718323
+    },
+    {
+      "for4_code": "4905",
+      "for4_name": "Statistics",
+      "for2_code": "49",
+      "for2_name": "Mathematical Sciences",
+      "support_pairs": 601,
+      "for4_total_pairs": 1081,
+      "confidence": 0.555967
+    },
+    {
+      "for4_code": "5001",
+      "for4_name": "Applied Ethics",
+      "for2_code": "50",
+      "for2_name": "Philosophy and Religious Studies",
+      "support_pairs": 159,
+      "for4_total_pairs": 351,
+      "confidence": 0.452991
+    },
+    {
+      "for4_code": "5002",
+      "for4_name": "History and Philosophy Of Specific Fields",
+      "for2_code": "50",
+      "for2_name": "Philosophy and Religious Studies",
+      "support_pairs": 690,
+      "for4_total_pairs": 1299,
+      "confidence": 0.531178
+    },
+    {
+      "for4_code": "5003",
+      "for4_name": "Philosophy",
+      "for2_code": "50",
+      "for2_name": "Philosophy and Religious Studies",
+      "support_pairs": 232,
+      "for4_total_pairs": 440,
+      "confidence": 0.527273
+    },
+    {
+      "for4_code": "5004",
+      "for4_name": "Religious Studies",
+      "for2_code": "50",
+      "for2_name": "Philosophy and Religious Studies",
+      "support_pairs": 210,
+      "for4_total_pairs": 368,
+      "confidence": 0.570652
+    },
+    {
+      "for4_code": "5005",
+      "for4_name": "Theology",
+      "for2_code": "50",
+      "for2_name": "Philosophy and Religious Studies",
+      "support_pairs": 120,
+      "for4_total_pairs": 173,
+      "confidence": 0.693642
+    },
+    {
+      "for4_code": "5101",
+      "for4_name": "Astronomical Sciences",
+      "for2_code": "51",
+      "for2_name": "Physical Sciences",
+      "support_pairs": 1298,
+      "for4_total_pairs": 1530,
+      "confidence": 0.848366
+    },
+    {
+      "for4_code": "5102",
+      "for4_name": "Atomic, Molecular and Optical Physics",
+      "for2_code": "51",
+      "for2_name": "Physical Sciences",
+      "support_pairs": 827,
+      "for4_total_pairs": 1401,
+      "confidence": 0.590293
+    },
+    {
+      "for4_code": "5103",
+      "for4_name": "Classical Physics",
+      "for2_code": "51",
+      "for2_name": "Physical Sciences",
+      "support_pairs": 226,
+      "for4_total_pairs": 369,
+      "confidence": 0.612466
+    },
+    {
+      "for4_code": "5104",
+      "for4_name": "Condensed Matter Physics",
+      "for2_code": "51",
+      "for2_name": "Physical Sciences",
+      "support_pairs": 1090,
+      "for4_total_pairs": 1556,
+      "confidence": 0.700514
+    },
+    {
+      "for4_code": "5105",
+      "for4_name": "Medical and Biological Physics",
+      "for2_code": "51",
+      "for2_name": "Physical Sciences",
+      "support_pairs": 158,
+      "for4_total_pairs": 312,
+      "confidence": 0.50641
+    },
+    {
+      "for4_code": "5106",
+      "for4_name": "Nuclear and Plasma Physics",
+      "for2_code": "51",
+      "for2_name": "Physical Sciences",
+      "support_pairs": 1573,
+      "for4_total_pairs": 1916,
+      "confidence": 0.820981
+    },
+    {
+      "for4_code": "5107",
+      "for4_name": "Particle and High Energy Physics",
+      "for2_code": "51",
+      "for2_name": "Physical Sciences",
+      "support_pairs": 939,
+      "for4_total_pairs": 1093,
+      "confidence": 0.859103
+    },
+    {
+      "for4_code": "5108",
+      "for4_name": "Quantum Physics",
+      "for2_code": "51",
+      "for2_name": "Physical Sciences",
+      "support_pairs": 1894,
+      "for4_total_pairs": 2895,
+      "confidence": 0.654231
+    },
+    {
+      "for4_code": "5109",
+      "for4_name": "Space Sciences",
+      "for2_code": "51",
+      "for2_name": "Physical Sciences",
+      "support_pairs": 478,
+      "for4_total_pairs": 661,
+      "confidence": 0.723147
+    },
+    {
+      "for4_code": "5110",
+      "for4_name": "Synchrotrons and Accelerators",
+      "for2_code": "51",
+      "for2_name": "Physical Sciences",
+      "support_pairs": 405,
+      "for4_total_pairs": 465,
+      "confidence": 0.870968
+    },
+    {
+      "for4_code": "5201",
+      "for4_name": "Applied and Developmental Psychology",
+      "for2_code": "52",
+      "for2_name": "Psychology",
+      "support_pairs": 201,
+      "for4_total_pairs": 332,
+      "confidence": 0.605422
+    },
+    {
+      "for4_code": "5202",
+      "for4_name": "Biological Psychology",
+      "for2_code": "52",
+      "for2_name": "Psychology",
+      "support_pairs": 4888,
+      "for4_total_pairs": 9220,
+      "confidence": 0.530152
+    },
+    {
+      "for4_code": "5203",
+      "for4_name": "Clinical and Health Psychology",
+      "for2_code": "52",
+      "for2_name": "Psychology",
+      "support_pairs": 757,
+      "for4_total_pairs": 1267,
+      "confidence": 0.597474
+    },
+    {
+      "for4_code": "5204",
+      "for4_name": "Cognitive and Computational Psychology",
+      "for2_code": "52",
+      "for2_name": "Psychology",
+      "support_pairs": 1429,
+      "for4_total_pairs": 2580,
+      "confidence": 0.553876
+    },
+    {
+      "for4_code": "5205",
+      "for4_name": "Social and Personality Psychology",
+      "for2_code": "52",
+      "for2_name": "Psychology",
+      "support_pairs": 295,
+      "for4_total_pairs": 419,
+      "confidence": 0.704057
+    }
+  ]
+}

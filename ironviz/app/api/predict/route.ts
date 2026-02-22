@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { MongoClient } from "mongodb";
 
 // Your MongoDB connection string (update this with your actual URI later!)
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017";
+const MONGODB_URI = process.env.MONGODB_URI;
 
 export async function POST(req: Request) {
   try {
@@ -28,7 +28,7 @@ export async function POST(req: Request) {
 
     // --- 2. Forward to Teammate's Python API ---
     // 🚨 IMPORTANT: Change this URL to your teammate's IP address or Ngrok URL!
-    const pythonApiUrl = "http://localhost:8000/api/analyze-idea"; 
+    const pythonApiUrl = "http://172.26.94.150:8000/api/analyze-idea"; 
     
     const response = await fetch(pythonApiUrl, {
       method: "POST",

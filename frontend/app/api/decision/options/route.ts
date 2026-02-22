@@ -11,9 +11,11 @@ export async function GET() {
         name: r.FOR4_NAME,
         opportunity_score: Number(r.opportunity_score_v1 || 0),
       }))
-      .sort((a, b) => b.opportunity_score - a.opportunity_score);
+      .sort((a, b) => a.name.localeCompare(b.name));
 
-    const funders = [...new Set(sankey.map((s) => s.source).filter(Boolean))].slice(0, 50);
+    const funders = [...new Set(sankey.map((s) => s.source).filter(Boolean))]
+      .sort((a, b) => a.localeCompare(b))
+      .slice(0, 50);
 
     return NextResponse.json({
       version: "decision-v1",

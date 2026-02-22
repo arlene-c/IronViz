@@ -51,13 +51,44 @@ type FunderRecommendation = {
 type SimilarityNeighborRow = {
   grant_id: string;
   neighbor_grant_id: string;
+  neighbor_for4_name?: string;
   similarity: number;
+};
+
+type ForTaxonomyRecord = {
+  for4_code: string;
+  for4_name: string;
+  for2_code: string;
+  for2_name: string;
+  support_pairs: number;
+  for4_total_pairs: number;
+  confidence: number;
+};
+
+type ForTaxonomyArtifact = {
+  version: string;
+  records: ForTaxonomyRecord[];
 };
 
 const clamp01 = (x: number) => Math.max(0, Math.min(1, x));
 
 function normalizeCode(code: string | number | undefined | null): string {
   return String(code ?? "").trim();
+}
+
+/** Extract the raw FOR4 code from a grant_id like "field-3001" → "3001" */
+function grantIdToCode(grantId: string): string {
+  return grantId.replace(/^field-/, "").trim();
+}
+
+/** Build the canonical grant_id key for a FOR4 code */
+function codeToGrantId(code: string): string {
+  return `field-${normalizeCode(code)}`;
+}
+
+function for2FromFor4(code: string | number): string {
+  const digits = normalizeCode(code).replace(/\D/g, "");
+  return digits.slice(0, 2);
 }
 
 function budgetFromField(field: OpportunityRow, months: number): number {
@@ -91,12 +122,41 @@ function deriveRiskFlags(remainingNeed: number, field: OpportunityRow, funders: 
   return flags;
 }
 
+/**
+ * Aggregate sankey rows for a list of FOR4 codes into a ranked funder list.
+ * Each code can carry an optional weight (defaults to 1.0).
+ */
+function aggregateFundersFromCodes(
+  sankey: SankeyRow[],
+  weightedCodes: Array<{ code: string; weight: number }>,
+): Array<{ funder: string; flow: number; cmuTotal: number }> {
+  const agg = new Map<string, { flow: number; cmuTotal: number }>();
+
+  for (const { code, weight } of weightedCodes) {
+    const w = Math.max(0, weight);
+    const rows = sankey.filter((r) => normalizeCode(r.FOR4_CODE) === code);
+    for (const r of rows) {
+      const key = r.source || "Unknown funder";
+      const prev = agg.get(key) ?? { flow: 0, cmuTotal: 0 };
+      prev.flow += Number(r.value || 0) * w;
+      prev.cmuTotal += Number(r.cmu_field_total || 0) * w;
+      agg.set(key, prev);
+    }
+  }
+
+  return [...agg.entries()]
+    .map(([funder, m]) => ({ funder, ...m }))
+    .sort((a, b) => b.flow + b.cmuTotal - (a.flow + a.cmuTotal))
+    .slice(0, 6);
+}
+
 export async function loadDecisionContext() {
-  const [opportunity, forecast, sankey, neighbors] = await Promise.all([
+  const [opportunity, forecast, sankey, neighbors, forTaxonomy] = await Promise.all([
     readModelArtifact<OpportunityRow[]>("opportunity_scores_v1.json"),
     readModelArtifact<ForecastRow[]>("forecast_v1.json"),
     readDataArtifact<SankeyRow[]>("sankey.json"),
     readModelArtifact<SimilarityNeighborRow[]>("similarity_neighbors_v1.json"),
+    readDataArtifact<ForTaxonomyArtifact>("for_taxonomy_v1.json"),
   ]);
 
   const campuses = [
@@ -109,15 +169,20 @@ export async function loadDecisionContext() {
     { code: "grid.512173.3", label: "CMU Africa / Global Unit" },
   ];
 
-  return { opportunity, forecast, sankey, campuses, neighbors };
+  return { opportunity, forecast, sankey, campuses, neighbors, forTaxonomy };
 }
 
 export async function runResearcherDecision(request: DecisionRequest) {
-  const { opportunity, forecast, sankey, neighbors } = await loadDecisionContext();
+  const { opportunity, forecast, sankey, neighbors, forTaxonomy } = await loadDecisionContext();
 
   const code = normalizeCode(request.for4_code);
+  const targetGrantId = codeToGrantId(code);
+
   const field = opportunity.find((r) => normalizeCode(r.FOR4_CODE) === code);
   if (!field) throw new Error("Unknown FOR4 code.");
+  const for2ByFor4 = new Map(
+    (forTaxonomy.records || []).map((r) => [normalizeCode(r.for4_code), normalizeCode(r.for2_code)]),
+  );
 
   const months = Number(request.project_length_months || 12);
   const recommendedMid = budgetFromField(field, months);
@@ -138,120 +203,153 @@ export async function runResearcherDecision(request: DecisionRequest) {
     .sort((a, b) => (Number(b.aau_forecast) || 0) - (Number(a.aau_forecast) || 0))[0];
   const forecast2026 = Number(fieldForecast?.aau_forecast || 0);
 
-  const funderRows = sankey.filter((r) => normalizeCode(r.FOR4_CODE) === code);
-  const funderAgg = new Map<string, { flow: number; cmuTotal: number }>();
-  for (const r of funderRows) {
-    const key = r.source || "Unknown funder";
-    const prev = funderAgg.get(key) || { flow: 0, cmuTotal: 0 };
-    prev.flow += Number(r.value || 0);
-    prev.cmuTotal += Number(r.cmu_field_total || 0);
-    funderAgg.set(key, prev);
-  }
-  let sortedFunders = [...funderAgg.entries()]
-    .map(([funder, m]) => ({ funder, ...m }))
-    .sort((a, b) => b.flow - a.flow)
-    .slice(0, 6);
-  let funderDataMode: "field_observed" | "similar_field_fallback" | "global_fallback" | "baseline_fallback" = "field_observed";
+  // ── Step 1: Direct field sankey lookup ──────────────────────────────────────
+  const directFunders = aggregateFundersFromCodes(sankey, [{ code, weight: 1.0 }]);
+
+  let sortedFunders = directFunders;
+  let funderDataMode: FunderRecommendation["source_type"] = "field_observed";
   let funderFallbackNote = "";
+  let neighborNamesUsed: string[] = [];
 
-  // Similar-field fallback first (preferred over global fallback)
+  // ── Step 2: Precomputed neighbor fallback ────────────────────────────────────
+  // Triggered when direct data is sparse (< 3 funders).
   if (sortedFunders.length < 3) {
-    const thisGrantId = `field-${code}`;
-    const similar = neighbors
-      .filter((n) => n.grant_id === thisGrantId && Number(n.similarity || 0) > 0)
-      .sort((a, b) => Number(b.similarity || 0) - Number(a.similarity || 0))
-      .slice(0, 5);
+    const precomputedNeighbors = neighbors
+      .filter(
+        (n) =>
+          n.grant_id === targetGrantId &&
+          Number(n.similarity ?? 0) >= 0.15,
+      )
+      .sort((a, b) => Number(b.similarity) - Number(a.similarity))
+      .slice(0, 10);
 
-    const similarCodes = similar
-      .map((s) => String(s.neighbor_grant_id || "").replace("field-", "").trim())
-      .filter(Boolean);
+    if (precomputedNeighbors.length > 0) {
+      const weightedCodes = precomputedNeighbors.map((n) => ({
+        // FIX: strip the "field-" prefix so the code matches sankey FOR4_CODE values
+        code: grantIdToCode(n.neighbor_grant_id),
+        // Square the similarity to up-weight close matches and down-weight weak ones
+        weight: Math.max(0.02, Number(n.similarity) ** 2),
+      }));
 
-    if (similarCodes.length > 0) {
-      const simWeights = new Map<string, number>();
-      for (const s of similar) {
-        const c = String(s.neighbor_grant_id || "").replace("field-", "").trim();
-        simWeights.set(c, Number(s.similarity || 0));
+      const neighborFunders = aggregateFundersFromCodes(sankey, weightedCodes);
+
+      if (neighborFunders.length > 0) {
+        // Blend: keep any direct rows, then fill from neighbors
+        const existing = new Set(sortedFunders.map((f) => f.funder));
+        const blended = [...sortedFunders];
+        for (const f of neighborFunders) {
+          if (!existing.has(f.funder)) blended.push(f);
+        }
+        sortedFunders = blended
+          .sort((a, b) => b.flow + b.cmuTotal - (a.flow + a.cmuTotal))
+          .slice(0, 6);
+
+        funderDataMode = "similar_field_fallback";
+        neighborNamesUsed = precomputedNeighbors
+          .slice(0, 4)
+          .map((n) => n.neighbor_for4_name ?? grantIdToCode(n.neighbor_grant_id));
+        funderFallbackNote = `Used precomputed similar-field neighbors: ${neighborNamesUsed.join(", ")}.`;
       }
+    }
+  }
 
-      const similarRows = sankey.filter((r) => similarCodes.includes(normalizeCode(r.FOR4_CODE)));
-      const simAgg = new Map<string, { flow: number; cmuTotal: number }>();
-      for (const r of similarRows) {
-        const fieldCode = normalizeCode(r.FOR4_CODE);
-        const w = Math.max(0.15, Number(simWeights.get(fieldCode) || 0.25));
-        const key = r.source || "Unknown funder";
-        const prev = simAgg.get(key) || { flow: 0, cmuTotal: 0 };
-        prev.flow += Number(r.value || 0) * w;
-        prev.cmuTotal += Number(r.cmu_field_total || 0) * w;
-        simAgg.set(key, prev);
+  // ── Step 3: Coordinate-space fallback ────────────────────────────────────────
+  // Triggered when direct and precomputed similar-field links are sparse.
+  // Uses sibling FOR4 fields under the same FOR2 and weights by historical AAU totals.
+  if (sortedFunders.length < 3) {
+    const targetFor2 = for2ByFor4.get(code) || for2FromFor4(code);
+    const siblings = opportunity
+      .filter((r) => {
+        const siblingCode = normalizeCode(r.FOR4_CODE);
+        const siblingFor2 = for2ByFor4.get(siblingCode) || for2FromFor4(siblingCode);
+        return siblingCode !== code && siblingFor2 === targetFor2;
+      })
+      .map((r) => ({
+        code: normalizeCode(r.FOR4_CODE),
+        name: r.FOR4_NAME,
+        aauTotal: Math.max(0, Number(r.AAU_total || 0)),
+      }))
+      .sort((a, b) => b.aauTotal - a.aauTotal)
+      .slice(0, 12);
+
+    if (siblings.length > 0) {
+      const siblingTotal = siblings.reduce((acc, s) => acc + s.aauTotal, 0);
+      const weightedCodes = siblings.map((s) => ({
+        code: s.code,
+        weight: siblingTotal > 0 ? s.aauTotal / siblingTotal : 1 / siblings.length,
+      }));
+      const siblingFunders = aggregateFundersFromCodes(sankey, weightedCodes);
+
+      if (siblingFunders.length > 0) {
+        const existing = new Set(sortedFunders.map((f) => f.funder));
+        const blended = [...sortedFunders];
+        for (const f of siblingFunders) {
+          if (!existing.has(f.funder)) blended.push(f);
+        }
+        sortedFunders = blended
+          .sort((a, b) => b.flow + b.cmuTotal - (a.flow + a.cmuTotal))
+          .slice(0, 6);
+
+        funderDataMode = "similar_field_fallback";
+        neighborNamesUsed = siblings.slice(0, 4).map((s) => s.name);
+        funderFallbackNote = `No direct/similarity links were sufficient. Used FOR2 sibling fallback (${targetFor2}xx) weighted by historical AAU totals from: ${neighborNamesUsed.join(", ")}.`;
       }
+    }
+  }
 
-      const simTop = [...simAgg.entries()]
-        .map(([funder, m]) => ({ funder, ...m }))
-        .sort((a, b) => b.flow - a.flow)
+  // ── Step 4: Hard baseline — last resort only ─────────────────────────────────
+  // Step 4: Global all-field fallback (CMU + AAU signal)
+  if (sortedFunders.length < 3) {
+    const globalAgg = new Map<string, { flow: number; cmuTotal: number }>();
+    for (const row of sankey) {
+      const key = row.source || "Unknown funder";
+      const prev = globalAgg.get(key) ?? { flow: 0, cmuTotal: 0 };
+      prev.flow += Number(row.value || 0);
+      prev.cmuTotal += Number(row.cmu_field_total || 0);
+      globalAgg.set(key, prev);
+    }
+
+    const globalTop = [...globalAgg.entries()]
+      .map(([funder, m]) => ({ funder, ...m }))
+      .sort((a, b) => b.flow + b.cmuTotal - (a.flow + a.cmuTotal))
+      .slice(0, 6);
+
+    if (globalTop.length > 0) {
+      const existing = new Set(sortedFunders.map((f) => f.funder));
+      const blended = [...sortedFunders];
+      for (const f of globalTop) {
+        if (!existing.has(f.funder)) blended.push(f);
+      }
+      sortedFunders = blended
+        .sort((a, b) => b.flow + b.cmuTotal - (a.flow + a.cmuTotal))
         .slice(0, 6);
 
-      const existing = new Set(sortedFunders.map((f) => f.funder));
-      let added = 0;
-      for (const s of simTop) {
-        if (!existing.has(s.funder)) {
-          sortedFunders.push(s);
-          added += 1;
-        }
-        if (sortedFunders.length >= 6) break;
-      }
-
-      if (added > 0) {
-        funderDataMode = "similar_field_fallback";
-        funderFallbackNote = `Used similar-field fallback from ${similarCodes.slice(0, 3).join(", ")} before global fallback.`;
-      }
-    }
-  }
-
-  // Fallback when field-specific links are sparse: use broad historical CMU-active funders
-  if (sortedFunders.length < 3) {
-    const global = new Map<string, { flow: number; cmuTotal: number }>();
-    for (const r of sankey) {
-      const key = r.source || "Unknown funder";
-      const prev = global.get(key) || { flow: 0, cmuTotal: 0 };
-      prev.flow += Number(r.value || 0);
-      prev.cmuTotal += Number(r.cmu_field_total || 0);
-      global.set(key, prev);
-    }
-    const globalTop = [...global.entries()]
-      .map(([funder, m]) => ({ funder, ...m }))
-      .sort((a, b) => (b.flow + b.cmuTotal) - (a.flow + a.cmuTotal))
-      .slice(0, 8);
-    const existing = new Set(sortedFunders.map((f) => f.funder));
-    let added = 0;
-    for (const g of globalTop) {
-      if (!existing.has(g.funder)) {
-        sortedFunders.push(g);
-        added += 1;
-      }
-      if (sortedFunders.length >= 6) break;
-    }
-    if (added > 0) {
       funderDataMode = "global_fallback";
-      if (!funderFallbackNote) {
-        funderFallbackNote = "Used global AAU/CMU historical funder activity because field-specific funder links were sparse.";
-      } else {
-        funderFallbackNote += " Added global AAU/CMU historical funders to fill remaining slots.";
-      }
+      funderFallbackNote =
+        "Used global fallback from all fields (combined AAU flow + CMU historical presence) because direct/similar/FOR2 sibling evidence was sparse.";
     }
   }
 
-  // Hard fallback: if still sparse (e.g. missing sankey data), provide baseline plausible funders.
   if (sortedFunders.length === 0) {
-    const baseline = ["NSF", "NIH", "Department of Defense", "DARPA", "Private Foundations"];
+    const baseline = [
+      "NSF",
+      "NIH",
+      "Department of Energy",
+      "Department of Defense",
+      "Private Foundations",
+      "Industry Partnerships",
+    ];
     sortedFunders = baseline.map((f, i) => ({
       funder: f,
       flow: Math.max(1, 100 - i * 10),
       cmuTotal: Math.max(1, 60 - i * 8),
     }));
     funderDataMode = "baseline_fallback";
-    funderFallbackNote = "Used baseline funder priors because no historical field/funder link data was available in loaded artifacts.";
+    funderFallbackNote =
+      "No direct field, similar-field, FOR2 sibling, or global historical links were available. Using baseline funder priors.";
   }
 
+  // ── Score and shape funder recommendations ───────────────────────────────────
   const topFlow = sortedFunders[0]?.flow || 1;
   const topCmu = Math.max(1, ...sortedFunders.map((f) => f.cmuTotal));
   const timing = timingWindowFromForecast(forecast2026, Number(field.growth_rate || 0));
@@ -260,7 +358,6 @@ export async function runResearcherDecision(request: DecisionRequest) {
     const fit = clamp01(f.flow / topFlow);
     const cmuPresence = clamp01(Math.log1p(f.cmuTotal) / Math.log1p(topCmu));
     const gapPenalty = clamp01(Number(field.under_target_gap || 0) * 6);
-    // Keep a realistic non-zero floor based on CMU historical presence + field momentum
     const winFloor = clamp01(0.12 + 0.12 * cmuPresence + 0.08 * clamp01(Number(field.opportunity_score_v1 || 0)));
     const win = Math.max(winFloor, clamp01(0.2 + 0.45 * fit + 0.25 * cmuPresence - 0.2 * gapPenalty));
     const expected = Math.round(Math.min(Math.max(80_000, f.flow * 0.25), Math.max(120_000, remainingNeed * 0.7)));
@@ -270,7 +367,7 @@ export async function runResearcherDecision(request: DecisionRequest) {
       award_timing_window: timing,
       cmu_win_probability: win,
       fit_score: fit,
-      source_type: funderDataMode === "field_observed" ? "field_observed" : funderDataMode,
+      source_type: funderDataMode,
     };
   });
 
@@ -283,6 +380,9 @@ export async function runResearcherDecision(request: DecisionRequest) {
     why: `Fit ${Math.round(f.fit_score * 100)}% | Win probability ${Math.round(f.cmu_win_probability * 100)}%`,
     suggested_action: i === 0 ? "Submit primary proposal" : i === 1 ? "Submit backup in parallel" : "Hold as contingency",
   }));
+
+  // Direct sankey row count — useful for debugging fallback triggers
+  const directSankeyRows = sankey.filter((r) => normalizeCode(r.FOR4_CODE) === code).length;
 
   return {
     request,
@@ -312,7 +412,8 @@ export async function runResearcherDecision(request: DecisionRequest) {
     likelihood_context: {
       funder_data_mode: funderDataMode,
       fallback_note: funderFallbackNote,
-      field_funder_links_found: funderRows.length,
+      neighbors_used: neighborNamesUsed,
+      field_funder_links_found: directSankeyRows,
     },
   };
 }
