@@ -72,21 +72,14 @@ export default function SimilarityMap({ data }: Props) {
   );
 
   return (
-<<<<<<< HEAD
-    <div className="bg-white dark:bg-gray-800 p-6 rounded shadow transition-colors duration-200 border border-gray-200 dark:border-gray-700">
-=======
     <div
       className="p-6 rounded shadow transition-colors duration-200 border bg-gradient-to-br from-emerald-50 via-white to-sky-50 dark:bg-slate-900 dark:border-slate-700"
       style={{ borderColor: chartTheme.similarity.cardBorder }}
     >
->>>>>>> 18350c96a22622323c348f44fd146e57b640548c
       <h2 className="text-xl font-semibold mb-1 text-gray-900 dark:text-white">
         Idea Similarity Map
         <HelpTip text="Points that are closer are more conceptually similar. Larger circles indicate higher field funding. Green points indicate stronger CMU-relative positioning." />
       </h2>
-<<<<<<< HEAD
-      <p className="text-xs text-gray-600 dark:text-gray-400 mb-3">
-=======
       <div className="flex justify-end mb-2">
         <button
           className="text-xs border rounded px-2 py-1 bg-white/80 hover:bg-white"
@@ -96,7 +89,6 @@ export default function SimilarityMap({ data }: Props) {
         </button>
       </div>
       <p className="text-xs text-gray-600 mb-3">
->>>>>>> 18350c96a22622323c348f44fd146e57b640548c
         Insight: Clustered points suggest nearby research themes you can leverage for proposals.
         <HelpTip text="Try targeting funders active in neighboring clusters to improve proposal fit." />
       </p>
@@ -126,15 +118,9 @@ export default function SimilarityMap({ data }: Props) {
           layout={{
             autosize: true,
             height: 400,
-<<<<<<< HEAD
-            margin: { t: 20, b: 20, l: 20, r: 20 },
-            paper_bgcolor: "rgba(0,0,0,0)",
-            plot_bgcolor: "rgba(0,0,0,0)",
-=======
             margin: { t: 20, b: 60, l: 70, r: 24 },
             paper_bgcolor: "transparent",
             plot_bgcolor: "transparent",
->>>>>>> 18350c96a22622323c348f44fd146e57b640548c
             font: { color: "#888888" },
             xaxis: {
               title: { text: "Similarity Dimension 1", standoff: 12 },

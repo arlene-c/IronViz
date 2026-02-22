@@ -21,12 +21,6 @@ export default function FunderFlowRanking({ data }: Props) {
     .slice(0, 10);
 
   return (
-<<<<<<< HEAD
-    <div className="bg-white dark:bg-gray-800 p-6 rounded shadow text-gray-900 dark:text-white transition-colors duration-200">
-      <h2 className="text-xl font-semibold mb-1">Top Funder-to-Field Flows</h2>
-      <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">Ranked by AAU funding volume.</p>
-      <div className="overflow-x-auto">
-=======
     <div className="bg-white p-6 rounded shadow">
       <div className="flex items-start justify-between gap-3 mb-1">
         <h2 className="text-xl font-semibold">Top Funder-to-Field Flows</h2>
@@ -40,7 +34,6 @@ export default function FunderFlowRanking({ data }: Props) {
         <li>Compare AAU flow versus CMU total to spot under-leveraged funder relationships.</li>
       </ul>
       <div className="overflow-auto">
->>>>>>> 18350c96a22622323c348f44fd146e57b640548c
         <table className="w-full text-sm">
           <thead className="text-left border-b dark:border-gray-700">
             <tr>

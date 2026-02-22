@@ -100,15 +100,6 @@ export default function OpportunityQuadrant({ data }: Props) {
   );
 
   return (
-<<<<<<< HEAD
-    <div className="bg-white dark:bg-gray-800 p-6 rounded shadow transition-colors duration-200 border border-gray-200 dark:border-gray-700">
-      <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
-        Opportunity Quadrant
-      </h2>
-      <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
-        X: under-target gap | Y: growth rate | bubble: AAU funding
-      </p>
-=======
     <div
       className="p-6 rounded shadow transition-colors duration-200 border bg-gradient-to-br from-rose-50 via-white to-sky-50 dark:bg-slate-900 dark:border-slate-700"
       style={{ borderColor: chartTheme.quadrant.cardBorder }}
@@ -128,19 +119,13 @@ export default function OpportunityQuadrant({ data }: Props) {
         <li>Larger bubbles imply larger external funding pools.</li>
         <li>Use this chart to shortlist target fields before outreach planning.</li>
       </ul>
->>>>>>> 18350c96a22622323c348f44fd146e57b640548c
       {loading && <p className="text-sm text-gray-500 mb-2">Loading model data...</p>}
       {error && <p className="text-sm text-red-600 mb-2">Error: {error}</p>}
 
       <div className="h-[400px] w-full">
         <ResponsiveContainer width="100%" height="100%">
-<<<<<<< HEAD
-          <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
-            <CartesianGrid strokeDasharray="3 3" strokeOpacity={0.25} stroke="#888888" />
-=======
           <ScatterChart margin={{ top: 18, right: 20, bottom: 42, left: 36 }}>
             <CartesianGrid strokeDasharray="3 3" strokeOpacity={0.25} stroke={chartTheme.quadrant.grid} />
->>>>>>> 18350c96a22622323c348f44fd146e57b640548c
             <XAxis
               type="number"
               dataKey="targetingGap"

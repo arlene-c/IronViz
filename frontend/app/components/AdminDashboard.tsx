@@ -99,15 +99,11 @@ export default function AdminDashboard() {
         </div>
         <div className="bg-white dark:bg-gray-800 p-6 rounded shadow text-gray-900 dark:text-white transition-colors duration-200">
           <h2 className="text-xl font-semibold mb-1">Top 5 Opportunity Rankings</h2>
-<<<<<<< HEAD
-          <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">Fast shortlist for strategic action.</p>
-=======
           <p className="text-sm text-gray-600 mb-4">Fast shortlist for strategic action.</p>
           <ul className="text-xs text-gray-600 mb-4 list-disc pl-5 space-y-1">
             <li>Start outreach from rank 1 to 3 to maximize expected return quickly.</li>
             <li>Use rank plus gap value to justify resource shifts in admin planning.</li>
           </ul>
->>>>>>> 18350c96a22622323c348f44fd146e57b640548c
           <ol className="space-y-2">
             {topOpportunities.map((row, idx) => (
               <li key={row.FOR4_CODE} className="flex justify-between items-start gap-3 border-b dark:border-gray-700 pb-2 last:border-b-0">

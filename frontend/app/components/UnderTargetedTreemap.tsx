@@ -40,13 +40,6 @@ export default function UnderTargetedTreemap({ data }: Props) {
     .slice(0, 25);
 
   return (
-<<<<<<< HEAD
-    <div className="bg-white dark:bg-gray-800 p-6 rounded shadow border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white transition-colors duration-200">
-      <h2 className="text-xl font-semibold mb-1">Under-Targeted Field Treemap</h2>
-      <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">Top 25 by under-target gap, sized by AAU funding.</p>
-      <ResponsiveContainer width="100%" height={420}>
-        <Treemap data={rows} dataKey="size" stroke="#1f2937" fill={chartTheme.treemap.fill}>
-=======
     <div
       className="p-6 rounded shadow border bg-gradient-to-br from-pink-50 via-white to-orange-50 dark:bg-slate-900 dark:border-slate-700"
       style={{ borderColor: chartTheme.treemap.cardBorder }}
@@ -64,7 +57,6 @@ export default function UnderTargetedTreemap({ data }: Props) {
       </ul>
       <ResponsiveContainer width="100%" height={420}>
         <Treemap data={rows} dataKey="size" stroke={chartTheme.treemap.stroke} fill="#60a5fa">
->>>>>>> 18350c96a22622323c348f44fd146e57b640548c
           <Tooltip
             content={({ active, payload }: any) => {
               if (!active || !payload?.length) return null;
