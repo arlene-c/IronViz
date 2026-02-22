@@ -100,6 +100,10 @@ export default function AdminDashboard() {
         <div className="bg-white p-6 rounded shadow">
           <h2 className="text-xl font-semibold mb-1">Top 5 Opportunity Rankings</h2>
           <p className="text-sm text-gray-600 mb-4">Fast shortlist for strategic action.</p>
+          <ul className="text-xs text-gray-600 mb-4 list-disc pl-5 space-y-1">
+            <li>Start outreach from rank 1 to 3 to maximize expected return quickly.</li>
+            <li>Use rank plus gap value to justify resource shifts in admin planning.</li>
+          </ul>
           <ol className="space-y-2">
             {topOpportunities.map((row, idx) => (
               <li key={row.FOR4_CODE} className="flex justify-between items-start gap-3 border-b pb-2 last:border-b-0">

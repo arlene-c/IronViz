@@ -217,6 +217,10 @@ export default function DecisionAssistant({ role }: Props) {
     localStorage.setItem(SAVED_IDEAS_KEY, JSON.stringify(ideas));
   };
 
+  const removeSavedIdea = (id: string) => {
+    persistSavedIdeas(savedIdeas.filter((idea) => idea.id !== id));
+  };
+
   const runResearcher = async () => {
     setRunning(true);
     setError(null);
@@ -281,6 +285,7 @@ export default function DecisionAssistant({ role }: Props) {
         already_received: idea.already_received,
       },
     ]);
+    removeSavedIdea(idea.id);
   };
 
   const addQuickProject = () => {
@@ -362,10 +367,34 @@ export default function DecisionAssistant({ role }: Props) {
     const covered = Math.min(adminResult.total_remaining_need, adminResult.expected_funding_inflow);
     const gap = Math.max(0, adminResult.total_remaining_need - covered);
     return [
-      { name: "Covered", value: covered, color: "#16a34a" },
+      { name: "Covered", value: covered, color: "#2563eb" },
       { name: "Gap", value: gap, color: "#ef4444" },
     ];
   }, [adminResult]);
+
+  const portfolioManualNeed = useMemo(() => {
+    return portfolio.reduce((acc, p) => {
+      const requested = p.budget_mode === "manual" ? Number(p.requested_budget || 0) : 0;
+      const received = Number(p.already_received || 0);
+      return acc + Math.max(0, requested - received);
+    }, 0);
+  }, [portfolio]);
+
+  const adminFundingAvailable = Math.round(Number(adminCurrentFunding || 0));
+  const adminFundingNeeded = Math.round(Number(adminResult?.total_remaining_need ?? portfolioManualNeed));
+  const adminProjectsCount = adminResult?.projects_analyzed ?? portfolio.length;
+  const adminFundingGap = Math.max(0, adminFundingNeeded - adminFundingAvailable);
+
+  const coverageTooltip = ({ active, payload }: any) => {
+    if (!active || !payload?.length) return null;
+    const p = payload[0];
+    return (
+      <div className="bg-white border rounded shadow p-2 text-xs">
+        <p className="font-semibold">{p.name}</p>
+        <p>{formatCompactUsd(Number(p.value || 0))}</p>
+      </div>
+    );
+  };
 
   return (
     <div className="grid grid-cols-1 gap-6">
@@ -529,39 +558,57 @@ export default function DecisionAssistant({ role }: Props) {
       )}
 
       {role === "admin" && (
-        <div className="grid grid-cols-1 xl:grid-cols-3 gap-6">
-          <div className="xl:col-span-1 bg-white p-6 rounded shadow space-y-3">
-            <h2 className="font-semibold text-lg">Admin Controls</h2>
-            <label className="text-sm text-gray-700">Current funding (USD)<HelpTip text="Total funds currently available to cover portfolio gaps." />
-              <input className="w-full border rounded p-2 text-sm mt-1" type="number" min={0} value={adminCurrentFunding} onChange={(e) => setAdminCurrentFunding(parseInputNumber(e.target.value))} />
-            </label>
-            <label className="text-sm text-gray-700">Planning horizon (months)<HelpTip text="Window for expected grant inflow and sequencing decisions." />
-              <input className="w-full border rounded p-2 text-sm mt-1" type="number" min={6} max={48} value={planningHorizon} onChange={(e) => setPlanningHorizon(parseInputNumber(e.target.value))} />
-            </label>
-
-            <div className="border rounded p-3 space-y-2">
-              <p className="text-xs font-semibold text-gray-600">Add project to portfolio<HelpTip text="One place to add projects. Use Inbox or quick form below." /></p>
-              <input className="w-full border rounded p-2 text-sm" placeholder="Project title/description" value={quickProject.idea_text} onChange={(e) => setQuickProject((p) => ({ ...p, idea_text: e.target.value }))} />
-              <select className="w-full border rounded p-2 text-sm" value={quickProject.field_code} onChange={(e) => setQuickProject((p) => ({ ...p, field_code: e.target.value }))}>
-                <option value="">Select field...</option>
-                {fields.slice(0, 100).map((f) => (<option key={f.code} value={f.code}>{f.name}</option>))}
-              </select>
-              <select className="w-full border rounded p-2 text-sm" value={quickProject.campus_code} onChange={(e) => setQuickProject((p) => ({ ...p, campus_code: e.target.value }))}>
-                <option value="">Select campus...</option>
-                {campuses.map((c) => (<option key={c.code} value={c.code}>{c.label}</option>))}
-              </select>
-              <div className="grid grid-cols-2 gap-2">
-                <input className="border rounded p-2 text-sm" type="number" min={6} max={60} placeholder="Months" value={quickProject.project_length_months} onChange={(e) => setQuickProject((p) => ({ ...p, project_length_months: parseInputNumber(e.target.value) }))} />
-                <input className="border rounded p-2 text-sm" type="number" min={0} placeholder="Already received" value={quickProject.already_received || ""} onChange={(e) => setQuickProject((p) => ({ ...p, already_received: parseInputNumber(e.target.value) }))} />
-              </div>
-              <div className="flex gap-2">
-                <button className="flex-1 border rounded p-2 text-sm" onClick={addQuickProject}>Add Project</button>
-                <button className="flex-1 bg-blue-600 text-white rounded p-2 text-sm disabled:opacity-60" onClick={runAdmin} disabled={running || portfolio.length === 0}>{running ? "Running..." : "Run Plan"}</button>
-              </div>
+        <div className="grid grid-cols-1 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div className="bg-white p-4 rounded shadow">
+              <p className="text-xs text-gray-500">Total Funding Available</p>
+              <p className="text-xl font-semibold">{formatCompactUsd(adminFundingAvailable)}</p>
+            </div>
+            <div className="bg-white p-4 rounded shadow">
+              <p className="text-xs text-gray-500">Total Funding Needed</p>
+              <p className="text-xl font-semibold">{formatCompactUsd(adminFundingNeeded)}</p>
+            </div>
+            <div className="bg-white p-4 rounded shadow">
+              <p className="text-xs text-gray-500"># Projects</p>
+              <p className="text-xl font-semibold">{adminProjectsCount}</p>
+            </div>
+            <div className="bg-white p-4 rounded shadow">
+              <p className="text-xs text-gray-500">Funding Gap</p>
+              <p className="text-xl font-semibold">{formatCompactUsd(adminFundingGap)}</p>
             </div>
           </div>
 
-          <div className="xl:col-span-2 grid grid-cols-1 gap-4">
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 items-start">
+            <div className="bg-white p-6 rounded shadow space-y-3">
+              <h2 className="font-semibold text-lg">Admin Controls</h2>
+              <label className="text-sm text-gray-700">Current funding (USD)<HelpTip text="Total funds currently available to cover portfolio gaps." />
+                <input className="w-full border rounded p-2 text-sm mt-1" type="number" min={0} value={adminCurrentFunding} onChange={(e) => setAdminCurrentFunding(parseInputNumber(e.target.value))} />
+              </label>
+              <label className="text-sm text-gray-700">Planning horizon (months)<HelpTip text="Window for expected grant inflow and sequencing decisions." />
+                <input className="w-full border rounded p-2 text-sm mt-1" type="number" min={6} max={48} value={planningHorizon} onChange={(e) => setPlanningHorizon(parseInputNumber(e.target.value))} />
+              </label>
+              <div className="border rounded p-3 space-y-2">
+                <p className="text-xs font-semibold text-gray-600">Add project to portfolio<HelpTip text="One place to add projects. Use Inbox or quick form below." /></p>
+                <input className="w-full border rounded p-2 text-sm" placeholder="Project title/description" value={quickProject.idea_text} onChange={(e) => setQuickProject((p) => ({ ...p, idea_text: e.target.value }))} />
+                <select className="w-full border rounded p-2 text-sm" value={quickProject.field_code} onChange={(e) => setQuickProject((p) => ({ ...p, field_code: e.target.value }))}>
+                  <option value="">Select field...</option>
+                  {fields.slice(0, 100).map((f) => (<option key={f.code} value={f.code}>{f.name}</option>))}
+                </select>
+                <select className="w-full border rounded p-2 text-sm" value={quickProject.campus_code} onChange={(e) => setQuickProject((p) => ({ ...p, campus_code: e.target.value }))}>
+                  <option value="">Select campus...</option>
+                  {campuses.map((c) => (<option key={c.code} value={c.code}>{c.label}</option>))}
+                </select>
+                <div className="grid grid-cols-2 gap-2">
+                  <input className="border rounded p-2 text-sm" type="number" min={6} max={60} placeholder="Months" value={quickProject.project_length_months} onChange={(e) => setQuickProject((p) => ({ ...p, project_length_months: parseInputNumber(e.target.value) }))} />
+                  <input className="border rounded p-2 text-sm" type="number" min={0} placeholder="Already received" value={quickProject.already_received || ""} onChange={(e) => setQuickProject((p) => ({ ...p, already_received: parseInputNumber(e.target.value) }))} />
+                </div>
+                <div className="flex gap-2">
+                  <button className="flex-1 border rounded p-2 text-sm" onClick={addQuickProject}>Add Project</button>
+                  <button className="flex-1 bg-blue-600 text-white rounded p-2 text-sm disabled:opacity-60" onClick={runAdmin} disabled={running || portfolio.length === 0}>{running ? "Running..." : "Run Plan"}</button>
+                </div>
+              </div>
+            </div>
+
             <div className="bg-white p-6 rounded shadow">
               <h3 className="font-semibold mb-2">
                 Admin Inbox
@@ -572,26 +619,27 @@ export default function DecisionAssistant({ role }: Props) {
                 <p className="text-sm text-gray-600">No saved ideas yet.</p>
               ) : (
                 <div className="space-y-2">
-                  {adminInboxItems.slice(0, 8).map((idea) => (
+                  {adminInboxItems.slice(0, 6).map((idea) => (
                     <div key={idea.id} className="border rounded p-3">
                       <div className="flex items-start justify-between gap-3">
                         <div>
                           <p className="font-medium">{idea.field_name || idea.field_code}</p>
                           <p className="text-xs text-gray-600 mt-1">{idea.idea_text}</p>
                           <p className="text-xs text-gray-500 mt-1">Remaining: {formatCompactUsd(idea.result?.budget.remaining_need || idea.requested_budget || 0)}</p>
-                          <p className="text-xs text-gray-500">
-                            Start: {idea.project_start_date ? new Date(idea.project_start_date).toLocaleDateString() : "Not set"}
-                          </p>
+                          <p className="text-xs text-gray-500">Start: {idea.project_start_date ? new Date(idea.project_start_date).toLocaleDateString() : "Not set"}</p>
                         </div>
                         <div className="text-right">
                           <p
-                            className={`text-xs px-2 py-1 rounded ${idea.urgency_percent >= 70 ? "bg-red-100 text-red-700" : idea.urgency_percent >= 40 ? "bg-amber-100 text-amber-700" : "bg-green-100 text-green-700"}`}
+                            className={`text-xs px-2 py-1 rounded ${idea.urgency_percent >= 70 ? "bg-red-100 text-red-700" : "bg-blue-100 text-blue-700"}`}
                             title="Higher urgency % means this idea is more critical versus other inbox ideas."
                           >
                             Urgency {idea.urgency_percent}%
                           </p>
                           <p className="text-[10px] text-gray-500 mt-1">Date factor x{Number(idea.time_factor || 1).toFixed(2)}</p>
-                          <button className="mt-2 text-xs border rounded px-2 py-1" onClick={() => addInboxIdeaToPortfolio(idea)}>Add to portfolio</button>
+                          <div className="mt-2 flex gap-1 justify-end">
+                            <button className="text-xs border rounded px-2 py-1" onClick={() => addInboxIdeaToPortfolio(idea)}>Add to portfolio</button>
+                            <button className="text-xs border border-red-300 text-red-700 rounded px-2 py-1" onClick={() => removeSavedIdea(idea.id)}>Remove</button>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -599,82 +647,91 @@ export default function DecisionAssistant({ role }: Props) {
                 </div>
               )}
             </div>
+          </div>
 
-            <div className="bg-white p-6 rounded shadow">
-              <h3 className="font-semibold mb-2">Portfolio (single list used for planning)</h3>
-              {portfolio.length === 0 ? (
-                <p className="text-sm text-gray-600">No projects added yet.</p>
-              ) : (
-                <div className="space-y-2">
-                  {portfolio.map((p) => (
-                    <div key={p.id} className="border rounded p-2 flex items-center justify-between gap-3">
-                      <div>
-                        <p className="text-sm font-medium">{p.idea_text || p.field_name || p.field_code}</p>
-                        <p className="text-xs text-gray-600">{p.field_name || p.field_code} | {p.project_length_months} months | received {formatCompactUsd(p.already_received || 0)}</p>
-                      </div>
-                      <button className="text-xs border rounded px-2 py-1" onClick={() => removePortfolioProject(p.id)}>Remove</button>
+          <div className="bg-white p-6 rounded shadow">
+            <h3 className="font-semibold mb-2">Portfolio (single list used for planning)</h3>
+            {portfolio.length === 0 ? (
+              <p className="text-sm text-gray-600">No projects added yet.</p>
+            ) : (
+              <div className="space-y-2">
+                {portfolio.map((p) => (
+                  <div key={p.id} className="border rounded p-2 flex items-center justify-between gap-3">
+                    <div>
+                      <p className="text-sm font-medium">{p.idea_text || p.field_name || p.field_code}</p>
+                      <p className="text-xs text-gray-600">{p.field_name || p.field_code} | {p.project_length_months} months | received {formatCompactUsd(p.already_received || 0)}</p>
                     </div>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {adminResult && (
-              <>
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-                  <div className="bg-white p-4 rounded shadow"><p className="text-xs text-gray-500">Projects</p><p className="font-semibold">{adminResult.projects_analyzed}</p></div>
-                  <div className="bg-white p-4 rounded shadow"><p className="text-xs text-gray-500">Need</p><p className="font-semibold">{formatCompactUsd(adminResult.total_remaining_need)}</p></div>
-                  <div className="bg-white p-4 rounded shadow"><p className="text-xs text-gray-500">Expected Inflow</p><p className="font-semibold">{formatCompactUsd(adminResult.expected_funding_inflow)}</p></div>
-                  <div className="bg-white p-4 rounded shadow"><p className="text-xs text-gray-500">Coverage</p><p className="font-semibold">{formatPercent(adminResult.coverage_ratio)}</p></div>
-                </div>
-
-                <div className="bg-white p-6 rounded shadow">
-                  <h3 className="font-semibold mb-2">Coverage & Risk Visuals</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="h-56">
-                      <ResponsiveContainer width="100%" height="100%">
-                        <PieChart>
-                          <Pie data={coverageData} dataKey="value" nameKey="name" outerRadius={80} label>
-                            {coverageData.map((c) => <Cell key={c.name} fill={c.color} />)}
-                          </Pie>
-                          <Tooltip />
-                        </PieChart>
-                      </ResponsiveContainer>
-                    </div>
-                    <div className="h-56">
-                      <ResponsiveContainer width="100%" height="100%">
-                        <BarChart data={adminResult.portfolio_rankings.slice(0, 6)}>
-                          <CartesianGrid strokeDasharray="3 3" />
-                          <XAxis dataKey="field_name" hide />
-                          <YAxis tickFormatter={(v) => formatPercent(Number(v))} />
-                          <Tooltip />
-                          <Bar dataKey="top_funder_probability" name="Top funder likelihood">
-                            {adminResult.portfolio_rankings.slice(0, 6).map((r, i) => (
-                              <Cell key={i} fill={r.top_funder_probability < 0.35 ? "#ef4444" : "#22c55e"} />
-                            ))}
-                          </Bar>
-                        </BarChart>
-                      </ResponsiveContainer>
-                    </div>
+                    <button className="text-xs border rounded px-2 py-1" onClick={() => removePortfolioProject(p.id)}>Remove</button>
                   </div>
-                </div>
-
-                <div className="bg-white p-6 rounded shadow">
-                  <h3 className="font-semibold mb-2">Explicit Low-Likelihood Reasons</h3>
-                  <ul className="text-sm list-disc pl-5 space-y-1">
-                    {adminResult.portfolio_rankings.slice(0, 6).map((r) => (
-                      <li key={r.field_code}>
-                        <span className="font-medium">{r.field_name}:</span>{" "}
-                        {r.top_funder_probability < 0.35
-                          ? "Low expected funding likelihood. Primary reason: weak top-funder probability and high competition."
-                          : "Moderate/strong likelihood. Main risk is timing and portfolio concentration."}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </>
+                ))}
+              </div>
             )}
           </div>
+
+          {adminResult && (
+            <>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div className="bg-white p-4 rounded shadow"><p className="text-xs text-gray-500">Projects</p><p className="font-semibold">{adminResult.projects_analyzed}</p></div>
+                <div className="bg-white p-4 rounded shadow"><p className="text-xs text-gray-500">Need</p><p className="font-semibold">{formatCompactUsd(adminResult.total_remaining_need)}</p></div>
+                <div className="bg-white p-4 rounded shadow"><p className="text-xs text-gray-500">Expected Inflow</p><p className="font-semibold">{formatCompactUsd(adminResult.expected_funding_inflow)}</p></div>
+                <div className="bg-white p-4 rounded shadow"><p className="text-xs text-gray-500">Coverage</p><p className="font-semibold">{formatPercent(adminResult.coverage_ratio)}</p></div>
+              </div>
+
+              <div className="bg-white p-6 rounded shadow">
+                <h3 className="font-semibold mb-2">Coverage & Risk Visuals</h3>
+                <p className="text-xs text-gray-600 mb-3">
+                  Coverage pie compares expected inflow vs uncovered gap. Likelihood bars show the top-funder win chance by project.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="h-56">
+                    <ResponsiveContainer width="100%" height="100%">
+                      <PieChart>
+                        <Pie
+                          data={coverageData}
+                          dataKey="value"
+                          nameKey="name"
+                          outerRadius={80}
+                          label={({ name, percent }: any) => `${name} ${((percent || 0) * 100).toFixed(0)}%`}
+                        >
+                          {coverageData.map((c) => <Cell key={c.name} fill={c.color} />)}
+                        </Pie>
+                        <Tooltip content={coverageTooltip} />
+                      </PieChart>
+                    </ResponsiveContainer>
+                  </div>
+                  <div className="h-56">
+                    <ResponsiveContainer width="100%" height="100%">
+                      <BarChart data={adminResult.portfolio_rankings.slice(0, 6)}>
+                        <CartesianGrid strokeDasharray="3 3" />
+                        <XAxis dataKey="field_name" hide />
+                        <YAxis tickFormatter={(v) => formatPercent(Number(v))} />
+                        <Tooltip formatter={(value: any) => formatPercent(Number(value))} />
+                        <Bar dataKey="top_funder_probability" name="Top funder likelihood">
+                          {adminResult.portfolio_rankings.slice(0, 6).map((r, i) => (
+                            <Cell key={i} fill={r.top_funder_probability < 0.35 ? "#ef4444" : "#2563eb"} />
+                          ))}
+                        </Bar>
+                      </BarChart>
+                    </ResponsiveContainer>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white p-6 rounded shadow">
+                <h3 className="font-semibold mb-2">Explicit Low-Likelihood Reasons</h3>
+                <ul className="text-sm list-disc pl-5 space-y-1">
+                  {adminResult.portfolio_rankings.slice(0, 6).map((r) => (
+                    <li key={r.field_code}>
+                      <span className="font-medium">{r.field_name}:</span>{" "}
+                      {r.top_funder_probability < 0.35
+                        ? "Low expected funding likelihood. Primary reason: weak top-funder probability and high competition."
+                        : "Moderate/strong likelihood. Main risk is timing and portfolio concentration."}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </>
+          )}
         </div>
       )}
     </div>

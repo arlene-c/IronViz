@@ -104,6 +104,10 @@ export default function ResearchDashboard() {
         <div className="bg-white p-6 rounded shadow">
           <h2 className="text-xl font-semibold mb-1">Top 2026 Field Forecasts</h2>
           <p className="text-sm text-gray-600 mb-4">Ranked by predicted AAU funding.</p>
+          <ul className="text-xs text-gray-600 mb-4 list-disc pl-5 space-y-1">
+            <li>Use this list to select fields with stronger near-term external momentum.</li>
+            <li>Pair top forecast fields with nearby similarity clusters for idea positioning.</li>
+          </ul>
           <ol className="space-y-2">
             {topForecastFields.map((row, idx) => (
               <li key={`${row.FOR4_CODE}-${row.year}`} className="flex justify-between items-start gap-3 border-b pb-2 last:border-b-0">

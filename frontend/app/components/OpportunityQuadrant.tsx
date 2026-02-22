@@ -6,6 +6,7 @@ import {
   Scatter,
   XAxis,
   YAxis,
+  Label,
   ZAxis,
   Tooltip,
   CartesianGrid,
@@ -53,6 +54,7 @@ export default function OpportunityQuadrant({ data }: Props) {
   const [rows, setRows] = useState<OpportunityRow[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [zoomed, setZoomed] = useState(false);
 
   useEffect(() => {
     if (data && data.length > 0) {
@@ -103,18 +105,27 @@ export default function OpportunityQuadrant({ data }: Props) {
       className="dark:bg-gray-800 p-6 rounded shadow transition-colors duration-200 border"
       style={{ background: chartTheme.quadrant.cardBackground, borderColor: chartTheme.quadrant.cardBorder }}
     >
-      <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
-        Opportunity Quadrant
-      </h2>
-      <p className="text-sm text-gray-600 mb-3">
-        X: under-target gap | Y: growth rate | bubble: AAU funding
-      </p>
+      <div className="flex items-start justify-between gap-3 mb-2">
+        <h2 className="text-xl font-semibold text-gray-900 dark:text-white">Opportunity Quadrant</h2>
+        <button
+          className="text-xs border rounded px-2 py-1 bg-white/80 hover:bg-white"
+          onClick={() => setZoomed(true)}
+        >
+          Zoom
+        </button>
+      </div>
+      <p className="text-sm text-gray-600 mb-3">X: under-target gap | Y: growth rate | bubble: AAU funding</p>
+      <ul className="text-xs text-gray-600 mb-3 list-disc pl-5 space-y-1">
+        <li>Top-right: fastest-growing fields where CMU looks under-indexed.</li>
+        <li>Larger bubbles imply larger external funding pools.</li>
+        <li>Use this chart to shortlist target fields before outreach planning.</li>
+      </ul>
       {loading && <p className="text-sm text-gray-500 mb-2">Loading model data...</p>}
       {error && <p className="text-sm text-red-600 mb-2">Error: {error}</p>}
 
       <div className="h-[400px] w-full">
         <ResponsiveContainer width="100%" height="100%">
-          <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
+          <ScatterChart margin={{ top: 18, right: 20, bottom: 42, left: 36 }}>
             <CartesianGrid strokeDasharray="3 3" strokeOpacity={0.25} stroke={chartTheme.quadrant.grid} />
             <XAxis
               type="number"
@@ -122,13 +133,17 @@ export default function OpportunityQuadrant({ data }: Props) {
               name="Under-target gap"
               stroke={chartTheme.quadrant.xAxis}
               tickFormatter={(tick) => Number(tick).toFixed(2)}
-            />
+            >
+              <Label value="Under-Target Gap (AAU share - CMU share)" position="insideBottom" offset={-8} />
+            </XAxis>
             <YAxis
               type="number"
               dataKey="growth"
               name="Growth Rate"
               stroke={chartTheme.quadrant.yAxis}
               tickFormatter={(tick) => `${(tick * 100).toFixed(0)}%`}
+              width={60}
+              label={{ value: "AAU Growth Rate", angle: -90, position: "insideLeft", offset: -4 }}
             />
             <ZAxis
               type="number"
@@ -153,6 +168,61 @@ export default function OpportunityQuadrant({ data }: Props) {
           </ScatterChart>
         </ResponsiveContainer>
       </div>
+      {zoomed && (
+        <div className="fixed inset-0 z-50 bg-black/50 p-6">
+          <div className="bg-white rounded shadow-xl h-full w-full p-4">
+            <div className="flex justify-between items-center mb-2">
+              <h3 className="font-semibold">Opportunity Quadrant (Zoomed)</h3>
+              <button className="text-xs border rounded px-2 py-1" onClick={() => setZoomed(false)}>
+                Close
+              </button>
+            </div>
+            <div className="h-[calc(100%-36px)]">
+              <ResponsiveContainer width="100%" height="100%">
+                <ScatterChart margin={{ top: 18, right: 20, bottom: 48, left: 46 }}>
+                  <CartesianGrid strokeDasharray="3 3" strokeOpacity={0.25} stroke={chartTheme.quadrant.grid} />
+                  <XAxis
+                    type="number"
+                    dataKey="targetingGap"
+                    name="Under-target gap"
+                    stroke={chartTheme.quadrant.xAxis}
+                    tickFormatter={(tick) => Number(tick).toFixed(2)}
+                  >
+                    <Label value="Under-Target Gap (AAU share - CMU share)" position="insideBottom" offset={-8} />
+                  </XAxis>
+                  <YAxis
+                    type="number"
+                    dataKey="growth"
+                    name="Growth Rate"
+                    stroke={chartTheme.quadrant.yAxis}
+                    tickFormatter={(tick) => `${(tick * 100).toFixed(0)}%`}
+                    width={70}
+                    label={{ value: "AAU Growth Rate", angle: -90, position: "insideLeft", offset: -4 }}
+                  />
+                  <ZAxis type="number" dataKey="funding" range={[80, 700]} />
+                  <Tooltip content={<CustomTooltip />} cursor={{ strokeDasharray: "3 3" }} />
+                  <ReferenceLine
+                    x={0}
+                    stroke={chartTheme.quadrant.refX}
+                    strokeDasharray="3 3"
+                    label={{ position: "top", value: "Parity", fill: chartTheme.quadrant.xAxis }}
+                  />
+                  <ReferenceLine y={0} stroke={chartTheme.quadrant.refY} strokeDasharray="3 3" />
+                  <Scatter data={chartData} name="Fields">
+                    {chartData.map((entry, index) => (
+                      <Cell
+                        key={`zoom-cell-${index}`}
+                        fill={entry.targetingGap > 0 ? chartTheme.quadrant.pointUnder : chartTheme.quadrant.pointStrong}
+                        opacity={0.8}
+                      />
+                    ))}
+                  </Scatter>
+                </ScatterChart>
+              </ResponsiveContainer>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

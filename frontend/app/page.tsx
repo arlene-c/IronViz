@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AdminDashboard from "./components/AdminDashboard";
 import DecisionAssistant from "./components/DecisionAssistant";
 import ResearchDashboard from "./components/ResearchDashboard";
@@ -8,9 +8,24 @@ import ResearchDashboard from "./components/ResearchDashboard";
 export default function Home() {
   const [view, setView] = useState<"admin" | "research">("admin");
   const [isDark, setIsDark] = useState(false);
+  const [darkApplied, setDarkApplied] = useState(false);
+
+  useEffect(() => {
+    const root = document.documentElement;
+    const body = document.body;
+    if (isDark) {
+      root.classList.add("dark");
+      body.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+      body.classList.remove("dark");
+    }
+    const applied = root.classList.contains("dark") && body.classList.contains("dark");
+    setDarkApplied(applied);
+  }, [isDark]);
 
   return (
-    <div className={`min-h-screen bg-gradient-to-br from-slate-50 via-white to-rose-50 text-gray-900 dark:bg-gray-900 dark:text-white p-6 transition-colors duration-200 ${isDark ? "dark" : ""}`}>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-rose-50 text-gray-900 dark:bg-gray-900 dark:text-white p-6 transition-colors duration-200">
       
       <div className="flex justify-between items-center mb-6">
         {/* Left Side: Dashboard Toggles */}
@@ -47,6 +62,9 @@ export default function Home() {
           {isDark ? "Light Mode" : "Dark Mode"}
         </button>
       </div>
+      <p className={`text-xs mb-4 ${darkApplied ? "text-blue-700 dark:text-blue-300" : "text-red-700 dark:text-red-300"}`}>
+        Theme check: {darkApplied ? "Dark mode styles applied" : "Dark mode styles not applied"}
+      </p>
 
       <div className="grid grid-cols-1 gap-6">
         <section>
